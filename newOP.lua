@@ -11,7 +11,7 @@ M=game.Players.LocalPlayer:GetMouse()
         while down and wait() do
             local T=M.Target
             local cf=M.Hit
-            local CF=CFrame.new(script.Parent.Torso.Position,cf)*CFrame.new(0,0,-Z)
+            local CF=CFrame.new(script.Parent.Torso.Position,cf.p)*CFrame.new(0,0,-Z)
             T.Anchored=true
             T.CFrame=CF
             local ray = Ray.new(tool.Handle.CFrame.p, (CF.p - script.Parent.Torso.CFrame.p).unit*300)
