@@ -1,6 +1,7 @@
 wait(1)
 M=game.Players.LocalPlayer:GetMouse()
     Z=20
+    --print''
     
     M.KeyDown:connect(function(K)
         if K=='u' then Z=Z-1 elseif K=='n' then Z=Z+1 end
