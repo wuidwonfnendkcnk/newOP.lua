@@ -12,7 +12,7 @@ M=game.Players.LocalPlayer:GetMouse()
         while down and wait() do
             
             if not T or T.Name=='Base' then else
-            --local cf=M.Hit?
+            --local cf=M.Hit
             local CF=CFrame.new(script.Parent.Torso.Position,T.Position)*CFrame.new(0,0,-Z)
             T.Anchored=true
             T.CFrame=CF
