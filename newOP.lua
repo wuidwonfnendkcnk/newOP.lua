@@ -29,6 +29,7 @@ M=game.Players.LocalPlayer:GetMouse()
         game.Debris:AddItem(rayPart,0.1)
         end
             end
+    
     end)
     
     M.Button1Up:connect(function()
