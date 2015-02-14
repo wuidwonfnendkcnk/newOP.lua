@@ -33,10 +33,10 @@ M=game.Players.LocalPlayer:GetMouse()
         rayPart.CFrame = CFrame.new(CF.p, script.Parent.Torso.CFrame.p) * CFrame.new(0, 0, -distance/2)
         game.Debris:AddItem(rayPart,0.1)
     end
+    
+            end
     T.Anchored=false
     T.BrickColor=BrickColor.Random()
-            end
-    
     end)
     
     M.Button1Up:connect(function()
