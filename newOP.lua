@@ -1,9 +1,11 @@
 wait(1)
 M=game.Players.LocalPlayer:GetMouse()
     Z=20
+    
     M.KeyDown:connect(function(K)
         if K=='u' then Z=Z-1 elseif K=='n' then Z=Z+1 end
         end)
+        
     M.Button1Down:connect(function()
         down=true
         while down and wait() do
@@ -30,4 +32,3 @@ M=game.Players.LocalPlayer:GetMouse()
     M.Button1Up:connect(function()
         down=false
     end)
-end)
