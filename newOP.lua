@@ -15,7 +15,7 @@ M=game.Players.LocalPlayer:GetMouse()
             local CF=CFrame.new(script.Parent.Torso.Position,T.Position)*CFrame.new(0,0,-Z)
             T.Anchored=true
             T.CFrame=CF
-            local ray = Ray.new(tool.Handle.CFrame.p, (CF.p - script.Parent.Torso.CFrame.p).unit*300)
+            local ray = Ray.new(CF.p, (CF.p - script.Parent.Torso.CFrame.p).unit*300)
 
         local distance = (CF.p - script.Parent.Torso.CFrame.p).magnitude
         local rayPart = Instance.new("Part", workspace)
