@@ -10,13 +10,14 @@ M=game.Players.LocalPlayer:GetMouse()
         down=true
         while down and wait() do
             local T=M.Target
-            local cf=M.Hit
-            local CF=CFrame.new(script.Parent.Torso.Position,cf.p)*CFrame.new(0,0,-Z)
+            if not T then else
+            --local cf=M.Hit
+            local CF=CFrame.new(script.Parent.Torso.Position,T.Position)*CFrame.new(0,0,-Z)
             T.Anchored=true
             T.CFrame=CF
             local ray = Ray.new(tool.Handle.CFrame.p, (CF.p - script.Parent.Torso.CFrame.p).unit*300)
 
-        local distance = (CF - script.Parent.Torso.CFrame.p).magnitude
+        local distance = (CF.p - script.Parent.Torso.CFrame.p).magnitude
         local rayPart = Instance.new("Part", workspace)
         rayPart.Name= "RayPart"
         rayPart.BrickColor = BrickColor.new("Bright red")
@@ -27,6 +28,7 @@ M=game.Players.LocalPlayer:GetMouse()
         rayPart.CFrame = CFrame.new(CF.p, script.Parent.Torso.CFrame.p) * CFrame.new(0, 0, -distance/2)
         game.Debris:AddItem(rayPart,0.1)
         end
+            end
     end)
     
     M.Button1Up:connect(function()
