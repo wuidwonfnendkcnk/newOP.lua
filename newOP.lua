@@ -35,3 +35,4 @@ M=game.Players.LocalPlayer:GetMouse()
     M.Button1Up:connect(function()
         down=false
     end)
+    --a
