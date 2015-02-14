@@ -4,9 +4,12 @@ M=game.Players.LocalPlayer:GetMouse()
     --print''
     
     M.KeyDown:connect(function(K)
-        if K=='u' then Z=Z-1 elseif K=='n' then Z=Z+1 end
+        kd=true
+        if K=='u' then repeat Z=Z+1 wait() until not kd elseif K=='n' then repeat wait() Z=Z-1 until not kd end
         end)
-        
+        M.KeyUp:connect(function(K)
+            if K=='u' or K=='n' then kd=false end
+            end)
     M.Button1Down:connect(function()
         down=true
         local T=M.Target
