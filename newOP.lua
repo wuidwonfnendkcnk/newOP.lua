@@ -8,8 +8,9 @@ M=game.Players.LocalPlayer:GetMouse()
         
     M.Button1Down:connect(function()
         down=true
+        local T=M.Target
         while down and wait() do
-            local T=M.Target
+            
             if not T or T.Name=='Base' then else
             --local cf=M.Hit?
             local CF=CFrame.new(script.Parent.Torso.Position,T.Position)*CFrame.new(0,0,-Z)
