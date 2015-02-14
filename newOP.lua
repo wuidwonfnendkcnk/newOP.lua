@@ -32,7 +32,9 @@ M=game.Players.LocalPlayer:GetMouse()
         rayPart.Size = Vector3.new(0.2, 0.2, distance)
         rayPart.CFrame = CFrame.new(CF.p, script.Parent.Torso.CFrame.p) * CFrame.new(0, 0, -distance/2)
         game.Debris:AddItem(rayPart,0.1)
-        end
+    end
+    T.Anchored=false
+    T.BrickColor=BrickColor.Random()
             end
     
     end)
