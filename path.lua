@@ -14,7 +14,7 @@ part.Color = Color3.new(C,0,0)
 part.Anchored=true
 if KK['q'] then
   part.CanCollide=false
-char.Torso.CFrame=char.Torso.CFrame*CFrame.new(0,-1,0)
+char['Right Leg'].CFrame=char['Right Leg'].CFrame*CFrame.new(0,-1,0)
 end
 wait(0)
 part.CFrame = CFrame.new(char.Torso.Position)*CFrame.new(0,-3.3,0)
