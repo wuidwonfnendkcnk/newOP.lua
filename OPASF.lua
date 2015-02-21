@@ -1568,7 +1568,10 @@ coroutine.wrap(function()
         running=false
         end
     end
-    end)()
+end)()
+
+
+
 coroutine.wrap(function()
     while wait() do
         if invis then
@@ -1577,7 +1580,7 @@ coroutine.wrap(function()
             end
         else
             for i,v in pairs(char:children()) do
-                if v.Name=='SP' then else
+                if v.Name=='SP' or v.Name:match'Humanoid' then else
                 pcall(function() v.Transparency=0 end)
                 end
             end
