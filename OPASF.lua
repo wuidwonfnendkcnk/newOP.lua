@@ -739,7 +739,7 @@ local attacks = {
         end
     end
 }
-   ,AS
+   ,
    l={50,function()
    if invis then invis = false chakra =chakra+50*3 else
        invis=true
