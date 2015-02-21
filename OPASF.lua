@@ -681,6 +681,25 @@ coroutine.wrap(function()
                 end
         end)
         
+    require2=function(notIF,requmnt)
+    	local G=Instance.new("ScreenGui",plr.PlayerGui)
+    	local tl=Instance.new("TextLabel",G)
+    	tl.Text=notIF
+    	tl.Size=UDim2.new(0.5,0,0.1,0)
+    	tl.Position=UDim2.new(0.3,0,0.1,0)
+    	local A=0
+    	coroutine.wrap(function()
+    		while wait(0) and tl do
+    			A=A+1
+    			if A>30 then A=0 diff=-diff else diff=1 end
+    	tl.BackgroundColor=BrickColor.Random()
+    	tl.Rotation=tl.Rotation+diff
+     end
+end)()
+requmnt()
+tl:Destroy()
+G:Destroy()
+    	end
     
     coroutine.wrap(function()
     while wait() and char:findFirstChild'SP' do
@@ -740,8 +759,13 @@ local attacks = {
     end
 }
    ,
-   l={50,function()
-   if invis then invis = false chakra =chakra+50*3 else
+   l={0,function()
+   if invis then 
+   	require2('SelectPos',function() mouse=plr:GetMouse() mouse.Button1Down:connect(function() CLICK=true end) repeat wait() until CLICK end)
+   TPP(mouse.Hit)
+   invis = false chakra =chakra+50*3 
+   else
+   	chakra=chakra-50*3
        invis=true
        end
    end}
