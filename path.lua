@@ -11,9 +11,9 @@ part.FormFactor='Custom'
 part.Size=Vector3.new(2.5,0.1,2.5)
 part.Color = Color3.new(C,0,0)
 part.Anchored=true
-part.CFrame = CFrame.new(char.Torso.Position)*CFrame.new(0,2,0)
+part.CFrame = CFrame.new(char.Torso.Position)*CFrame.new(0,-2,0)
 if KK['q'] then
-char.HumanoidRootPart.CFrame=char.Torso.CFrame*CFrame.new(0,0.1,0)
+char.HumanoidRootPart.CFrame=char.Torso.CFrame*CFrame.new(0,-0.1,0)
 end
 end
 end)()
