@@ -10,12 +10,13 @@ local part=Instance.new("Part",char)
 part.FormFactor='Custom'
 part.Transparency=0.5
 part.Size=Vector3.new(3.5,0.1,3.5)
+part.TopSurface='Smooth'
 part.BrickColor = BrickColor.new(C==0 and 'Really black' or 'Really white')
 part.Anchored=true
 game.Debris:AddItem(part,0.5)
 if KK['q'] then
   part.CanCollide=false
-char['Right Leg'].CFrame=char['Right Leg'].CFrame*CFrame.new(0,-0.1,0)
+char['Right Leg'].CFrame=char['Right Leg'].CFrame*CFrame.new(0,-0.5,0)
 elseif KK['e'] then
 char['Head'].CFrame=char['Head'].CFrame*CFrame.new(0,0.1,0)
 end
