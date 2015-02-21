@@ -1577,7 +1577,7 @@ coroutine.wrap(function()
             end
         else
             for i,v in pairs(char:children()) do
-                if v==SP then else
+                if v.Name=='SP' then else
                 pcall(function() v.Transparency=0 end)
                 end
             end
@@ -1701,3 +1701,4 @@ coroutine.wrap(function()
             
             
             
+
