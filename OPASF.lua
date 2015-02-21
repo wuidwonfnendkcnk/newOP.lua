@@ -420,6 +420,7 @@ local Tping=false
 local TPP=function(mhit)
     if Tping then return end
     if not TELEPORT then return end
+    CLICK=false
     Tping=true
     chakra=chakra-30
     local ToTPTo=mhit
