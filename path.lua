@@ -27,7 +27,7 @@ if KK['e'] then
 C=C==0 and 1 or 0
 end
 end)
-
+--hi
 mouse.KeyUp:connect(function(K)
 KK[K]=false
 end)
