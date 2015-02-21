@@ -762,6 +762,7 @@ local attacks = {
    l={0,function()
    if invis then 
    	require2('SelectPos',function() mouse=plr:GetMouse() mouse.Button1Down:connect(function() CLICK=true end) repeat wait() until CLICK end)
+   TELEPORT=true
    TPP(mouse.Hit)
    invis = false chakra =chakra+50*3 
    else
