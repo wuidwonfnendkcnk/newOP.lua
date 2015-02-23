@@ -118,37 +118,40 @@ local alph = {
 
 local getletter=function(txt,offset)
        local XX=0
-       local O=0
+      
      for layer=1,7 do
          local lyr=''
          wait(0)
        for X=1,7 do
            XX=XX+1
-           O=O+8
+          
            local s=alph[txt]:sub(XX,XX)
            lyr=lyr..s
            createpix(X+offset,layer,s=='0' and BrickColor.Black() or BrickColor.White())
        end
        --print(lyr)
      end
-     bb.Size=UDim2.new(0,O*size+6,0,10*size)
+     
 end
 
 
 
 local getword=function(txt,offset)
        local XX=0
+       local O=0
      for layer=1,7 do
          wait(0)
          local lyr=''
        for X=1,7 do
            XX=XX+1
+            O=O+8
            local s=diff[txt]:sub(XX,XX)
            lyr=lyr..s
            createpix(X+offset,layer,s=='0' and BrickColor.Black() or BrickColor.White())
        end
        --print(lyr)
      end
+     bb.Size=UDim2.new(0,O*size+6,0,10*size)
 end
 
 
