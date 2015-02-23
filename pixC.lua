@@ -8,11 +8,14 @@ fr=Instance.new('Frame',bb)
 fr.Size=UDim2.new(3,0,1,0)
 fr.BackgroundTransparency=1
 fr.BorderSizePixel=0
+local size=10
+
 
 local createpix=function(x,y,Bw)
     local pix=Instance.new("TextLabel",fr)
-    pix.Size=UDim2.new(0,10,0,10)
-    pix.Position=UDim2.new(0,x*10,0,y*10)
+    pix.Size=UDim2.new(0,size,0,size)
+pixx.Position=UDim2.new(0,size*x,0,0)
+pix:TweenPosition(UDim2.new(0,size*x,0,size*y),nil,nil,.2)
 pix.Text=''
 --pix.BorderSizePixel=0
 pix.BackgroundColor=Bw
