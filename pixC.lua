@@ -1,13 +1,15 @@
 local plr=game.Players.LocalPlayer
 local char=script.Parent
 script.Parent=plr.PlayerGui
-local bb=Instance.new('BillboardGui',plr.Character.Head)
-bb.StudsOffset=Vector3.new(1,2,0)
-bb.Size=UDim2.new(0,500,0,300)
+bb=Instance.new('BillboardGui',plr.Character.Head)
+bb.StudsOffset=Vector3.new(0,4,0)
+bb.Size=UDim2.new(0,100,0,50)
 fr=Instance.new('Frame',bb)
-fr.Size=UDim2.new(3,0,1,0)
-fr.BackgroundTransparency=1
-fr.BorderSizePixel=0
+fr.Size=UDim2.new(1,0,1,0)
+fr.BackgroundTransparency=.5 
+fr.BackgroundColor3=Color3.new(0,0,0)
+fr.BorderSizePixel=3 
+
 local size=10
 
 
@@ -116,17 +118,20 @@ local alph = {
 
 local getletter=function(txt,offset)
        local XX=0
+       local O=0
      for layer=1,7 do
          local lyr=''
          wait(0)
        for X=1,7 do
            XX=XX+1
+           O=O+8
            local s=alph[txt]:sub(XX,XX)
            lyr=lyr..s
            createpix(X+offset,layer,s=='0' and BrickColor.Black() or BrickColor.White())
        end
        --print(lyr)
      end
+     bb.Size=UDim2.new(0,O*size+6,0,10*size)
 end
 
 
