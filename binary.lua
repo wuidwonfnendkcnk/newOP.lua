@@ -67,7 +67,7 @@ _G.change = function(newB)
 Binary=newB
 for i=1,#Binary do
 local main=Binary:sub(i,i)
-local obv=things[i]
+local obv=things[''..i..'']
 wait(0)
 if not obv then else
 if main=='0' then
