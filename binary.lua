@@ -76,7 +76,6 @@ desc=function()
   print'anchorfunction'
   end}
 
-  }
 }
 
 _G.change = function(newB)
