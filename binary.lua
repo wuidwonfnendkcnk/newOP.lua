@@ -1,17 +1,35 @@
-local Binary='01'
+local Binary='000000000'
 local Model=Instance.new("Model",Workspace)
 Instance.new("Part",Model)
 Instance.new("Part",Model).Name='ABC'
 local things = {
-{on=function() Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,0.1,0) end
-, off=function() Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,-0.1,0) end}
+  
+{on=function() 
+  Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,0.1,0) 
+end,
+off=function() 
+ Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,-0.1,0) 
+end
+}
+
 ,
+
 {on=function()
-Model.Part.CFrame=Model.Part.CFrame*CFrame.new(0,0,-1)
+ Model.Part.CFrame=Model.Part.CFrame*CFrame.new(0,0,-1)
 end,
 off = function()
-Model.ABC.CFrame=Model.Part.CFrame*CFrame.new(0,2,0)
+ Model.ABC.CFrame=Model.Part.CFrame*CFrame.new(0,2,0)
 end}
+
+,
+
+{on=function()
+ Model.Name=Binary
+end,
+off = function()
+ Model.Name='Model'
+end}
+
 }
 
 _G.change = function(newB)
