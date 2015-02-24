@@ -1,5 +1,5 @@
 local Binary='000110000'
-local Model=Instance.new("Model",script.Parent)
+local Model=Instance.new("Model",owner.Character)
 Instance.new("Part",Model)
 Instance.new("Part",Model).Name='ABC'
 
