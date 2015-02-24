@@ -1,7 +1,13 @@
-local Binary='000000000'
+local Binary='000110000'
 local Model=Instance.new("Model",Workspace)
 Instance.new("Part",Model)
 Instance.new("Part",Model).Name='ABC'
+
+Anchor=function(M,Anc)
+  for i,v in pairs(M:children()) do
+    if v:IsA'Model' then Anchor(v) else pcall(function() v.Anchored=Anc end)  end
+    end
+end
 
 local on1=false
 
@@ -43,7 +49,16 @@ end,
 off=function()
   on1=false
 end
+
+,
   
+  {on=function()
+ Anchor(Model,true)
+end,
+off = function()
+ Anchor(Model,false)
+end}
+
   }
 }
 
