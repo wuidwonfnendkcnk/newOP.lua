@@ -43,11 +43,11 @@ desc=function()
 end,
 off = function()
  Model.Name='Model'
-end},
+end,
 desc=function()
   print'namingfunction'
   print(Model.Name)
-  end
+  end}
 ,
 ['4']=
 {on=function()
