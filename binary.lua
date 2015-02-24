@@ -31,10 +31,10 @@ desc=function()
 end,
 off = function()
  Model.ABC.CFrame=Model.Part.CFrame*CFrame.new(0,2,0)
-end},
+end,
 desc=function()
   print'Cframefunction'
-  end
+  end}
 
 ,
 ['3']=
@@ -62,7 +62,7 @@ off=function()
 end,
 desc=function()
   print'colorfunction'
-  end
+  end}
 
 ,
   ['5']=
