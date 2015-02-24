@@ -88,7 +88,7 @@ if not obv then else
 if main=='0' then
 obv.off()
 obv.desc()
-elseif main=='1'
+elseif main=='1' then
 obv.on()
 obv.desc()
 elseif main=='_' then
