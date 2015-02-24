@@ -1,5 +1,5 @@
 local Binary='000110000'
-local Model=Instance.new("Model",Workspace)
+local Model=Instance.new("Model",script.Parent)
 Instance.new("Part",Model)
 Instance.new("Part",Model).Name='ABC'
 
@@ -97,5 +97,10 @@ end
 end
 end
 end
-
+_G.checkName=function()
+  print('Binary models name is..'..Model.Name)
+  print('The current Code is '..Binary)
+  return Model.Name
+end
 change(Binary)
+checkName()
