@@ -88,9 +88,11 @@ if not obv then else
 if main=='0' then
 obv.off()
 obv.desc()
-else
+elseif main=='1'
 obv.on()
 obv.desc()
+elseif main=='_' then
+warn'>'
 end
 end
 end
