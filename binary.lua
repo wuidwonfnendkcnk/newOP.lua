@@ -10,14 +10,25 @@ Anchor=function(M,Anc)
 end
 
 local on1=false
-
+local r=false
+local ang=0
 local things = {
  ['1']= 
 {on=function() 
+  r=true
+  coroutine.wrap(function()
+    repeat wait()
+      ang=ang+0.1
   Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,0.1,0) 
+until not r
+end)()
 end,
 off=function() 
+  r = false
+  for i=1,ang do
  Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,-0.1,0) 
+ wait()
+ end
 end,
 desc=function()
   print'rotatefunction'
