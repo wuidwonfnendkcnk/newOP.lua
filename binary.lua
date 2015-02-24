@@ -2,6 +2,9 @@ local Binary='000000000'
 local Model=Instance.new("Model",Workspace)
 Instance.new("Part",Model)
 Instance.new("Part",Model).Name='ABC'
+
+local on1=false
+
 local things = {
   
 {on=function() 
@@ -29,7 +32,19 @@ end,
 off = function()
  Model.Name='Model'
 end}
-
+,
+{on=function()
+  coroutine.wrap(function()
+    on1=true
+    repeat wait() Model.Part.BrickColor=BrickColor.Random() until not on1
+    Model.Part.BrickColor=BrickColor.new('abc')
+    end)()
+end,
+off=function()
+  on1=false
+end
+  
+  }
 }
 
 _G.change = function(newB)
