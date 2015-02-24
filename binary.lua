@@ -18,7 +18,10 @@ local things = {
 end,
 off=function() 
  Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,-0.1,0) 
-end
+end,
+desc=function()
+  print'rotatefunction'
+  end
 }
 
 ,
@@ -28,7 +31,10 @@ end
 end,
 off = function()
  Model.ABC.CFrame=Model.Part.CFrame*CFrame.new(0,2,0)
-end}
+end},
+desc=function()
+  print'Cframefunction'
+  end
 
 ,
 ['3']=
@@ -37,7 +43,11 @@ end}
 end,
 off = function()
  Model.Name='Model'
-end}
+end},
+desc=function()
+  print'namingfunction'
+  print(Model.Name)
+  end
 ,
 ['4']=
 {on=function()
@@ -49,7 +59,10 @@ end}
 end,
 off=function()
   on1=false
-end
+end,
+desc=function()
+  print'colorfunction'
+  end
 
 ,
   ['5']=
@@ -58,7 +71,10 @@ end
 end,
 off = function()
  Anchor(Model,false)
-end}
+end,
+desc=function()
+  print'anchorfunction'
+  end}
 
   }
 }
@@ -72,8 +88,10 @@ wait(0)
 if not obv then else
 if main=='0' then
 obv.off()
+obv.desc()
 else
 obv.on()
+obv.desc()
 end
 end
 end
