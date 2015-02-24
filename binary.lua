@@ -12,7 +12,7 @@ end
 local on1=false
 
 local things = {
-  
+ ['1']= 
 {on=function() 
   Model.Part.CFrame=Model.Part.CFrame*CFrame.Angles(0,0.1,0) 
 end,
@@ -22,7 +22,7 @@ end
 }
 
 ,
-
+['2']=
 {on=function()
  Model.Part.CFrame=Model.Part.CFrame*CFrame.new(0,0,-1)
 end,
@@ -31,7 +31,7 @@ off = function()
 end}
 
 ,
-
+['3']=
 {on=function()
  Model.Name=Binary
 end,
@@ -39,6 +39,7 @@ off = function()
  Model.Name='Model'
 end}
 ,
+['4']=
 {on=function()
   coroutine.wrap(function()
     on1=true
@@ -51,7 +52,7 @@ off=function()
 end
 
 ,
-  
+  ['5']=
   {on=function()
  Anchor(Model,true)
 end,
