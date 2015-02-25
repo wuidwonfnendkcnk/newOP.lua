@@ -37,10 +37,14 @@ while wait(0) and Mod and Mod.Parent~=nil do
 for i=1,360,(360/100) do
   local diff=1
   for _=1,360,(360/100) do
-local N=Mod[tostring(_)]
+    if Mod then
+local N=Mod:findFirstChild(tostring(_))
   diff=diff+(360/100)
 if Cha then Pos=Cha.Position end
+if N then
 N.CFrame = CFrame.new(Pos)*CFrame.Angles(0,math.rad(i+diff),0)*CFrame.new(0,0,-4)
+end
+end
 end
 
 wait(0)
