@@ -32,13 +32,15 @@ end
 game.Debris:AddItem(Mod,5)
 
 local nw=coroutine.wrap(function()
-local NN=1
+
 while wait(0) and Mod and Mod.Parent~=nil do
-for i=NN,360+NN,(360/100) do
-local N=Mod[tostring(i)]
+for i=1,360,(360/100) do
+  for _=1,360,(360/100) do
+local N=Mod[tostring(_)]
 if Cha then Pos=Cha.Position end
 N.CFrame = CFrame.new(Pos)*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,0,-4)
-NN=NN+1
+end
+
 wait(0)
 end
 
