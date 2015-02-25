@@ -35,10 +35,12 @@ local nw=coroutine.wrap(function()
 
 while wait(0) and Mod and Mod.Parent~=nil do
 for i=1,360,(360/100) do
+  local diff=1
   for _=1,360,(360/100) do
 local N=Mod[tostring(_)]
+  diff=diff+(360/100)
 if Cha then Pos=Cha.Position end
-N.CFrame = CFrame.new(Pos)*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,0,-4)
+N.CFrame = CFrame.new(Pos)*CFrame.Angles(0,math.rad(i+diff),0)*CFrame.new(0,0,-4)
 end
 
 wait(0)
