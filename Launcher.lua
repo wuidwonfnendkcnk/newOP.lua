@@ -59,7 +59,7 @@ end
 
 Mouse.Button1Down:connect(function()
 local pos=Mouse.Hit
-local t=mouse.Target
+local t=Mouse.Target
 if not t.Parent:findFirstChild'Humanoid' then t=nil end
 Surround(pos,t)
 end)
