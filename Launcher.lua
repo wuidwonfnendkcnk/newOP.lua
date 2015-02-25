@@ -69,5 +69,16 @@ Mouse.Button1Down:connect(function()
 local pos=Mouse.Hit.p
 local t=Mouse.Target
 if not t.Parent:findFirstChild'Humanoid' then t=nil end
+local raypart=Instance.new("Part",Char)
+raypart.Size=Vector3.new(1,1,4)
+raypart.Anchored=true
+raypart.CFrame=CFrame.new(Char.Torso.Position,pos)
+for i=4,((pos-Char.Torso.Position).magnitude)-3, 4 do
+wait(0)
+r=raypart:clone()
+r.CFrame=raypart.CFrame*CFrame.new(0,0,-4)
+raypart=r
+raypart.Parent=Char
+end
 Surround(pos,t)
 end)
