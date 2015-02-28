@@ -5,7 +5,7 @@ fails[#fails+1]=Fail
 end
 
 
-local Chat=function(c,M) game:service'Chat':Chat(c.Head,M) game:service'Chat':Chat(c.Torso,M) end
+local Chat=function(c,M) game:service'Chat':Chat(c.Head,'I '..M) game:service'Chat':Chat(c.Torso,'I '..M) end
 A'fail!'
 A'am a p00phead'
 A'cri 2 mommi'
