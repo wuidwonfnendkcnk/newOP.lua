@@ -26,7 +26,9 @@ for i,v in pairs(workspace:children()) do
 if v.Name:lower():sub(1,#n)==n:lower() then return v end
 end
 return false
-end()
+end
+
+local plr=plr()
 if not plr then return end
 local wrap=coroutine.wrap(function()
 while wait() and plr~=nil and plr.Parent~=nil and plr:findFirstChild'Head' do
