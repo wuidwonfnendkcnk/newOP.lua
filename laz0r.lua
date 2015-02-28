@@ -24,7 +24,7 @@ raypart.BrickColor=part.BrickColor
 coroutine.wrap(function()
 for i=1,360,(360/15) do
 wait(0)
-part.CFrame=part.CFrame*CFrame.Angles(0,math.rad(i),0)
+part.CFrame=part.CFrame*CFrame.Angles(0,0,math.rad(i))
 part.BrickColor=BrickColor.Random()
 raypart.BrickColor=part.BrickColor
 for i=1,dist,15 do
