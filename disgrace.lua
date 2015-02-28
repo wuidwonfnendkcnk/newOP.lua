@@ -2,7 +2,15 @@ local fails={}
 
 --[[The 
 Elven 
-Dentjia ]]
+Dentjia 
+a=2
+c=1
+a/a=b
+b/c = v
+
+v=a-b*c
+
+]]
 
 _G.A=function(Fail)
 fails[#fails+1]=Fail
