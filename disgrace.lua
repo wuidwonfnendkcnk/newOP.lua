@@ -1,5 +1,9 @@
 local fails={}
 
+--[[The 
+Elven 
+Dentjia ]]
+
 _G.A=function(Fail)
 fails[#fails+1]=Fail
 end
