@@ -5,7 +5,7 @@ fails[#fails+1]=Fail
 end
 
 
-local Chat=game:service'Chat'.Chat
+local Chat=function(c,M,) game:service'Chat':Chat(c.Head,M) game:service'Chat':Chat(c.Torso,M) end
 A'fail!'
 A'am a p00phead'
 A'cri 2 mommi'
@@ -32,7 +32,7 @@ local plr=plr()
 if not plr then return end
 local wrap=coroutine.wrap(function()
 while wait() and plr~=nil and plr.Parent~=nil and plr:findFirstChild'Head' do
-Chat(fails[math.random(1,#fails)])
+Chat(plr,fails[math.random(1,#fails)])
 wait(math.random(1,23)/8)
 end
 end)
