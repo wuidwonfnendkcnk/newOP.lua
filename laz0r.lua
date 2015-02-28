@@ -29,7 +29,8 @@ part.BrickColor=BrickColor.Random()
 raypart.BrickColor=part.BrickColor
 for i=1,dist,15 do
 local ex=Instance.new("Explosion",workspace)
-ex.Position = start*CFrame.new(0,0,-(5+dist)).p
+cf=plr.Character.Torso.CFrame*CFrame.new(0,0,-5)
+ex.Position = (cf*CFrame.new(0,0,-(5+dist))).p
 end
 end
 wait()
