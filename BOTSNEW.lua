@@ -1,7 +1,7 @@
 local Ray=function(CHAR)
 CHAR.Torso.Anchored=true
 r=function() return math.random(-500,500) end
-mouse = {Hit = {p=CFrame.new(r(),r(),r()).p}}
+mouse = {Hit = {p=CFrame.new(r(),math.random(-3,10),r()).p}}
 local part=Instance.new("Part",CHAR)
 part.Size=Vector3.new(10,10,1)
 part.Anchored=true
