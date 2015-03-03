@@ -1,5 +1,4 @@
 local Ray=function(CHAR)
-  NLS([[local CHAR = Workspace:findFirstChild(']]..CHAR.Name..[[') 
 CHAR.Torso.Anchored=true
 r=function() return math.random(-500,500) end
 mouse = {Hit = {p=CFrame.new(r(),r(),r()).p}}
@@ -54,7 +53,7 @@ coroutine.wrap(function()
     part.Size=part.Size+Vector3.new(3,3,0)
     part.CFrame=cff
     end
-  end)()]],CHAR)
+  end)()
 end
 
 
