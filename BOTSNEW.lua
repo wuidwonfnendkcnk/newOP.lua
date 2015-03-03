@@ -12,7 +12,7 @@ local Ray=function(CHAR)
 CHAR.Torso.Anchored=true
 r=function() return math.random(-500,500) end
 mouse = {Hit = {p=CFrame.new(r(),math.random(-3,10),r()).p}}
-  if math.random(-1000,1000)<math.random(-1000,1000) then
+  if math.random(-100,100)<math.random(-100,100) then
     mouse.Hit.p=GetRandom().Torso.CFrame.p
     CHAR.Torso.CFrame=CFrame.new(CHAR.Torso.Position,mouse.Hit.p)
     CHAR.Torso.Anchored=false
@@ -126,7 +126,7 @@ clone.Name=names[math.random(1,#names)]
           while wait() do
             z=math.random(10)
             wait(z)
-            if math.random(1000)<math.random(1000) and charr then
+            if math.random(10000)<math.random(1000) and charr then
                         Ray(charr)
                         end
             end
@@ -138,7 +138,7 @@ coroutine.wrap(function()
   while wait() do
       local N=names[math.random(1,#names)]
           local NN=N
-      for i=1,20 do
+      for i=1,11 do
           wait()
       local c=clone:clone()
       c.Parent=Workspace
