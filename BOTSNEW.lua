@@ -41,6 +41,7 @@ raypart.Size=Vector3.new(2,2,dist)
 raypart.Anchored=true
 raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
 raypart.BrickColor=part.BrickColor
+raypart.Name='ray'
 coroutine.wrap(function()
   
   coroutine.wrap(function()
