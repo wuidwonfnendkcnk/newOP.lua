@@ -10,9 +10,11 @@ local part=Instance.new("Part",plr.Character)
 part.Size=Vector3.new(10,10,1)
 part.Anchored=true
 part.Transparency=0.3
-part.CFrame=plr.Character.Torso.CFrame*CFrame.new(0,0,-5)
 local p=mouse.Hit.p
 local start=plr.Character.Torso.CFrame*CFrame.new(0,0,-5)
+part.CFrame=CFrame.new(start.p,p)*CFrame.new(0,0,-10)
+
+
 local CF=CFrame.new(start.p,p)
 local dist=(start.p-p).magnitude
 if dist>400 then dist=400 end
