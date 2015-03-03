@@ -12,7 +12,8 @@ part.Anchored=true
 part.Transparency=0.3
 local p=mouse.Hit.p
 local start=plr.Character.Torso.CFrame*CFrame.new(0,0,-5)
-part.CFrame=CFrame.new(start.p,p)
+local s=start*CFrame.new(0,0,5)
+part.CFrame=CFrame.new(start.p,p)*CFrame.new(0,0,-7)
 
 
 local CF=CFrame.new(start.p,p)
