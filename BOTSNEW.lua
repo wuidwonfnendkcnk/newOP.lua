@@ -97,12 +97,19 @@ clone.Name=names[math.random(1,#names)]
                         charr.Humanoid.Jump=true
                         end
                         
-                        if math.random(1000)<math.random(1000) then
-                        Ray(charr)
-                        end
+                        
                  
                 end
         end)
+        coroutine.wrap(function()
+          while wait() do
+            z=math.random(10)
+            wait(z)
+            if math.random(1000)<math.random(1000) and charr then
+                        Ray(charr)
+                        end
+            end
+          end)()
         nw()
     end
         
