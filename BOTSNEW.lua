@@ -59,7 +59,7 @@ end
 
 
 
-char=script.Parent
+char=owner.Character
 char.Archivable=true
 clone=char:clone()
 names = {}
