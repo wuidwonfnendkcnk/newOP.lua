@@ -54,7 +54,7 @@ end)()
 coroutine.wrap(function()
   while wait(0) and part and part.Parent~=nil do
     cff=part.CFrame
-    part.Size=part.Size+Vector3.new(1,1,1)
+    part.Size=part.Size+Vector3.new(1,1,0)
     part.CFrame=cff
     end
   end)()
