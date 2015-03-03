@@ -30,6 +30,13 @@ raypart.BrickColor=part.BrickColor
 local A=1
 local B=5
 local C=15
+end
+wait()
+game.Debris:AddItem(part,0.1)
+game.Debris:AddItem(raypart,0.2)
+plr.Character.Torso.Anchored=false
+end)()
+coroutine.wrap(function()
 for i=1,dist,30 do
 local ex=Instance.new("Explosion",workspace)
 CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-5)
@@ -37,10 +44,5 @@ ex.Position = (CF).p
 A=A+1
 if A<B then wait(0) elseif A>=C then A=1 end
 end
-end
-wait()
-game.Debris:AddItem(part,0.1)
-game.Debris:AddItem(raypart,0.2)
-plr.Character.Torso.Anchored=false
 end)()
 end)
