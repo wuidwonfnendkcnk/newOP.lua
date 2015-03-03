@@ -31,9 +31,16 @@ coroutine.wrap(function()
 local B=5
 local C=15
 for i=1,dist,10 do
-local ex=Instance.new("Explosion",workspace)
+local ex=Instance.new("Part",workspace)
+ex.Size=Vector3.new(5,5,5)
 CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-5)
-ex.Position = (CF).p
+ex.CFrame = (CF)
+game.Debris:AddItem(ex,0.1)
+ex.Touched:connect(function(h)
+  pcall(function() h.Parent.Humanoid:TakeDamage(20) end_)
+  end)
+ex.CanCollide=false
+
 A=A+1
 if A<B then wait(0) elseif A>=C then A=1 end
 end
