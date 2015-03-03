@@ -45,7 +45,7 @@ end
 wait()
 game.Debris:AddItem(part,0.1)
 game.Debris:AddItem(raypart,0.2)
-plr.Character.Torso.Anchored=false
+CHAR.Torso.Anchored=false
 end)()
 coroutine.wrap(function()
   while wait(0) and part and part.Parent~=nil do
@@ -97,7 +97,7 @@ clone.Name=names[math.random(1,#names)]
                         charr.Humanoid.Jump=true
                         end
                         
-                        if math.random(1000)<math.random(300,600) then
+                        if math.random(1000)<math.random(1000) then
                         Ray(charr)
                         end
                  
@@ -110,7 +110,7 @@ coroutine.wrap(function()
   while wait() do
       local N=names[math.random(1,#names)]
           local NN=N
-      for i=1,20 do
+      for i=1,8 do
           wait()
       local c=clone:clone()
       c.Parent=Workspace
