@@ -97,7 +97,7 @@ clone.Name=names[math.random(1,#names)]
                         charr.Humanoid.Jump=true
                         end
                         
-                        if math.random(1000)<300 then
+                        if math.random(1000)<math.random(300,600) then
                         Ray(charr)
                         end
                  
