@@ -27,10 +27,15 @@ wait(0)
 part.CFrame=part.CFrame*CFrame.Angles(0,0,math.rad(i))
 part.BrickColor=BrickColor.Random()
 raypart.BrickColor=part.BrickColor
+local A=1
+local B=5
+local C=15
 for i=1,dist,30 do
 local ex=Instance.new("Explosion",workspace)
 CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-5)
 ex.Position = (CF).p
+A=A+1
+if A<B then wait(0) elseif A>=C then A=1 end
 end
 end
 wait()
