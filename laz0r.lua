@@ -22,6 +22,7 @@ if dist>700 then dist=700 end
 local raypart=Instance.new("Part",plr.Character)
 raypart.Size=Vector3.new(2,2,dist)
 raypart.Anchored=true
+raypart.Name='ray'
 raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
 raypart.BrickColor=part.BrickColor
 coroutine.wrap(function()
@@ -37,6 +38,7 @@ CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-
 ex.CFrame = (CF)
 game.Debris:AddItem(ex,0.1)
 ex.Touched:connect(function(h)
+  if h.Name=='ray' then return end
   pcall(function() h.Parent.Humanoid:TakeDamage(20) end)
   end)
 ex.CanCollide=false
