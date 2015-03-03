@@ -16,7 +16,7 @@ local s=start*CFrame.new(0,0,5)
 part.CFrame=CFrame.new(start.p,p)*CFrame.new(0,0,-7)
 
 
-local CF=CFrame.new(start.p,p)
+local CF=part.CFrame
 local dist=(start.p-p).magnitude
 if dist>400 then dist=400 end
 local raypart=Instance.new("Part",plr.Character)
