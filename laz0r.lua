@@ -37,7 +37,7 @@ CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-
 ex.CFrame = (CF)
 game.Debris:AddItem(ex,0.1)
 ex.Touched:connect(function(h)
-  pcall(function() h.Parent.Humanoid:TakeDamage(20) end_)
+  pcall(function() h.Parent.Humanoid:TakeDamage(20) end)
   end)
 ex.CanCollide=false
 
