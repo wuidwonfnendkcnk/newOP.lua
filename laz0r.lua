@@ -7,6 +7,7 @@ mouse.Button1Down:connect(function()
 if not active then return end
 plr.Character.Torso.Anchored=true
 local part=Instance.new("Part",plr.Character)
+part.Transparency=1
 part.Size=Vector3.new(10,10,1)
 part.Anchored=true
 part.Transparency=0.3
@@ -23,9 +24,32 @@ local raypart=Instance.new("Part",plr.Character)
 raypart.Size=Vector3.new(2,2,dist)
 raypart.Anchored=true
 raypart.Name='ray'
+raypart.Transparency=1
 raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
 raypart.BrickColor=part.BrickColor
 coroutine.wrap(function()
+  
+  
+
+for i=1,dist/3,5 do
+wait(0)
+part.CFrame=part.CFrame*CFrame.Angles(0,0,math.rad(i))
+part.BrickColor=BrickColor.Random()
+raypart.BrickColor=part.BrickColor
+
+end
+wait()
+game.Debris:AddItem(part,0.1)
+game.Debris:AddItem(raypart,0.2)
+plr.Character.Torso.Anchored=false
+end)()
+coroutine.wrap(function()
+ for i=1,dist/3,5 do
+   wait(0)
+    cff=part.CFrame
+    part.Size=part.Size+Vector3.new(3,3,0)
+    part.CFrame=cff
+  end
   
   coroutine.wrap(function()
   local A=1
@@ -48,23 +72,7 @@ if A<B then wait(0) elseif A>=C then A=1 end
 end
 end)()
 
-for i=1,360,(360/15) do
-wait(0)
-part.CFrame=part.CFrame*CFrame.Angles(0,0,math.rad(i))
-part.BrickColor=BrickColor.Random()
-raypart.BrickColor=part.BrickColor
-
-end
-wait()
-game.Debris:AddItem(part,0.1)
-game.Debris:AddItem(raypart,0.2)
-plr.Character.Torso.Anchored=false
 end)()
-coroutine.wrap(function()
-  while wait(0) and part and part.Parent~=nil do
-    cff=part.CFrame
-    part.Size=part.Size+Vector3.new(3,3,0)
-    part.CFrame=cff
-    end
-  end)()
+
+
 end)
