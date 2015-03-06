@@ -39,14 +39,15 @@ raypart.BrickColor=part.BrickColor
 
 end
 wait()
-game.Debris:AddItem(part,0.1)
-game.Debris:AddItem(raypart,0.2)
+game.Debris:AddItem(part,1)
+game.Debris:AddItem(raypart,0.5)
 plr.Character.Torso.Anchored=false
 end)()
 coroutine.wrap(function()
  for i=1,dist/3,5 do
    wait(0)
    if i>400/3 then
+     wait(0)
      game.Lighting.Ambient=BrickColor.Random().Color
      game.Lighting.OutdoorAmbient=BrickColor.Random().Color
      end
