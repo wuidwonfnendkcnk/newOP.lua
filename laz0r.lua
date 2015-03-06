@@ -46,7 +46,7 @@ end)()
 coroutine.wrap(function()
  for i=1,dist/3,5 do
    wait(0)
-   if i>400 then
+   if i>400/3 then
      game.Lighting.Ambient=BrickColor.Random().Color
      end
     cff=part.CFrame
