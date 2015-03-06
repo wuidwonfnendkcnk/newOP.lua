@@ -52,12 +52,15 @@ coroutine.wrap(function()
   end
   
   coroutine.wrap(function()
+    raypart.Transparency=0
   local A=1
 local B=5
 local C=15
 for i=1,dist,10 do
 local ex=Instance.new("Part",workspace)
-ex.Size=Vector3.new(5,5,5)
+ex.Size=Vector3.new(7,7,7)
+ex.Shape='Ball'
+ex.BrickColor=BrickColor.Random()
 CF=raypart.CFrame*CFrame.new(0,0,dist/2)*CFrame.new(0,0,-(i+5))*CFrame.new(0,0,-5)
 ex.CFrame = (CF)
 game.Debris:AddItem(ex,0.1)
