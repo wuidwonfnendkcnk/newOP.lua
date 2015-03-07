@@ -50,6 +50,8 @@ coroutine.wrap(function()
      wait(0)
      game.Lighting.Ambient=BrickColor.Random().Color
      game.Lighting.OutdoorAmbient=BrickColor.Random().Color
+     CFF=raypart.CFrame
+     raypart.Size,raypart.CFrame=raypart.Size+Vector3.new(1,1,1),CFF
      end
     cff=part.CFrame
     part.Size=part.Size+Vector3.new(3,3,0)
