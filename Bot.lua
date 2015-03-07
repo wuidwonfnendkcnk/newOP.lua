@@ -18,7 +18,7 @@ Main = {
 ,
 
 Response = {
-{"I am botty, how goes it",function(plr) return ", "..plr.Name.."?" end}
+{"I am botty, how goes it",function(self,plr) return (", "..plr.Name.."?") end}
 }
 }
 
