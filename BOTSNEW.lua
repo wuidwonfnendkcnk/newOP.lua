@@ -1,5 +1,6 @@
-GetRandom=function()
+GetRandom=function(targ)
   local chars={}
+  if targ then return targ end
   for i,v in pairs(Workspace:children()) do
     if v:findFirstChild'Humanoid' and v:findFirstChild'Torso' then
       chars[#chars+1]=v
@@ -8,12 +9,20 @@ GetRandom=function()
   return chars[math.random(1,#chars)]
   end
 
-local Ray=function(CHAR)
+checkwithinvicinity=function(pos)
+  for i,v in pairs(bots) do
+    if (v.Torso.Position-pos).magnitude<20 then
+      Ray(v,lastFirer)
+      end
+    end
+  end
+
+local Ray=function(CHAR,Targ)
 CHAR.Torso.Anchored=true
 r=function() return math.random(-500,500) end
 mouse = {Hit = {p=CFrame.new(r(),math.random(-3,10),r()).p}}
-  if math.random(100)<30 then
-    mouse.Hit.p=GetRandom().Torso.CFrame.p
+  if math.random(100)<30 or Targ then
+    mouse.Hit.p=GetRandom(Targ).Torso.CFrame.p
     CHAR.Torso.CFrame=CFrame.new(CHAR.Torso.Position,mouse.Hit.p)
     CHAR.Torso.Anchored=false
    for i=1,20 do
@@ -32,7 +41,7 @@ local start=CHAR.Torso.CFrame*CFrame.new(0,0,-5)
 local s=start*CFrame.new(0,0,5)
 part.CFrame=CFrame.new(start.p,p)*CFrame.new(0,0,-7)
 
-
+lastFirer=CHAR
 local CF=part.CFrame
 local dist=(start.p-p).magnitude
 if dist>700 then dist=700 end
@@ -110,13 +119,13 @@ if DIE then
    game.Debris:AddItem(Aa,0.2)
   end
 end)()
-
+checkwithinvicinity(CF.p)
 end)()
 
 
 end
 
-
+bots={}
 
 char=owner.Character
 char.Archivable=true
@@ -182,6 +191,7 @@ coroutine.wrap(function()
       local c=clone:clone()
       c.Parent=Workspace
       c.Name=N
+      bots[#bots+1]=c
           wait()
           c:MoveTo(Workspace.Base.Position+Vector3.new(r(),0,r()))
               move(c)
