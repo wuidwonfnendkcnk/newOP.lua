@@ -29,7 +29,7 @@ Response = {
 
 local Chat=function(respT,PLR)
 T=(respT[1]..respT[2](nil,PLR))
-  game:service'Chat':Chat(Bot,T)
+  game:service'Chat':Chat(BOT,T)
 end
 
 local findmatch=function(P,txt)
