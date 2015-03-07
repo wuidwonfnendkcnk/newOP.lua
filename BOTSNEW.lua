@@ -39,10 +39,11 @@ if dist>700 then dist=700 end
 local raypart=Instance.new("Part",CHAR)
 raypart.Size=Vector3.new(2,2,dist)
 raypart.Anchored=true
-raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
-raypart.BrickColor=part.BrickColor
 raypart.Name='ray'
 raypart.Transparency=1
+raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
+raypartCframe=raypart.CFrame
+raypart.BrickColor=part.BrickColor
 coroutine.wrap(function()
   
   
@@ -57,15 +58,20 @@ end
 wait()
 game.Debris:AddItem(part,1)
 game.Debris:AddItem(raypart,0.5)
-CHAR.Torso.Anchored=false
+plr.Character.Torso.Anchored=false
 end)()
 coroutine.wrap(function()
  for i=1,dist/3,5 do
    wait(0)
    if i>400/3 then
-     wait(0)
+     DIE=true
      game.Lighting.Ambient=BrickColor.Random().Color
      game.Lighting.OutdoorAmbient=BrickColor.Random().Color
+     CFF=raypart.CFrame
+     raypart.FormFactor='Custom'
+     raypart.Size=raypart.Size+Vector3.new(0.05,0.05,0.05)
+     wait(0)
+     raypart.CFrame=raypartCframe
      end
     cff=part.CFrame
     part.Size=part.Size+Vector3.new(3,3,0)
@@ -90,13 +96,23 @@ ex.Touched:connect(function(h)
   pcall(function() h.Parent.Humanoid:TakeDamage(20) end)
   end)
 ex.CanCollide=false
-
+Aa=ex:clone()
 A=A+1
 if A<B then wait(0) elseif A>=C then A=1 end
 end
+wait()
+if DIE then
+  DIE=false
+   Instance.new("Explosion",Workspace).Position=CF.p
+   Aa.Parent=workspace
+   Aa.BrickColor=BrickColor.Random()
+   Aa.CFrame=CF
+   game.Debris:AddItem(Aa,0.2)
+  end
 end)()
 
 end)()
+
 
 end
 
