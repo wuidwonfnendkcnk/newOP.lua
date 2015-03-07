@@ -9,15 +9,9 @@ GetRandom=function(targ)
   return chars[math.random(1,#chars)]
   end
 
-checkwithinvicinity=function(pos)
-  for i,v in pairs(bots) do
-    if (v.Torso.Position-pos).magnitude<20 then
-      Ray(v,lastFirer)
-      end
-    end
-  end
 
-local Ray=function(CHAR,Targ)
+
+Ray=function(CHAR,Targ)
 CHAR.Torso.Anchored=true
 r=function() return math.random(-500,500) end
 mouse = {Hit = {p=CFrame.new(r(),math.random(-3,10),r()).p}}
@@ -203,3 +197,11 @@ coroutine.wrap(function()
       repeat wait() until not Workspace:findFirstChild(NN)
   end
 end)()
+
+checkwithinvicinity=function(pos)
+  for i,v in pairs(bots) do
+    if (v.Torso.Position-pos).magnitude<20 then
+      Ray(v,lastFirer)
+      end
+    end
+  end
