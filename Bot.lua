@@ -9,6 +9,7 @@ BOT.Name='Botty'
 local Responses={
 
 {
+  Num = 3,
 Main = {
 "who",
 "r",
@@ -17,10 +18,37 @@ Main = {
 
 ,
 
+
+
 Response = {
 {"I am botty, how goes it",function(self,plr) return (", "..plr.Name.."?") end}
 }
 }
+
+
+
+
+,
+
+
+
+
+{
+  Num = 4,
+Main = {
+'w',
+'at',
+'s',
+'up'
+}
+
+,
+
+Response = {
+{"Nm, hbu",function(self,plr) return ', '..plr.Name end}
+}
+}
+
 
 
 }
@@ -35,8 +63,16 @@ end
 local findmatch=function(P,txt)
 for i=1,#Responses do
 txt=txt:lower()
-if txt:match(Responses[i].Main[1]) and txt:match(Responses[i].Main[2]) and txt:match(Responses[i].Main[3])  then
+local canrespond = false
+for I=1,Responses[i].Num do
+if match(Responses[i].Main[I]) then
+canrespond=true
+else
+return false
+end
+if canrespond then
 Chat(Responses[i].Response[math.random(1,#Responses[i].Response)],P)
+  end
 end
 end
 end
