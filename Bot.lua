@@ -28,7 +28,7 @@ Response = {
 
 
 local Chat=function(respT,PLR)
-print(respT[1]..respT[2](PLR))
+print(respT[1]..respT[2](nil,PLR))
 end
 
 local findmatch=function(P,txt)
