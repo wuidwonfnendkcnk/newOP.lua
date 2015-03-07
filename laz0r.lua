@@ -87,7 +87,7 @@ end
 wait()
 if DIE then
   DIE=false
-   Instance.new("Explosion",Workspace).CFrame=CF
+   Instance.new("Explosion",Workspace).Position=CF.p
    Aa.Parent=workspace
    Aa.BrickColor=BrickColor.Random()
    Aa.CFrame=CF
