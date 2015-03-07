@@ -26,6 +26,7 @@ raypart.Anchored=true
 raypart.Name='ray'
 raypart.Transparency=1
 raypart.CFrame=CF*CFrame.new(0,0,-dist/2)
+raypartCframe=raypart.CFrame
 raypart.BrickColor=part.BrickColor
 coroutine.wrap(function()
   
@@ -52,9 +53,9 @@ coroutine.wrap(function()
      game.Lighting.OutdoorAmbient=BrickColor.Random().Color
      CFF=raypart.CFrame
      raypart.FormFactor='Custom'
-     raypart.Size=raypart.Size+Vector3.new(0.1,0.1,0.1)
+     raypart.Size=raypart.Size+Vector3.new(0.05,0.05,0.05)
      wait(0)
-     raypart.CFrame=CFF
+     raypart.CFrame=raypartCframe
      end
     cff=part.CFrame
     part.Size=part.Size+Vector3.new(3,3,0)
