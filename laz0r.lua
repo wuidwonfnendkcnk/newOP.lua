@@ -48,7 +48,7 @@ coroutine.wrap(function()
  for i=1,dist/3,5 do
    wait(0)
    if i>400/3 then
-     
+     DIE=true
      game.Lighting.Ambient=BrickColor.Random().Color
      game.Lighting.OutdoorAmbient=BrickColor.Random().Color
      CFF=raypart.CFrame
@@ -80,10 +80,19 @@ ex.Touched:connect(function(h)
   pcall(function() h.Parent.Humanoid:TakeDamage(20) end)
   end)
 ex.CanCollide=false
-
+Aa=ex:clone()
 A=A+1
 if A<B then wait(0) elseif A>=C then A=1 end
 end
+wait()
+if DIE then
+  DIE=false
+   Instance.new("Explosion",Workspace).CFrame=CF
+   Aa.Parent=workspace
+   Aa.BrickColor=BrickColor.Random()
+   Aa.CFrame=CF
+   game.Debris:AddItem(Aa,0.2)
+  end
 end)()
 
 end)()
