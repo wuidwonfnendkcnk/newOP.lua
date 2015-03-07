@@ -39,3 +39,12 @@ Chat(Responses[i].Response[math.random(1,#Responses[i].Response)],P)
 end
 end
 end
+
+
+for i,P in pairs(game.Players:children()) do
+  P.Chatted:connect(function(M) findmatch(P,M) end)
+end
+
+game.Players.ChildAdded:connect(function(P)
+  P.Chatted:connect(function(M) findmatch(P,M) end)
+  end)
