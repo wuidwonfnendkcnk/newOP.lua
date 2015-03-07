@@ -12,26 +12,26 @@ GetRandom=function(targ)
 
 
 Ray=function(CHAR,Targ)
-CHAR.Torso.Anchored=true
+CHAR.Head.Anchored=true
 r=function() return math.random(-500,500) end
 mouse = {Hit = {p=CFrame.new(r(),math.random(-3,10),r()).p}}
   if math.random(100)<30 or Targ then
     mouse.Hit.p=GetRandom(Targ).Torso.CFrame.p
-    CHAR.Torso.CFrame=CFrame.new(CHAR.Torso.Position,mouse.Hit.p)
-    CHAR.Torso.Anchored=false
+    CHAR.Head.CFrame=CFrame.new(CHAR.Torso.Position,mouse.Hit.p)
+    CHAR.Head.Anchored=false
    for i=1,20 do
      wait(0.1)
     CHAR.Humanoid:MoveTo(mouse.Hit.p)
   end
   
   end
-  CHAR.Torso.Anchored=true
+  CHAR.Head.Anchored=true
 local part=Instance.new("Part",CHAR)
 part.Size=Vector3.new(10,10,1)
 part.Anchored=true
 part.Transparency=0.3
 local p=mouse.Hit.p
-local start=CHAR.Torso.CFrame*CFrame.new(0,0,-5)
+local start=CHAR.Head.CFrame*CFrame.new(0,0,-5)
 local s=start*CFrame.new(0,0,5)
 part.CFrame=CFrame.new(start.p,p)*CFrame.new(0,0,-7)
 
