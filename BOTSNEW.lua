@@ -58,7 +58,7 @@ end
 wait()
 game.Debris:AddItem(part,1)
 game.Debris:AddItem(raypart,0.5)
-plr.Character.Torso.Anchored=false
+CHAR.Torso.Anchored=false
 end)()
 coroutine.wrap(function()
  for i=1,dist/3,5 do
