@@ -1,7 +1,7 @@
 local createBoom=function(Par,C0)
 local Boom=Instance.new("Part")
 Boom.FormFactor='Custom'
-Boom.Size=Vector3.new(0.5,0.5,2)
+Boom.Size=Vector3.new(0.5,0.5,1.5)
 local n2=Boom:clone()
 n2.BrickColor=BrickColor.Black()
 n2.Size=Boom.Size-Vector3.new(0.2,0.2,-0.2)
@@ -19,6 +19,6 @@ end
 
 
 local la=script.Parent['Left Arm']
-local b1=createBoom(la,CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(90),0,math.rad(90)))
-local b2=createBoom(la,CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(90),0,math.rad(90)))
+local b1=createBoom(la,CFrame.new(-0.25,-2,0)*CFrame.Angles(math.rad(90),0,math.rad(90)))
+local b2=createBoom(la,CFrame.new(0.25,-2,0)*CFrame.Angles(math.rad(90),0,math.rad(90)))
 
