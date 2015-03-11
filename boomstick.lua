@@ -1,4 +1,4 @@
-local createBoom=function()
+local createBoom=function(Par)
 local Boom=Instance.new("Part")
 Boom.FormFactor='Custom'
 Boom.Size=Vector3.new(1,1,2.5)
@@ -11,8 +11,8 @@ w.Part1=Boom
 w.Part0=n2
 return Boom
 end
-
-local b1=createBoom()
+local la=script.Parent['Left Arm']
+local b1=createBoom(la)
 local w=Instance.new("Weld",b1)
-w.Part0=script.Parent['Left Arm']
+w.Part0=la
 w.Part1=w.Parent
