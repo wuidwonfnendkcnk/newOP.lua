@@ -1,4 +1,4 @@
-local createBoom=function(Par)
+local createBoom=function(Par,C0)
 local Boom=Instance.new("Part")
 Boom.FormFactor='Custom'
 Boom.Size=Vector3.new(1,1,2.5)
@@ -10,13 +10,15 @@ Boom.Parent=Par
 local w=Instance.new("Weld",Boom)
 w.Part1=Boom
 w.Part0=n2
+local w=Instance.new("Weld",Boom)
+w.Part0=Par
+w.Part1=w.Parent
+w.C0=C0
 return Boom
 end
 
 
 local la=script.Parent['Left Arm']
-local b1=createBoom(la)
-local w=Instance.new("Weld",b1)
-w.Part0=la
-w.Part1=w.Parent
-w.C0=CFrame.new(0,-1,0)*CFrame.Angles(1,0,0)
+local b1=createBoom(la,CFrame.new(-1,-1,0)*CFrame.Angles(math.rad(90),0,0))
+local b2=createBoom(la,CFrame.new(1,-1,0)*CFrame.Angles(math.rad(90),0,0))
+
