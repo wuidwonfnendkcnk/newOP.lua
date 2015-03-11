@@ -19,6 +19,6 @@ end
 
 
 local la=script.Parent['Left Arm']
-local b1=createBoom(la,CFrame.new(-1,-1,0)*CFrame.Angles(math.rad(90),0,0))
-local b2=createBoom(la,CFrame.new(1,-1,0)*CFrame.Angles(math.rad(90),0,0))
+local b1=createBoom(la,CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(90),0,0))
+local b2=createBoom(la,CFrame.new(0.3,-1,0)*CFrame.Angles(math.rad(90),0,0))
 
