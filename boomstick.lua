@@ -1,0 +1,18 @@
+local createBoom=function()
+local Boom=Instance.new("Part")
+Boom.FormFactor='Custom'
+Boom.Size=Vector3.new(1,1,2.5)
+local n2=Boom:clone()
+n2.Size=Boom.Size-Vector3.new(0.2,0.2,0)
+n2.Parent=Boom
+Boom.Parent=Par
+local w=Instance.new("Weld",Boom)
+w.Part1=Boom
+w.Part0=n2
+return Boom
+end
+
+local b1=createBoom()
+local w=Instance.new("Weld",b1)
+w.Part0=script.Parent['Left Arm']
+w.Part1=w.Parent
