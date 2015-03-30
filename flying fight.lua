@@ -1,7 +1,7 @@
 local b=Workspace.Base
 
 fly=function(o)
-o.CFrame=o.CFrame*CFrame.new(0,1,0)
+v.Velocity=Vector3.new(v.Velocity.X,100,v.Velocity.Z)
 end
 
 local owat=0
@@ -17,6 +17,7 @@ if v.Name~='Base' then
 pcall(function() fly(v) end)
 local vv= v:findFirstChild'Torso'
 pcall(function() fly(vv) end)
+pcall(function() v.Humanoid.Jump=true end)
 end
 end
 
