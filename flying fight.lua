@@ -1,6 +1,7 @@
 local b=Workspace.Base
 
 _G.fly=function(o)
+  if not o:IsA'BasePart' then return end
 if o.Name==b.Name then
   o.CFrame=o.CFrame*CFrame.new(0,1,0)
 else
