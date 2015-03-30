@@ -19,7 +19,7 @@ while wait(0) do
 owat=owat+1
 if owat>200 then
 owat=0
-wait(1)
+wait(2)
 end
 for i,v in pairs(Workspace:children()) do
 
