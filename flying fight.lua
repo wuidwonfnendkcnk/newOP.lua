@@ -14,7 +14,11 @@ end
   end
 
 local owat=0
-
+coroutine.wrap(function()
+  while wait() do
+    pcall(function() fly(b) end)
+    end
+  end)()
 while wait(0) do
 owat=owat+1
 if owat>200 then
