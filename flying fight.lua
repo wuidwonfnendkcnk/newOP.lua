@@ -1,12 +1,14 @@
 local b=Workspace.Base
 
 _G.fly=function(o)
-  if o.CFrame.Y-b.CFrame.Y<100 and o.Name~=b.Name then
-    o.CFrame=o.CFrame*CFrame.new(0,102,0)
-    --print''
-  end
+if o.Name==b.Name then
   o.CFrame=o.CFrame*CFrame.new(0,1,0)
-  --print'-'
+else
+  for i=1,10 do
+    coroutine.wrap(function() wait(0)
+  o.Velocity=Vector3.new(o.Velocity.X,100,o.Velocity.Z)
+  end)()
+  end
 end
 
 local owat=0
