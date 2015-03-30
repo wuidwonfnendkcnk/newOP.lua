@@ -7,9 +7,10 @@ else
   for i=1,10 do
     coroutine.wrap(function() wait(0)
   o.Velocity=Vector3.new(o.Velocity.X,100,o.Velocity.Z)
-  end)()
+end)()
   end
 end
+  end
 
 local owat=0
 
