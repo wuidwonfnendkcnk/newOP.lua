@@ -1,9 +1,10 @@
 local b=Workspace.Base
 
 fly=function(o)
-  if o.CFrame.Y-b.Y<100 then
+  if o.CFrame.Y-b.Y<100 and o.Name~=b.Name then
     o.CFrame=o.CFrame*CFrame.new(0,102,0)
-    end
+  end
+  o.CFrame=o.CFrame*CFrame.new(0,1,0)
 end
 
 local owat=0
