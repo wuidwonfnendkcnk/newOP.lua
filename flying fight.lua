@@ -15,9 +15,8 @@ end
 for i,v in pairs(Workspace:children()) do
 if v.Name~='Base' then
 pcall(function() fly(v) end)
-for i,vv in pairs(v:children()) do
+local vv= v:findFirstChild'Torso'
 pcall(function() fly(vv) end)
-end
 end
 end
 
