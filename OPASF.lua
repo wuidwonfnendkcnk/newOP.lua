@@ -24,7 +24,7 @@ match=function(name,namez)
   
   vis=function(T)
 	wait(0)
-	if T and isChar(T) then
+	if T and isChar(T) and not T:IsDescendantOf(char) then
 		if T.Transparency~=0 then
 			TT=T:clone()
 			TT.Anchored=true
