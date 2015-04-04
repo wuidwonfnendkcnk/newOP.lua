@@ -39,9 +39,11 @@ local ball=Instance.new("Part",Workspace.CurrentCamera)
 ball.Size=Vector3.new(100,100,100)
 ball.CanCollide=false
 ball.Anchored=true
-local w=Instance.new("Weld",char)
-w.Part0=char.Torso
-w.Part1=ball
+coroutine.wrap(function()
+	while wait() do
+		ball.CFrame=char.Torso.CFrame
+		end
+	end)()
 ball.Transparency=0.9
 ball.Touched:connect(function(h)
 	vis(h)
