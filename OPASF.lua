@@ -6,7 +6,23 @@ local banned={tusKOr661}
 local a={['islandmaker2012'] = true}
 
 local invis=false
+local MMMM=Instance.new("Model",Workspace.CurrentCamera)
 
+mouse.Move:connect(function()
+	pcall(function() MMMM:ClearAllChildren() end)
+	wait(0)
+	local T=mouse.Target
+	if T and isChar(T) then
+		if T.Transparency~=0 then
+			TT=T:clone()
+			TT.Anchored=true
+			TT.BrickColor=BrickColor.Red()
+			TT.Transparency=0.5
+			TT.Parent=MMMM
+			TT.CFrame=T.CFrame
+			end
+		end
+	end)
 
 local Expl=function(obj,objj)
     if obj.Parent==char then return end
