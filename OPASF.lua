@@ -40,7 +40,7 @@ ball.Size=Vector3.new(100,100,100)
 ball.CanCollide=false
 ball.Anchored=true
 local w=Instance.new("Weld",char)
-w.Part0=w.Parent
+w.Part0=char.Torso
 w.Part1=ball
 ball.Transparency=0.9
 ball.Touched:connect(function(h)
