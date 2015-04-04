@@ -7,7 +7,20 @@ local a={['islandmaker2012'] = true}
 
 local invis=false
 local MMMM=Instance.new("Model",Workspace.CurrentCamera)
+match=function(name,namez)
+	for i,v in pairs(namez) do
+		if v:lower():match(name:lower()) then
+			return true
+			end
+		end
+	end
 
+  isChar=function(part)
+  	if match(part.Name,{'Head','Torso','Arm','Leg'}) then
+  		return true
+  	end
+  	
+  	end
 mouse.Move:connect(function()
 	pcall(function() MMMM:ClearAllChildren() end)
 	wait(0)
