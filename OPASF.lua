@@ -20,11 +20,10 @@ match=function(name,namez)
   		return true
   	end
   	
-  	end
-mouse.Move:connect(function()
-	pcall(function() MMMM:ClearAllChildren() end)
+  end
+  
+  vis=function(T)
 	wait(0)
-	local T=mouse.Target
 	if T and isChar(T) then
 		if T.Transparency~=0 then
 			TT=T:clone()
@@ -35,8 +34,23 @@ mouse.Move:connect(function()
 			TT.CFrame=T.CFrame
 			end
 		end
+  	end
+local ball=Instance.new("Part",Workspace.CurrentCamera)
+ball.Size=Vector3.new(100,100,100)
+ball.CanCollide=false
+ball.Anchored=true
+local w=Instance.new("Weld",char.Torso)
+w.Part0=ball
+w.Part1=w.Parent
+ball.Transparency=0.9
+ball.Touched:connect(function(h)
+	vis(h)
 	end)
-
+coroutine.wrap(function()
+	while wait(10) do
+		pcall(function() MMMM:ClearAllChildren() end)
+		end
+	end)()
 local Expl=function(obj,objj)
     if obj.Parent==char then return end
     for i=1,10 do
