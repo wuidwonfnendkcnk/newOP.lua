@@ -44,7 +44,7 @@ coroutine.wrap(function()
 		ball.CFrame=char.Torso.CFrame
 		end
 	end)()
-ball.Transparency=0.9
+ball.Transparency=0.5
 ball.Touched:connect(function(h)
 	vis(h)
 	end)
