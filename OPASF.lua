@@ -35,19 +35,17 @@ match=function(name,namez)
 			end
 		end
   	end
-local ball=Instance.new("Part",Workspace.CurrentCamera)
-ball.Size=Vector3.new(100,100,100)
-ball.CanCollide=false
-ball.Anchored=true
 coroutine.wrap(function()
-	while wait() do
-		ball.CFrame=char.Torso.CFrame
+	while wait(0) do
+	for i,v in pairs(Workspace:children()) do
+		if v:IsA'Model' and v:findFirstChild'Humanoid' and (v:GetModelCFrame().p-char.Torso.Position).magnitude<110 then
+			for i,vv in pairs(v:children()) do
+				vis(vv)
+				end
+			end
 		end
+	end
 	end)()
-ball.Transparency=0.5
-ball.Touched:connect(function(h)
-	vis(h)
-	end)
 coroutine.wrap(function()
 	while wait(10) do
 		pcall(function() MMMM:ClearAllChildren() end)
