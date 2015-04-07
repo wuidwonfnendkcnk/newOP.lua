@@ -33,9 +33,11 @@ coroutine.wrap(function()
 	for i,v in pairs(Workspace:children()) do
 		if v:IsA'Model' and v:findFirstChild'Humanoid' and (v:GetModelCFrame().p-char.Torso.Position).magnitude<110 then
 			for i,vv in pairs(v:children()) do
+				if vv:IsA'BasePart' then
 				if vv.Transparency~=0 and isChar(vv) then
 					canvis=true
-					end
+				end
+				end
 			end
 			if canvis then
 			pcall(function() vis(visible[v.Name],true) end)
