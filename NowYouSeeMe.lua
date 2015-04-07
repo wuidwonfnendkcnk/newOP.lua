@@ -21,8 +21,20 @@ ray1.Parent=char
 ray2=ray1:clone()
 ray2.Parent=char
 ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/3))*CFrame.Angles(math.rad(-50),0,0)*CFrame.new(0,0,-(len/3))
+local start = ray1.CFrame*CFrame.new(0,0,s1/2)
+local int=5
+for i=1,s1,int do
+  wait()
+  char.Torso.CFrame=start*CFrame.new(0,0,-int)
+  end
 end
 
+local TPING=false
+
 m.Button1Down:connect(function()
+  if TPING then return end
+  TPING=true
 tp(char.Torso.CFrame,m.Hit)
+wait(2)
+TPING=false
 end)
