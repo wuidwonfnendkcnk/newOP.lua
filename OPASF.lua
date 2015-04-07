@@ -58,7 +58,7 @@ for i,v in pairs(Workspace:children()) do
 		end
 end
 
-workspace.ChildRemoving:connect(function(cc)
+workspace.ChildRemoved:connect(function(cc)
 	if visible[cc.Name] then visible[cc.Name]:Destroy() end
 end)
 
