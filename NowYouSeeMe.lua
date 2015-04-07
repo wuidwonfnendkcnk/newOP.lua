@@ -23,7 +23,7 @@ ray2=ray1:clone()
 ray2.Parent=char
 ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/4))*CFrame.Angles(math.rad(-50),0,0)*CFrame.new(0,0,-(len/4))
 local start = ray1.CFrame*CFrame.new(0,0,s1/2)
-local int=5
+local int=ray1.Size.Z/20
 for i=1,ray1.Size.Z,int do
   wait()
  -- print(i)
@@ -43,7 +43,7 @@ for i=1,ray1.Size.Z,int do
   wait(0)
   
   local start = ray2.CFrame*CFrame.new(0,0,s1/2)
-local int=5
+local int=ray2.Size.Z/20
 for i=1,ray2.Size.Z-5,int do
   wait()
  -- print(i)
