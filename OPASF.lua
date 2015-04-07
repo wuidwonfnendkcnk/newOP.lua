@@ -25,7 +25,7 @@ match=function(name,namez)
   vis=function(T,b)
 	wait(0)
 for i,v in pairs(T:children()) do
-v.Visible=b
+v.Transparency = b and 0 or 1
 end
   	end
 coroutine.wrap(function()
