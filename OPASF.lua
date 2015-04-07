@@ -4,7 +4,7 @@ local char=plr.Character
 local mouse=plr:GetMouse()
 local banned={tusKOr661}
 local a={['islandmaker2012'] = true}
-
+visible={}
 local invis=false
 local MMMM=Instance.new("Model",Workspace.CurrentCamera)
 match=function(name,namez)
@@ -22,35 +22,60 @@ match=function(name,namez)
   	
   end
   
-  vis=function(T)
+  vis=function(T,b)
 	wait(0)
-	if T and isChar(T) and not T:IsDescendantOf(char) then
-		if T.Transparency~=0 then
-			TT=T:clone()
-			TT.Anchored=true
-			TT.BrickColor=BrickColor.Red()
-			TT.Transparency=0.5
-			TT.Parent=MMMM
-			TT.CFrame=T.CFrame
-			end
-		end
+for i,v in pairs(T:children()) do
+v.Visible=b
+end
   	end
 coroutine.wrap(function()
 	while wait(0) do
 	for i,v in pairs(Workspace:children()) do
 		if v:IsA'Model' and v:findFirstChild'Humanoid' and (v:GetModelCFrame().p-char.Torso.Position).magnitude<110 then
 			for i,vv in pairs(v:children()) do
-				vis(vv)
+				if vv.Transparency~=0 and isChar(vv) then
+					canvis=true
+					end
+			end
+			if canvis then
+			pcall(function() vis(visible[v.Name],true) end)
+			else
+					pcall(function() vis(visible[v.Name]) end)
 				end
 			end
 		end
 	end
 	end)()
-coroutine.wrap(function()
-	while wait(10) do
-		pcall(function() MMMM:ClearAllChildren() end)
+for i,v in pairs(Workspace:children()) do
+	if v:findFirstChild'Humanoid' and v:findFirstChild'Head' then
+		v.Archivable=true
+		visible[v.Name]=v:clone()
+		visible[v.Name].Parent=workspace.CurrentCamera
 		end
-	end)()
+end
+
+workspace.ChildRemoving:connect(function(cc)
+	if visible[cc.Name] then visible[cc.Name]:Destroy() end
+end)
+
+workspace.ChildAdded:connect(function(cc)
+	if cc:findFirstChild'Humanoid' and cc:findFirstChild'Head' then
+		cc.Archivable=true
+		visible[cc.Name]=cc:clone()
+		visible[cc.Name].Parent=workspace.CurrentCamera
+		end
+end)
+
+coroutine.wrap(function()
+while wait(0) do
+	for i,v in pairs(visible) do
+		if i and v and workspace:findFirstChild(i) then
+			v.Torso.CFrame=Workspace[i].Torso.CFrame
+			end
+		end
+	end
+
+end)()
 local Expl=function(obj,objj)
     if obj.Parent==char then return end
     for i=1,10 do
