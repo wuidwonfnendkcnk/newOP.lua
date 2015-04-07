@@ -25,7 +25,9 @@ match=function(name,namez)
   vis=function(T,b)
 	wait(0)
 for i,v in pairs(T:children()) do
+	pcall(function()
 v.Transparency = b and 0 or 1
+end)
 end
   	end
 coroutine.wrap(function()
@@ -33,7 +35,7 @@ coroutine.wrap(function()
 	for i,v in pairs(Workspace:children()) do
 		if v:IsA'Model' and v:findFirstChild'Humanoid' and (v:GetModelCFrame().p-char.Torso.Position).magnitude<110 then
 			for i,vv in pairs(v:children()) do
-				if vv:IsA'BasePart' then
+				if vv:IsA'BasePart'  and vv.Name~='Humanoid' then
 				if vv.Transparency~=0 and isChar(vv) then
 					canvis=true
 				end
