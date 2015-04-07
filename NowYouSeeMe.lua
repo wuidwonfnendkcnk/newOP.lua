@@ -25,7 +25,11 @@ local start = ray1.CFrame*CFrame.new(0,0,s1/2)
 local int=5
 for i=1,s1,int do
   wait()
-  char.Torso.CFrame=start*CFrame.new(0,0,-int)
+  local p=Instance.new("Part",char)
+  p.Size=Vector3.new(5,5,5)
+  p.Anchored=true
+  p.CanCollide=false
+  p.CFrame=start*CFrame.new(0,0,-int)
   end
 end
 
