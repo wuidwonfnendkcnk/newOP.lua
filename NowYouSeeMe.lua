@@ -30,7 +30,8 @@ for i=1,ray1.Size.Z*2,int do
   p.Size=Vector3.new(5,5,5)
   p.Anchored=true
   p.CanCollide=false
-  p.CFrame=start*CFrame.new(0,0,-int)
+  start=start*CFrame.new(0,0,-int)
+  p.CFrame=start
   end
 end
 
