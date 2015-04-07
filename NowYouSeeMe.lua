@@ -22,8 +22,8 @@ ray2=ray1:clone()
 ray2.Parent=char
 ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/3))*CFrame.Angles(math.rad(-50),0,0)*CFrame.new(0,0,-(len/3))
 local start = ray1.CFrame*CFrame.new(0,0,s1/2)
-local int=1
-for i=1,ray1.Size.Z*2,int do
+local int=5
+for i=1,ray1.Size.Z,int do
   wait()
   print(i)
   local p=Instance.new("Part",char)
@@ -31,7 +31,8 @@ for i=1,ray1.Size.Z*2,int do
   p.Anchored=true
   p.CanCollide=false
   start=start*CFrame.new(0,0,-int)
-  p.CFrame=start
+  p.CFrame=start*CFrame.Angles(0,math.rad(math.random(-90,90)),math.rad(math.random(-100,100)))
+    p.BrickColor=BrickColor.Random()
   end
 end
 
