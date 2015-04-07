@@ -22,9 +22,10 @@ ray2=ray1:clone()
 ray2.Parent=char
 ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/3))*CFrame.Angles(math.rad(-50),0,0)*CFrame.new(0,0,-(len/3))
 local start = ray1.CFrame*CFrame.new(0,0,s1/2)
-local int=5
+local int=1
 for i=1,ray1.Size.Z*2,int do
   wait()
+  print(i)
   local p=Instance.new("Part",char)
   p.Size=Vector3.new(5,5,5)
   p.Anchored=true
