@@ -34,7 +34,7 @@ for i=1,ray1.Size.Z,int do
   p.Transparency=0.5
   game.Debris:AddItem(p,0.5)
   start=start*CFrame.new(0,0,-int)
-  char.Torso.CFrame=start
+  
   p.CFrame=start*CFrame.Angles(0,math.rad(math.random(-90,90)),math.rad(math.random(-100,100)))
     p.BrickColor=BrickColor.Random()
 
@@ -44,7 +44,7 @@ for i=1,ray1.Size.Z,int do
   
   local start = ray2.CFrame*CFrame.new(0,0,s1/2)
 local int=5
-for i=1,ray2.Size.Z,int do
+for i=1,ray2.Size.Z-5,int do
   wait()
  -- print(i)
   local p=Instance.new("Part",char)
