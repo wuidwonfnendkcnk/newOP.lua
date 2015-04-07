@@ -18,7 +18,9 @@ local ray1=mainray:clone()
 ray1.Size=Vector3.new(0.1,0.1,s1)
 ray1.CFrame=dir*CFrame.Angles(math.rad(45),0,0)*CFrame.new(0,0,-(len/4))
 ray1.Parent=char
-
+ray2=ray1:clone()
+ray2.Parent=char
+ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/4))*CFrame.Angles(math.rad(-90),0,0)
 end
 
 m.Button1Down:connect(function()
