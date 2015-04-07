@@ -16,11 +16,11 @@ mainray.CanCollide=false
 mainray.Anchored=true
 local ray1=mainray:clone()
 ray1.Size=Vector3.new(0.1,0.1,s1)
-ray1.CFrame=dir*CFrame.Angles(math.rad(20),0,0)*CFrame.new(0,0,-(len/4))
+ray1.CFrame=dir*CFrame.Angles(math.rad(15),0,0)*CFrame.new(0,0,-(len/4))
 ray1.Parent=char
 ray2=ray1:clone()
 ray2.Parent=char
-ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/4))*CFrame.Angles(math.rad(-40),0,0)*CFrame.new(0,0,-(len/4))
+ray2.CFrame=ray2.CFrame*CFrame.new(0,0,-(len/4))*CFrame.Angles(math.rad(-30),0,0)*CFrame.new(0,0,-(len/4))
 end
 
 m.Button1Down:connect(function()
