@@ -16,7 +16,7 @@ mainray.CanCollide=false
 mainray.Anchored=true
 local ray1=mainray:clone()
 ray1.Size=Vector3.new(0.1,0.1,s1)
-ray1.CFrame=dir*CFrame.Angles(0,0,math.rad(-45))*CFrame.new(0,0,-(len/4))
+ray1.CFrame=dir*CFrame.Angles(math.rad(45),0,0)*CFrame.new(0,0,-(len/4))
 ray1.Parent=char
 
 end
