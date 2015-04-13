@@ -55,7 +55,7 @@ dif=CFrame.new(dif.p,m.Hit.p)
   end
 
 else
-spd=spd-1
+spd=spd-(spd/25)
 print(spd)
  if spd<0 then spd=0 end
 end
