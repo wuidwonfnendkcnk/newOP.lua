@@ -35,7 +35,7 @@ end)
 m.Button1Up:connect(function()
   new=true
   active=0
-repeat wait() print'' until spd<2
+repeat wait() --[[print'']] until spd<2
 fall=true
 new=false
 end)
@@ -43,7 +43,8 @@ end)
 while wait() do
   if new then
   dif=dif*CFrame.new(0,0,-(spd/7))
-    print'slowing'
+   -- print'slowing'
+    char.Torso.CFrame=dif*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(-90))*CFrame.Angles(math.rad(-90),math.rad(-90),0)
   end
 if active==1 then
   if spd>50 then spd=50 end
