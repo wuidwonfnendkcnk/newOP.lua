@@ -68,7 +68,7 @@ else
   fall=false
 end
 end
-if not new then
+if not new and active==0 then
   FALL()
   end
 end
