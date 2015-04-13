@@ -14,7 +14,7 @@ active=active==0 and 1 or 0
 end)
 
 while wait() do
-if active then
+if active==1 then
 dif=dif*CFrame.new(0,0,-1)
 end
 part.CFrame = dif
