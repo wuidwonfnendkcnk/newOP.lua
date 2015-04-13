@@ -37,10 +37,10 @@ dif=dif*CFrame.new(0,0,-1)
 dif=CFrame.new(dif.p,m.Hit.p)
 end
 end
-part.CFrame = dif
+part.CFrame = CFrame.new(dif.p)
 char.Torso.Anchored=true
 if active==1 then
-char.Torso.CFrame=part.CFrame*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(-90))*CFrame.Angles(math.rad(-90),math.rad(-90),0)
+char.Torso.CFrame=dif*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(-90))*CFrame.Angles(math.rad(-90),math.rad(-90),0)
 else
   if not fall then fall=true
     
