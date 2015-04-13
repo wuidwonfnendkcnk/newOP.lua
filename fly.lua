@@ -32,9 +32,9 @@ active=1
 fall=false
 end)
 m.Button1Up:connect(function()
-active=0
 repeat wait() until spd<1
 fall=true
+active=0
 end)
 
 while wait() do
