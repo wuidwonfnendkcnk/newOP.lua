@@ -28,8 +28,13 @@ end
 
 spd=1
 m.Button1Down:connect(function()
-active=active==0 and 1 or 0
-fall=active==0 and false or fall
+active=1
+fall=false
+end)
+m.Button1Up:connect(function()
+active=0
+repeat wait() until spd<1
+fall=true
 end)
 
 while wait() do
