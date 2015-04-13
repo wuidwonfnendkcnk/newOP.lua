@@ -38,6 +38,7 @@ m.Button1Up:connect(function()
 repeat wait() --[[print'']] until spd<2
 fall=true
 new=false
+FALL()
 end)
 
 while wait() do
