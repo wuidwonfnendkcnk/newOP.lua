@@ -32,12 +32,16 @@ active=1
 fall=false
 end)
 m.Button1Up:connect(function()
-repeat wait() until spd<1
+  new=true
+repeat wait() until spd<2
 fall=true
 active=0
 end)
 
 while wait() do
+  if new then
+  dif=dif*CFrame.new(0,0,-(spd/7))
+  end
 if active==1 then
   if spd>50 then spd=50 end
   spd=spd+1
@@ -45,6 +49,7 @@ if active==1 then
 dif=dif*CFrame.new(0,0,-(spd/7))
 dif=CFrame.new(dif.p,m.Hit.p)
 end
+
 else
 spd=spd-1
 if spd<0 then spd=1 end
