@@ -37,6 +37,7 @@ m.Button1Up:connect(function()
   active=0
 repeat wait() print'' until spd<2
 fall=true
+new=false
 end)
 
 while wait() do
@@ -62,7 +63,7 @@ char.Torso.Anchored=true
 if active==1 then
 char.Torso.CFrame=dif*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(-90))*CFrame.Angles(math.rad(-90),math.rad(-90),0)
 else
-  if not fall then fall=true
+  if not fall and not new then fall=true
     
   FALL()
   fall=false
