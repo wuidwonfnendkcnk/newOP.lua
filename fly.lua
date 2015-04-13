@@ -66,6 +66,7 @@ char.Torso.CFrame=dif*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(-90))*CFrame
 else
   if not fall and not new then fall=true
   fall=false
+  FALL()
 end
 end
 if not new and active==0 then
