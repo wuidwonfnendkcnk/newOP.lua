@@ -9,7 +9,7 @@ local dif=part.CFrame
 local fall=false
 local FALL=function()
   char.Torso.CFrame=part.CFrame*CFrame.new(0,10,0)
-  for i=10,1,-0.5 do
+  for i=10,3,-0.5 do
     if fall then
     wait(0)
     char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)
@@ -17,7 +17,7 @@ local FALL=function()
   end
   wait(0)
   
-  for i=1,10,0.5 do
+  for i=3,10,0.5 do
     wait(0)
     if fall then
     char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)
