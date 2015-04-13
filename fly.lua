@@ -24,7 +24,9 @@ local FALL=function()
     end
     end
   
-  end
+end
+
+spd=1
 m.Button1Down:connect(function()
 active=active==0 and 1 or 0
 fall=active==0 and false or fall
@@ -32,10 +34,15 @@ end)
 
 while wait() do
 if active==1 then
+  if spd>50 then spd=50 end
+  spd=spd+1
   if fall then else
-dif=dif*CFrame.new(0,0,-1)
+dif=dif*CFrame.new(0,0,-(spd/7))
 dif=CFrame.new(dif.p,m.Hit.p)
 end
+else
+spd=spd-1
+if spd<0 then spd=1 end
 end
 part.CFrame = CFrame.new(dif.p)
 char.Torso.Anchored=true
