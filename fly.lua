@@ -17,5 +17,5 @@ if active==1 then
 end
 part.CFrame = dif
 char.Torso.Anchored=true
-char.Torso.CFrame=part.CFrame*CFrame.new(0,20,0)*CFrame.Angles(math.rad(90),0,math.rad(90))
+char.Torso.CFrame=part.CFrame*CFrame.new(0,20,0)*CFrame.Angles(math.rad(-90),0,math.rad(-90))
 end
