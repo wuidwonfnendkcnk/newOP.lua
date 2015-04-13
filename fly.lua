@@ -1,8 +1,8 @@
 local active = 0
 
 local m=game.Players.LocalPlayer:GetMouse()
-
-local part=Instance.new("Part",script.Parent)
+local char=script.Parent
+local part=Instance.new("Part",char)
 part.Anchored=true
 part.Size=Vector3.new(5,1,5)
 local dif=part.CFrame
