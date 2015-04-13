@@ -14,6 +14,7 @@ end)
 while wait() do
 if active==1 then
 dif=dif*CFrame.new(0,0,-1)
+dif=CFrame.new(dif.p,m.Hit.p)
 end
 part.CFrame = dif
 char.Torso.Anchored=true
