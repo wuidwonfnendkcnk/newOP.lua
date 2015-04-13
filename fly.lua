@@ -7,8 +7,8 @@ part.Anchored=true
 part.Size=Vector3.new(5,1,5)
 local dif=part.CFrame
 local w=Instance.new("Weld",part)
-w.Part0=w.Parent
-w.Part1=script.Parent.Torso
+w.Part0=script.Parent.Torso
+w.Part1=w.Parent
 m.Button1Down:connect(function()
 active=active==0 and 1 or 0
 end)
