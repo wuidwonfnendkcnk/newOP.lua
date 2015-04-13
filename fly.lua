@@ -15,7 +15,7 @@ end)
 
 while wait() do
 if active==1 then
-dif=dif*CFrame.new(0,0,-1)
+--dif=dif*CFrame.new(0,0,-1)
 end
 part.CFrame = dif
 w.C0=part.CFrame*CFrame.new(0,10,0)*CFrame.Angles(0,0,math.rad(90))
