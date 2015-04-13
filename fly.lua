@@ -2,13 +2,13 @@ local active = 0
 
 local m=game.Players.LocalPlayer:GetMouse()
 
-local part=Instance.new("Part",owner.Character)
+local part=Instance.new("Part",script.Parent)
 part.Anchored=true
 part.Size=Vector3.new(5,1,5)
 local dif=part.CFrame
 local w=Instance.new("Weld",part)
 w.Part0=w.Parent
-w.Part1=owner.Character.Torso
+w.Part1=script.Parent.Torso
 m.Button1Down:connect(function()
 active=active==0 and 1 or 0
 end)
