@@ -12,7 +12,7 @@ local FALL=function()
   for i=10,3,-0.5 do
     if fall then
     wait(0)
-    char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)
+    char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)*CFrame.Angles(0,math.rad(5),0)
     end
   end
   wait(0)
@@ -20,7 +20,7 @@ local FALL=function()
   for i=3,10,0.5 do
     wait(0)
     if fall then
-    char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)
+    char.Torso.CFrame=part.CFrame*CFrame.new(0,i,0)*CFrame.Angles(0,math.rad(5),0)
     end
     end
   
