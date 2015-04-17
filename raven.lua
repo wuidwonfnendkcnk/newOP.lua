@@ -19,10 +19,11 @@ local part=Instance.new("Part",script.Parent)
 part.Anchored=true
 repeat wait()
 inv()
-part.CFrame=tor.CFrame*CFrame.new(0,-((tor.Size.Y)+0.5),0)
+part.CFrame=tor.CFrame*CFrame.new(0,-((tor.Size.Y)+1),0)
 until done
 part:Destroy()
 vis()
+done=false
 else
 done=true
 end
