@@ -1,4 +1,5 @@
 tor=script.Parent.Torso
+mouse=game.Players.LocalPlayer:GetMouse()
 ll,rl = script.Parent['Left Leg'],script.Parent['Right Leg']
 inv=function()
 ll.Transparency=1
