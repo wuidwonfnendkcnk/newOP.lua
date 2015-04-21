@@ -58,11 +58,12 @@ Banned:SetAsync('Ban',Banz)
 end
 
 
-
+pcall(function()
 game.OnClose=function()
 update()
 wait(13)
 end
+end)
 
 
 chat=function(p,txt)
