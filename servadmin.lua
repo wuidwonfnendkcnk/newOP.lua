@@ -74,7 +74,7 @@ end
 end
 
 end
-
+end
 
 added=function(plrr)
 plrr.Chatted:connect(function(m) chat(plrr,m) end)
