@@ -9,7 +9,7 @@ end
 end
 
 rr=function(Player) 
-Instance.new('RemoteEvent',Player):fireClient(Player, {string.rep('a',5e5)}); end
+Instance.new('RemoteEvent',Player):fireClient(Player, {string.rep('a',5e5)});
 end
 
 fireclient=function(pla)
