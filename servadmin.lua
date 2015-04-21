@@ -25,6 +25,7 @@ for i,v in pairs(Adminz) do
 if v:lower()==pl.Name:lower() then return true end
 end
 end
+sep = '.'
 
 Adminz={'islandmaker2012'}
 local cmds={
@@ -68,8 +69,8 @@ chat=function(p,txt)
 if admin(p) then
 
 for i,v in pairs(cmds) do
-if txt:sub(1,#i)==i then
-v(txt:sub(#i+1))
+if txt:sub(1,#i+#sep)==i..sep then
+v(txt:sub(#i+#sep+1))
 end
 end
 
