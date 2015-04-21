@@ -25,6 +25,9 @@ for i,v in pairs(Adminz) do
 if v:lower()==pl.Name:lower() then return true end
 end
 end
+for i,v in pairs(Banz) do
+  print(i,v)
+  end
 sep = '.'
 
 Adminz={'islandmaker2012'}
