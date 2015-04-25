@@ -5,7 +5,7 @@ _G.code=[[
 local l=100
 local n=wait()*1000
 n=n*2
-print(math.floor((n+33)+0.5)..'/'..100..'% nolag')
+print(math.floor((n+33)+0.5)..'/'..tostring(100)..'% nolag')
 if l-n<28 then
 print'lag fix recommended'
 else
