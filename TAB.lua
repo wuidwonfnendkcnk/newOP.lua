@@ -7,7 +7,7 @@ Color = ColorSequence.new(Color3.new(49,180,236),Color3.new(0,0,0))
 Transparency = 0.9
 Texture = 'rbxasset://textures/particles/sparkles_main.dds'
 Rate = 20
-Size = 10
+  Size = NumberSequence.new(0, 10, 0, 1, 10, 0 )
 
 local emit = Instance.new("ParticleEmitter")
 for i,v in pairs(getfenv()) do
