@@ -1,7 +1,7 @@
 T={Speed = (NumberRange.new(5,5)) ,
 Lifetime = (NumberRange.new(5,10))
 }
-Color = {Start= Color3.new(49,180,236),End=Color3.new(0,0,0)}
+Color = ColorRange.new(Color3.new(49,180,236),Color3.new(0,0,0))
 
 
 Transparency = 0.9
