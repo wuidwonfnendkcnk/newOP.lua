@@ -1,5 +1,5 @@
 T={Speed ={Min= 5,Max= 5} 
-Lifetime = {Min=5, Max= 10} }
+Lifetime = {Min=5, Max= 10}
 
 Color = {Start= Color3.new(49,180,236),End=Color3.new(0,0,0)}
 
