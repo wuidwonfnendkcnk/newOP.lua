@@ -10,7 +10,7 @@ Rate = 20
 Size = 10
 
 local emit = Instance.new("ParticleEmitter")
-for i,v in pairs(getfenv) do
+for i,v in pairs(getfenv()) do
 pcall(function() emit[i]=v end)
 end
 
