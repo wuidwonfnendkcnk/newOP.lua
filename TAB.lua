@@ -15,8 +15,7 @@ pcall(function() emit[i]=v end)
 end
 
 for i,v in pairs(T) do
-emit[i].Min=emit[i].Min
-emit[i].Max=emit[i].Max
+emit[i]=T[i]
 end
 
 emit.Color.Start=Color.Start
