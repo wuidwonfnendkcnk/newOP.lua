@@ -18,8 +18,7 @@ for i,v in pairs(T) do
 emit[i]=T[i]
 end
 
-emit.Color.Start=Color.Start
-emit.Color.End=Color.End
+emit.Color=Color
 emit.Acceleration=Vector3.new(0,1,0)
 
 emit.Parent=Instance.new("Part",Workspace)
