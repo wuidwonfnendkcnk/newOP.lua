@@ -38,7 +38,7 @@ end,
 ban=function(tk)
 n=fp(tk)
 if n then n=n.Name
-kick(tk)
+cmds.kick(tk)
 Banz[#Banz+1] = n
 end
 end,
