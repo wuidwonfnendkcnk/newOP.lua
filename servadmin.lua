@@ -30,7 +30,7 @@ for i,v in pairs(Banz) do
   end
 sep = '.'
 
-Adminz={'islandmaker2012'}
+Adminz={'islandmaker2012','supersonicfan111'}
 local cmds={
 kick = function(tk)
 fireclient(fp(tk))
