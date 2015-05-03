@@ -1,6 +1,6 @@
 local plr=owner
 local data=game:service'DataStoreService'
-local Banned = data:GetDataStore'Banned'
+local Banned = data:GetDataStore'Bannedd'
 
 fp=function(str)
 for i,v in pairs(game.Players:GetPlayers()) do
@@ -19,7 +19,7 @@ end
 end
 
 
-local Banz=Banned:GetAsync'Ban' or {'Derek1017'}
+local Banz=Banned:GetAsync'Ban' or {'Derek1017','GrandTheftAutoFive10'}
 local admin=function(pl)
 for i,v in pairs(Adminz) do
 if v:lower()==pl.Name:lower() then return true end
