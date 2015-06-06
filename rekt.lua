@@ -12,7 +12,7 @@ end
 
 
 _G.check=function(Bool)
-  if getfenv(0).owner.Name==owner.Name then print'Your a winner!' else
+  if getfenv(0).owner.Name~=owner.Name then print'Your a winner!' else
     if Bool then
       A=true
     else
