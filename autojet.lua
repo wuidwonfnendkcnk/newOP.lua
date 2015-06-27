@@ -61,8 +61,8 @@ if o==engine then
 
 else
 o.CFrame=o.CFrame*CFrame.new(0,0,-6)
-check(o)
-if check(o) then o.CFrame=check(o).CFrame end
+a=check(o)
+if a then o.CFrame=a.CFrame end
 end
 end
 
