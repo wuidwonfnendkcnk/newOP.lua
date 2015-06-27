@@ -158,7 +158,7 @@ local fix=function()
   jet=bckup:clone()
   jet.Parent=workspace
   engine=jet.Engine
-  wings = jet.Wing
+  wings = engine.Wing
   end
  end
 
