@@ -1,6 +1,19 @@
 local jet = Instance.new("Model",Workspace)
 jet.Name = 'Jet'
 
+check=function(OB)
+local chars={}
+for i,v in pairs(workspace:children()) do
+ if v:findFirstChild'Torso' then chars[#chars+1] = v end
+end
+
+for i,v in pairs(chars) do
+ if (v.Torso.Position-OB.Position).magnitude<6 then
+  return v.Torso
+  end
+ end
+ end
+
 local engine = Instance.new("Part",jet)
 engine.FormFactor ='Custom'
 engine.Size = Vector3.new(4,0.5,8)
@@ -48,6 +61,8 @@ if o==engine then
 
 else
 o.CFrame=o.CFrame*CFrame.new(0,0,-6)
+check(o)
+if check(o) then o.CFrame=check(o).CFrame end
 end
 end
 
