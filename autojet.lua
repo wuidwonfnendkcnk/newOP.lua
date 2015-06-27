@@ -171,7 +171,9 @@ if curr~=nil then
 target(curr)
 AIM=true
 --print'AIMING'
+pcall(function()
 print('targ is '..curr.Parent.Name)
+end)
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
 --print'fire!'
