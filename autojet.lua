@@ -53,7 +53,7 @@ end
 
 rot = function(ang)
 
-cf=cf*CFrame.Angles(0,math.rad(ang==1 and 5 or -5),0)
+cf=cf*CFrame.Angles(math.rad(math.random(-5,5)),math.rad(ang==1 and 5 or -5),math.rad(math.random(-5,5)) )
 
 end
 
