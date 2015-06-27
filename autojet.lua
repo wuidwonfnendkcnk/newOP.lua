@@ -58,7 +58,7 @@ target = function(obj)
   if not obj then return end
 cf = CFrame.new(engine.Position,obj.Position)
 engine.CFrame= cf
-wait(1)
+wait(0)
 end
 
 curr=nil
