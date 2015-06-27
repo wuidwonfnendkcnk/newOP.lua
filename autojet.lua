@@ -166,6 +166,9 @@ local fix=function()
 
 while wait() do
  fix()
+ if cf.Y<10 then
+  rot(math.random(0,1))
+  end
   if AIM and curr then
     target(curr)
     pcall(function()
