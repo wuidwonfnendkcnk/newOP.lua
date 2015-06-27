@@ -145,7 +145,18 @@ Fire(M)
   end
 end
 
+local fix=function()
+ if not jet or jet.Parent~=workspace then
+  pcall(function() jet:Destroy() end)
+  jet=bckpup:clone()
+  jet.Parent=workspace
+  
+  end
+ end
+
+
 while wait() do
+ fix()
   if AIM and curr then
     target(curr)
     pcall(function()
