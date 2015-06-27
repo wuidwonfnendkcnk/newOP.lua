@@ -137,7 +137,7 @@ while wait() do
     end
 move(engine)
 engine.CFrame=cf
-  if math.random(10,25)/10>1.5 then
+  if math.random(10,25)/10<2 and not AIM then
 rot(1)
 else
 rot(0)
