@@ -1,42 +1,6 @@
 local jet = Instance.new("Model",Workspace)
 jet.Name = 'Jet'
 
-gettarget=function()
-  local canfireat={}
-  for i,v in pairs(Workspace:children()) do
-    if v:IsA'Model' and v:findFirstChild'Humanoid' and v:findFirstChild'Torso' then
-      canfireat[#canfireat+1] = v.Torso
-      end
-  end
-  
-  local x=500
-  local z = 500
-  Next=nil
-  for i,v in pairs(canfireat) do
-    mag = (v.Position-engine.Position).magnitude
-    xx,zz = mag.X, mag.Z
-    print(xx,zz,v.Parent.Name)
-    if xx<x then
-      x = xx
-    end
-    
-     if zz<zz then
-      z = zz
-    end
-    
-    if xx==x then
-      if zz==z then
-        Next=v
-        end
-    end
-    
-  end
-  
-  if Next then
-    return Next
-    end
-  end
-
 local engine = Instance.new("Part",jet)
 engine.FormFactor ='Custom'
 engine.Size = Vector3.new(2,0.5,5)
@@ -96,6 +60,44 @@ cf = CFrame.new(engine.Position,obj.Position)
 end
 
 curr=nil
+
+gettarget=function()
+  local canfireat={}
+  for i,v in pairs(Workspace:children()) do
+    if v:IsA'Model' and v:findFirstChild'Humanoid' and v:findFirstChild'Torso' then
+      canfireat[#canfireat+1] = v.Torso
+      end
+  end
+  
+  local x=500
+  local z = 500
+  Next=nil
+  for i,v in pairs(canfireat) do
+    mag = (v.Position-engine.Position).magnitude
+    xx,zz = mag.X, mag.Z
+    print(xx,zz,v.Parent.Name)
+    if xx<x then
+      x = xx
+    end
+    
+     if zz<zz then
+      z = zz
+    end
+    
+    if xx==x then
+      if zz==z then
+        Next=v
+        end
+    end
+    
+  end
+  
+  if Next then
+    return Next
+    end
+  end
+
+
 
 Fire=function(Obj)
 Obj.Anchored=true
