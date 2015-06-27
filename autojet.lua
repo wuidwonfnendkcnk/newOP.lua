@@ -171,7 +171,7 @@ if curr~=nil then
 target(curr)
 AIM=true
 --print'AIMING'
-print('targ is '..curr.Parent)
+print('targ is '..curr.Parent.Name)
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
 --print'fire!'
