@@ -57,7 +57,7 @@ end
 
 target = function(obj)
   if not obj then return end
-cf = CFrame.new(engine.Position,obj.Position)
+cf = CFrame.new(engine.Position,obj.Position)*CFrame.new(0,2,0)
 engine.CFrame= cf
 wait(0)
 end
@@ -160,7 +160,7 @@ end
 
 if curr == nil then
 
-  if math.random(1,100)<50 then
+  if (function() a= math.random(1,1000) return a<400 and a>200 end) then
 curr=gettarget()
 if not curr then --print 'WTF' else
 --print(curr.Parent.Name,'ftw')
