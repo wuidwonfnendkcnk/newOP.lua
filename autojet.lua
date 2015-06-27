@@ -59,7 +59,7 @@ end
 
 target = function(obj)
   if not obj then return end
-cf = CFrame.new(engine.Position,obj.Position)*CFrame.new(0,2,0)
+cf = CFrame.new(engine.Position,obj.Position+Vector3.new(0,1,0))
 engine.CFrame= cf
 wait(0)
 end
