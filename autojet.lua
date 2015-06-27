@@ -73,7 +73,11 @@ gettarget=function()
   local z = 500
   Next=nil
   for i,v in pairs(canfireat) do
-    mag = (v.Position-engine.Position).magnitude
+    mag = Vector3.new((v.Position.X-engine.Position.X),0,(v.Position.Z-engine.Position.Z))
+    if mag.X<0 then mag=Vector3.new(-mag.X,mag.Y,mag.Z)
+      
+  end
+  if mag.Z<0 then mag=Vector3.new(mag.X,mag.Y,-mag.Z)
     xx,zz = mag.X, mag.Z
     print(xx,zz,v.Parent.Name)
     if xx<x then
