@@ -49,9 +49,9 @@ end
 end
 
 rot = function(ang)
-if ang==1 then
+
 cf=cf*CFrame.Angles(0,math.rad(ang==1 and 5 or -5),0)
-end
+
 end
 
 target = function(obj)
@@ -142,7 +142,8 @@ if curr == nil then
   if math.random(1,100)<50 then
 curr=gettarget()
   end
-else
+end
+if curr~=nil then
 target(curr)
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
