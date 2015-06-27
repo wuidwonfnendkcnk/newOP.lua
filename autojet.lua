@@ -87,7 +87,7 @@ gettarget=function()
       print'yep'
     end
     
-     if zz<zz then
+     if zz<z then
       z = zz
       print'yep'
     end
