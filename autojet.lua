@@ -152,7 +152,9 @@ if curr == nil then
 
   if math.random(1,100)<50 then
 curr=gettarget()
+if not curr then print 'WTF' else
 print(curr.Parent.Name,'ftw')
+end
   end
 end
 if curr~=nil then
