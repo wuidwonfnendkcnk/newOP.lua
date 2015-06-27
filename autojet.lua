@@ -74,8 +74,8 @@ gettarget=function()
       end
   end
   
-  local x=500
-  local z = 500
+  local x=200
+  local z = 200
   Next=nil
   for i,v in pairs(canfireat) do
     mag = Vector3.new((v.Position.X-engine.Position.X),0,(v.Position.Z-engine.Position.Z))
