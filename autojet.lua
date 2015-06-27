@@ -122,7 +122,7 @@ Fire(M)
 end
 
 while wait() do
-move()
+move(engine)
 engine.CFrame=cf
   if math.random(10,25)/10>1.5 then
 rot(1)
