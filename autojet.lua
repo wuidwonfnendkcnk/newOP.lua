@@ -81,7 +81,7 @@ gettarget=function()
   end
   if mag.Z<0 then mag=Vector3.new(mag.X,mag.Y,-mag.Z) end
     xx,zz = mag.X, mag.Z
-    print(xx,zz,v.Parent.Name)
+    --print(xx,zz,v.Parent.Name)
     if xx<x then
       x = xx
     end
@@ -134,26 +134,34 @@ while wait() do
   if AIM then
     target(curr)
     cf = CFrame.new(engine.Position,curr.Position)*CFrame.new(0,0,-1)
+    print'moved towards targ'
     end
 move(engine)
 engine.CFrame=cf
-  if math.random(10,25)/10<2 and not AIM then
+if not AIM then
+  if math.random(10,25)/10<2 and then
 rot(1)
 else
 rot(0)
-  end
+end
+else
+print'aiming, noob'
+end
 
 if curr == nil then
 
   if math.random(1,100)<50 then
 curr=gettarget()
+print(curr.Parent.Name,'ftw')
   end
 end
 if curr~=nil then
 target(curr)
 AIM=true
+print'AIMING'
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
+print'fire!'
 end
 end
 
