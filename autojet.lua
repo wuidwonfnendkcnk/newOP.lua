@@ -14,8 +14,8 @@ gettarget=function()
   Next=nil
   for i,v in pairs(canfireat) do
     mag = (v.Position-engine.Position).magnitude
-    xx,yy,zz = mag.X, mag.Y, mag.Z
-    
+    xx,zz = mag.X, mag.Z
+    print(xx,zz,v.Parent.Name)
     if xx<x then
       x = xx
     end
