@@ -110,7 +110,7 @@ gettarget=function()
 
 Fire=function(Obj)
 Obj.Anchored=true
-Obj.Touched:connect(function(h) Obj:explode() Obj:Destroy() end)
+Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) end)
 coroutine.wrap(function()
 while wait() do
 move(Obj)
