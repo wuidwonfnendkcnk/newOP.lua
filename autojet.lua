@@ -23,11 +23,13 @@ wings.Name = 'Wing'
 
 wings.Anchored = true
 engine.Anchored = true
-
+ wings.Parent = engine
+ 
+ local bckup=jet:clone()
 local set = function()
 
   coroutine.wrap(function()
-    wings.Parent = engine
+
     wings.CFrame = engine.CFrame*CFrame.Angles(0,math.rad(90),0)
   end)()
   
@@ -107,7 +109,14 @@ gettarget=function()
 
   end
 
-
+resp=function()
+  jet:Destroy()
+  jet = bckup:clone()
+  jet.Parent=workspace
+  set()
+  AIM=false
+ curr=nil
+  end
 
 Fire=function(Obj)
 Obj.Anchored=true
