@@ -98,9 +98,9 @@ gettarget=function()
     
   end
   
-  if Next then
+  print(Next)
     return Next
-    end
+
   end
 
 
