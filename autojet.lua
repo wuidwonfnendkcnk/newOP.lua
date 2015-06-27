@@ -121,7 +121,7 @@ resp=function()
 Fire=function(Obj)
 Obj.Anchored=true
 game.Debris:AddItem(Obj,7)
-Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h==curr then curr=nil AIM=false for i=1,20 do rot(1) wait(0) end end end)
+Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h==curr then curr=nil AIM=false for i=1,20 do rot(1) wait(0) end resp() end end)
 coroutine.wrap(function()
 while true do
   if Obj.Name=='Missile' then
