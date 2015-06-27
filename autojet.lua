@@ -148,7 +148,7 @@ end
 local fix=function()
  if not jet or jet.Parent~=workspace then
   pcall(function() jet:Destroy() end)
-  jet=bckpup:clone()
+  jet=bckup:clone()
   jet.Parent=workspace
   
   end
