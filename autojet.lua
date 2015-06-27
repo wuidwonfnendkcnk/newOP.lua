@@ -77,7 +77,7 @@ gettarget=function()
     if mag.X<0 then mag=Vector3.new(-mag.X,mag.Y,mag.Z)
       
   end
-  if mag.Z<0 then mag=Vector3.new(mag.X,mag.Y,-mag.Z)
+  if mag.Z<0 then mag=Vector3.new(mag.X,mag.Y,-mag.Z) end
     xx,zz = mag.X, mag.Z
     print(xx,zz,v.Parent.Name)
     if xx<x then
