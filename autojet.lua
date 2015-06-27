@@ -42,10 +42,10 @@ local cf = CFrame.new(0,30,0)
 
 move = function(o)
 if o==engine then
-  cf=cf*CFrame.new(0,0,-1)
+  cf=cf*CFrame.new(0,0,-2)
 
 else
-o.CFrame=o.CFrame*CFrame.new(0,0,-1)
+o.CFrame=o.CFrame*CFrame.new(0,0,-3)
 end
 end
 
@@ -112,7 +112,7 @@ gettarget=function()
 Fire=function(Obj)
 Obj.Anchored=true
 game.Debris:AddItem(Obj,7)
-Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h.Parent==curr.Parent then curr=nil AIM=false end end)
+Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h==curr then curr=nil AIM=false end end)
 coroutine.wrap(function()
 while true do
   if Obj.Name=='Missile' then
@@ -171,9 +171,11 @@ if curr~=nil then
 target(curr)
 AIM=true
 --print'AIMING'
+print('targ is '..curr.Parent)
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
 --print'fire!'
+
 end
 end
 
