@@ -11,11 +11,12 @@ local Bullet=Instance.new("Part")
 Bullet.Size=Vector3.new(1,1,1)
 Bullet.Shape='Ball'
 Bullet.BrickColor = BrickColor.Yellow()
-
+Bullet.Name='Bullet'
 
 local Missile = Instance.new("Part")
 Missile.Size=Vector3.new(1,1,2)
 Missile.BrickColor=BrickColor.Black()
+Missile.Name='Missile'
 
 local wings = engine:clone()
 wings.Name = 'Wing'
@@ -110,9 +111,15 @@ gettarget=function()
 
 Fire=function(Obj)
 Obj.Anchored=true
+game.Debris:AddItem(Obj,7)
 Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h.Parent==curr.Parent then curr=nil AIM=false end end)
 coroutine.wrap(function()
-while wait() do
+while true do
+  if Obj.Name=='Missile' then
+    wait()
+  else
+    wait(0)
+    end
 move(Obj)
 end
 end)()
