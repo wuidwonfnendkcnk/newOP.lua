@@ -151,6 +151,7 @@ curr=gettarget()
 end
 if curr~=nil then
 target(curr)
+AIM=true
 if math.random(10,100)>40 then
 fire(math.random(3)==1 and 'Bullet' or 'Missile')
 end
