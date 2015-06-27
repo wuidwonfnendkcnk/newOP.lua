@@ -91,6 +91,7 @@ end
 end
 
 target = function(obj)
+  if not obj then return end
 cf = CFrame.new(engine.Position,obj.Position)
 end
 
