@@ -112,7 +112,7 @@ gettarget=function()
 Fire=function(Obj)
 Obj.Anchored=true
 game.Debris:AddItem(Obj,7)
-Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h==curr then curr=nil AIM=false end end)
+Obj.Touched:connect(function(h) Obj:explode() game.Debris:AddItem(Obj,0.2) if h==curr then curr=nil AIM=false for i=1,20 do rot(1) wait(0) end end end)
 coroutine.wrap(function()
 while true do
   if Obj.Name=='Missile' then
@@ -141,7 +141,7 @@ Fire(M)
 end
 
 while wait() do
-  if AIM then
+  if AIM and curr then
     target(curr)
     cf = CFrame.new(engine.Position,curr.Position)*CFrame.new(0,0,-1)
     --print'moved towards targ'
