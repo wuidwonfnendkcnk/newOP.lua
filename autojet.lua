@@ -150,7 +150,8 @@ local fix=function()
   pcall(function() jet:Destroy() end)
   jet=bckup:clone()
   jet.Parent=workspace
-  
+  engine=jet.Engine
+  wings = jet.Wing
   end
  end
 
