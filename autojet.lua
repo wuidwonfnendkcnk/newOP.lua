@@ -143,7 +143,9 @@ end
 while wait() do
   if AIM and curr then
     target(curr)
+    pcall(function()
     cf = CFrame.new(engine.Position,curr.Position)*CFrame.new(0,0,-1)
+    end)
     --print'moved towards targ'
     end
 move(engine)
@@ -162,7 +164,8 @@ if curr == nil then
 
   if (function() a= math.random(1,1000) return a<400 and a>200 end) then
 curr=gettarget()
-if not curr then --print 'WTF' else
+if not curr then --print 'WTF' 
+  else
 --print(curr.Parent.Name,'ftw')
 end
   end
