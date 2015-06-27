@@ -131,6 +131,10 @@ Fire(M)
 end
 
 while wait() do
+  if AIM then
+    target(curr)
+    cf = CFrame.new(engine.Position,curr.Position)*CFrame.new(0,0,-1)
+    end
 move(engine)
 engine.CFrame=cf
   if math.random(10,25)/10>1.5 then
