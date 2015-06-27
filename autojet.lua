@@ -76,10 +76,11 @@ local cf = CFrame.new(0,30,0)
 
 
 move = function(o)
-if o~=engine then
-o.CFrame=o.CFrame*CFrame.new(0,0,-1)
+if o==engine then
+  cf=cf*CFrame.new(0,0,-1)
+
 else
-cf=cf*CFrame.new(0,0,-1)
+o.CFrame=o.CFrame*CFrame.new(0,0,-1)
 end
 end
 
