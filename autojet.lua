@@ -3,7 +3,7 @@ jet.Name = 'Jet'
 
 local engine = Instance.new("Part",jet)
 engine.FormFactor ='Custom'
-engine.Size = Vector3.new(2,0.5,5)
+engine.Size = Vector3.new(4,0.5,8)
 engine.BrickColor = BrickColor.Red()
 engine.Name = 'Engine'
 
@@ -39,15 +39,15 @@ coroutine.wrap(function()
 while wait() do set() end
 end)()
 
-local cf = CFrame.new(0,30,0)
+local cf = CFrame.new(10,50,-30)
 
 
 move = function(o)
 if o==engine then
-  cf=cf*CFrame.new(0,0,-2)
+  cf=cf*CFrame.new(0,0,-5)
 
 else
-o.CFrame=o.CFrame*CFrame.new(0,0,-3)
+o.CFrame=o.CFrame*CFrame.new(0,0,-6)
 end
 end
 
@@ -187,7 +187,7 @@ end
 
 if curr == nil then
 
-  if (function() a= math.random(1,1000) return a<400 and a>200 end) then
+  if (function() a= math.random(500,10000) return a<9000 and a>8800 end) then
 curr=gettarget()
 if not curr then --print 'WTF' 
   else
