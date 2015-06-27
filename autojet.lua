@@ -110,10 +110,6 @@ gettarget=function()
   end
 
 resp=function()
-  jet:Destroy()
-  jet = bckup:clone()
-  jet.Parent=workspace
-  set()
   AIM=false
  curr=nil
   end
