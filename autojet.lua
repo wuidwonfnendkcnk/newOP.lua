@@ -84,15 +84,18 @@ gettarget=function()
     --print(xx,zz,v.Parent.Name)
     if xx<x then
       x = xx
+      print'yep'
     end
     
      if zz<zz then
       z = zz
+      print'yep'
     end
     
     if xx==x then
       if zz==z then
         Next=v
+        print'yup'
         end
     end
     
