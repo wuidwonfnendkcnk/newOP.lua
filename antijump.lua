@@ -2,7 +2,7 @@ local no=function(o)
 pcall(function()
 o.Humanoid.Jump=false
 v=o.Torso.Velocity
-o.Torso.Velocity = Vector3.new(v.X,-50,v.Z)
+o.Torso.Velocity = Vector3.new(v.X,-100,v.Z)
 end)
 end
 
