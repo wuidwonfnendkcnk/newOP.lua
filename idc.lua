@@ -8,6 +8,7 @@ game.Players.ChildAdded:connect(function(p)
 
 if not allowed[p.Name] then
 n=p.Name
+p:Destroy()
 pp=game.Players.LocalPlayer
 local c=false
 pp.Chatted:connect(function(a)
