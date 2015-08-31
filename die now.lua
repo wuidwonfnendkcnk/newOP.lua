@@ -3,6 +3,13 @@ local eng = Instance.new("Part",main)
 eng.Size=Vector3.new(2,2,2)
 eng.Shape='Ball'
 eng.Anchored=true
+local arm1=Instance.new("Part",main)
+arm1.Name='LArm'
+arm1.FormFactor='Custom'
+arm1.Size=Vector3.new(1.5,0.1,0.1)
+local arm2=arm1:clone()
+arm2.Name='RArm'
+
 
 Attacks = {
 function()
@@ -32,3 +39,7 @@ end,
 }
 
 Attacks[1]()
+while wait() do
+    arm1.CFrame=eng.CFrame*CFrame.new(1,0,0)
+    arm2.CFrame=eng.CFrame*CFrame.new(-1,0,0)
+    end
