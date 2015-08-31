@@ -12,11 +12,12 @@ function()
     end
 wait(0.5)
 
-    for i=1,36,4 do
+    for i=1,72,4 do
     wait(0)
       eng.CFrame=eng.CFrame*CFrame.Angles(0,math.rad(40),0)
     end
     local a=eng:clone()
+    a.Parent=eng
     a.BrickColor=BrickColor.Red()
     a.Transparency=0.5
     a.CanCollide=false
