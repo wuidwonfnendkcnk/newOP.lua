@@ -6,11 +6,11 @@ eng.Anchored=true
 local arm1=Instance.new("Part",main)
 arm1.Name='LArm'
 arm1.FormFactor='Custom'
-arm1.Size=Vector3.new(1.5,0.1,0.1)
+arm1.Size=Vector3.new(2,0.1,0.1)
 local arm2=arm1:clone()
 arm2.Name='RArm'
 arm1.Anchored,arm2.Anchored=true,true
-
+arm2.Parent=main
 Attacks = {
 function()
     for i=1,math.random(7,22) do
@@ -39,8 +39,8 @@ end,
 }
 coroutine.wrap(function()
     while wait() do
-    arm1.CFrame=eng.CFrame*CFrame.new(1,0,0)
-    arm2.CFrame=eng.CFrame*CFrame.new(-1,0,0)
+    arm1.CFrame=eng.CFrame*CFrame.new(1.5,0,0)
+    arm2.CFrame=eng.CFrame*CFrame.new(-1.5,0,0)
 end
 end)()
 wait(2)
