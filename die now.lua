@@ -1,7 +1,7 @@
 local main=Instance.new("Model",script.Parent)
 local eng = Instance.new("Part",main)
-eng.Size=Vector3.new(1,1,1)
---eng.Shape='Ball'
+eng.Size=Vector3.new(2,2,2)
+eng.Shape='Ball'
 eng.Anchored=true
 
 Attacks = {
@@ -22,7 +22,7 @@ wait(0.5)
     a.Transparency=0.5
     a.CanCollide=false
     a.CFrame=eng.CFrame
-    for i=1,100,2 do
+    for i=1,150,4 do
     a.Size=Vector3.new(i*2,i*2,i*2)
     a.CFrame=eng.CFrame
     wait()
