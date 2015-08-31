@@ -1,7 +1,7 @@
 local main=Instance.new("Model",script.Parent)
 local eng = Instance.new("Part",main)
 eng.Size=Vector3.new(1,1,1)
-eng.Shape='Ball'
+--eng.Shape='Ball'
 eng.Anchored=true
 
 Attacks = {
