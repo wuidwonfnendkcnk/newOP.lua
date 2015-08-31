@@ -37,9 +37,12 @@ wait(0.5)
     a:Destroy()
 end,
 }
-
-Attacks[1]()
-while wait() do
+coroutine.wrap(function()
+    while wait() do
     arm1.CFrame=eng.CFrame*CFrame.new(1,0,0)
     arm2.CFrame=eng.CFrame*CFrame.new(-1,0,0)
-    end
+end
+end)()
+wait(2)
+Attacks[1]()
+
