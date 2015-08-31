@@ -9,7 +9,7 @@ arm1.FormFactor='Custom'
 arm1.Size=Vector3.new(1.5,0.1,0.1)
 local arm2=arm1:clone()
 arm2.Name='RArm'
-
+arm1.Anchored,arm2.Anchored=true,true
 
 Attacks = {
 function()
