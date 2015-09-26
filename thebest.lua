@@ -54,3 +54,8 @@ for i=1,20 do
   zaptop.CFrame=cf
   wait(0)
   end
+
+local w= Instance.new("Weld",char)
+w.Part0=zap
+w.Part1=t
+w.C0=CFrame.new(0,-(zap.Size.Y/2),0)
