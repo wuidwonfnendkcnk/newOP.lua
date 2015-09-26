@@ -31,8 +31,8 @@ zap.Anchored=true
 zap.CFrame=t.CFrame*CFrame.new(0,-2.5,0)
 
 cf=zap.CFrame
-for i=1,30 do
+for i=1,30,2 do
 zap.Size=Vector3.new(5,i*2,5)
 zap.CFrame=cf*CFrame.new(0,i,0)
-wait()
+wait(0)
 end
