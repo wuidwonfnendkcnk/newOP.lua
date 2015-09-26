@@ -46,8 +46,11 @@ zaptop.Size=Vector3.new(5,0.5,5)
 zaptop.Anchored=true
 cf=zap.CFrame*CFrame.new(0,zap.Size.Y/2,0)
 zaptop.CFrame=cf
-for i=1,10 do
-  zaptop.Size=zaptop.Size+Vector3.new(0.5,0.1,0.5)
+zaptop.Material=zap.Material
+zaptop.BrickColor=zap.BrickColor
+zaptop.Transparency=zap.Transparency
+for i=1,20 do
+  zaptop.Size=zaptop.Size+Vector3.new(0.25,0.1,0.25)
   zaptop.CFrame=cf
   wait(0)
   end
