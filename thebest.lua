@@ -38,3 +38,16 @@ zap.Size=Vector3.new(5,i*2,5)
 zap.CFrame=cf*CFrame.new(0,i,0)
 wait(0)
 end
+
+
+local zaptop = Instance.new("Part",nc)
+zaptop.FormFactor='Custom'
+zaptop.Size=Vector3.new(5,0.5,5)
+zaptop.Anchored=true
+cf=zap.CFrame*CFrame.new(0,zap.Size.Y/1.9,0)
+zaptop.CFrame=cf
+for i=1,10 do
+  zaptop.Size=zaptop.Size+Vector3.new(0.5,0.1,0.5)
+  zaptop.CFrame=cf*CFrame.new(0,i/5,0)
+  wait(0)
+  end
