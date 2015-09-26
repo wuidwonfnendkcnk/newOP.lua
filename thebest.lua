@@ -30,6 +30,8 @@ zap.Anchored=true
 
 zap.CFrame=t.CFrame*CFrame.new(0,-2.5,0)
 
+zap.Transparency=0.5
+
 cf=zap.CFrame
 for i=1,30,2 do
 zap.Size=Vector3.new(5,i*2,5)
