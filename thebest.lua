@@ -194,7 +194,39 @@ new.Material='Grass'
 local newWeld = Instance.new("Weld",bottom)
 newWeld.Part0=newWeld.Parent
 newWeld.Part1=new
-newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(90))
+newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(37))
+newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
+newWeld.C0=newWeld.C0*CFrame.new(0,-((A-1)*((new.Size.Y)/2)),0)
+if A==1 then
+  newWeld.C0=newWeld.C0*CFrame.new(0,-3,0)
+  end
+r=function() return math.random(-200,150) end
+weldz[#weldz+1]=newWeld
+  last=new
+  zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-((last.Size.Y)/2),0)
+  wait()
+end
+
+for i,v in pairs(weldz) do
+  local newWeld=v
+  newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+  end
+  
+  
+  local arm2 = Instance.new("Model",nc)
+arm2.Name='Left Arm'
+weldz={}
+for A=1,15 do
+local new = Instance.new("Part",bod)
+new.Parent=arm2
+local X,Z=bottom.Size.X,bottom.Size.Z
+new.Size=Vector3.new(X,(X+Z)/2,Z)
+new.BrickColor=BrickColor.New'Brown'
+new.Material='Grass'
+local newWeld = Instance.new("Weld",bottom)
+newWeld.Part0=newWeld.Parent
+newWeld.Part1=new
+newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(-37))
 newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
 newWeld.C0=newWeld.C0*CFrame.new(0,-((A-1)*((new.Size.Y)/2)),0)
 if A==1 then
