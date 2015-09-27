@@ -59,7 +59,7 @@ local w= Instance.new("Weld",char)
 w.Part0=zap
 w.Part1=t
 w.C0=CFrame.new(0,-(zap.Size.Y/2),0)
-w.C0=w.C0*CFrame.new(0,-2,0)
+--w.C0=w.C0*CFrame.new(0,-2,0)
 
 w2=Instance.new("Weld",char)
 w2.Part0=zap
@@ -70,6 +70,7 @@ zap.Anchored,t.Anchored,zaptop.Anchored=false,false,false
 
 local mod = Instance.new('Model',nc)
 mod.Name = "Round"
+
 create = function(Z)
 local a = Instance.new("Part")
 a.Name=tostring(#nc.Round:children()+1)
@@ -130,3 +131,14 @@ if ii==2 or ii==4 or ii==6 or ii==8 or ii==10 then
   zaptop.Weld4.C0=ow4
   end
 end
+
+local bottom = zaptop:clone()
+bottom.Parent=nc
+bottom.Name='Bottom'
+bottom.Material=Workspace.Base.Material
+bottom.BrickColor=Workspace.Base.BrickColor
+
+local WtC = Instance.new("Weld",zap)
+WtC.Part0=zap
+WtC.Part1=bottom
+WtC.C0=CFrame.new(0,-(zap.Size.Y/2),0)
