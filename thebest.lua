@@ -147,3 +147,23 @@ local WtC = Instance.new("Weld",zap)
 WtC.Part0=zap
 WtC.Part1=bottom
 WtC.C0=CFrame.new(0,-(zap.Size.Y/2),0)
+
+
+local bod = Instance.new("Model",nc)
+bod.Name='Body'
+for i=1,20 do
+local new = Instance.new("Part",bod)
+new.Parent=bod
+local X,Z=bottom.Size.X,bottom.Size.Z
+new.Size=Vector3.new(X,(X+Z)/2,Z)
+local newWeld = Instance.new("Weld",last or bottom)
+newWeld.Part0=newWeld.Parent
+newWeld.Part1=new
+newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)
+newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
+local r=function() return math.random(-200,150) end
+newWeld.C0=newWeld.C0*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+  last=new
+  zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-last.Size.Y,0)
+  wait()
+  end
