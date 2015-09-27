@@ -183,7 +183,7 @@ for i,v in pairs(weldz) do
 
 local arm1 = Instance.new("Model",nc)
 arm1.Name='Left Arm'
-weldzR={}
+weldzL={}
 for A=1,20 do
 local new = Instance.new("Part",bod)
 new.Parent=arm1
@@ -201,7 +201,7 @@ if A==1 then
   newWeld.C0=newWeld.C0*CFrame.new(0,-3,0)
   end
 r=function() return math.random(-200,150) end
-weldz[#weldz+1]=newWeld
+weldzL[#weldzL+1]=newWeld
   last=new
 --  zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-((last.Size.Y)/2),0)
   wait()
@@ -233,7 +233,7 @@ if A==1 then
   newWeld.C0=newWeld.C0*CFrame.new(0,-3,0)
   end
 r=function() return math.random(-200,150) end
-weldz[#weldz+1]=newWeld
+weldzR[#weldzR+1]=newWeld
   last=new
  -- zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-((last.Size.Y)/2),0)
   wait()
