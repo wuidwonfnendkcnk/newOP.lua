@@ -243,3 +243,25 @@ for i,v in pairs(weldzR) do
   local newWeld=v
   newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
   end
+
+
+wait()
+
+local For=function(T)
+  local w=coroutine.wrap(function()
+    for AA=1,15 do
+      for i,v in pairs(T) do
+        v.C0=v.C0*CFrame.Angles(0,0,math.rad(1))
+        end
+        wait(0)
+      end
+  end)
+  w()
+end
+
+For(weldzR)
+For(weldzL)
+for i=1,15 do
+  char.Torso.CFrame=char.Torso.CFrame*CFrame.new(0,5,0)
+  wait()
+  end
