@@ -102,11 +102,11 @@ create'-z'
 create'-x'
 wait(1)
 a=1
-local ow={
-  ['ow1']=zaptop.Weld1.C0,
-  ['ow2']=zaptop.Weld2.C0,
-  ['ow3']=zaptop.Weld3.C0,
-  ['ow4']=zaptop.Weld4.C0}
+
+  ow1=zaptop.Weld1.C0
+  ow2=zaptop.Weld2.C0
+  ow3=zaptop.Weld3.C0
+  ow4=zaptop.Weld4.C0
 for ii=1,10 do
   
 for i=1,5 do
