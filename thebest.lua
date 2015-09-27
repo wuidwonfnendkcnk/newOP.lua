@@ -102,7 +102,7 @@ create'-z'
 create'-x'
 wait(1)
 a=1
-for ii=1,2 do
+for ii=1,4 do
 for i=1,5 do
 wait()
   zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(-1,0,0)
