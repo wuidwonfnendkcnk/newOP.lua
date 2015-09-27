@@ -59,7 +59,7 @@ local w= Instance.new("Weld",char)
 w.Part0=zap
 w.Part1=t
 w.C0=CFrame.new(0,-(zap.Size.Y/2),0)
---w.C0=w.C0*CFrame.new(0,-2,0)
+w.C0=w.C0*CFrame.new(0,2,0)
 
 w2=Instance.new("Weld",char)
 w2.Part0=zap
