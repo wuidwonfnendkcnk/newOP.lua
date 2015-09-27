@@ -138,7 +138,10 @@ bottom:breakJoints()
 bottom.Name='Bottom'
 bottom.Material=Workspace.Base.Material
 bottom.BrickColor=Workspace.Base.BrickColor
-
+bottom.FormFactor='Custom'
+bottom.Size=bottom.Size-Vector3.new(0,(bottom.Size.Y),0)
+bottom.Size=bottom.Size+Vector3.new(0,0.1,0)
+bottom.Transparency=0
 local WtC = Instance.new("Weld",zap)
 WtC.Part0=zap
 WtC.Part1=bottom
