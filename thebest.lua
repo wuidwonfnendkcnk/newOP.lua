@@ -66,7 +66,7 @@ w2.Part0=zap
 w2.Part1=zaptop
 w2.C0 = CFrame.new(0,zap.Size.Y/2,0)
 
---zap.Anchored,t.Anchored,zaptop.Anchored=false,false,false
+zap.Anchored,t.Anchored,zaptop.Anchored=false,false,false
 
 local mod = Instance.new('Model',nc)
 mod.Name = "Round"
@@ -78,7 +78,7 @@ a.Size=Vector3.new(1,zap.Size.Y+2.5,1)
 a.BrickColor=zap.BrickColor
 a.Material=zap.Material
 a.Transparency=0.5
-local w3 = Instance.new("Weld",char)
+local w3 = Instance.new("Weld",zaptop)
 w3.Part0 = zaptop
 w3.Part1 = a
 print(Z)
