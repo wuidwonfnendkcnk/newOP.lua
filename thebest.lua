@@ -164,7 +164,10 @@ newWeld.Part0=newWeld.Parent
 newWeld.Part1=new
 newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)
 newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
-newWeld.C0=newWeld.C0*CFrame.new(0,-((A)*new.Size.Y),0)
+newWeld.C0=newWeld.C0*CFrame.new(0,-((A-1)*new.Size.Y),0)
+if A==1 then
+  newWeld.C0=newWeld.C0*CFrame.new(0,-3,0)
+  end
 r=function() return math.random(-200,150) end
 weldz[#weldz+1]=newWeld
   last=new
