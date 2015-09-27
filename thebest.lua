@@ -102,9 +102,9 @@ create'-z'
 create'-x'
 wait(1)
 a=1
-repeat a=a+1
-for i=1,5 do
 
+for i=1,5 do
+wait()
   zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(-1,0,0)
 
   zaptop.Weld2.C0=zaptop.Weld2.C0*CFrame.new(0,0,1)
@@ -115,7 +115,7 @@ for i=1,5 do
 end
 
 for i=1,5 do
-
+wait()
   zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(0,0,-1)
 
   zaptop.Weld2.C0=zaptop.Weld2.C0*CFrame.new(-1,0,0)
@@ -125,4 +125,3 @@ for i=1,5 do
   zaptop.Weld4.C0=zaptop.Weld4.C0*CFrame.new(1,0,0)
 end
 
-until a>3
