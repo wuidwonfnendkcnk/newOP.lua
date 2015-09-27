@@ -171,5 +171,5 @@ end
 
 for i,v in pairs(weldz) do
   local newWeld=v
-  newWeld.C0=newWeld.C0*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+  newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
   end
