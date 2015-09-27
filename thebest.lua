@@ -194,7 +194,7 @@ new.Material='Grass'
 local newWeld = Instance.new("Weld",bottom)
 newWeld.Part0=newWeld.Parent
 newWeld.Part1=new
-newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(37))
+newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(28))
 newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
 newWeld.C0=newWeld.C0*CFrame.new(0,-((A-1)*((new.Size.Y)/2)),0)
 if A==1 then
@@ -226,7 +226,7 @@ new.Material='Grass'
 local newWeld = Instance.new("Weld",bottom)
 newWeld.Part0=newWeld.Parent
 newWeld.Part1=new
-newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(-37))
+newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad(-28))
 newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
 newWeld.C0=newWeld.C0*CFrame.new(0,-((A-1)*((new.Size.Y)/2)),0)
 if A==1 then
