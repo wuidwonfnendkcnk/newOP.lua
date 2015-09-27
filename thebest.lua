@@ -261,7 +261,7 @@ end
 
 For(weldzR,3)
 For(weldzL,-3)
-for i=1,15 do
+--[[for i=1,15 do
   zap.CFrame=zap.CFrame*CFrame.new(0,-5,0)
   wait()
-  end
+  end]]
