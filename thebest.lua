@@ -151,6 +151,7 @@ WtC.C0=CFrame.new(0,-(zap.Size.Y/2),0)
 
 local bod = Instance.new("Model",nc)
 bod.Name='Body'
+weldz={}
 for i=1,20 do
 local new = Instance.new("Part",bod)
 new.Parent=bod
@@ -162,8 +163,13 @@ newWeld.Part1=new
 newWeld.C0=CFrame.new(0,-((last or bottom).Size.Y)/2,0)
 newWeld.C0=newWeld.C0*CFrame.new(0,-(new.Size.Y/3),0)
 local r=function() return math.random(-200,150) end
-newWeld.C0=newWeld.C0*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+weldz[#weldz+1]=newWeld
   last=new
   zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-last.Size.Y,0)
   wait()
+end
+
+for i,v in pairs(weldz) do
+  local newWeld=v
+  newWeld.C0=newWeld.C0*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
   end
