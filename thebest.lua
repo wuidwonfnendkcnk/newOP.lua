@@ -102,7 +102,7 @@ create'-z'
 create'-x'
 wait(1)
 a=1
-for ii=0,10 do
+for ii=1,10 do
   local ow={
   ['ow1']=zaptop.Weld1.C0,
   ['ow2']=zaptop.Weld2.C0,
