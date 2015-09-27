@@ -121,7 +121,8 @@ end
 
 for i=1,4 do
   zaptop["Weld"..i].C0=zaptop['Weld'..i].C0*CFrame.Angles(0,math.rad(90),0)
-  end
+end
+print(ii)
 if ii==2 or ii==4 or ii == 6 or ii== 8 or ii==10 then
   for i=1,4 do
   zaptop["Weld"..i].C0=ow['ow'..i]
