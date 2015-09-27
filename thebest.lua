@@ -102,12 +102,13 @@ create'-z'
 create'-x'
 wait(1)
 a=1
-for ii=1,2 do
-  local ow={
+local ow={
   ['ow1']=zaptop.Weld1.C0,
   ['ow2']=zaptop.Weld2.C0,
   ['ow3']=zaptop.Weld3.C0,
   ['ow4']=zaptop.Weld4.C0}
+for ii=1,10 do
+  
 for i=1,5 do
 wait(0)
   zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(-1,0,0)
@@ -122,4 +123,10 @@ end
 for i=1,4 do
   zaptop["Weld"..i].C0=zaptop['Weld'..i].C0*CFrame.Angles(0,math.rad(90),0)
 end
+if ii==2 or ii==4 or ii==6 or ii==8 or ii==10 then
+  zaptop.Weld1.C0=ow1
+  zaptop.Weld2.C0=ow2
+  zaptop.Weld3.C0=ow3
+  zaptop.Weld4.C0=ow4
+  end
 end
