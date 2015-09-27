@@ -114,14 +114,7 @@ wait()
   zaptop.Weld4.C0=zaptop.Weld4.C0*CFrame.new(0,0,-1)
 end
 
-for i=1,5 do
-wait()
-  zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(0,0,-1)
-
-  zaptop.Weld2.C0=zaptop.Weld2.C0*CFrame.new(-1,0,0)
-  
-  zaptop.Weld3.C0=zaptop.Weld3.C0*CFrame.new(0,0,1)
- 
-  zaptop.Weld4.C0=zaptop.Weld4.C0*CFrame.new(1,0,0)
-end
+for i=1,4 do
+  zaptop["Weld"..i].C0=zaptop['Weld'..i].C0*CFrame.Angles(0,math.rad(90),0)
+  end
 
