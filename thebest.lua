@@ -134,6 +134,7 @@ end
 
 local bottom = zaptop:clone()
 bottom.Parent=nc
+bottom:breakJoints()
 bottom.Name='Bottom'
 bottom.Material=Workspace.Base.Material
 bottom.BrickColor=Workspace.Base.BrickColor
