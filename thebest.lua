@@ -81,7 +81,7 @@ a.Transparency=0.5
 local w3 = Instance.new("Weld",zaptop)
 w3.Part0 = zaptop
 w3.Part1 = a
-w3.Name=a.Name
+w3.Name=w3.Name..a.Name
 print(Z)
 if Z=='z' then
 
