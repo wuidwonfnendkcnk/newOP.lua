@@ -102,8 +102,8 @@ create'-x'
 wait(10)
 for i=1,5 do
   wait(1)
-  mod['1'].Weld.C0=mod['1'].Weld.C0*CFrame.new(-1,0,0)
-  mod['2'].Weld.C0=mod['2'].Weld.C0*CFrame.new(0,0,-1)
-  mod['3'].Weld.C0=mod['3'].Weld.C0*CFrame.new(1,0,0)
-  mod['4'].Weld.C0=mod['4'].Weld.C0*CFrame.new(0,0,1)
+  zaptop.Weld1.C0=zaptop.Weld1.C0*CFrame.new(-1,0,0)
+  zaptop.Weld2.C0=zaptop.Weld2.C0*CFrame.new(0,0,-1)
+  zaptop.Weld3.C0=zaptop.Weld3.C0*CFrame.new(1,0,0)
+  zaptop.Weld4.C0=zaptop.Weld4.C0*CFrame.new(0,0,1)
 end
