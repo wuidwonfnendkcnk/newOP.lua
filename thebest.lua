@@ -81,7 +81,9 @@ a.Transparency=0.5
 local w3 = Instance.new("Weld",char)
 w3.Part0 = zaptop
 w3.Part1 = a
+print(Z)
 if Z=='z' then
+
 w3.C0=CFrame.new(0,-(a.Size.Y/2),-(zaptop.Size.Z/2))
   elseif Z=='x' then
 w3.C0=CFrame.new(-(zaptop.Size.X/2),-(a.Size.Y/2),0)
