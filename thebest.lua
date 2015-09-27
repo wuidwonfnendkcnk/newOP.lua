@@ -209,7 +209,7 @@ end
 
 for i,v in pairs(weldzL) do
   local newWeld=v
-  newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+  --newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
   end
   
   
@@ -241,7 +241,7 @@ end
 
 for i,v in pairs(weldzR) do
   local newWeld=v
-  newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
+  --newWeld.C1=newWeld.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
   end
 
 
