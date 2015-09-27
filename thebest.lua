@@ -214,7 +214,7 @@ for i,v in pairs(weldz) do
   
   
   local arm2 = Instance.new("Model",nc)
-arm2.Name='Left Arm'
+arm2.Name='Right Arm'
 weldz={}
 for A=1,20 do
 local new = Instance.new("Part",bod)
