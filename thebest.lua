@@ -251,7 +251,7 @@ local For=function(T,ang,orig)
   local w=coroutine.wrap(function()
     for AA=1,30 do
       for i,v in pairs(T) do
-        v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)-(ang*AA)))
+        v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
 v.C0=v.C0*CFrame.new(0,-((i-1)*((last.Size.Y)/2)),0)
          -- v.C1=v.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
