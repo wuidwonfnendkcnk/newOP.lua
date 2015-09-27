@@ -99,11 +99,11 @@ create'z'
 create'x'
 create'-z'
 create'-x'
-wait()
+wait(10)
 for i=1,5 do
   wait(1)
-  mod['1'].CFrame=mod['1'].CFrame*CFrame.new(-1,0,0)
-  mod['2'].CFrame=mod['2'].CFrame*CFrame.new(0,0,-1)
-  mod['3'].CFrame=mod['3'].CFrame*CFrame.new(1,0,0)
-  mod['4'].CFrame=mod['4'].CFrame*CFrame.new(0,0,1)
+  mod['1'].Weld.C0=mod['1'].Weld.C0*CFrame.new(-1,0,0)
+  mod['2'].Weld.C0=mod['2'].Weld.C0*CFrame.new(0,0,-1)
+  mod['3'].Weld.C0=mod['3'].Weld.C0*CFrame.new(1,0,0)
+  mod['4'].Weld.C0=mod['4'].Weld.C0*CFrame.new(0,0,1)
 end
