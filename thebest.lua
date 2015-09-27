@@ -184,7 +184,7 @@ for i,v in pairs(weldz) do
 local arm1 = Instance.new("Model",nc)
 arm1.Name='Left Arm'
 weldz={}
-for A=1,15 do
+for A=1,20 do
 local new = Instance.new("Part",bod)
 new.Parent=arm1
 local X,Z=bottom.Size.X,bottom.Size.Z
@@ -216,7 +216,7 @@ for i,v in pairs(weldz) do
   local arm2 = Instance.new("Model",nc)
 arm2.Name='Left Arm'
 weldz={}
-for A=1,15 do
+for A=1,20 do
 local new = Instance.new("Part",bod)
 new.Parent=arm2
 local X,Z=bottom.Size.X,bottom.Size.Z
