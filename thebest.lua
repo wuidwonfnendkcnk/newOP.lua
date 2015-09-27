@@ -247,11 +247,11 @@ for i,v in pairs(weldzR) do
 
 wait()
 
-local For=function(T)
+local For=function(T,ang)
   local w=coroutine.wrap(function()
     for AA=1,15 do
       for i,v in pairs(T) do
-        v.C1=v.C1*CFrame.Angles(0,0,math.rad(1))
+        v.C1=v.C1*CFrame.Angles(0,0,math.rad(ang))
         end
         wait(0)
       end
@@ -259,8 +259,8 @@ local For=function(T)
   w()
 end
 
-For(weldzR)
-For(weldzL)
+For(weldzR,3)
+For(weldzL,-3)
 for i=1,15 do
   zap.CFrame=zap.CFrame*CFrame.new(0,-5,0)
   wait()
