@@ -59,7 +59,7 @@ local w= Instance.new("Weld",char)
 w.Part0=zap
 w.Part1=t
 w.C0=CFrame.new(0,-(zap.Size.Y/2),0)
-w.C0=w.C0*CFrame.new(0,2,0)
+w.C0=w.C0*CFrame.new(0,3,0)
 
 w2=Instance.new("Weld",char)
 w2.Part0=zap
@@ -76,7 +76,7 @@ local a = Instance.new("Part")
 a.Name=tostring(#nc.Round:children()+1)
 a.Parent=nc.Round
 a.FormFactor='Custom'
-a.Size=Vector3.new(1,zap.Size.Y+2.3,1)
+a.Size=Vector3.new(1,zap.Size.Y,1)
 a.BrickColor=zap.BrickColor
 a.Material=zap.Material
 a.Transparency=0.5
