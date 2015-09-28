@@ -323,7 +323,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
     end)
 
 local Sine=0
-local Change=2.1
+local Change=1.6
 POS=WELD22.C0
 L=function(A,B,C)
   return A:lerp(B,C)
