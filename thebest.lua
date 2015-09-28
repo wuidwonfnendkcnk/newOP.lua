@@ -314,35 +314,22 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   
   local mouse = p:GetMouse()
   An=false
- dir='fo'
+ --dir='fo'
   mouse.Button1Down:connect(function()
-    An=not An
-    No=0
-    No2=25
-    dir='fo'
+   Moving=not Moving
+    --No=0
+   -- No2=25
+    --dir='fo'
     end)
 
-while wait(0) do
-  if An then
-    if No<50 then
-      if dir=='fo' then
-    WELD22.C0=WELD22.C0*CFrame.Angles(0.1,0,0)
-    end
-  elseif No>50 then
-    No=49
-    if dir=='ba' then
-    WELD22.C0=WELD22.C0*CFrame.Angles(-0.1,0,0)
-    end
-    if dir=='fo' then dir='ba' end
-  end
-  if dir=='fo' then
-    No=No+1
-  else
-    No=No-1
-  end
-  if No<1 then
-    dir='fo'
-    No=1
-    end
-    end
-  end
+local Sine=0
+local Change=1
+POS=WELD22.C0
+while wait() do
+Sine=Sine+Change
+-- STUFF TO DETECT MOVING, ETC
+if Walking then
+WELD22.C0=WELD22.C0:Lerp(POS*CFrame.Angles(0,0,math.sin(Sine)),.1) -- CFRAMETOLERP:Lerp(POS,SPEED)
+-- Experiment with the angles stuff ;p
+end
+end
