@@ -339,7 +339,7 @@ Sine=Sine+Change
 if Moving then
   
 WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.12) -- CFRAMETOLERP:Lerp(POS,SPEED)
-WELD2.C0= L(WELD2.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08) -- CFRAMETOLERP:Lerp(POS,SPEED)
+WELD2.C0= L(WELD2.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08)*CFrame.new(0,math.sin(Sine/3),0) -- CFRAMETOLERP:Lerp(POS,SPEED)
 
 end
 end
