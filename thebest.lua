@@ -171,6 +171,7 @@ if A==1 then
 r=function() return math.random(-200,150) end
 weldz[#weldz+1]=newWeld
   last=new
+  LAST=new
   zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-((last.Size.Y)/2),0)
   wait()
 end
