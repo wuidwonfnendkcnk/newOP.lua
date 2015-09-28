@@ -325,9 +325,14 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
 while wait(0) do
   if An then
     if No<50 then
+      if dir=='fo' then
     WELD22.C0=WELD22.C0*CFrame.Angles(0.1,0,0)
-  else
+    end
+  elseif No>50 then
+    No=49
+    if dir=='ba' then
     WELD22.C0=WELD22.C0*CFrame.Angles(-0.1,0,0)
+    end
     if dir=='fo' then dir='ba' end
   end
   if dir=='fo' then
