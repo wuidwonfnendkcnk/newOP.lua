@@ -219,7 +219,8 @@ weldzR={}
 for A=1,20 do
 local new = Instance.new("Part",bod)
 new.Parent=arm2
-local X,Z=bottom.Size.X,bottom.Size.Z
+X=bottom.Size.X
+Z=bottom.Size.Z
 new.Size=Vector3.new(X,(X+Z)/2,Z)
 new.BrickColor=BrickColor.New'Brown'
 new.Material='Grass'
@@ -249,7 +250,7 @@ wait()
 
 local For=function(T,ang,orig)
   local w=coroutine.wrap(function()
-    for AA=1,30 do
+    for AA=1,10 do
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
@@ -264,7 +265,22 @@ end
 
 For(weldzR,3,-45)
 For(weldzL,-3,45)
---[[for i=1,15 do
-  zap.CFrame=zap.CFrame*CFrame.new(0,-5,0)
-  wait()
-  end]]
+
+YY=(X+Z)/2
+local leg1=Instance.new("Part",bod)
+leg1.Name="Left Leg"
+local leg2 = Instance.new("Part",bod)
+leg2.Name='Right Leg'
+leg1.Size=Vector3.new(last.Size.X,YY*20,last.Size.Z)
+leg2.Size=leg1.Size
+
+local WELD = Instance.new("Weld",LAST)
+WELD.Part0 = LAST
+WELD.Part1 = leg1
+
+WELD.C0=CFrame.new(0,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(30))
+  
+  local WELD2 = Instance.new("Weld",LAST)
+WELD2.Part0 = LAST
+WELD2.Part1 = leg2
+WELD2.C0=CFrame.new(0,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(-30))
