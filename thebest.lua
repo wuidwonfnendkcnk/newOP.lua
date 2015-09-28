@@ -327,7 +327,7 @@ local Change=1.2
 POS=WELD22.C0*CFrame.new(0,-20,0)
 
 
-POS2=WELD2.C0
+POS2=WELD2.C0*CFrame.new(0,0,10)
 
 L=function(A,B,C)
   return A:lerp(B,C)
