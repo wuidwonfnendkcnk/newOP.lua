@@ -323,7 +323,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
     end)
 
 local Sine=0
-local Change=20
+local Change=1
 POS=WELD22.C0
 L=function(A,B,C)
   return A:lerp(B,C)
@@ -332,7 +332,7 @@ while wait() do
 Sine=Sine+Change
 -- STUFF TO DETECT MOVING, ETC
 if Moving then
-WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine*0.2),0,0),0.1) -- CFRAMETOLERP:Lerp(POS,SPEED)
+WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine)*0.2,0,0),0.3) -- CFRAMETOLERP:Lerp(POS,SPEED)
 -- Experiment with the angles stuff ;p
 end
 end
