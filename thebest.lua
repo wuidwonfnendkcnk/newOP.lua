@@ -329,10 +329,10 @@ POS=WELD22.C0*CFrame.new(0,-20,0)
 
 POS2=WELD2.C0
 
-POSS=WELD02.C0*CFrame.new(0,-20,0)
+POSS=WELD02.C0*CFrame.new(0,-20,0)*CFrame.Angles(0,math.rad(90),0)
 
 
-POSS2=WELD.C0
+POSS2=WELD.C0*CFrame.Angles(0,math.rad(90),0)
 
 L=function(A,B,C)
   return A:lerp(B,C)
