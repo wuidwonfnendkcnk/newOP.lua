@@ -319,14 +319,20 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
     No=0
     No2=25
     end)
-
+CanRev=false
 while wait() do
   if An then
+    if not CanRev then
     No=No+1
+  else
+    No=No-1
+  end
+  if No<0 then No=0 CanRev=false end
     if No>50 then
-      WELD22.C0=WELD22.C0*CFrame.Angles(0,-0.1,0)
+      WELD22.C0=WELD22.C0*CFrame.Angles(-0.3,0,0)
+      CanRev=true
     else
-      WELD22.C0=WELD22.C0*CFrame.Angles(0,0.1,0)
+      WELD22.C0=WELD22.C0*CFrame.Angles(0.3,0,0)
       end
     end
   end
