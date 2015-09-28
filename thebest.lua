@@ -338,7 +338,7 @@ Sine=Sine+Change
 -- STUFF TO DETECT MOVING, ETC
 if Moving then
   
-WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.1) -- CFRAMETOLERP:Lerp(POS,SPEED)
+WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.2) -- CFRAMETOLERP:Lerp(POS,SPEED)
 WELD2.C0= L(WELD2.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.1) -- CFRAMETOLERP:Lerp(POS,SPEED)
 
 end
