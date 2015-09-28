@@ -278,7 +278,8 @@ local leg2 = Instance.new("Part",bod)
 leg2.Name='Right Leg'
 leg1.Size=Vector3.new(last.Size.X,YY*20,last.Size.Z)
 leg2.Size=leg1.Size
-
+leg1.BrickColor,leg2.BrickColor=arm1.Part.BrickColor
+leg1.Material,leg2.Material='Grass','Grass'
 local WELD = Instance.new("Weld",LAST)
 WELD.Part0 = LAST
 WELD.Part1 = leg1
