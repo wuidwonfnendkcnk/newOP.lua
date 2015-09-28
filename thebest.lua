@@ -280,6 +280,7 @@ leg1.Size=Vector3.new(last.Size.X,YY*20,last.Size.Z)
 leg2.Size=leg1.Size
 leg1.BrickColor,leg2.BrickColor=BrickColor.New'Brown',BrickColor.New'Brown'
 leg1.Material,leg2.Material='Grass','Grass'
+
 local WELD = Instance.new("Weld",LAST)
 WELD.Part0 = LAST
 WELD.Part1 = leg1
@@ -290,3 +291,21 @@ WELD.C0=CFrame.new(-10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(-10))
 WELD2.Part0 = LAST
 WELD2.Part1 = leg2
 WELD2.C0=CFrame.new(10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(10))
+  
+  leg12 = Instance.new("Part",leg1)
+  leg22 = Instance.new("Part",leg2)
+  leg12.Size=Vector3.new(leg1.Size.X,YY*10,leg1.Size.Z)
+  leg22.Size=leg12.Size
+  leg12.BrickColor,leg22.BrickColor=BrickColor.New'Brown',BrickColor.New'Brown'
+leg12.Material,leg22.Material='Grass','Grass'
+
+local WELD02 = Instance.new("Weld",leg1)
+WELD02.Part0 = leg1
+WELD02.Part1 = leg11
+
+WELD02.C0=CFrame.new(-10,-(leg1.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-10))
+  
+  local WELD22 = Instance.new("Weld",leg2)
+WELD22.Part0 = leg2
+WELD22.Part1 = leg22
+WELD22.C0=CFrame.new(10,-(leg1.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(10))
