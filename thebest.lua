@@ -329,6 +329,11 @@ POS=WELD22.C0*CFrame.new(0,-20,0)
 
 POS2=WELD2.C0
 
+POSS=WELD12.C0*CFrame.new(0,-20,0)
+
+
+POSS2=WELD1.C0
+
 L=function(A,B,C)
   return A:lerp(B,C)
   end
@@ -340,6 +345,10 @@ if Moving then
   
 WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08) -- CFRAMETOLERP:Lerp(POS,SPEED)
 WELD2.C0= L(WELD2.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08)*CFrame.new(0,0,-(math.sin(Sine/3))) -- CFRAMETOLERP:Lerp(POS,SPEED)
+if Sine>16 then
+WELD12.C0=L(WELD12.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08) -- CFRAMETOLERP:Lerp(POS,SPEED)
+WELD1.C0= L(WELD1.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08)*CFrame.new(0,0,-(math.sin(Sine/3))) -- CFRAMETOLERP:Lerp(POS,SPEED)
+end
 
 end
 end
