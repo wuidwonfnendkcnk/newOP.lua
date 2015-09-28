@@ -338,17 +338,18 @@ L=function(A,B,C)
   return A:lerp(B,C)
   end
 while wait() do
-Sine=Sine+Change
 
+Sine=0
 -- STUFF TO DETECT MOVING, ETC
 if Moving then
-  
+  Sine=Sine+Change
 WELD22.C0=L(WELD22.C0,POS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08) -- CFRAMETOLERP:Lerp(POS,SPEED)
 WELD2.C0= L(WELD2.C0,POS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08)*CFrame.new(0,0,-(math.sin(Sine/3))) -- CFRAMETOLERP:Lerp(POS,SPEED)
 if Sine>16 then
 WELD02.C0=L(WELD02.C0,POSS*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08) -- CFRAMETOLERP:Lerp(POS,SPEED)
 WELD.C0= L(WELD.C0,POSS2*CFrame.Angles(math.sin(Sine/3)*0.3,0,0),0.08)*CFrame.new(0,0,-(math.sin(Sine/3))) -- CFRAMETOLERP:Lerp(POS,SPEED)
 end
-
+else
+Sine=0
 end
 end
