@@ -328,7 +328,7 @@ POS=WELD22.C0
 while wait() do
 Sine=Sine+Change
 -- STUFF TO DETECT MOVING, ETC
-if Walking then
+if Moving then
 WELD22.C0=WELD22.C0:Lerp(POS*CFrame.Angles(0,0,math.sin(Sine)),.1) -- CFRAMETOLERP:Lerp(POS,SPEED)
 -- Experiment with the angles stuff ;p
 end
