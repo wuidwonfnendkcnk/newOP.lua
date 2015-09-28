@@ -314,25 +314,31 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   
   local mouse = p:GetMouse()
   An=false
+  pizza=false
+pizza2=true
   mouse.Button1Down:connect(function()
+    pizza2=not pizza2
     An=not An
     No=0
     No2=25
     end)
-CanRev=false
+
 while wait() do
   if An then
-    if not CanRev then
+    for i=1,51 do
+      wait()
+    if pizza and not pizza2 then
     No=No+1
-  else
+  elseif not pizza2 and not pizza then
     No=No-1
   end
-  if No<0 then No=0 CanRev=false end
+  if No<0 then No=0 pizza=true end
     if No>50 then
       WELD22.C0=WELD22.C0*CFrame.Angles(-0.3,0,0)
-      CanRev=true
+      pizza=false
     else
       WELD22.C0=WELD22.C0*CFrame.Angles(0.3,0,0)
       end
-    end
+  end
+  end
   end
