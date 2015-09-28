@@ -276,7 +276,7 @@ local leg1=Instance.new("Part",bod)
 leg1.Name="Left Leg"
 local leg2 = Instance.new("Part",bod)
 leg2.Name='Right Leg'
-leg1.Size=Vector3.new(last.Size.X,YY*10,last.Size.Z)
+leg1.Size=Vector3.new(last.Size.X,YY*20,last.Size.Z)
 leg2.Size=leg1.Size
 
 local WELD = Instance.new("Weld",LAST)
