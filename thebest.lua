@@ -326,7 +326,7 @@ local Sine=0
 local Change=1
 POS=WELD22.C0
 L=function(A,B,C)
-  return A:Lerp(B,C)
+  return A:lerp(B,C)
   end
 while wait() do
 Sine=Sine+Change
