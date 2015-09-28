@@ -339,7 +339,7 @@ L=function(A,B,C)
   end
 while wait() do
 
-Sine=0
+
 -- STUFF TO DETECT MOVING, ETC
 if Moving then
   Sine=Sine+Change
