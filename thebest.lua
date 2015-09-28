@@ -323,7 +323,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
     end)
 
 local Sine=0
-local Change=0.3
+local Change=1.2
 POS=WELD22.C0*CFrame.new(0,-20,0)
 
 
