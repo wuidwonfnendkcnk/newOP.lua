@@ -312,7 +312,7 @@ WELD22.Part0 = leg2
 WELD22.Part1 = leg22
 WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   
-  local mouse = plr:GetMouse()
+  local mouse = p:GetMouse()
   An=false
   mouse.Button1Down:connect(function()
     An=not An
