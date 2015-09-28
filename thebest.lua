@@ -283,9 +283,9 @@ local WELD = Instance.new("Weld",LAST)
 WELD.Part0 = LAST
 WELD.Part1 = leg1
 
-WELD.C0=CFrame.new(-18,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(-10))
+WELD.C0=CFrame.new(-10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(-10))
   
   local WELD2 = Instance.new("Weld",LAST)
 WELD2.Part0 = LAST
 WELD2.Part1 = leg2
-WELD2.C0=CFrame.new(18,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(10))
+WELD2.C0=CFrame.new(10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(10))
