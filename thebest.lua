@@ -253,13 +253,13 @@ for i,v in pairs(weldzR) do
 
 wait()
 
-local For=function(T,ang,orig,ok)
+local For=function(T,ang,orig,ok,ok2)
   local w=coroutine.wrap(function()
-    for AA=1,10 do
+    for AA=1,ok or 10 do
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
-v.C0=v.C0*CFrame.new(0,-((i-1)*((last.Size.Y)/2)),0)
+v.C0=v.C0*CFrame.new(ok2~=nil and -ok2 or 0,-((i-1)*((last.Size.Y)/2)),0)
          -- v.C1=v.C1*CFrame.Angles(math.rad(r()),math.rad(r()),math.rad(r()))
         end
         wait(0)
@@ -333,9 +333,9 @@ L=function(A,B,C)
 end
 
 wait(3)
-For(weldzL,-3,150)
+For(weldzL,-3,150,11,50)
 for i,v in pairs(weldzL) do
-  v.C0=v.C0*CFrame.new(0,0,-500)
+ -- v.C0=v.C0*CFrame.new(0,0,-500)
   end
 local Handle= Instance.new("Part")
 while true do
