@@ -255,7 +255,7 @@ wait()
 
 local For=function(T,ang,orig,ok)
   local w=coroutine.wrap(function()
-    for AA=1,ok or 10 do
+    for AA=1,10 do
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
@@ -333,13 +333,7 @@ L=function(A,B,C)
 end
 
 wait(3)
-for i=1,10 do
-for _,v in pairs(weldzL) do
-    v.C0=CFrame.new(0,-(last.Size.Y/2),0)*CFrame.Angles(0, 0, math.rad((150)+(i*5)) )
-    v.C0=v.C0*CFrame.new(0,0,-((i*(last.Size.Y))))
-end
-wait()
-end
+For(weldzL,-3,150)
 
 local Handle= Instance.new("Part")
 while true do
