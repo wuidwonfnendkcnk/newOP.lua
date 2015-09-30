@@ -209,7 +209,7 @@ local aWeld2 = Instance.new("Weld",limb)
 aWeld2.Part0=limb
 aWeld2.Part1=limb2
 aWeld2.C0 = CFrame.new(0,0,0)
-aWeld2.C0=aWeld2.C0*CFrame.new(20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(50))*CFrame.new(0,10,0)
+aWeld2.C0=aWeld2.C0*CFrame.new(20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(50))*CFrame.new(0,-10,0)
 
 wait(10)
 
