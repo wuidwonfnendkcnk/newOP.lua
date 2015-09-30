@@ -331,7 +331,7 @@ POSS2=WELD.C0*CFrame.Angles(0,math.rad(180),0)
 L=function(A,B,C)
   return A:lerp(B,C)
 end
-For(weldzL,-3,-35,15)
+For(weldzL,1.3,-35,20)
 
 
 local Handle= Instance.new("Part")
