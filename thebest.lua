@@ -259,9 +259,9 @@ local For=function(T,ang,orig,ok,ok2,half)
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
         if half and i>=#T/2 then
-          print(v.C0)
-        v.C0=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(45)))
-          print(v.C0)
+          print(v.C1)
+        v.C1=v.C1*CFrame.Angles(0,0,math.rad(0,0,math.rad(45)))
+          print(v.C1)
           print'rot extra'
         end
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
