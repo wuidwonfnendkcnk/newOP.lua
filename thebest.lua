@@ -255,8 +255,9 @@ wait()
 
 local For=function(T,ang,orig,ok,ok2,half)
   local w=coroutine.wrap(function()
-    local inc=0
+    
     for AA=1,ok or 10 do
+      local inc=0
         for i,v in pairs(T) do
           
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
