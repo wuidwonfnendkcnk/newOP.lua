@@ -315,7 +315,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   local mouse = p:GetMouse()
   An=false
  --dir='fo'
-  mouse.Button1Down:connect(function()
+char.Humanoid.Walking:connect(function()
    Moving=not Moving
     --No=0
    -- No2=25
@@ -336,7 +336,11 @@ POSS2=WELD.C0*CFrame.Angles(0,math.rad(180),0)
 
 L=function(A,B,C)
   return A:lerp(B,C)
-  end
+end
+
+
+
+local Handle= Instance.new("Part")
 while wait() do
 
 
