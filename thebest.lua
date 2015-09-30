@@ -255,9 +255,9 @@ wait()
 
 local For=function(T,ang,orig,ok,ok2,half)
   local w=coroutine.wrap(function()
-    
+    local inc=0
     for AA=1,ok or 10 do
-      local inc=0
+      
         for i,v in pairs(T) do
           
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
@@ -266,7 +266,7 @@ local For=function(T,ang,orig,ok,ok2,half)
         if half and i>=#T/2 then
           --print(v.C1)
           wait(0)
-          inc=inc+7
+          inc=inc+1
         v.C1=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(90)))
           v.C0=v.C0*CFrame.new((i)+inc,(i*2),0)
           --print(v.C1)
