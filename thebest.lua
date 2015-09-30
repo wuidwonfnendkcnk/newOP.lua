@@ -335,10 +335,10 @@ end
 
 
 local Handle= Instance.new("Part")
-while wait() do
+while true do
 
 local p=char.Torso.Position
-wait()
+wait(0)
 if (char.Torso.Position-p).magnitude >1 then
   Moving=true
 else
