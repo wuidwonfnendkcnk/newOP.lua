@@ -253,9 +253,9 @@ for i,v in pairs(weldzR) do
 
 wait()
 
-local For=function(T,ang,orig)
+local For=function(T,ang,orig,ok)
   local w=coroutine.wrap(function()
-    for AA=1,10 do
+    for AA=1,ok or 10 do
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
@@ -331,7 +331,7 @@ POSS2=WELD.C0*CFrame.Angles(0,math.rad(180),0)
 L=function(A,B,C)
   return A:lerp(B,C)
 end
-For(weldzR,-3,-35)
+For(weldzL,-3,-35,15)
 
 
 local Handle= Instance.new("Part")
