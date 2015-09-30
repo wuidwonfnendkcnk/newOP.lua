@@ -331,8 +331,16 @@ POSS2=WELD.C0*CFrame.Angles(0,math.rad(180),0)
 L=function(A,B,C)
   return A:lerp(B,C)
 end
-For(weldzL,1,-45,20)
 
+wait(3)
+for i=1,10 do
+for _,v in pairs(weldzL) do
+    v.C0=CFrame.new(0,-(last.Size.Y/2),0)*CFrame.Angles(0, 0, math.rad((150)+(i*5)) )
+      v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
+v.C0=v.C0*CFrame.new(0,-((i-1)*((last.Size.Y)/2)),0)
+end
+wait()
+end
 
 local Handle= Instance.new("Part")
 while true do
