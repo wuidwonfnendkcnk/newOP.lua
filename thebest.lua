@@ -259,7 +259,7 @@ local For=function(T,ang,orig,ok,ok2,half)
       for i,v in pairs(T) do
         v.C0=CFrame.new(0,-((last).Size.Y)/2,0)*CFrame.Angles(0,0,math.rad((orig)+(ang*AA)))
         if half and i>=half then
-        v.C0=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(ang*(AA/1.5))))
+        v.C0=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(ang*(AA))))
         end
       v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
 v.C0=v.C0*CFrame.new(ok2~=nil and -ok2 or 0,-((i-1)*((last.Size.Y)/2)),0)
@@ -336,7 +336,7 @@ L=function(A,B,C)
 end
 
 wait(3)
-For(weldzL,-3,150,11,10,(#weldzL/2))
+For(weldzL,-3,150,11,5,(#weldzL/2))
 for i,v in pairs(weldzL) do
  -- v.C0=v.C0*CFrame.new(0,0,-500)
   end
