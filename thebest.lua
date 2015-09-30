@@ -314,13 +314,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   
   local mouse = p:GetMouse()
   An=false
- --dir='fo'
-char.Humanoid.Running:connect(function()
-   Moving=not Moving
-    --No=0
-   -- No2=25
-    --dir='fo'
-    end)
+Moving=false
 
 local Sine=0
 local Change=1.2
@@ -343,6 +337,13 @@ end
 local Handle= Instance.new("Part")
 while wait() do
 
+local p=char.Torso.Position
+wait()
+if (char.Torso.Position-p).magnitude >1 then
+  Moving=true
+else
+  Moving=false
+  end
 
 -- STUFF TO DETECT MOVING, ETC
 if Moving then
