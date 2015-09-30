@@ -255,6 +255,7 @@ wait()
 
 local For=function(T,ang,orig,ok,ok2,half)
   local w=coroutine.wrap(function()
+    local inc=0
     for AA=1,ok or 10 do
         for i,v in pairs(T) do
           
@@ -264,8 +265,9 @@ local For=function(T,ang,orig,ok,ok2,half)
         if half and i>=#T/2 then
           --print(v.C1)
           wait(0)
+          inc=inc+5
         v.C1=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(90)))
-          v.C0=v.C0*CFrame.new(i/5,(i/5),0)
+          v.C0=v.C0*CFrame.new((i/5)+inc,(i/5),0)
           --print(v.C1)
           --print'rot extra'
         end
