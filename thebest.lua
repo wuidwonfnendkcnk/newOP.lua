@@ -337,10 +337,8 @@ L=function(A,B,C)
 end
 
 wait(3)
-For(weldzL,-3,150,11,5,(#weldzL/2))
-for i,v in pairs(weldzL) do
- -- v.C0=v.C0*CFrame.new(0,0,-500)
-  end
+For(weldzL,-3,150,11,5,#weldzL/2)
+
 local Handle= Instance.new("Part")
 while true do
 
