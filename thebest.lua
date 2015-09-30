@@ -315,7 +315,7 @@ WELD22.C0=CFrame.new(0,-(leg2.Size.Y/2),0)*CFrame.Angles(0,0,math.rad(-5))
   local mouse = p:GetMouse()
   An=false
  --dir='fo'
-char.Humanoid.Walking:connect(function()
+char.Humanoid.Running:connect(function()
    Moving=not Moving
     --No=0
    -- No2=25
