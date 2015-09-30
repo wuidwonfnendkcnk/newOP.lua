@@ -336,8 +336,7 @@ wait(3)
 for i=1,10 do
 for _,v in pairs(weldzL) do
     v.C0=CFrame.new(0,-(last.Size.Y/2),0)*CFrame.Angles(0, 0, math.rad((150)+(i*5)) )
-      v.C0=v.C0*CFrame.new(0,-(last.Size.Y/3),0)
-v.C0=v.C0*CFrame.new(0,-((i-1)*((last.Size.Y)/2)),0)
+    v.C0=v.C0*CFrame.new(0,0,-((i*(last.Size.Y))))
 end
 wait()
 end
