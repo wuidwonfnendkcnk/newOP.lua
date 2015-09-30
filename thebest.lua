@@ -268,7 +268,7 @@ local For=function(T,ang,orig,ok,ok2,half)
           wait(0)
           inc=inc+7
         v.C1=v.C0*CFrame.Angles(0,0,math.rad(0,0,math.rad(90)))
-          v.C0=v.C0*CFrame.new((i/3)+inc,(i),0)
+          v.C0=v.C0*CFrame.new((i)+inc,(i*2),0)
           --print(v.C1)
           --print'rot extra'
         end
