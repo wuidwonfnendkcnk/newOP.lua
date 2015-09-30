@@ -216,23 +216,23 @@ arm2.Name='Right Arm'
 local X,Z=bottom.Size.X,bottom.Size.Z
 YY=(X+Z)/4
 local 2limb = Instance.new("Part",arm2)
-2limb.Name='Limb1'
-2limb.Size = Vector3.new(X,YY*10,Z)
+o2limb.Name='Limb1'
+o2limb.Size = Vector3.new(X,YY*10,Z)
 local a2Weld1 = Instance.new("Weld",bottom)
 a2Weld1.Part0=bottom
-a2Weld1.Part1=2limb
+a2Weld1.Part1=o2limb
 a2Weld1.C0 = CFrame.new(0,0,0)
 a2Weld1.C0=a2Weld1.C0*CFrame.Angles(0,0,math.rad(-30))*CFrame.new(0,-(YY*5),0)
-limb.BrickColor=BrickColor.New'Brown'
-limb.Material='Grass'
-local 2limb2 = 2limb:clone()
-2limb2.Parent=arm1
-2limb2:breakJoints()
-2limb2.Name='Limb2'
-2limb2.Size=Vector3.new(X,YY*15,Z)
-local a2Weld2 = Instance.new("Weld",limb)
-a2Weld2.Part0=2limb
-a2Weld2.Part1=2limb2
+o2limb.BrickColor=BrickColor.New'Brown'
+o2limb.Material='Grass'
+local o2limb2 = o2limb:clone()
+o2limb2.Parent=arm1
+o2limb2:breakJoints()
+o2limb2.Name='Limb2'
+o2limb2.Size=Vector3.new(X,YY*15,Z)
+local a2Weld2 = Instance.new("Weld",o2limb)
+a2Weld2.Part0=o2limb
+a2Weld2.Part1=o2limb2
 a2Weld2.C0 = CFrame.new(0,0,0)
 a2Weld2.C0=a2Weld2.C0*CFrame.new(20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)
 
