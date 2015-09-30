@@ -192,15 +192,26 @@ local X,Z=bottom.Size.X,bottom.Size.Z
 YY=(X+Z)/4
 local limb = Instance.new("Part",arm1)
 limb.Name='Limb1'
-limb.Size = Vector3.new(X,YY*20,Z)
+limb.Size = Vector3.new(X,YY*10,Z)
 local aWeld1 = Instance.new("Weld",bottom)
 aWeld1.Part0=bottom
 aWeld1.Part1=limb
 aWeld1.C0 = CFrame.new(0,0,0)
-aWeld1.C0=aWeld1.C0*CFrame.Angles(0,0,math.rad(30))*CFrame.new(0,-(YY*10),0)
-  
+aWeld1.C0=aWeld1.C0*CFrame.Angles(0,0,math.rad(30))*CFrame.new(0,-(YY*5),0)
+limb.BrickColor=BrickColor.New'Brown'
+limb.Material='Grass'
+local limb2 = limb:clone()
+limb2.Parent=arm1
+limb2:breakJoints()
+limb2.Name='Limb2'
+limb2.Size=Vector3.new(X,YY*15,Z)
+local aWeld2 = Instance.new("Weld",limb)
+aWeld2.Part0=limb
+aWeld2.Part1=limb2
+aWeld2.C0 = CFrame.new(0,0,0)
+aWeld2.C0=aWeld1.C0*CFrame.Angles(0,0,math.rad(30))*CFrame.new(0,-(YY*7.5),0)
 
-
+wait(10)
 
 
 wait()
