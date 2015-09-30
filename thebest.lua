@@ -339,7 +339,8 @@ while true do
 
 local p=char.Torso.Position
 wait(0)
-if (char.Torso.Position-p).magnitude >1 then
+local pp = char.Torso.Position
+if (Vector3.new(pp.X,0,pp.Z)-Vector3.new(p.X,0,p.Z)).magnitude >1 then
   Moving=true
 else
   Moving=false
