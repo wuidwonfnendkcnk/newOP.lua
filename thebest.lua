@@ -347,7 +347,7 @@ L=function(A,B,C)
 end
 
 wait(3)
-For(weldzL,-3,-150,11,5,#weldzL/2)
+For(weldzL,-3,0,11,5,#weldzL/2)
 
 local Handle= Instance.new("Part")
 while true do
