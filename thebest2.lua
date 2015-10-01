@@ -238,8 +238,8 @@ a2Weld2.C0=a2Weld2.C0*CFrame.new(-20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50
 wait(5)
 for i=1,50 do
   wait()
-  a2Weld2.C0=CFrame.new(0,0,0)*CFrame.new(-20+(0.75*i),-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)*CFrame.Angles(0,0,math.rad(i*3))
-  aWeld2.C0=CFrame.new(0,0,0)*CFrame.new(20-(0.75*i),-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(50))*CFrame.new(0,-10,0)*CFrame.Angles(0,0,math.rad(-i*3))
+  a2Weld2.C0=CFrame.new(0,0,0)*CFrame.new(-20+(0.75*i),-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)*CFrame.Angles(0,0,math.rad(i*2))
+  aWeld2.C0=CFrame.new(0,0,0)*CFrame.new(20-(0.75*i),-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(50))*CFrame.new(0,-10,0)*CFrame.Angles(0,0,math.rad(-i*2))
     bottom.Anchored=true
   end
 wait(1)
