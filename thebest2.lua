@@ -322,8 +322,9 @@ for i=1,50 do
   for i=1,50 do
     wait()
     a2Weld2.C0=a2Weld2.C0*CFrame.Angles(0,0,-1)
+    bottom.Anchored=true
     end
-
+bottom.Anchored=false
 local Handle= Instance.new("Part")
 while true do
 
