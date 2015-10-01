@@ -235,12 +235,12 @@ a2Weld2.Part0=o2limb
 a2Weld2.Part1=o2limb2
 a2Weld2.C0 = CFrame.new(0,0,0)
 a2Weld2.C0=a2Weld2.C0*CFrame.new(-20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)
-
+wait(5)
 for i=1,50 do
   wait()
   a2Weld2.C0=a2Weld2.C0*CFrame.Angles(0,0,math.rad(1))
   aWeld2.C0=aWeld2.C0*CFrame.Angles(0,0,math.rad(-1))
-    zaptop.CFrame=zaptop.CFrame*CFrame.new(0,1,0)
+    bottom.CFrame=bottom.CFrame*CFrame.new(0,1,0)
   end
 wait(1)
 
