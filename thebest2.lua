@@ -322,6 +322,7 @@ for i=1,50 do
   for i=1,50 do
     wait()
     a2Weld2.C0=a2Weld2.C0*CFrame.Angles(0,0,-1)
+    a2Weld2.C0=a2Weld2.C0*CFrame.new(1.2,-5,0)
     bottom.Anchored=true
     end
 bottom.Anchored=false
