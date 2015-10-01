@@ -226,7 +226,7 @@ a2Weld1.C0=a2Weld1.C0*CFrame.Angles(0,0,math.rad(-30))*CFrame.new(0,-(YY*5),0)
 o2limb.BrickColor=BrickColor.New'Brown'
 o2limb.Material='Grass'
 local o2limb2 = o2limb:clone()
-o2limb2.Parent=arm1
+o2limb2.Parent=arm2
 o2limb2:breakJoints()
 o2limb2.Name='Limb2'
 o2limb2.Size=Vector3.new(X,YY*15,Z)
@@ -234,7 +234,7 @@ local a2Weld2 = Instance.new("Weld",o2limb)
 a2Weld2.Part0=o2limb
 a2Weld2.Part1=o2limb2
 a2Weld2.C0 = CFrame.new(0,0,0)
-a2Weld2.C0=a2Weld2.C0*CFrame.new(20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)
+a2Weld2.C0=a2Weld2.C0*CFrame.new(-20,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(-50))*CFrame.new(0,-10,0)
 
 
 wait(10)
