@@ -240,11 +240,11 @@ for i=1,50 do
   wait()
   a2Weld2.C0=a2Weld2.C0*CFrame.Angles(0,0,math.rad(1))
   aWeld2.C0=aWeld2.C0*CFrame.Angles(0,0,math.rad(-1))
-    bottom.CFrame=bottom.CFrame*CFrame.new(0,1,0)
+    bottom.Anchored=true
   end
 wait(1)
 
-
+bottom.Anchored=false
 wait()
 
 
