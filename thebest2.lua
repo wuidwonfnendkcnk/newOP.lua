@@ -347,7 +347,7 @@ StHWeld.Part0=Handle
 StHWeld.Part1=STop
 StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)
 
-local w1=Instance.new("Part",workspace)
+local w1=Instance.new("Part",Sword)
 w1.FormFactor='Custom'
 w1.Size=Vector3.new(10,20,30)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
@@ -356,6 +356,17 @@ local w1Weld=Instance.new("Weld",STop)
 w1Weld.Part0=STop
 w1Weld.Part1=w1
 w1Weld.C0=CFrame.new(0,-(42.5),-12)*CFrame.Angles(math.rad(-90),0,0)
+
+
+local w2=Instance.new("Part",Sword)
+w2.FormFactor='Custom'
+w2.Size=Vector3.new(10,20,30)
+Instance.new("SpecialMesh",w2).MeshType='Wedge'
+local w2Weld=Instance.new("Weld",STop)
+
+w1Weld.Part0=STop
+w1Weld.Part1=w1
+w1Weld.C0=CFrame.new(0,-(42.5),12)*CFrame.Angles(math.rad(-90),math.rad(180),0)
 
 
 wait()
