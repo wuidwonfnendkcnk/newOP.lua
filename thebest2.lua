@@ -323,8 +323,12 @@ local split = function(str,index,opt)
   
 bottom.Anchored=false
 local Handle= Instance.new("Part")
+wait()
+walk=true
 while true do
-
+if walk then
+  char.HumanoidRootPart.CFrame=L(char.Torso.CFrame,char.Torso.CFrame*CFrame.new(0,0,-1))
+  end
 local p=char.Torso.Position
 wait(0)
 local pp = char.Torso.Position
