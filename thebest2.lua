@@ -271,7 +271,7 @@ WELD2.C0=CFrame.new(10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(10))
   
   leg12 = Instance.new("Part",leg1)
   leg22 = Instance.new("Part",leg2)
-  leg12.Size=Vector3.new(leg1.Size.X,YY*5,leg1.Size.Z)
+  leg12.Size=Vector3.new(leg1.Size.X,YY*7.5,leg1.Size.Z)
   leg22.Size=leg12.Size
   leg12.BrickColor,leg22.BrickColor=BrickColor.New'Brown',BrickColor.New'Brown'
 leg12.Material,leg22.Material='Grass','Grass'
