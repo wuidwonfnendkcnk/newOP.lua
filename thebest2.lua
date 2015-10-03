@@ -327,7 +327,7 @@ Sword.Name='Sword'
 local Handle= Instance.new("Part",Sword)
 Handle.Size=Vector3.new(15,30,15)
 local HWeld=Instance.new("Weld",limb2)
-HWeld.Part0=o2limb2
+HWeld.Part0=limb2
 HWeld.Part1=Handle
 HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)
 wait()
