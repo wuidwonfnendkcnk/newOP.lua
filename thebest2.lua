@@ -325,11 +325,11 @@ bottom.Anchored=false
 Sword=Instance.new("Model",bod)
 Sword.Name='Sword'
 local Handle= Instance.new("Part",Sword)
-Handle.Size=Vector3.new(20,30,20)
-local HWeld=Instance.new("Weld",o2limb2)
+Handle.Size=Vector3.new(15,30,15)
+local HWeld=Instance.new("Weld",limb2)
 HWeld.Part0=o2limb2
 HWeld.Part1=Handle
-HWeld.C0=CFrame.new(0,-(o2limb2.Size.Y/2),0)
+HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)
 wait()
 
 
