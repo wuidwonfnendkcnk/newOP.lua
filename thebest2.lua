@@ -361,7 +361,7 @@ w1.Size=Vector3.new(10,12.5,45)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
 sm=w1.SpecialMesh
 sm.Offset=Vector3.new(0,6.25,0)
-sm.Scale=Vector3.new(0,2,0)
+sm.Scale=Vector3.new(1,2,1)
 local w1Weld=Instance.new("Weld",Handle)
 
 w1Weld.Part0=Handle
@@ -375,7 +375,7 @@ w2.Size=Vector3.new(10,12.5,45)
 Instance.new("SpecialMesh",w2).MeshType='Wedge'
 sm=w2.SpecialMesh
 sm.Offset=Vector3.new(0,6.25,0)
-sm.Scale=Vector3.new(0,2,0)
+sm.Scale=Vector3.new(1,2,1)
 
 w2Weld.Part0=Handle
 w2Weld.Part1=w2
