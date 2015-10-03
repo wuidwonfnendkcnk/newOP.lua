@@ -323,10 +323,12 @@ local split = function(str,index,opt)
   
 bottom.Anchored=false
 local Handle= Instance.new("Part")
+Handle.Size=Vector3.new(20,30,20)
+local HWeld=Instance.new("Weld",o2limb2)
+HWeld.C0=CFrame.new(0,-(o2limb2.Size.Y/2),0)
 wait()
-mov=0
-CF=char.Torso.CFrame
-walk=true
+
+
 while true do
 
 local p=char.Torso.Position
@@ -350,17 +352,6 @@ end
 else
 Sine=0
 end
-wait(1)
-if walk then
-  mov=mov+2
-  char.HumanoidRootPart.CFrame=char.Torso.CFrame*CFrame.new(0,0,-mov)
-end
-rot=math.random(1,2)
-print(rot)
-if rot==1 then
-  char.HumanoidRootPart.CFrame=char.HumanoidRootPart.CFrame*CFrame.Angles(0,math.rad(5),0)
-elseif rot==2 then
-  char.HumanoidRootPart.CFrame=char.HumanoidRootPart.CFrame*CFrame.Angles(0,math.rad(-5),0)
-  end
+
 end
 
