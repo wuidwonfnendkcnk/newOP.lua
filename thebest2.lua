@@ -351,7 +351,6 @@ local w1=Instance.new("Part",workspace)
 w1.FormFactor='Custom'
 w1.Size=Vector3.new(10,10,20)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
-wait(10)
 local w1Weld=Instance.new("Weld",STop)
 
 w1Weld.Part0=STop
