@@ -352,9 +352,9 @@ w1.Size=Vector3.new(10,10,10)
 
 local w1Weld=Instance.new("Weld",STop)
 
-HWeld.Part0=STop
-HWeld.Part1=w1
-HWeld.C0=CFrame.new(0,-(30),0)
+w1Weld.Part0=STop
+w1Weld.Part1=w1
+w1Weld.C0=CFrame.new(0,-(30),0)
 
 
 wait()
