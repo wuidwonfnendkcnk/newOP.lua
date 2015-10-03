@@ -360,7 +360,7 @@ w1.FormFactor='Custom'
 w1.Size=Vector3.new(10,12.5,45)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
 sm=w1.Mesh
-sm.Offset=Vector3.new(5,6.25,0)
+sm.Offset=Vector3.new(10,6.25,0)
 sm.Scale=Vector3.new(1,2,1)
 local w1Weld=Instance.new("Weld",Handle)
 
@@ -374,7 +374,7 @@ w2.FormFactor='Custom'
 w2.Size=Vector3.new(10,12.5,45)
 Instance.new("SpecialMesh",w2).MeshType='Wedge'
 sm=w2.Mesh
-sm.Offset=Vector3.new(-5,6.25,0)
+sm.Offset=Vector3.new(-10,6.25,0)
 sm.Scale=Vector3.new(1,2,1)
 local w2Weld=Instance.new("Weld",Handle)
 w2Weld.Part0=Handle
