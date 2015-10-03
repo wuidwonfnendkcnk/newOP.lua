@@ -336,7 +336,7 @@ HWeld.Part0=limb2
 HWeld.Part1=Handle
 HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)*CFrame.new(0,-15,0)
 
-local STop = Handle:clone()
+--[[local STop = Handle:clone()
 STop.Parent=Sword
 STop:BreakJoints()
 STop.Size=STop.Size+Vector3.new(0,25,50)
@@ -345,13 +345,13 @@ local StHWeld=Instance.new("Weld",Handle)
 
 StHWeld.Part0=Handle
 StHWeld.Part1=STop
-StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)
+StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)]]
 
 local w1=Instance.new("Part",Sword)
 w1.FormFactor='Custom'
-w1.Size=Vector3.new(10,40,100)
+w1.Size=Vector3.new(10,40,70)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
-local w1Weld=Instance.new("Weld",STop)
+local w1Weld=Instance.new("Weld",Handle)
 
 w1Weld.Part0=STop
 w1Weld.Part1=w1
@@ -360,9 +360,9 @@ w1Weld.C0=CFrame.new(0,-(42.5),-20)*CFrame.Angles(math.rad(-90),0,0)
 
 local w2=Instance.new("Part",Sword)
 w2.FormFactor='Custom'
-w2.Size=Vector3.new(10,40,100)
+w2.Size=Vector3.new(10,40,70)
 Instance.new("SpecialMesh",w2).MeshType='Wedge'
-local w2Weld=Instance.new("Weld",STop)
+local w2Weld=Instance.new("Weld",Handle)
 
 w2Weld.Part0=STop
 w2Weld.Part1=w2
