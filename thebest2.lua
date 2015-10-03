@@ -311,8 +311,15 @@ end
 
 wait(3)
 
+local split = function(str,index,opt)
+  if opt then
+    return {str:sub(1,index),str:sub(index)}
+  end
+  return str:sub(1,index),str:sub(index)
+  end
+
     aWeld2.C0=CFrame.new(0,10,0)
-    aWeld2.C0=aWeld2.C0*CFrame.new(0,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(130))*CFrame.new(0,-35,0)
+    aWeld2.C0=aWeld2.C0*CFrame.new(0,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(120))*CFrame.new(0,-35,0)
   
 bottom.Anchored=false
 local Handle= Instance.new("Part")
