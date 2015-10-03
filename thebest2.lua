@@ -312,7 +312,7 @@ end
 wait(3)
 
     aWeld2.C0=CFrame.new(0,10,0)
-    aWeld2.C0=a2Weld2.C0*CFrame.new(0,-(YY),0)*CFrame.Angles(0,0,math.rad(66))*CFrame.new(50,-20,0)
+    aWeld2.C0=a2Weld2.C0*CFrame.new(0,-(YY),0)*CFrame.Angles(0,0,math.rad(66))*CFrame.new(10,-20,0)
   
 bottom.Anchored=false
 local Handle= Instance.new("Part")
