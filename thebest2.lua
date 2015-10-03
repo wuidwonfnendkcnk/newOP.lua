@@ -322,23 +322,31 @@ local split = function(str,index,opt)
     aWeld2.C0=aWeld2.C0*CFrame.new(0,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(120))*CFrame.new(0,-35,0)
   
 bottom.Anchored=false
+
 Sword=Instance.new("Model",bod)
 Sword.Name='Sword'
+
 local Handle= Instance.new("Part",Sword)
 Handle.FormFactor='Custom'
 Handle.Size=Vector3.new(12.5,30,12.5)
+
 local HWeld=Instance.new("Weld",limb2)
+
 HWeld.Part0=limb2
 HWeld.Part1=Handle
 HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)
+
 local STop = Handle:clone()
 STop.Parent=Sword
 STop:BreakJoints()
 STop.Size=STop.Size+Vector3.new(10,20,10)
-local HWeld=Instance.new("Weld",Handle)
-HWeld.Part0=Handle
-HWeld.Part1=STop
-HWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)
+
+local StHWeld=Instance.new("Weld",Handle)
+
+StHWeld.Part0=Handle
+StHWeld.Part1=STop
+StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-30,0)
+
 wait()
 
 
