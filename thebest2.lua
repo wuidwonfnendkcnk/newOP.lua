@@ -350,10 +350,17 @@ end
 else
 Sine=0
 end
-
+wait(1)
 if walk then
   mov=mov+2
-  char.HumanoidRootPart.CFrame=CF*CFrame.new(0,0,-mov)
+  char.HumanoidRootPart.CFrame=char.Torso.CFrame*CFrame.new(0,0,-mov)
+end
+rot=math.random(1,2)
+print(rot)
+if rot==1 then
+  char.HumanoidRootPart.CFrame=char.HumanoidRootPart.CFrame*CFrame.Angles(0,math.rad(5),0)
+elseif rot==2 then
+  char.HumanoidRootPart.CFrame=char.HumanoidRootPart.CFrame*CFrame.Angles(0,math.rad(-5),0)
   end
 end
 
