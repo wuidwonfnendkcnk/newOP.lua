@@ -334,7 +334,7 @@ local HWeld=Instance.new("Weld",limb2)
 
 HWeld.Part0=limb2
 HWeld.Part1=Handle
-HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)
+HWeld.C0=CFrame.new(0,-(limb2.Size.Y),0)
 
 local STop = Handle:clone()
 STop.Parent=Sword
@@ -345,7 +345,7 @@ local StHWeld=Instance.new("Weld",Handle)
 
 StHWeld.Part0=Handle
 StHWeld.Part1=STop
-StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-30,0)
+StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)
 
 wait()
 
