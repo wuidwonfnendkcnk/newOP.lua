@@ -353,7 +353,7 @@ end
 
 if walk then
   mov=mov+2
-  char.HumanoidRootPart.CFrame=L(char.Torso.CFrame,CF*CFrame.new(0,0,-mov),0.08)
+  char.HumanoidRootPart.CFrame=CF*CFrame.new(0,0,-mov)
   end
 end
 
