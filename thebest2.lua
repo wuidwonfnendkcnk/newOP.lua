@@ -364,9 +364,9 @@ w2.Size=Vector3.new(10,20,30)
 Instance.new("SpecialMesh",w2).MeshType='Wedge'
 local w2Weld=Instance.new("Weld",STop)
 
-w1Weld.Part0=STop
-w1Weld.Part1=w1
-w1Weld.C0=CFrame.new(0,-(42.5),12)*CFrame.Angles(math.rad(-90),math.rad(180),0)
+w2Weld.Part0=STop
+w2Weld.Part1=w2
+w2Weld.C0=CFrame.new(0,-(42.5),12)*CFrame.Angles(math.rad(-90),math.rad(180),0)
 
 
 wait()
