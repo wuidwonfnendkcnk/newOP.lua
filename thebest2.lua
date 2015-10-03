@@ -355,7 +355,7 @@ local w1Weld=Instance.new("Weld",Handle)
 
 w1Weld.Part0=Handle
 w1Weld.Part1=w1
-w1Weld.C0=CFrame.new(0,-(32.5),-15)*CFrame.Angles(math.rad(-90),0,0)
+w1Weld.C0=CFrame.new(0,-(32.5),-10)*CFrame.Angles(math.rad(-90),0,0)
 
 
 local w2=Instance.new("Part",Sword)
@@ -366,8 +366,9 @@ local w2Weld=Instance.new("Weld",Handle)
 
 w2Weld.Part0=Handle
 w2Weld.Part1=w2
-w2Weld.C0=CFrame.new(0,-(32.5),15)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
+w2Weld.C0=CFrame.new(0,-(32.5),10)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
 bottom.Anchored=false
+bottom.CFrame=bottom.CFrame*CFrame.new(0,50,0)
 
 wait()
 
