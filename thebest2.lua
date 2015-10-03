@@ -334,7 +334,7 @@ local HWeld=Instance.new("Weld",limb2)
 
 HWeld.Part0=limb2
 HWeld.Part1=Handle
-HWeld.C0=CFrame.new(0,-(limb2.Size.Y),0)
+HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)*CFrame.new(0,-15,0)
 
 local STop = Handle:clone()
 STop.Parent=Sword
