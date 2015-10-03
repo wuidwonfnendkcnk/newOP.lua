@@ -328,7 +328,7 @@ Sword.Name='Sword'
 
 local Handle= Instance.new("Part",Sword)
 Handle.FormFactor='Custom'
-Handle.Size=Vector3.new(12.5,30,12.5)
+Handle.Size=Vector3.new(10,30,10)
 
 local HWeld=Instance.new("Weld",limb2)
 
@@ -339,7 +339,7 @@ HWeld.C0=CFrame.new(0,-(limb2.Size.Y/2),0)
 local STop = Handle:clone()
 STop.Parent=Sword
 STop:BreakJoints()
-STop.Size=STop.Size+Vector3.new(10,20,10)
+STop.Size=STop.Size+Vector3.new(0,25,30)
 
 local StHWeld=Instance.new("Weld",Handle)
 
