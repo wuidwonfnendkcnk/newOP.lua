@@ -368,9 +368,13 @@ w2Weld.Part0=Handle
 w2Weld.Part1=w2
 w2Weld.C0=CFrame.new(0,-(32.5),10)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
 bottom.Anchored=false
-bottom.CFrame=bottom.CFrame*CFrame.new(0,50,0)
-
+char.Torso.CFrame=char.Torso.CFrame*CFrame.new(0,50,0)
+for i=1,10 do
+  wait(0)
+char.Torso.Velocity=Vector3.new(0,-200,0)
+end
 wait()
+char.Torso.Velocity=Vector3.new(0,50,0)
 
 
 while true do
