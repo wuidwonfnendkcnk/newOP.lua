@@ -347,10 +347,11 @@ StHWeld.Part0=Handle
 StHWeld.Part1=STop
 StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)
 
-local w1=Instance.new("Part",Sword)
+local w1=Instance.new("Part",workspace)
 w1.FormFactor='Custom'
 w1.Size=Vector3.new(10,20,10)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
+wait(10)
 local w1Weld=Instance.new("Weld",STop)
 
 w1Weld.Part0=STop
