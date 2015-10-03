@@ -321,7 +321,7 @@ local split = function(str,index,opt)
     aWeld2.C0=CFrame.new(0,10,0)
     aWeld2.C0=aWeld2.C0*CFrame.new(0,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(120))*CFrame.new(0,-35,0)
   
-bottom.Anchored=false
+
 
 Sword=Instance.new("Model",bod)
 Sword.Name='Sword'
@@ -349,25 +349,25 @@ StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)]]
 
 local w1=Instance.new("Part",Sword)
 w1.FormFactor='Custom'
-w1.Size=Vector3.new(10,30,45)
+w1.Size=Vector3.new(10,25,45)
 Instance.new("SpecialMesh",w1).MeshType='Wedge'
 local w1Weld=Instance.new("Weld",Handle)
 
 w1Weld.Part0=Handle
 w1Weld.Part1=w1
-w1Weld.C0=CFrame.new(0,-(32.5),-10)*CFrame.Angles(math.rad(-90),0,0)
+w1Weld.C0=CFrame.new(0,-(32.5),-15)*CFrame.Angles(math.rad(-90),0,0)
 
 
 local w2=Instance.new("Part",Sword)
 w2.FormFactor='Custom'
-w2.Size=Vector3.new(10,30,45)
+w2.Size=Vector3.new(10,25,45)
 Instance.new("SpecialMesh",w2).MeshType='Wedge'
 local w2Weld=Instance.new("Weld",Handle)
 
 w2Weld.Part0=Handle
 w2Weld.Part1=w2
-w2Weld.C0=CFrame.new(0,-(32.5),10)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
-
+w2Weld.C0=CFrame.new(0,-(32.5),15)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
+bottom.Anchored=false
 
 wait()
 
