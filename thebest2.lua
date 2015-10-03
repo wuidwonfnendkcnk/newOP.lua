@@ -253,7 +253,7 @@ local leg1=Instance.new("Part",bod)
 leg1.Name="Left Leg"
 local leg2 = Instance.new("Part",bod)
 leg2.Name='Right Leg'
-leg1.Size=Vector3.new(last.Size.X,YY*10,last.Size.Z)
+leg1.Size=Vector3.new(last.Size.X,YY*20,last.Size.Z)
 leg2.Size=leg1.Size
 leg1.BrickColor,leg2.BrickColor=BrickColor.New'Brown',BrickColor.New'Brown'
 leg1.Material,leg2.Material='Grass','Grass'
@@ -262,7 +262,7 @@ local WELD = Instance.new("Weld",LAST)
 WELD.Part0 = LAST
 WELD.Part1 = leg1
 
-WELD.C0=CFrame.new(-10,-(YY*5.3),0)*CFrame.Angles(0,0,math.rad(-10))
+WELD.C0=CFrame.new(-10,-(YY*10.3),0)*CFrame.Angles(0,0,math.rad(-10))
   
   local WELD2 = Instance.new("Weld",LAST)
 WELD2.Part0 = LAST
