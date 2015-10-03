@@ -311,7 +311,7 @@ end
 
 wait(3)
 
-    aWeld2.C0=CFrame.new(0,10,0)
+    aWeld2.C0=CFrame.new(-5,10,0)
     aWeld2.C0=a2Weld2.C0*CFrame.new(0,-(YY),0)*CFrame.Angles(0,0,math.rad(60))*CFrame.new(0,-20,0)
   
 bottom.Anchored=false
