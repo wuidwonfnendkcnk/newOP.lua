@@ -366,7 +366,7 @@ local w2Weld=Instance.new("Weld",STop)
 
 w2Weld.Part0=STop
 w2Weld.Part1=w2
-w2Weld.C0=CFrame.new(0,-(42.5),10)*CFrame.Angles(math.rad(-180),math.rad(180),0)
+w2Weld.C0=CFrame.new(0,-(42.5),10)*CFrame.Angles(math.rad(-180),math.rad(180),0)--q
 
 
 wait()
