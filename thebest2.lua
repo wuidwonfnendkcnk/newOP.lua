@@ -347,6 +347,16 @@ StHWeld.Part0=Handle
 StHWeld.Part1=STop
 StHWeld.C0=CFrame.new(0,-(Handle.Size.Y/2),0)*CFrame.new(0,-20,0)
 
+local w1=Instance.new("WedgePart",Sword)
+w1.Size=Vector3.new(10,10,10)
+
+local w1Weld=Instance.new("Weld",STop)
+
+HWeld.Part0=STop
+HWeld.Part1=w1
+HWeld.C0=CFrame.new(0,-(30),0)
+
+
 wait()
 
 
