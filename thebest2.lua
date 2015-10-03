@@ -322,7 +322,9 @@ local split = function(str,index,opt)
     aWeld2.C0=aWeld2.C0*CFrame.new(0,-(YY*7.5),0)*CFrame.Angles(0,0,math.rad(120))*CFrame.new(0,-35,0)
   
 bottom.Anchored=false
-local Handle= Instance.new("Part")
+Sword=Instance.new("Model",bod)
+Sword.Name='Sword'
+local Handle= Instance.new("Part",Sword)
 Handle.Size=Vector3.new(20,30,20)
 local HWeld=Instance.new("Weld",o2limb2)
 HWeld.C0=CFrame.new(0,-(o2limb2.Size.Y/2),0)
