@@ -388,7 +388,7 @@ mouse.Button1Down:connect(function()
   attack=true
   for i=1,End,ind do
     wait()
-    a2Weld2.C0=a2Weld2.C0*CFrame.Angles(0,math.rad(ind),0)
+    aWeld2.C0=aWeld2.C0*CFrame.Angles(math.rad(ind),0,0)
     end
   end)
 
