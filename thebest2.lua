@@ -389,7 +389,12 @@ mouse.Button1Down:connect(function()
   for i=1,End,ind do
     wait()
     aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(-ind),math.rad(ind),0)*CFrame.new(-0.5,-0.1,0)
-    end
+  end
+   for i=End,1,-ind do
+    wait()
+    aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(ind),math.rad(-ind),0)*CFrame.new(0.5,0.1,0)
+  end
+  attack=false
   end)
 
 while true do
