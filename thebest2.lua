@@ -385,11 +385,14 @@ ind=10
 End=90
 
 local hand=Instance.new("Part",Sword)
-hand.Size=Vector3.new(10,20,45*2)
+hand.Size=Vector3.new(10,12,45*2)
 local handWeld=Instance.new("Weld",Handle)
 handWeld.Part0=Handle
 handWeld.Part1=hand
 handWeld.C0=CFrame.new(0,-Handle.Size.Y/2,0)
+
+hand.BrickColor=BrickColor.Black()
+Handle.BrickColor=hand.BrickColor
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
