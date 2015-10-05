@@ -379,7 +379,7 @@ sm.Scale=Vector3.new(1,2,1)
 local w2Weld=Instance.new("Weld",Handle)
 w2Weld.Part0=Handle
 w2Weld.Part1=w2
-w2Weld.C0=CFrame.new(0,-(32.5),8)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
+w2Weld.C0=CFrame.new(0,-(42.5),8)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
 
 
 while true do
