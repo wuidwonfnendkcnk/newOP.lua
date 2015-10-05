@@ -385,7 +385,7 @@ ind=10
 End=90
 
 local hand=Instance.new("Part",Sword)
-hand.Size=Vector3.new(10,10,45*2)
+hand.Size=Vector3.new(10,20,45*2)
 local handWeld=Instance.new("Weld",Handle)
 handWeld.Part0=Handle
 handWeld.Part1=hand
