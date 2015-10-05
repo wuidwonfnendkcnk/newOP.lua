@@ -366,7 +366,7 @@ local w1Weld=Instance.new("Weld",Handle)
 
 w1Weld.Part0=Handle
 w1Weld.Part1=w1
-w1Weld.C0=CFrame.new(0,-(32.5),-10)*CFrame.Angles(math.rad(-90),0,0)
+w1Weld.C0=CFrame.new(0,-(37.5),-10)*CFrame.Angles(math.rad(-90),0,0)
 
 
 local w2=Instance.new("Part",Sword)
