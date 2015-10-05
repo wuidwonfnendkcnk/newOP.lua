@@ -409,7 +409,7 @@ mouse.Button1Down:connect(function()
   wait(1)
   attack=false
   end)
-
+zap.CFrame=CFrame.new(zap.CFrame.p)*CFrame.new(0,20,0)
 while true do
 
 local p=char.Torso.Position
