@@ -386,6 +386,7 @@ End=90
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
+  local CO=aWeld1.C0
   for i=1,End,ind do
     wait()
     aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(-ind),math.rad(ind),0)*CFrame.new(-0.5,-0.1,0)
@@ -394,6 +395,8 @@ mouse.Button1Down:connect(function()
     wait()
     aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(ind),math.rad(-ind),0)*CFrame.new(0.5,0.1,0)
   end
+  aWeld1.C0=CO
+  wait(1)
   attack=false
   end)
 
