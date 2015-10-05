@@ -380,7 +380,17 @@ local w2Weld=Instance.new("Weld",Handle)
 w2Weld.Part0=Handle
 w2Weld.Part1=w2
 w2Weld.C0=CFrame.new(0,-(42.5),5)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles(0,0,math.rad(180))
-
+attack=false
+ind=5
+End=90
+mouse.Button1Down:connect(function()
+  if attack then return end
+  attack=true
+  for i=1,End,ind do
+    wait()
+    HWeld.C0=HWeld.C0*CFrame.Angles(0,0,math.rad(ind))
+    end
+  end)
 
 while true do
 
