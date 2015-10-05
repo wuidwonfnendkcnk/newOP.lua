@@ -383,6 +383,13 @@ w2Weld.C0=CFrame.new(0,-(42.5),5)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles
 attack=false
 ind=10
 End=90
+
+local hand=Instance.new("Part",Sword)
+hand.Size=Vector3.new(10,10,45*2)
+local handWeld=Instance.new("Weld",Handle)
+handWeld.Part0=Handle
+handWeld.Part1=hand
+handWeld.C0=CFrame.new(0,-Handle.Size.Y/2,0)
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
