@@ -427,7 +427,7 @@ mouse.Button1Down:connect(function()
     bl.Shape='Ball'
     Instance.new("Fire",bl)
     bl.Transparency=1
-    bl.Touched:connect(function(h) print(h.Name,h.Parent.Name) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
+    bl.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     bl.CFrame=laz.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)*CFrame.new(0,-35,0)
     pos=laz.CFrame*CFrame.new(0,-(laz.Size.Y),0).p
     local block=Instance.new("Part",bl)
@@ -436,7 +436,7 @@ mouse.Button1Down:connect(function()
     block.CanCollide=false
     block.Anchored=true
     block.Transparency=0.7
-    block.Touched:connect(function(h) print(h.Name,h.Parent.Name) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
+    block.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     bl.CanCollide=false
   end
    for i=End,1,-ind do
