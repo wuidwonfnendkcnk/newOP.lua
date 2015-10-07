@@ -434,7 +434,7 @@ mouse.Button1Down:connect(function()
     block.Size=Vector3.new(100,50,100)
     block.CFrame=CFrame.new(pos.X,Workspace.Base.CFrame.Y,pos.Z)
     block.CanCollide=false
-    block.Anchored=true
+    block.Anchored=false
     block.Transparency=0.7
     block.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     bl.CanCollide=false
