@@ -403,8 +403,9 @@ mouse.Button1Down:connect(function()
     local p=Instance.new("Part",Handle)
     p.BrickColor=BrickColor.New("Turqoise")
     p.Transparency=0.5
+    p.Size=Vector3.new(5,5,5)
     p.Anchored=true
-    p.CFrame=Handle.CFrame*CFrame.new(0,26,0)
+    p.CFrame=Handle.CFrame*CFrame.new(0,-26,0)
     game.Debris:AddItem(p,(ind/10)/3)
   end
    for i=End,1,-ind do
