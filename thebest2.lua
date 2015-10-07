@@ -432,7 +432,7 @@ mouse.Button1Down:connect(function()
     pos=laz.CFrame*CFrame.new(0,-(laz.Size.Y),0).p
     local block=Instance.new("Part",bl)
     block.Size=Vector3.new(100,50,100)
-    block.CFrame=CFrame.New(pos.X,Workspace.Base.CFrame.Y,pos.Z)
+    block.CFrame=CFrame.new(pos.X,Workspace.Base.CFrame.Y,pos.Z)
     block.CanCollide=false
     block.Anchored=true
     block.Transparency=0.7
