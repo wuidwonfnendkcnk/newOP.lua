@@ -414,16 +414,19 @@ mouse.Button1Down:connect(function()
       laz.Size=laz.Size+Vector3.new(0,-(i/2),0)
       end
     laz.Anchored=true
+    laz.Transparency=0.1
+    laz.BrickColor=BrickColor.Red()
     laz.CanCollide=false
     laz.CFrame=p.CFrame*CFrame.Angles(math.rad(90-(i/2)),0,0)*CFrame.new(0,-(laz.Size.Y/2),0)
     laz.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(10) end end)
     local bl=p:clone()
     bl.Parent=p
     bl.Name='ball'
-    bl.Size=Vector3.new(20,20,20)
+    bl.Size=Vector3.new(40,40,40)
     bl.Shape='Ball'
+    Instance.new("Fire",bl)
     bl.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(10) end end)
-    bl.CFrame=laz.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)*CFrame.new(0,20,0)
+    bl.CFrame=laz.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)*CFrame.new(0,-20,0)
     bl.CanCollide=false
   end
    for i=End,1,-ind do
