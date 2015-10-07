@@ -409,7 +409,10 @@ mouse.Button1Down:connect(function()
     game.Debris:AddItem(p,(ind/10)/3)
     local laz=Instance.new("Part",p)
     laz.Name='lazor'
-    laz.Size=Vector3.new(1,(p.CFrame.Y-workspace.Base.CFrame.Y)+(((i>End/2) and (-(i/2)))),1)
+    laz.Size=Vector3.new(1,(p.CFrame.Y-workspace.Base.CFrame.Y),1)
+    if i>End/2 then
+      laz.Size=laz.Size+Vector3.new(0,-(i/2),0)
+      end
     laz.Anchored=true
     laz.CanCollide=false
     laz.CFrame=p.CFrame*CFrame.Angles(math.rad(90-(i/2)),0,0)*CFrame.new(0,-(laz.Size.Y/2),0)
@@ -421,6 +424,7 @@ mouse.Button1Down:connect(function()
     bl.Shape='Ball'
     bl.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(10) end end)
     bl.CFrame=laz.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)*CFrame.new(0,20,0)
+    bl.CanCollide=false
   end
    for i=End,1,-ind do
     wait()
