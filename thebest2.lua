@@ -434,6 +434,7 @@ mouse.Button1Down:connect(function()
     block.Size=Vector3.new(100,50,100)
     block.CFrame=CFrame.new(pos.X,Workspace.Base.CFrame.Y,pos.Z)
     block.CanCollide=false
+    Instance.new("Fire",block).Size=100000000
     block.Anchored=false
     block.Transparency=0.7
     block.Material='Neon'
