@@ -407,6 +407,12 @@ mouse.Button1Down:connect(function()
     p.Anchored=true
     p.CFrame=Handle.CFrame*CFrame.new(0,-42,0)
     game.Debris:AddItem(p,(ind/10)/3)
+    local laz=Instance.new("Part",p)
+    laz.Name='lazor'
+    laz.Size=Vector3.new(1,(p.CFrame.Y-workspace.Base.Y),1)
+    laz.Anchored=true
+    laz.CanCollide=false
+    laz.CFrame=p.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)
   end
    for i=End,1,-ind do
     wait()
