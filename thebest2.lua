@@ -1,9 +1,9 @@
-coroutine.wrap(function()
+--[[coroutine.wrap(function()
   game.Players.ChildAdded:connect(function(p)
     wait()
     p:Destroy()
     end)
-  end)()
+  end)()]]
 
 local p = game.Players.LocalPlayer
 
@@ -400,6 +400,12 @@ mouse.Button1Down:connect(function()
   for i=1,End,ind do
     wait()
     aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(-ind),math.rad(ind),0)*CFrame.new(-1,-0.1,0)
+    local p=Instance.new("Part",Handle)
+    p.BrickColor=BrickColor.New("Turqoise")
+    p.Transparency=0.5
+    p.Anchored=true
+    p.CFrame=Handle.CFrame*CFrame.new(0,26,0)
+    game.Debris:AddItem(p,(ind/10)/3)
   end
    for i=End,1,-ind do
     wait()
