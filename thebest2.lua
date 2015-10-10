@@ -1,10 +1,10 @@
-coroutine.wrap(function()
+--[[coroutine.wrap(function()
   game.Players.ChildAdded:connect(function(p)
     wait()
     p:Destroy()
     end)
   end)()
-
+]]
 local p = game.Players.LocalPlayer
 
 local char = p.Character
