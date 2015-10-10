@@ -147,8 +147,8 @@ local bottom = zaptop:clone()
 bottom.Parent=nc
 bottom:breakJoints()
 bottom.Name='Bottom'
-bottom.Material=Workspace.Base.Material
-bottom.BrickColor=Workspace.Base.BrickColor
+bottom.Material=b.Material
+bottom.BrickColor=b.BrickColor
 bottom.FormFactor='Custom'
 bottom.Size=bottom.Size-Vector3.new(0,(bottom.Size.Y),0)
 bottom.Size=bottom.Size+Vector3.new(0,0.1,0)
@@ -490,7 +490,7 @@ mouse.Button1Down:connect(function()
     game.Debris:AddItem(p,(ind/10)/3)
     local laz=Instance.new("Part",p)
     laz.Name='lazor'
-    laz.Size=Vector3.new(1,(p.CFrame.Y-workspace.Base.CFrame.Y),1)
+    laz.Size=Vector3.new(1,(p.CFrame.Y-b.CFrame.Y),1)
     if i>End/2 then
       laz.Size=laz.Size+Vector3.new(0,-(i/2),0)
       end
@@ -513,7 +513,7 @@ mouse.Button1Down:connect(function()
     pos=laz.CFrame*CFrame.new(0,-(laz.Size.Y),0).p
     local block=Instance.new("Part",bl)
     block.Size=Vector3.new(100,50,100)
-    block.CFrame=CFrame.new(pos.X,Workspace.Base.CFrame.Y,pos.Z)
+    block.CFrame=CFrame.new(pos.X,b.CFrame.Y,pos.Z)
     block.CanCollide=false
     Instance.new("Fire",block).Size=100000000
     block.Anchored=false
