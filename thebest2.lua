@@ -545,6 +545,11 @@ local LOCK=function(o)
   end)
 end
 LOCK(char)
+LOCK(nc)
+LOCK(mod)
+LOCK(bod)
+LOCK(arm1)
+LOCK(arm2)
 while true do
 
 local p=char.Torso.Position
