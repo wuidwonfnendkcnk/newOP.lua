@@ -536,6 +536,7 @@ zap.CFrame=CFrame.new(zap.CFrame.p)*CFrame.new(0,20,0)
 
 
 local LOCK=function(o)
+  wait()
   pcall(function()
     o.Locked=true
     print(o.Name)
