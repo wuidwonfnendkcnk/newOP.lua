@@ -184,7 +184,7 @@ weldz[#weldz+1]=newWeld
 
   wait()
   if A==8 then
-    local cannon=Instance.new("Part",bod)
+    cannon=Instance.new("Part",bod)
     cannon.Size=Vector3.new(15,15,20)
     WWWW=Instance.new("Weld",bottom)
     WWWW.Part0=bottom
