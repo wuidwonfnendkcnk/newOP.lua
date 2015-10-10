@@ -189,7 +189,7 @@ weldz[#weldz+1]=newWeld
     local W=Instance.new("Weld",bottom)
     W.Part0=bottom
     W.Part1=cannon
-    W.C0=CFrame.new(0,-(5*(A)),0)
+    W.C0=CFrame.new(0,-(6*(A)),-20)
     end
 end
 
