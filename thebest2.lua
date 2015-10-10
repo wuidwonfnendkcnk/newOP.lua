@@ -533,6 +533,16 @@ else
   attack=false
   end)
 zap.CFrame=CFrame.new(zap.CFrame.p)*CFrame.new(0,20,0)
+
+
+local LOCK=function(o)
+  pcall(function()
+  for i,v in pairs(o:children()) do
+    pcall(function() v.Locked=true LOCK(v) end)
+  end
+  end)
+end
+LOCK(char)
 while true do
 
 local p=char.Torso.Position
