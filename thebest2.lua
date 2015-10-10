@@ -346,7 +346,7 @@ Fire=function(pos)
   Ball.Velocity=Ball.CFrame.lookVector*300
   Instance.new("Fire",Ball).Size=10000
   Ball.Fire.Color=BrickColor.new'Toothpaste'.Color
-  rek=false
+  local rek=false
   Ball.Touched:connect(function(h)
     Ball.Anchored=true
     if rek then return end
@@ -360,15 +360,18 @@ Fire=function(pos)
       block.CFrame=Ball.CFrame*CFrame.new(0,8,0)
       block.BrickColor=BrickColor.Random()
       block.Material='Neon'
-      local rek=block:clone()
+      local rek=Instance.new("Part",workspace)
+      rek.Size=Vector3.new(2,2,2)
+      rek.Transparency=1
       rek.CanCollide=false
       rek.Parent=block
       rek.Anchored=false
       rek.CFrame=Ball.CFrame
       rek.BrickColor=BrickColor.new'Toothpaste'
-      rek.Touched:connect(function(h) pcall(function() h.Parent.Humanoid:TakeDamage(10) end) end)
+      rek.Touched:connect(function(h) pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(10) end end) end)
     end
     game.Debris:AddItem(block,1)
+    game.Debris:AddItem(Ball,1)
     end)
   end
 Sword=Instance.new("Model",bod)
