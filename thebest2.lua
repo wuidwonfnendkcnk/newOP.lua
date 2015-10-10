@@ -357,6 +357,7 @@ Fire=function(pos)
   Ball.Fire.Color=BrickColor.new'Toothpaste'.Color
   local rek=false
   Ball.Touched:connect(function(h)
+    pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(20) end end)
     Ball.Anchored=true
     if rek then return end
     rek=true
@@ -370,7 +371,7 @@ Fire=function(pos)
       block.BrickColor=BrickColor.Random()
       block.Material='Neon'
       local rek=Instance.new("Part",workspace)
-      rek.Size=Vector3.new(2,2,2)
+      rek.Size=Vector3.new(5,5,5)
       rek.Transparency=0.5
       rek.CanCollide=false
       rek.Parent=block
