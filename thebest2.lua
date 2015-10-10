@@ -8,7 +8,7 @@
 local p = game.Players.LocalPlayer
 
 local char = p.Character
-
+local mouse=p:GetMouse()
 local nc = Instance.new("Model",char)
 
 local t = char.Torso
