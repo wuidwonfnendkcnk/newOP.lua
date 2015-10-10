@@ -190,6 +190,14 @@ weldz[#weldz+1]=newWeld
     cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*(A)),-10)
     end
 end
+coroutine.wrap(function()
+  while wait() do
+    cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*8),-10)
+    if rot then
+      cannon.CFrame=CFrame.new(cannon.Position,mouse.Hit.p)
+      end
+    end
+end)()
 
 for i,v in pairs(weldz) do
   local newWeld=v
@@ -444,14 +452,7 @@ end)
 hand.BrickColor=BrickColor.Black()
 Handle.BrickColor=hand.BrickColor
 
-coroutine.wrap(function()
-  while wait() do
-    cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*8),-10)
-    if rot then
-      cannon.CFrame=CFrame.new(cannon.Position,mouse.Hit.p)
-      end
-    end
-  end)
+
 
 mouse.Move:connect(function()
   if mode=='rocket' then
