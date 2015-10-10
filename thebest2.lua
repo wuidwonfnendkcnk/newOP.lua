@@ -190,8 +190,11 @@ weldz[#weldz+1]=newWeld
     cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*(A)),-10)
     end
 end
+rot=false
 coroutine.wrap(function()
-  while wait() do
+  while wait(0) do
+    cannon.Anchored=true
+    cannon.CanCollide=false
     cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*8),-10)
     if rot then
       cannon.CFrame=CFrame.new(cannon.Position,mouse.Hit.p)
