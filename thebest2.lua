@@ -537,6 +537,8 @@ zap.CFrame=CFrame.new(zap.CFrame.p)*CFrame.new(0,20,0)
 
 local LOCK=function(o)
   pcall(function()
+    o.Locked=true
+    print(o.Name)
   for i,v in pairs(o:children()) do
     print(v.Name)
     if v:IsA'BasePart' then v.Locked=true end
