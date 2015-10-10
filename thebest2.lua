@@ -186,10 +186,8 @@ weldz[#weldz+1]=newWeld
   if A==8 then
     cannon=Instance.new("Part",bod)
     cannon.Size=Vector3.new(15,15,20)
-    WWWW=Instance.new("Weld",bottom)
-    WWWW.Part0=bottom
-    WWWW.Part1=cannon
-    WWWW.C0=CFrame.new(0,-(6*(A)),-10)
+    
+    cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*(A)),-10)
     end
 end
 
@@ -433,21 +431,38 @@ local handWeld=Instance.new("Weld",Handle)
 handWeld.Part0=Handle
 handWeld.Part1=hand
 handWeld.C0=CFrame.new(0,-Handle.Size.Y/2,0)
+
+
+
 mouse.KeyDown:connect(function(k)
   if k=='t' then mode='sword'
     elseif k=='r' then mode='rocket'
     end
-  end)
+end)
+
+
 hand.BrickColor=BrickColor.Black()
 Handle.BrickColor=hand.BrickColor
 
-mouse.Move:connect(function()
-  if mode=='rocket' then
-    AA=WWWW
-    local n=AA
-   n.C0=CFrame.new(n.C0.p,mouse.Hit.p)
+coroutine.wrap(function()
+  while wait() do
+    cannon.CFrame=bottom.CFrame*CFrame.new(0,-(6*8),-10)
+    if rot then
+      cannon.CFrame=CFrame.new(cannon.Position,mouse.Hit.p)
+      end
     end
   end)
+
+mouse.Move:connect(function()
+  if mode=='rocket' then
+ rot=true
+else
+ rot=false
+    end
+end)
+
+
+
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
