@@ -342,7 +342,7 @@ Fire=function(pos)
   local Ball=Instance.new("Part",char)
   Ball.Size=Vector3.new(10,10,10)
   Ball.Shape='Ball'
-  Ball.CFrame=CFrame.new((cannon.CFrame*CFrame.new(0,0,-10)).p,pos)
+  Ball.CFrame=CFrame.new((cannon.CFrame*CFrame.new(0,0,-30)).p,pos)
   Ball.Velocity=Ball.CFrame.lookVector*300
   Instance.new("Fire",Ball).Size=10000
   Ball.Fire.Color=BrickColor.new'Toothpaste'.Color
@@ -442,8 +442,7 @@ mouse.Move:connect(function()
   if mode=='rocket' then
     AA=WWWW
     local n=AA
-    n.C0 = CFrame.new(0,-(6*(8)),0)
-      n.C0=CFrame.new(n.C0.p,mouse.Hit.p)*CFrame.new(0,0,10)
+   n.C1=CFrame.new(n.C0.p,mouse.Hit.p)*CFrame.new(0,0,10)
     end
   end)
 mouse.Button1Down:connect(function()
