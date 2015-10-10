@@ -558,7 +558,7 @@ while true do
 repeat
 local p=char.Torso.Position
 wait(0)
-local pp = char.Torso.Position
+pp = char.Torso.Position
 if pp.Y>normY+200 then
   char.Torso.CFrame=CFrame.new(pp.X,normY,pp.Z)
 end
