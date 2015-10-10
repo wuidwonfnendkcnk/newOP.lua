@@ -360,7 +360,7 @@ Fire=function(pos)
   Ball.Fire.Color=BrickColor.new'Toothpaste'.Color
   local rek=false
   Ball.Touched:connect(function(h)
-    pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(20) end end)
+    pcall(function() if h.Parent~=p.Character and h~=b then h.Parent.Humanoid:TakeDamage(20) end end)
     Instance.new("Explosion",Ball).Position=Ball.Position
     Ball.Explosion.BlastRadius=10
     Ball.Anchored=true
@@ -383,7 +383,7 @@ Fire=function(pos)
       rek.Anchored=false
       rek.CFrame=Ball.CFrame*CFrame.new(math.random(-20,20),math.random(-5,25),math.random(-10,15))
       rek.BrickColor=BrickColor.new'Toothpaste'
-      rek.Touched:connect(function(h) pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(10) end end) end)
+      rek.Touched:connect(function(h) if h==b then return end pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(10) end end) end)
     end
     game.Debris:AddItem(block,1)
     game.Debris:AddItem(Ball,1)
@@ -499,7 +499,7 @@ mouse.Button1Down:connect(function()
     laz.BrickColor=BrickColor.Red()
     laz.CanCollide=false
     laz.CFrame=p.CFrame*CFrame.Angles(math.rad(90-(i/2)),0,0)*CFrame.new(0,-(laz.Size.Y/2),0)
-    laz.Touched:connect(function(h)  if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
+    laz.Touched:connect(function(h) if h==b then return end  if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     local bl=p:clone()
     bl.Parent=p
     bl.Name='ball'
@@ -508,7 +508,7 @@ mouse.Button1Down:connect(function()
     bl.Shape='Ball'
     Instance.new("Fire",bl)
     bl.Transparency=1
-    bl.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
+    bl.Touched:connect(function(h) if h==b then return end if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     bl.CFrame=laz.CFrame*CFrame.new(0,-(laz.Size.Y/2),0)*CFrame.new(0,-35,0)
     pos=laz.CFrame*CFrame.new(0,-(laz.Size.Y),0).p
     local block=Instance.new("Part",bl)
