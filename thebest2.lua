@@ -556,14 +556,14 @@ LOCK(arm2)
 normY=230
 while true do
 repeat
-local p=char.Torso.Position
+PP=char.Torso.Position
 wait(0)
 pp = char.Torso.Position
 if pp.Y>normY+200 then
   char.Torso.CFrame=CFrame.new(pp.X,normY,pp.Z)
 end
 until pp.Y<normY+200
-if (Vector3.new(pp.X,0,pp.Z)-Vector3.new(p.X,0,p.Z)).magnitude >1 then
+if (Vector3.new(pp.X,0,pp.Z)-Vector3.new(PP.X,0,PP.Z)).magnitude >1 then
   Moving=true
 else
   Moving=false
