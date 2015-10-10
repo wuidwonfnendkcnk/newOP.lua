@@ -185,11 +185,11 @@ weldz[#weldz+1]=newWeld
   wait()
   if A==8 then
     local cannon=Instance.new("Part",bod)
-    cannon.Size=Vector3.new(12,12,25)
+    cannon.Size=Vector3.new(15,15,20)
     local W=Instance.new("Weld",bottom)
     W.Part0=bottom
     W.Part1=cannon
-    W.C0=CFrame.new(0,-(6*(A)),-15)
+    W.C0=CFrame.new(0,-(6*(A)),-10)
     end
 end
 
