@@ -519,7 +519,7 @@ mouse.Button1Down:connect(function()
     block.Anchored=false
     block.Transparency=0.7
     block.Material='Neon'
-    block.Touched:connect(function(h) if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
+    block.Touched:connect(function(h) if h==b then return end if h.Parent:findFirstChild'Humanoid' and h.Name~=p.Name then h.Parent.Humanoid:TakeDamage(40) end end)
     bl.CanCollide=false
   end
    for i=End,1,-ind do
