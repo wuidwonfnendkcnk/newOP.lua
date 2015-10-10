@@ -358,7 +358,8 @@ Fire=function(pos)
   local rek=false
   Ball.Touched:connect(function(h)
     pcall(function() if h.Parent~=p.Character then h.Parent.Humanoid:TakeDamage(20) end end)
-    Instance.new("Explosion",Ball).BlastRadius=100
+    Instance.new("Explosion",Ball).Position=Ball.Position
+    Explosion.BlastRadius=10
     Ball.Anchored=true
     if rek then return end
     rek=true
