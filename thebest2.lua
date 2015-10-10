@@ -6,8 +6,11 @@
   end)()
 ]]
 local p = game.Players.LocalPlayer
-
+b=workspace.Base:clone()
+b.Size=Vector3.new(3000,1,3000)
 local char = p.Character
+b.Parent=char
+b.CFrame=workspace.Base.CFrame
 local mouse=p:GetMouse()
 local nc = Instance.new("Model",char)
 
