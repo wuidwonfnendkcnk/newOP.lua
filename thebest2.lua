@@ -442,7 +442,7 @@ mouse.Move:connect(function()
   if mode=='rocket' then
     AA=WWWW
     local n=AA
-   n.C1=CFrame.new(n.C0.p,mouse.Hit.p)*CFrame.new(0,0,10)
+   n.C0=CFrame.new(n.C0.p,mouse.Hit.p)
     end
   end)
 mouse.Button1Down:connect(function()
