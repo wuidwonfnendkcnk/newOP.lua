@@ -183,6 +183,14 @@ weldz[#weldz+1]=newWeld
   zaptop.CFrame=zaptop.CFrame*CFrame.new(0,-((last.Size.Y)/2),0)
 
   wait()
+  if A==8 then
+    local cannon=Instance.new("Part",bod)
+    cannon.Size=Vector3.new(10,10,30)
+    local W=Instance.new("Weld",bottom)
+    W.Part0=bottom
+    W.Part1=cannon
+    W.C0=CFrame.new(0,-(5*(A)),0)
+    end
 end
 
 for i,v in pairs(weldz) do
@@ -383,19 +391,24 @@ w2Weld.C0=CFrame.new(0,-(42.5),5)*CFrame.Angles(math.rad(-90),0,0)*CFrame.Angles
 attack=false
 ind=10
 End=90
-
+mode='sword'
 local hand=Instance.new("Part",Sword)
 hand.Size=Vector3.new(20,10,45)
 local handWeld=Instance.new("Weld",Handle)
 handWeld.Part0=Handle
 handWeld.Part1=hand
 handWeld.C0=CFrame.new(0,-Handle.Size.Y/2,0)
-
+mouse.KeyDown:connect(function(k)
+  if k=='t' then mode='sword'
+    elseif k=='r' then mode='rocket'
+    end
+  end)
 hand.BrickColor=BrickColor.Black()
 Handle.BrickColor=hand.BrickColor
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
+  if mode=='sword' then
   local CO=aWeld1.C0
   for i=1,End,ind do
     wait()
@@ -446,6 +459,9 @@ mouse.Button1Down:connect(function()
     aWeld1.C0=aWeld1.C0*CFrame.Angles(math.rad(ind),math.rad(-ind),0)*CFrame.new(1,0.1,0)
   end
   aWeld1.C0=CO
+else
+  
+  end
   wait(1)
   attack=false
   end)
