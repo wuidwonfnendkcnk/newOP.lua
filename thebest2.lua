@@ -186,10 +186,10 @@ weldz[#weldz+1]=newWeld
   if A==8 then
     local cannon=Instance.new("Part",bod)
     cannon.Size=Vector3.new(15,15,20)
-    local W=Instance.new("Weld",bottom)
-    W.Part0=bottom
-    W.Part1=cannon
-    W.C0=CFrame.new(0,-(6*(A)),-10)
+    WWWW=Instance.new("Weld",bottom)
+    WWWW.Part0=bottom
+    WWWW.Part1=cannon
+    WWWW.C0=CFrame.new(0,-(6*(A)),-10)
     end
 end
 
@@ -338,7 +338,39 @@ local split = function(str,index,opt)
   
 bottom.Anchored=false
 
-
+Fire=function(pos)
+  local Ball=Instance.new("Part",char)
+  Ball.Size=Vector3.new(10,10,10)
+  Ball.Shape='Ball'
+  Ball.CFrame=CFrame.new((Cannon.CFrame*CFrame.new(0,0,-10)).p,pos)
+  Ball.Velocity=Ball.CFrame.lookVector*300
+  Instance.new("Fire",Ball).Size=10000
+  Ball.Fire.Color=BrickColor.new'Toothpaste'.Color
+  rek=false
+  Ball.Touched:connect(function(h)
+    Ball.Anchored=true
+    if rek then return end
+    rek=true
+    local block=Instance.new("Part",Ball)
+    block.Size=Vector3.new(10,1,10)
+    block.Anchored=true
+    for i=1,10 do
+      wait()
+      block.Size=block.Size+Vector3.new(1,0,1)
+      block.CFrame=Ball.CFrame*CFrame.new(0,8,0)
+      block.BrickColor=BrickColor.Random()
+      block.Material='Neon'
+      local rek=block:clone()
+      rek.CanCollide=false
+      rek.Parent=block
+      rek.Anchored=false
+      rek.CFrame=Ball.CFrame
+      rek.BrickColor=BrickColor.new'Toothpaste'
+      rek.Touched:connect(function(h) pcall(function() h.Parent.Humanoid:TakeDamage(10) end) end)
+    end
+    game.Debris:AddItem(block,1)
+    end)
+  end
 Sword=Instance.new("Model",bod)
 Sword.Name='Sword'
 
@@ -405,6 +437,15 @@ mouse.KeyDown:connect(function(k)
   end)
 hand.BrickColor=BrickColor.Black()
 Handle.BrickColor=hand.BrickColor
+
+mouse.Move:connect(function()
+  if mode=='rocket' then
+    AA=WWWW
+    local n=AA
+    n.C0 = C0=CFrame.new(0,-(6*(8)),0)
+      n.C0=CFrame.new(n.C0.p,mouse.Hit.p)*CFrame.new(0,0,-10)
+    end
+  end)
 mouse.Button1Down:connect(function()
   if attack then return end
   attack=true
@@ -460,7 +501,9 @@ mouse.Button1Down:connect(function()
   end
   aWeld1.C0=CO
 else
-  
+  if mode=='rocket' then
+    Fire(mouse.Hit.p)
+    end
   end
   wait(1)
   attack=false
