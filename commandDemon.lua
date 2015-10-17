@@ -19,13 +19,14 @@ v.BrickColor=BrickColor.Black()
 v.Transparency=0.1
 v.Material='Neon'
 f=Instance.new("Fire",v)
-f.Heat=25
-f.Size=1
+f.Heat=15
+f.Size=0.1
 f.Color=Color3.new(255, 78, 19)
 f.SecondaryColor=Color3.new(255, 145, 101)
 s=f:clone()
 s.Parent=v
-s.Heat=15
+s.Heat=5
+s.Size=0.1
 s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 v.Touched:connect(function(h)
