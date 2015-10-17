@@ -6,7 +6,7 @@ _G.tw=function(o1,o2,diff)
 o1.CFrame=CFrame.new(o1.CFrame.p,pos)*CFrame.new(0,0,-1)
 end
 deadbutstanding={}
-
+can=true
 findd=function(obj)
   for i,v in pairs(deadbutstanding) do
     if v==obj then return true end
@@ -74,6 +74,17 @@ move=true
 targ='none'
 end
 
+if m:match'begone' then
+  can=false
+  dum.Parent=workspace.CurrentCamera
+  dum:MakeJoints()
+elseif m:match'return' and m:match'hell' then
+  can=true
+  dum.Parent=workspace
+  dum:MakeJoints()
+  dum.Torso.CFrame=CFrame.new(0,100,0)
+  end
+
 if m:lower():sub(1,5)=="targ'" then
 targ=m:lower():sub(6)
 targ=fp(targ).Name
@@ -110,13 +121,16 @@ end)
 
 
 while wait() do
+  if not can then else
 if targ~='none' and fp(targ) and fp(targ):findFirstChild'Torso' then
-  if move then
+  if move and can then
 tw(dum.Head,workspace:findFirstChild(fp(targ).Name).Torso)
 end
 end
 
-if move and follow then
+if move and follow and can then
   tw(dum.Head,owner.Character.Head,CFrame.new(0,0,10))
+  end
+  
   end
 end
