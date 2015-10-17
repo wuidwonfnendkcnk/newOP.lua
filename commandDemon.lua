@@ -82,7 +82,7 @@ if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():
     if v:IsA'BasePart' then repeat v=v.Parent until v:IsA'Model' or v==workspace end
     if v==workspace then a='nope' 
       print(a)
-      elseif v:IsA'Model' then
+      elseif v:IsA'Model' and v:findFirstChild'Torso' then
       dum.Torso.CFrame=v.Torso.CFrame
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
