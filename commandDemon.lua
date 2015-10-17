@@ -32,7 +32,7 @@ s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 end
 v.Touched:connect(function(h)
-  if h.Locked or h.Name=='Base' then return end
+  if h.Name=='Base' then return end
 h.BrickColor=BrickColor.Red()
 h.Material='Neon'
 h.Transparency=0.1
