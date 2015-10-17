@@ -123,7 +123,7 @@ end)
 
 while wait() do
   
-  if not dum or not workspace:findFirstChild(owner.Name.."'s Demon") then
+  if not dum or not workspace:findFirstChild(owner.Name.."'s Demon") and can then
     dum=dup:clone()
     dum.Parent=workspace
     dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
