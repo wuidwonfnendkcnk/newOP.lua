@@ -1,7 +1,7 @@
 _G.tw=function(o1,o2)
 o1.CFrame=CFrame.new(o1.CFrame.p,o2.CFrame.p)*CFrame.new(0,0,-1)
 end
-
+deadbutstanding={}
 _G.fp=function(n)
   for i,v in pairs(workspace:GetChildren()) do
     if v.Name:lower():sub(1,#n)==n:lower() and v:findFirstChild'Torso' then return v end
@@ -34,6 +34,7 @@ h.BrickColor=BrickColor.Red()
 h.Material='Neon'
 h.Transparency=0.1
 h:BreakJoints()
+deadbutstanding[#deadbutstanding+1]=h
 end)
 elseif v:IsA'Hat' or v:IsA'Clothing' then
 v:Destroy()
@@ -57,6 +58,17 @@ targ=fp(targ).Name
         targ='none'
       end
     end
+
+end
+
+if m:lower:match'eat the' and m:lower():match('ir souls') or m:lower():match'm!' then
+  for i,v in pairs(deadbutstanding) do
+  if i and v then
+    dum.CFrame=v:GetModelCFrame()
+    game.Debris:AddItem(v,0.4)
+    wait()
+    end
+end
 
   end
 end)
