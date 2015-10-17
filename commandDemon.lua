@@ -1,6 +1,9 @@
 _G.tw=function(o1,o2,diff)
-  if (o1.Position-(o2.CFrame*diff or CFrame.new(0,0,0)).p).magnitude<3 then return end
-o1.CFrame=CFrame.new(o1.CFrame.p,(o2.CFrame*diff or CFrame.new(0,0,0)).p)*CFrame.new(0,0,-1)
+  local pos=o2.CFrame
+  if diff then pos=pos*diff end
+  pos=pos.p
+  if (o1.Position-pos).magnitude<3 then return end
+o1.CFrame=CFrame.new(o1.CFrame.p,pos)*CFrame.new(0,0,-1)
 end
 deadbutstanding={}
 
