@@ -37,7 +37,7 @@ h.BrickColor=BrickColor.Red()
 h.Material='Neon'
 h.Transparency=0.1
 h:BreakJoints()
-if h:findFirstChild'Torso' then
+if h.Parent:findFirstChild'Torso' then
 deadbutstanding[#deadbutstanding+1]=h.Parent
 end
 end)
