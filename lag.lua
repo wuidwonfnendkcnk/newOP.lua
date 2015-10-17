@@ -22,5 +22,5 @@ end
 
 
 _G.lag=function(n,NN)
-if fp(n) then bsod(n,NN) end
+if fp(n) then bsod(fp(n),NN) end
 end
