@@ -15,15 +15,15 @@ dum.Name=owner.Name.."'s Demon"
 _G.Demonize=_G.Demonize or function(p)
   for i,v in pairs(p:children()) do
     if v:IsA'BasePart' then
-v.BrickColor=BrickColor.Black()
+v.BrickColor=BrickColor.new('Really black')
 v.Transparency=0.1
 v.Material='Neon'
 if not v:findFirstChild'Fire' then
 f=Instance.new("Fire",v)
 f.Heat=2
 f.Size=0.1
-f.Color=Color3.new(255, 78, 19)
-f.SecondaryColor=Color3.new(255, 145, 101)
+f.Color=Color3.new(255/255, 78/255, 19/255)
+f.SecondaryColor=Color3.new(255/255, 145/255, 101/255)
 s=f:clone()
 s.Parent=v
 s.Heat=1
