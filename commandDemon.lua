@@ -61,11 +61,12 @@ targ=fp(targ).Name
 
 end
 
-if m:lower:match'eat the' and m:lower():match('ir souls') or m:lower():match'm!' then
+if m:lower:match('eat the') and ((m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
   if i and v then
     dum.CFrame=v:GetModelCFrame()
     game.Debris:AddItem(v,0.4)
+    deadbutstanding[i]=nil
     wait()
     end
 end
