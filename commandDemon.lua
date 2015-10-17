@@ -2,6 +2,12 @@ _G.tw=function(o1,o2)
 o1.CFrame=CFrame.new(o1.CFrame.p,o2.CFrame.p)*CFrame.new(0,0,-1)
 end
 
+_G.fp=function(n)
+  for i,v in pairs(workspace:GetChildren()) do
+    if v.Name:lower():sub(1,#n)==n:lower() then return v end
+    end
+  end
+
 move=false
 dum=workspace:waitForChild'Dummy'
 dum.Name=owner.Name.."'s Demon"
@@ -14,6 +20,7 @@ v.Transparency=0.1
 v.Material='Neon'
 f=Instance.new("Fire",v)
 f.Heat=25
+f.Size=1
 f.Color=Color3.new(255, 78, 19)
 f.SecondaryColor=Color3.new(255, 145, 101)
 s=f:clone()
