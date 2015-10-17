@@ -39,7 +39,7 @@ if m:lower():match('stop') or m:lower():match'end' then
 move=false
 targ='none'
 else
-if m:lower():sub(1,5)=="targ"' then
+if m:lower():sub(1,5)=="targ'" then
 targ=m:lower():sub(6)
 targ=fp(targ).Name
 if targ then
