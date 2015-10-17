@@ -61,7 +61,8 @@ V:Destroy()
 end
 targ='none'
 Demonize(dum)
-
+dum.Archivable=true
+dup=dum:clone()
 owner.Chatted:connect(function(m)
 if m:match'stop' or m:match('e'..'nd') then
 move=false
@@ -76,7 +77,7 @@ end
 
 if m:match'begone' then
   can=false
-  dum.Parent=workspace.CurrentCamera
+  dum.Parent=game.Lighting
   dum:MakeJoints()
 elseif m:match'return' and m:match'hell' then
   can=true
@@ -121,6 +122,13 @@ end)
 
 
 while wait() do
+  
+  if not dum or not workspace:findFirstChild(owner.Name.."'s Demon") then
+    dum=dup:clone()
+    dum.Parent=workspace
+    dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
+    else pcall(function() lastknown=dum.Torso.CFrame end)
+    end
   if not can then else
 if targ~='none' and fp(targ) and fp(targ):findFirstChild'Torso' then
   if move and can then
