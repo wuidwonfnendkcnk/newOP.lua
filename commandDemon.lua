@@ -18,17 +18,19 @@ _G.Demonize=_G.Demonize or function(p)
 v.BrickColor=BrickColor.Black()
 v.Transparency=0.1
 v.Material='Neon'
+if not v:findFirstChild'Fire' then
 f=Instance.new("Fire",v)
-f.Heat=15
+f.Heat=2
 f.Size=0.1
 f.Color=Color3.new(255, 78, 19)
 f.SecondaryColor=Color3.new(255, 145, 101)
 s=f:clone()
 s.Parent=v
-s.Heat=5
+s.Heat=1
 s.Size=0.1
 s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
+end
 v.Touched:connect(function(h)
   if h.Locked or h.Name=='Base' then return end
 h.BrickColor=BrickColor.Red()
