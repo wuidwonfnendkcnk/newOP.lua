@@ -91,10 +91,11 @@ if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():
 
     wait()
   end
-  end
-    end)
+  end)
+
 end
 
+end
 end)
 
 
