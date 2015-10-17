@@ -88,10 +88,11 @@ if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
   end
-  end)
+
     wait()
   end
   end
+    end)
 end
 
 end)
