@@ -69,7 +69,7 @@ end
 if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
   if i and v then
-    dum.Torso.CFrame=v:IsA'Model' and v:GetModelCFrame()
+    dum.Torso.CFrame=v:IsA'Model' and v:GetModelCFrame() or v.CFrame
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
     wait()
