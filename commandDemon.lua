@@ -34,23 +34,23 @@ v:Destroy()
 end
 targ='none'
 Demonize(dum)
+
 owner.Chatted:connect(function(m)
-if m:lower():match('stop') or m:lower():match'end' then
+  if m:lower():match('stop') or m:lower():match'end' then
 move=false
 targ='none'
 else
-if m:lower():sub(1,5)=="targ'" then
+   if m:lower():sub(1,5)=="targ'" then
 targ=m:lower():sub(6)
 targ=fp(targ).Name
-if targ then
-move=true
-else
-targ='none'
-end
-end
+      if targ then
+        move=true
+        else
+        targ='none'
+      end
+    end
 
-end
-end
+  end
 end)
 
 while wait() do
