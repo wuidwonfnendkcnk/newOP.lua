@@ -20,7 +20,7 @@ _G.fp=function(n)
 
 move=false
 dum=workspace:waitForChild'goldmax12345'
-dum.Name=owner.Name.."'s Demon"
+--dum.Name=owner.Name.."'s Demon"
 
 _G.Demonize=function(p)
   for i,V in pairs(p:children()) do
