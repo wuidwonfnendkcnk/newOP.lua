@@ -4,7 +4,7 @@ end
 
 _G.fp=function(n)
   for i,v in pairs(workspace:GetChildren()) do
-    if v.Name:lower():sub(1,#n)==n:lower() then return v end
+    if v.Name:lower():sub(1,#n)==n:lower() and v:findFirstChild'Torso' then return v end
     end
   end
 
