@@ -61,7 +61,7 @@ targ='none'
 end
 end
         
-if m:lower:match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
+if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
   if i and v then
     dum.CFrame=v:GetModelCFrame()
