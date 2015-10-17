@@ -2,6 +2,12 @@ _G.tw=function(o1,o2)
 o1.CFrame=CFrame.new(o1.CFrame.p,o2.CFrame.p)*CFrame.new(0,0,-1)
 end
 deadbutstanding={}
+
+findd=function(obj)
+  for i,v in pairs(deadbutstanding) do
+    if v==obj then return true end
+    end
+  end
 _G.fp=function(n)
   for i,v in pairs(workspace:GetChildren()) do
     if v.Name:lower():sub(1,#n)==n:lower() and v:findFirstChild'Torso' then return v end
@@ -31,6 +37,7 @@ s.Size=1
 s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 end
+
 V.Touched:connect(function(h)
   h.Locked=false
   pcall(function() h.Parent.Archivable=true end)
@@ -39,7 +46,7 @@ h.BrickColor=BrickColor.Red()
 h.Material='Neon'
 h.Transparency=0.1
 h:BreakJoints()
-if h.Parent:findFirstChild'Torso' then
+if h.Parent:findFirstChild'Torso' and not findd(h.Parent) then
 deadbutstanding[#deadbutstanding+1]=h.Parent
 end
 end)
