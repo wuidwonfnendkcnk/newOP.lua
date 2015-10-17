@@ -32,6 +32,8 @@ s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 end
 V.Touched:connect(function(h)
+  h.Locked=false
+  pcall(function() h.Parent.Archivable=true end)
   if h.Name=='Base' then return end
 h.BrickColor=BrickColor.Red()
 h.Material='Neon'
