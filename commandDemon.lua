@@ -13,25 +13,25 @@ dum=workspace:waitForChild'Dummy'
 dum.Name=owner.Name.."'s Demon"
 
 _G.Demonize=_G.Demonize or function(p)
-  for i,v in pairs(p:children()) do
-    if v:IsA'BasePart' then
-v.BrickColor=BrickColor.new('Really black')
-v.Transparency=0.1
-v.Material='Neon'
-if not v:findFirstChild'Fire' then
-f=Instance.new("Fire",v)
+  for i,V in pairs(p:children()) do
+    if V:IsA'BasePart' then
+V.BrickColor=BrickColor.new('Really black')
+V.Transparency=0.1
+V.Material='Neon'
+if not V:findFirstChild'Fire' then
+f=Instance.new("Fire",V)
 f.Heat=2
 f.Size=0.1
 f.Color=Color3.new(255/255, 78/255, 19/255)
 f.SecondaryColor=Color3.new(255/255, 145/255, 101/255)
 s=f:clone()
-s.Parent=v
+s.Parent=V
 s.Heat=1
 s.Size=0.1
 s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 end
-v.Touched:connect(function(h)
+V.Touched:connect(function(h)
   if h.Name=='Base' then return end
 h.BrickColor=BrickColor.Red()
 h.Material='Neon'
@@ -41,8 +41,8 @@ if h.Parent:findFirstChild'Torso' then
 deadbutstanding[#deadbutstanding+1]=h.Parent
 end
 end)
-elseif v:IsA'Hat' or v:IsA'Clothing' then
-v:Destroy()
+elseif V:IsA'Hat' or V:IsA'Clothing' then
+V:Destroy()
     end
   end
 end
@@ -69,7 +69,7 @@ end
 if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
   if i and v then
-    dum.CFrame=v:GetModelCFrame()
+    dum.Torso.CFrame=v:IsA'Model' and v:GetModelCFrame()
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
     wait()
