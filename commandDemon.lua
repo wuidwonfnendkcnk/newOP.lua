@@ -77,6 +77,7 @@ end
         
 if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
+    pcall(function()
     print(i,v)
   if i~=nil and v~=nil and (v:IsA'BasePart' or v:IsA'Model') then
     if v:IsA'BasePart' then repeat v=v.Parent until v:IsA'Model' or v==workspace end
@@ -86,7 +87,8 @@ if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():
       dum.Torso.CFrame=v.Torso.CFrame
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
-    end
+  end
+  end)
     wait()
   end
   end
