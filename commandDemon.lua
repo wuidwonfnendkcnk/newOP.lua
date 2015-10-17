@@ -70,9 +70,11 @@ end
         
 if m:lower():match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
-  if i~=nil and v~=nil and v:IsA'BasePart' or v:IsA'Model' then
+    print(i,v)
+  if i~=nil and v~=nil and (v:IsA'BasePart' or v:IsA'Model') then
     if v:IsA'BasePart' then repeat v=v.Parent until v:IsA'Model' or v==workspace end
     if v==workspace then a='nope' 
+      print(a)
       elseif v:IsA'Model' then
       dum.Torso.CFrame=v.Torso.CFrame
     game.Debris:AddItem(v,0.4)
