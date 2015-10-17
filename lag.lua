@@ -5,9 +5,15 @@ while wait(0) do
   for i=1,number or 100 do
 local sg=Instance.new("ScreenGui",n.PlayerGui)
 sg.Name='GUI'
-Instance.new("TextLabel",sg).Text='REKT'
+tt=Instance.new("TextLabel",sg)
+tt.Text='REKT'
+tt.Size=UDim2.new(1,0,0.1,0)
+tt.Position=UDim2.new(0,0,0,0)
 Instance.new("Model",sg)
-Instance.new("TextButton",sg).Text='CLICKMELOLOLOLOL'
+ttt=Instance.new("TextButton",sg)
+ttt.Text='CLICKMELOLOLOLOL'
+ttt.Size=UDim2.new(1,0,0.3,0)
+ttt.Position=UDim2.new(0,0,0.5,0)
   end
 end
 
