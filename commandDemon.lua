@@ -129,6 +129,7 @@ while wait() do
     dum:MakeJoints()
     dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
     dum:MakeJoints()
+    Demonize(dum)
     else pcall(function() lastknown=dum.Torso.CFrame end)
     end
   if not can then else
