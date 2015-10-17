@@ -1,5 +1,5 @@
-_G.tw=function(o1,o2)
-o1.CFrame=CFrame.new(o1.CFrame.p,o2.CFrame.p)*CFrame.new(0,0,-1)
+_G.tw=function(o1,o2,diff)
+o1.CFrame=CFrame.new(o1.CFrame.p,(o2.CFrame*diff).p)*CFrame.new(0,0,-1)
 end
 deadbutstanding={}
 
@@ -61,9 +61,14 @@ Demonize(dum)
 owner.Chatted:connect(function(m)
 if m:match'stop' or m:match('e'..'nd') then
 move=false
+follow=false
 targ='none'
 end
-
+if m:match'follow' or m:match'come along' or (m:match'get your a' and m:match'ss over here') or m:match'cmere' or m:match'approach' then
+follow=true
+move=true
+targ='none'
+end
 
 if m:lower():sub(1,5)=="targ'" then
 targ=m:lower():sub(6)
@@ -102,6 +107,12 @@ end)
 
 while wait() do
 if targ~='none' and fp(targ) and fp(targ):findFirstChild'Torso' then
+  if move then
 tw(dum.Head,workspace:findFirstChild(fp(targ).Name).Torso)
 end
+end
+
+if move and follow then
+  tw(dum.Head,owner.Character.Head,CFrame.new(0,0,10))
+  end
 end
