@@ -12,7 +12,7 @@ move=false
 dum=workspace:waitForChild'Dummy'
 dum.Name=owner.Name.."'s Demon"
 
-_G.Demonize=_G.Demonize or function(p)
+_G.Demonize=function(p)
   for i,V in pairs(p:children()) do
     if V:IsA'BasePart' then
 V.BrickColor=BrickColor.new('Really black')
@@ -20,14 +20,14 @@ V.Transparency=0.1
 V.Material='Neon'
 if not V:findFirstChild'Fire' then
 f=Instance.new("Fire",V)
-f.Heat=2
-f.Size=0.1
+f.Heat=15
+f.Size=1
 f.Color=Color3.new(255/255, 78/255, 19/255)
 f.SecondaryColor=Color3.new(255/255, 145/255, 101/255)
 s=f:clone()
 s.Parent=V
-s.Heat=1
-s.Size=0.1
+s.Heat=5
+s.Size=1
 s.Color=Color3.new(0,0,0)
 s.Enabled,f.Enabled=true,true
 end
