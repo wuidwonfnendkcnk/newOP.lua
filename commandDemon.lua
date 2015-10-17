@@ -126,6 +126,7 @@ while wait() do
   if not dum or not workspace:findFirstChild(owner.Name.."'s Demon") and can then
     dum=dup:clone()
     dum.Parent=workspace
+    dum:MakeJoints()
     dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
     dum:MakeJoints()
     else pcall(function() lastknown=dum.Torso.CFrame end)
