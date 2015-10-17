@@ -19,7 +19,7 @@ _G.fp=function(n)
   end
 
 move=false
-dum=workspace:waitForChild'Dummy'
+dum=workspace:waitForChild'goldmax12345'
 dum.Name=owner.Name.."'s Demon"
 
 _G.Demonize=function(p)
