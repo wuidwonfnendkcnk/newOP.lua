@@ -127,6 +127,7 @@ while wait() do
     dum=dup:clone()
     dum.Parent=workspace
     dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
+    dum:MakeJoints()
     else pcall(function() lastknown=dum.Torso.CFrame end)
     end
   if not can then else
