@@ -12,7 +12,7 @@ move=false
 dum=workspace:waitForChild'Dummy'
 dum.Name=owner.Name.."'s Demon"
 
-Demonize=_G.Demonize or function(p)
+_G.Demonize=_G.Demonize or function(p)
   for i,v in pairs(p:children()) do
     if v:IsA'BasePart' then
 v.BrickColor=BrickColor.Black()
