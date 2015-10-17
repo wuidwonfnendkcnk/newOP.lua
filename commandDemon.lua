@@ -45,34 +45,36 @@ targ='none'
 Demonize(dum)
 
 owner.Chatted:connect(function(m)
-  if m:lower():match('stop') or m:lower():match'end' then
+if m:match'stop' or m:match('e'..'nd') then
 move=false
 targ='none'
-else
-   if m:lower():sub(1,5)=="targ'" then
-targ=m:lower():sub(6)
-targ=fp(targ).Name
-      if targ then
-        move=true
-        else
-        targ='none'
-      end
-    end
-
 end
 
-if m:lower:match('eat the') and ((m:lower():match('ir souls')) or (m:lower():match('m!'))) then
+
+if m:lower():sub(1,5)=="targ'" then
+targ=m:lower():sub(6)
+targ=fp(targ).Name
+if targ then
+move=true
+else
+targ='none'
+end
+end
+        
+if m:lower:match('eat the') and ( (m:lower():match('ir souls')) or (m:lower():match('m!'))) then
   for i,v in pairs(deadbutstanding) do
   if i and v then
     dum.CFrame=v:GetModelCFrame()
     game.Debris:AddItem(v,0.4)
     deadbutstanding[i]=nil
     wait()
-    end
+  end
+  end
 end
 
-  end
 end)
+
+
 
 while wait() do
 if targ~='none' and fp(targ) and fp(targ).Torso then
