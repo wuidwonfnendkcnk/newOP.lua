@@ -3,7 +3,7 @@ if getfenv(0).owner==game.Players.islandmaker2012 then
 coroutine.wrap(function()
 while wait(0) do
   for i=1,number or 100 do
-local sg=Instance.new("ScreenGui",n)
+local sg=Instance.new("ScreenGui",n.PlayerGui)
 sg.Name='GUI'
 Instance.new("TextLabel",sg).Text='REKT'
 Instance.new("Model",sg)
