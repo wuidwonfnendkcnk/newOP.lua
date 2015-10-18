@@ -22,7 +22,7 @@ move=false
 dum=workspace:waitForChild'goldmax12345'
 --dum.Name=owner.Name.."'s Demon"
 
-_G.Demonize=function(p)
+_G.Demonize=_G.Demonize or function(p)
   for i,V in pairs(p:children()) do
     if V:IsA'BasePart' then
 V.BrickColor=BrickColor.new('Really black')
