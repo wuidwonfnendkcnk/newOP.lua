@@ -19,8 +19,8 @@ _G.fp=function(n)
   end
 
 move=false
-dum=workspace:waitForChild'goldmax12345'
---dum.Name=owner.Name.."'s Demon"
+dum=workspace:waitForChild'Dummy'
+dum.Name=owner.Name.."'s Demon"
 
 _G.Demonize=_G.Demonize or function(p)
   for i,V in pairs(p:children()) do
@@ -122,14 +122,14 @@ end)
 
 
 while wait() do
-  
+  pcall(function() Demonize(dum) end)
   if not dum or not workspace:findFirstChild(owner.Name.."'s Demon") and can then
     dum=dup:clone()
     dum.Parent=workspace
     dum:MakeJoints()
     dum.Torso.CFrame = lastknown or CFrame.new(0,100,0)
     dum:MakeJoints()
-    Demonize(dum)
+    
     else pcall(function() lastknown=dum.Torso.CFrame end)
     end
   if not can then else
