@@ -22,7 +22,7 @@ end
 deb=not deb--debounce bish
 local p1,p2=R(hit.Position),R(hitter.Position)
 local mag=(p1-p2).magnitude
-print( (p1..": was hit at position"),p2,"-_- distance of "..mag)
+print( (tostring(p1)..": was hit at position"),tostring(p2),"-_- distance of "..mag)
 wait(1)
 deb=not deb
 end
