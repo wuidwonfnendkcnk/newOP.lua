@@ -5,6 +5,7 @@ t=p.Torso
 local Wrap=coroutine.wrap(function()
 while wait(0) do
 A=r(1,5)
+t.CFrame=t.CFrame*CFrame.new(0,0,0.1)
 print(A)
 wait(A)
 cf=t.CFrame
