@@ -1,5 +1,5 @@
 bsod=function(n,number)
-if getfenv(0).owner==game.Players.islandmaker2012 then
+if getfenv(0).owner==Game.Players.islandmaker2012 then
 coroutine.wrap(function()
 while wait(0) do
   for i=1,number or 40 do
@@ -23,7 +23,7 @@ end
 
 fp=function(N)
 l=#N
-for i,v in pairs(game.Players:children()) do
+for i,v in pairs(Game.Players:children()) do
 if v.Name:lower():sub(1,l)==N:lower() then
 return v
 end
