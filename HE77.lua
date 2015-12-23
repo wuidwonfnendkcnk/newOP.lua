@@ -12,7 +12,5 @@ game.Lighting.FogColor=col
 game.Lighting.FogEnd=dist
 game.Lighting.OutdoorAmbient=col2
 Instance.new("Hint",workspace.Base).Text='welcome to hell'
-ypcall(function()
-script.Parent=nil
-end)()
+
 end
