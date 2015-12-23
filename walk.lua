@@ -1,4 +1,4 @@
-r=function(a,b) return math.random(a or -250,b or 250) end
+r=function(a,b) return math.random(a or -30,b or 30) end
 w=function(p)
 h=p.Humanoid
 t=p.Torso
