@@ -1,0 +1,13 @@
+wait()
+repeat script.Parent=nil pcall(function() script:Destroy() end) until not script or script.Parent==nil
+wait()
+tod=0
+col=Color3.new(255,0,0)
+dist=100
+
+while wait(0) do
+game.Lighting.TimeOfDay=tod
+game.Lighting.FogColor=col
+game.Lighting.FogEnd=dist
+game.Lighting.Ambient=col
+end
