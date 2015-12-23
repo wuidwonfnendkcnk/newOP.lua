@@ -4,7 +4,7 @@ wait()
 tod=0
 col=Color3.new(255,0,0)
 col2=Color3.new(10/255,1/255,1/255)
-dist=100
+dist=150
 
 while wait(0) do
 game.Lighting.TimeOfDay=tod
