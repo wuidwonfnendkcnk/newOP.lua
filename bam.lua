@@ -51,7 +51,7 @@ for i=1,Y-5,3 do
 wait(0)
 p.CFrame=CFF*CFrame.new(0,0,i)
 sq.CFrame=t.CFrame*CFrame.new(0,-i,0)
-sq.Transparency=0.8
+sq.Transparency=1
 end
 p.Anchored=false
 local T=false
