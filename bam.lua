@@ -1,5 +1,5 @@
 local plr=game.Players.LocalPlayer
-local char=plr.CharacterAdded:wait()
+local char=plr.Character or plr.CharacterAdded:wait()
 local t=char:WaitForChild'Torso'
 local m=plr:GetMouse()
 local atk=false
