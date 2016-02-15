@@ -63,6 +63,7 @@ sq.CFrame=t.CFrame*CFrame.new(0,-i,0)
 sq.Transparency=1
 end
 p.Anchored=false
+t.Anchored=true
 local T=false
 workspace.Base.Touched:connect(function(j)
 if j==p and not T then
