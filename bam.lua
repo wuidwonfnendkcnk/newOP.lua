@@ -27,6 +27,7 @@ for i=1,36,2 do
 	local spot=i
 local p=Instance.new("Part",workspace)
 p.Size=Vector3.new(1,1,3)
+p.BrickColor=BrickColor.New'Toothpaste'
 p.CFrame=t.CFrame
 p.CFrame=p.CFrame*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-3)
 coroutine.wrap(function()
