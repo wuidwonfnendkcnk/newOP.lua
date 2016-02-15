@@ -39,10 +39,11 @@ wait()
 end
 wait(0.1)
 p:breakJoints()
-local Y=t.CFrame.Y-workspace.Base.CFrame.Y
+local Y=t.CFrame.Y
+local CFF=p.CFrame
 for i=Y,5,-1 do
 wait(0)
-p.CFrame=CFrame.new(p.CFrame.X,Y,p.CFrame.Z)
+p.CFrame=CFF*CFrame.new(0,Y,0)
 end
 p.Anchored=false
 local T=false
