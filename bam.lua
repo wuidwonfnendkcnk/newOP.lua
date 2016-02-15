@@ -17,6 +17,7 @@ wait(0)
 t.Velocity=Vector3.new(0,-100,0)
 t.Anchored=true
 end
+local Y=t.CFrame.Y
 local sq=Instance.new("Part",workspace)
 sq.Size=Vector3.new(25,1,25)
 sq.Anchored=true
@@ -56,7 +57,7 @@ wait()
 end
 wait(0)
 p:breakJoints()
-local Y=t.CFrame.Y
+
 local CFF=p.CFrame
 
 for i=1,Y-5,3 do
