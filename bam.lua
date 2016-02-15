@@ -50,8 +50,10 @@ local Y=t.CFrame.Y
 local CFF=p.CFrame
 local stopper=Instance.new("Part",workspace)
 stopper.Size=Vector3.new(25,5,25)
-stopper.Transparency=1
+stopper.Transparency=0.8
 stopper.Position=(p.CFrame*CFrame.new(0,Y,0)).p
+	stopper:breakJoints()
+	stopper.CanCollide=false
 stopper.Touched:connect(function(h)
 h.Anchored=true
 game.Debris:AddItem(stopper,0.1)
