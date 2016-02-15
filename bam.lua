@@ -14,7 +14,7 @@ t.Velocity=Vector3.new(0,500,0)
 end
 for i=1,3 do
 wait(0)
-t.Velocity=Vector3.new(0,-100,0)
+t.Velocity=Vector3.new(0,0,0)
 t.Anchored=true
 end
 local Y=t.CFrame.Y
