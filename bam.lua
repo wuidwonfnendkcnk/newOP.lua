@@ -44,6 +44,7 @@ local CFF=p.CFrame
 for i=1,Y-5,3 do
 wait(0)
 p.CFrame=CFF*CFrame.new(0,0,i)
+sq.CFrame=t.CFrame*CFrame.new(0,i,0)
 end
 p.Anchored=false
 local T=false
@@ -67,8 +68,11 @@ p.Transparency=i/10
 p.Touched:connect(function(h)
 h:breakJoints()
 end)
+
 p.CFrame=p.CFrame*CFrame.new(-1,1,0)
 end
+sq:explode()
+sq:Destroy()
 
 for i=6,12 do
 wait(0)
@@ -87,4 +91,10 @@ end)
 
 end)()
 end
+local sq=Instance.new("Part",workspace)
+sq.Size=Vector3.new(1,25,1)
+sq.Anchored=true
+sq.CFrame=t.CFrame
+sq.Transparency=1
+sq.CanCollide=false
 end)
