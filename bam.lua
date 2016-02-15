@@ -77,8 +77,7 @@ end)
 
 p.CFrame=p.CFrame*CFrame.new(-1,1,0)
 end
-sq:explode()
-sq:Destroy()
+
 
 for i=6,12 do
 wait(0)
@@ -90,6 +89,8 @@ h:breakJoints()
 end)
 p.CFrame=p.CFrame*CFrame.new(1,1,0)
 end
+Instance.new("Explosion",workspace).Position=sq.Position
+sq:Destroy()
 p:Destroy()
 t.Anchored=false
 end
