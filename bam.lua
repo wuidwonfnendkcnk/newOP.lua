@@ -28,6 +28,7 @@ local stopper=Instance.new("Part",workspace)
 stopper.Size=Vector3.new(25,5,25)
 stopper.Transparency=0.8
 stopper.Position=(t.CFrame*CFrame.new(0,-Y,0)).p
+	t.Anchored=true
 	stopper:breakJoints()
 	stopper.CanCollide=false
 stopper.Touched:connect(function(h)
