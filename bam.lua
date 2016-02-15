@@ -17,6 +17,12 @@ wait()
 t.Velocity=Vector3.new(0,-100,0)
 t.Anchored=true
 end
+local sq=Instance.new("Part",workspace)
+sq.Size=Vector3.new(1,25,1)
+sq.Anchored=true
+sq.CFrame=t.CFrame
+sq.Transparency=1
+sq.CanCollide=false
 for i=1,36,2 do
 	local spot=i
 local p=Instance.new("Part",workspace)
@@ -91,10 +97,5 @@ end)
 
 end)()
 end
-local sq=Instance.new("Part",workspace)
-sq.Size=Vector3.new(1,25,1)
-sq.Anchored=true
-sq.CFrame=t.CFrame
-sq.Transparency=1
-sq.CanCollide=false
+
 end)
