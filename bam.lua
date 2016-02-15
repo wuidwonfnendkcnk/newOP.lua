@@ -23,6 +23,16 @@ sq.Anchored=true
 sq.CFrame=t.CFrame
 sq.Transparency=1
 sq.CanCollide=false
+local stopper=Instance.new("Part",workspace)
+stopper.Size=Vector3.new(25,5,25)
+stopper.Transparency=0.8
+stopper.Position=(t.CFrame*CFrame.new(0,-Y,0)).p
+	stopper:breakJoints()
+	stopper.CanCollide=false
+stopper.Touched:connect(function(h)
+h.Anchored=true
+game.Debris:AddItem(stopper,0.1)
+end)
 for i=1,36,2 do
 	local spot=i
 local p=Instance.new("Part",workspace)
@@ -48,16 +58,7 @@ wait(0)
 p:breakJoints()
 local Y=t.CFrame.Y
 local CFF=p.CFrame
-local stopper=Instance.new("Part",workspace)
-stopper.Size=Vector3.new(25,5,25)
-stopper.Transparency=0.8
-stopper.Position=(p.CFrame*CFrame.new(0,Y,0)).p
-	stopper:breakJoints()
-	stopper.CanCollide=false
-stopper.Touched:connect(function(h)
-h.Anchored=true
-game.Debris:AddItem(stopper,0.1)
-end)
+
 for i=1,Y-5,3 do
 wait(0)
 p.CFrame=CFF*CFrame.new(0,0,i)
