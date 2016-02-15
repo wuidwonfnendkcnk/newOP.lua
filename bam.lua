@@ -18,7 +18,7 @@ t.Velocity=Vector3.new(0,-100,0)
 t.Anchored=true
 end
 local sq=Instance.new("Part",workspace)
-sq.Size=Vector3.new(1,25,1)
+sq.Size=Vector3.new(25,1,25)
 sq.Anchored=true
 sq.CFrame=t.CFrame
 sq.Transparency=1
@@ -50,7 +50,7 @@ local CFF=p.CFrame
 for i=1,Y-5,3 do
 wait(0)
 p.CFrame=CFF*CFrame.new(0,0,i)
-sq.CFrame=t.CFrame*CFrame.new(0,i,0)
+sq.CFrame=t.CFrame*CFrame.new(0,-i,0)
 sq.Transparency=0.8
 end
 p.Anchored=false
