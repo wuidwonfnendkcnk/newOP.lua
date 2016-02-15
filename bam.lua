@@ -42,7 +42,7 @@ p:breakJoints()
 local Y=t.CFrame.Y-workspace.Base.CFrame.Y
 for i=Y,5,-1 do
 wait(0)
-p.CFrame=CFrame.new(p.X,Y,p.Z)
+p.CFrame=CFrame.new(p.CFrame.X,Y,p.CFrame.Z)
 end
 p.Anchored=false
 local T=false
