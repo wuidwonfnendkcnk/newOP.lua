@@ -41,9 +41,9 @@ wait(0.1)
 p:breakJoints()
 local Y=t.CFrame.Y
 local CFF=p.CFrame
-for i=3,Y-5 do
+for i=1,Y-5 do
 wait(0)
-p.CFrame=CFF*CFrame.new(0,0,Y)
+p.CFrame=CFF*CFrame.new(0,0,i)
 end
 p.Anchored=false
 local T=false
