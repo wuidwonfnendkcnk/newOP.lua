@@ -6,14 +6,14 @@ local atk=false
 m.Button1Down:connect(function()
 if atk then return end
 atk=true
-for i=1,20 do
+for i=1,15 do
 	char.Humanoid.Jump=true
 wait()
 t.Velocity=Vector3.new(0,500,0)
 
 end
-for i=1,10 do
-wait()
+for i=1,3 do
+wait(0)
 t.Velocity=Vector3.new(0,-100,0)
 t.Anchored=true
 end
@@ -44,10 +44,18 @@ for i=1,10 do
 p.CFrame=p.CFrame*CFrame.Angles(math.rad(9),0,0)
 wait()
 end
-wait(0.1)
+wait(0)
 p:breakJoints()
 local Y=t.CFrame.Y
 local CFF=p.CFrame
+local stopper=Instance.new("Part",workspace)
+stopper.Size=Vector3.new(25,5,25)
+stopper.Transparency=1
+stopper.Position=(p.CFrame*CFrame.new(0,Y,0).p
+stopper.Touched:connect(function(h)
+h.Anchored=true
+game.Debris:AddItem(stopper,0.1)
+end)
 for i=1,Y-5,3 do
 wait(0)
 p.CFrame=CFF*CFrame.new(0,0,i)
