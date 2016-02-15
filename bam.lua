@@ -40,7 +40,7 @@ end
 wait(0.1)
 p:breakJoints()
 local Y=t.CFrame.Y-workspace.Base.CFrame.Y
-for i=Y,5 do
+for i=Y,5,-1 do
 wait(0)
 p.CFrame=CFrame.new(p.X,Y,p.Z)
 end
