@@ -6,6 +6,7 @@ end
 
 Chat=function(plr,msg)
   for i,v in pairs(Cmdz) do
+    print(i,Cmdz[i].Sep,Cmdz[i].Action)
     if i:lower()==msg:lower():sub(1,#i) then
       if msg:lower():sub(#i,#i+#Cmdz[i]['Sep'])==Cmdz[i]['Sep'] then
         print'asdd'
