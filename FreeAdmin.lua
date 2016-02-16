@@ -15,7 +15,7 @@ Chat=function(plr,msg)
   end
 end
 
-game.Players.LocalPlayer.Chatted:connect(function(m)
-  Chat(nil,m)
+owner.Chatted:connect(function(m)
+  Chat(owner,m)
   end)
 NewCmd('asd','/',[[function(asd) print(asd) end]])
