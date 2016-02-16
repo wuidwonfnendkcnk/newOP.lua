@@ -1,7 +1,7 @@
 Cmdz={}
 
 NewCmd=function(cmd,sep,action)
-Cmdz[cmd]={['Sep']=sep,['Action']=loadstring(action)}
+Cmdz[cmd]={['Sep']=sep,['Action']=function(arg) loadstring(action)(arg) end}
 end
 
 Chat=function(plr,msg)
