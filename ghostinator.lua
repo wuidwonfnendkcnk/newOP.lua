@@ -5,6 +5,16 @@ local ghost=char:clone()
 local m=plr:GetMouse()
 local cam=workspace.CurrentCamera
 local on=false
+GetNear=function(o)
+    local pos=o.Torso.Position
+    for i,v in pairs(workspace:children()) do
+        if v~=char and v:findFirstChild'Torso' and v:findFirstChild'Humanoid' then
+            if (v.Torso.Position-pos).magnitude<10 then
+                return v
+            end
+        end
+    end
+end
 m.Button1Down:connect(function()
 on = not on
 if on then
