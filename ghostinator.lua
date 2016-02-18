@@ -20,6 +20,7 @@ on = not on
 if on then
 Ghost=ghost:clone()
 Ghost.Parent=cam
+Ghost:MoveTo((char.Torso.CFrame*CFrame.new(0,0,-5)).p)
 Ghost:makeJoints()
 workspace.CurrentCamera.CameraSubject=Ghost.Humanoid
 else
