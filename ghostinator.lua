@@ -43,6 +43,9 @@ if keys['p'] then
 local C=GetNear(Ghost)
 if C then
 C.Humanoid:TakeDamage(1)
+Ghost.Parent=workspace
+wait(0)
+Ghost.Parent=workspace.CurrentCamera
 end
 end
 char.Humanoid.WalkSpeed=0
