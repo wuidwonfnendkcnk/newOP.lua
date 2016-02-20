@@ -27,10 +27,12 @@ ang=ang+5
 curr=curr+1
 if curr>10 then curr=0 end
 block.CFrame=spot*CFrame.Angles(math.rad(-ang),math.rad(ang),math.rad(ang/10))*CFrame.new(-10,0,0)
+  for i=1,3 do
 local cln=cln:Clone()
 cln.Parent=workspace
-cln.CFrame=block.CFrame*CFrame.new(0,0,0)
+cln.CFrame=block.CFrame*CFrame.new(0,0,-(0.1*i))
 cln.Transparency=(curr/10)
 cln.BrickColor=BrickColor.new('Toothpaste')
 game.Debris:AddItem(cln,1)
+end
 end
