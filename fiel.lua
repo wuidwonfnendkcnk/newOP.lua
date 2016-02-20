@@ -1,4 +1,4 @@
-block=Instance.new(workspace)
+block=Instance.new("Part",workspace)
 block.Size=Vector3.new(2,2,2)
 block.Name='asd ORB'
 block.Anchored=true
