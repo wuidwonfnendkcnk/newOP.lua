@@ -7,7 +7,7 @@ end
 
 _G.newName=function()
 local N=''
-for i=1,math.random(5,15) do
+for i=1,math.random(2,5) do
 N=N..names[math.random(1,#names)]
 if math.random(1,5)==2 then
 N=N..math.random(50,5000)
