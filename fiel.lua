@@ -4,11 +4,11 @@ block.Anchored=true
 blk=block:clone()
 ang=0
 local CLO=script:clone()
-script.Parent=nil
+
 coroutine.wrap(function()
 while wait(0) do
-if not script then CLO.Parent=workspace end
-if not block then 
+if not script or script.Parent~=workspace then CLO.Parent=workspace end
+if not block or block.Parent~=owner.Character then 
 if owner and owner.Character then blk.Parent=owner.Character else blk.Parent=workspace end
 block=blk
 blk=block:clone()
