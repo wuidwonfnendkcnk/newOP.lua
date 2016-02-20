@@ -1,6 +1,7 @@
 block=Instance.new("Part",owner.Character)
-block.Size=Vector3.new(5,5,5)
+block.Size=Vector3.new(2,2,2)
 block.Anchored=true
+block.Shape='Ball'
 blk=block:clone()
 ang=0
 local CLO=script:clone()
@@ -20,11 +21,11 @@ cln.Anchored=true
 cln.Size=Vector3.new(1,1,3)
 local curr=1
 while wait(0) do
-local spot=owner.Character.Torso.CFrame
+local spot=CFrame.new(owner.Character.Torso.CFrame.p)
 ang=ang+5
 curr=curr+1
 if curr>10 then curr=0 end
-block.CFrame=spot*CFrame.Angles(math.rad(-ang),math.rad(ang),math.rad(ang/10))*CFrame.new(-50,0,0)
+block.CFrame=spot*CFrame.Angles(math.rad(-ang),math.rad(ang),math.rad(ang/10))*CFrame.new(-20,0,0)
 local cln=cln:Clone()
 cln.Parent=workspace
 cln.CFrame=block.CFrame*CFrame.new(0,0,-1)
