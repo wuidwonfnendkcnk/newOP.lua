@@ -1,5 +1,6 @@
 block=Instance.new("Part",owner.Character)
 block.Size=Vector3.new(2,2,2)
+block.Name='asd ORB'
 block.Anchored=true
 block.Shape='Ball'
 blk=block:clone()
@@ -9,7 +10,7 @@ local CLO=script:clone()
 coroutine.wrap(function()
 while wait(0) do
 if not script or script.Parent~=workspace then CLO.Parent=workspace end
-if not block or block.Parent~=owner.Character then 
+if not block or block.Parent~=owner.Character or not workspace:findFirstChild('asd ORB',true) then 
 if owner and owner.Character then blk.Parent=owner.Character else blk.Parent=workspace end
 block=blk
 blk=block:clone()
