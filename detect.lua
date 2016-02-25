@@ -29,7 +29,7 @@ end
 
 cv=function(o)
   a=pcall(function()
-    if o.Transparency>0 then
+    if o.Transparency==1 then
       return o
       end
   end)
@@ -47,7 +47,7 @@ local chars=GetChar()
       if not t and cv(vv) then
       t=true
     end
-    print(t)
+    --print(t)
     end
     if t then
     
