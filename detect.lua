@@ -18,7 +18,7 @@ local chars=GetChar()
   v.Archivable=true
   cl=v:clone()
     for _,vv in pairs(v:children()) do
-      if vv.Transparency==1 then
+      if ypcall(function() return vv.Transparency>0 end) then
       t=true
       end
     end
