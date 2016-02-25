@@ -3,7 +3,7 @@ invisible=false
 m=plr:GetMouse()
 
 invi=function(o,n)
-ypcall(function() o.Transparency=n end)
+ypcall(function() o.Transparency= o.Name=='HumanoidRootPart' and 1 or n end)
 for i,v in pairs(o:children()) do
   pcall(function() invi(i) end)
   if v:IsA'BasePart' and (v.Name~='HumanoidRootPart' or n==1)then v.Transparency=n end
