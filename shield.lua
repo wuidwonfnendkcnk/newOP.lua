@@ -76,7 +76,7 @@ if keys['g'] then
   
 if not s3 then s3=true c3=0 shield3=Shield3:clone() shield3.Parent=workspace.Base end
 
-shield3.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c3,5)*CFrame.Angles(math.rad(c1*9),0,math.rad(90))
+shield3.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c3,5)*CFrame.Angles(math.rad(c3*9),0,math.rad(90))
 c3=c3+1
 
 if c3>=M then c3=M end
