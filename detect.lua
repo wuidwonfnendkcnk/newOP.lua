@@ -25,7 +25,14 @@ end
 return ret
 end
 
-
+cv=function(o)
+  a=pcall(function()
+    if o.Transparency>0 then
+      return o
+      end
+  end)
+  return a
+  end
 coroutine.wrap(function()
 while wait(0.1) do
 pcall(function() workspace.CurrentCamera:clearAllChildren() end)
@@ -35,7 +42,7 @@ local chars=GetChar()
   v.Archivable=true
   cl=v:clone()
     for _,vv in pairs(v:children()) do
-      if vv:IsA'BasePart' and vv.Transparency==1 then
+      if not t and cv(vv) then
       t=true
       end
     end
