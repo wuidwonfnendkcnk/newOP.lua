@@ -60,7 +60,7 @@ local chars=GetChar()
     end
   end
 end
-end)
+end)()
 
 m.Button1Down:connect(function()
   invisible=not invisible
