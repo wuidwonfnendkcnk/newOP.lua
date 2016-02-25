@@ -19,9 +19,9 @@ M=10
 
 Shield1=Instance.new("Part")
 Shield1.FormFactor='Custom'
---Shield1.Shape='Cylinder'
+Shield1.Shape='Cylinder'
 Shield1.FormFactor='Custom'
-Shield1.Size=Vector3.new(7.5,1,10)
+Shield1.Size=Vector3.new(1,10,7.5)
 Shield1.Anchored=true
 Shield1.Transparency=0.8
 Shield1.BrickColor=BrickColor.New'Teal'
