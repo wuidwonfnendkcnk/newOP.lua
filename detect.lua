@@ -44,7 +44,8 @@ local chars=GetChar()
     for _,vv in pairs(v:children()) do
       if not t and cv(vv) then
       t=true
-      end
+    end
+    print(t)
     end
     if t then
     
