@@ -5,7 +5,7 @@ m=plr:GetMouse()
 invi=function(o,n)
 ypcall(function() o.Transparency= o.Name=='HumanoidRootPart' and 1 or n end)
 for i,v in pairs(o:children()) do
-  pcall(function() invi(i) end)
+  pcall(function() invi(v) v.face:Destroy() end)
   if v:IsA'BasePart' and (v.Name~='HumanoidRootPart' or n==1)then v.Transparency=n end
   if v:IsA'Hat' or v:IsA'Clothing' then
     v:Destroy() end
@@ -52,6 +52,7 @@ local chars=GetChar()
     if t then
     
     for i,v in pairs(cl:children()) do
+      pcall(function() v.face:Destroy() end)
     if v:IsA'Hat' or v:IsA'Clothing' or v:IsA'CharacterMesh' or v:IsA'Humanoid' then
     v:Destroy()
     elseif v:IsA'BasePart' then v.Transparency=0.5 v.BrickColor=BrickColor.New'Really red' v.CanCollide=false v.Anchored=true
