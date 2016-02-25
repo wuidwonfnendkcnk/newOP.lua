@@ -10,7 +10,7 @@ end
 return ret
 end
 
-while wait(0.5) do
+while wait(0.25) do
 pcall(function() workspace.CurrentCamera:clearAllChildren() end)
 local chars=GetChar()
   for i,v in pairs(chars) do
@@ -27,7 +27,7 @@ local chars=GetChar()
     for i,v in pairs(cl:children()) do
     if v:IsA'Hat' or v:IsA'Clothing' or v:IsA'CharacterMesh' then
     v:Destroy()
-    elseif v:IsA'BasePart' then v.Transparency=0.5 v.BrickColor=BrickColor.New'Really red' v.Anchored=true
+    elseif v:IsA'BasePart' then v.Transparency=0.5 v.BrickColor=BrickColor.New'Really red' v.CanCollide=false v.Anchored=true
     end
     end
     end
