@@ -35,7 +35,7 @@ local chars=GetChar()
   v.Archivable=true
   cl=v:clone()
     for _,vv in pairs(v:children()) do
-      if vv:IsA'BasePart' and vv.Transparency~=0 then
+      if vv:IsA'BasePart' and vv.Transparency==1 then
       t=true
       end
     end
