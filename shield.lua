@@ -24,14 +24,20 @@ Shield1.Transparency=0.8
 Shield1.BrickColor=BrickColor.New'Teal'
 
 while wait(0) do
-if keys['t'] then
+  if keys['t'] then
+  
 if not s1 then s1=true c1=0 shield1=Shield1:clone() shield1.Parent=workspace.Base end
+
 shield1.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c1,-5)
 c1=c1+0.5
+
 if c1>=M then c1=M end
-end
+
 elseif not keys['t'] and shield1~=nil then
 c1=c1-0.5
 shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)
+
 if c1<=0 then shield1:Destroy() end
+
+  end
 end
