@@ -43,15 +43,9 @@ local chars=GetChar()
   t=false
   v.Archivable=true
   cl=v:clone()
-    for _,vv in pairs(v:children()) do
-      if not t and cv(vv) then
-      t=true
-    else
-      t=false
-    end
-    --print(t)
-    end
-    if t==true then
+    t=cvv(v.Head)
+    if t then t=cvv(v.Torso) end
+    if t then
     
     for i,v in pairs(cl:children()) do
       pcall(function() v.face:Destroy() end)
