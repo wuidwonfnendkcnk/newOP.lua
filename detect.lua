@@ -30,7 +30,7 @@ end
 cv=function(o)
   a=pcall(function()
     if o.Transparency==1 and (o.Name~='HumanoidRootPart') then
-      return o
+      return o.Name=='Torso' or o.Name=='Head'
       end
   end)
   return a
