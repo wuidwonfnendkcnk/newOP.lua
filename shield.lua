@@ -55,7 +55,7 @@ if c1<=0 then shield1:Destroy() s1=false end
 
 end
 
-if keys['h'] then
+if keys['f'] then
   
 if not s2 then s2=true c2=0 shield2=Shield2:clone() shield2.Parent=workspace.Base end
 
@@ -64,7 +64,7 @@ c2=c2+1
 
 if c2>=M then c2=M end
 
-elseif not keys['h'] and s2 then
+elseif not keys['f'] and s2 then
 c2=c2-2
 shield2.CFrame=char.Torso.CFrame*CFrame.Angles(0,math.rad(90),0)*CFrame.new(0,(-10)+c2,-5)*CFrame.Angles(math.rad(c2*9),0,math.rad(90))
 
@@ -89,7 +89,7 @@ if c3<=0 then shield3:Destroy() s3=false end
 
 end
 
-if keys['f'] then
+if keys['h'] then
   
 if not s4 then s4=true c4=0 shield4=Shield4:clone() shield4.Parent=workspace.Base end
 
@@ -98,7 +98,7 @@ c4=c4+1
 
 if c4>=M then c4=M end
 
-elseif not keys['f'] and s4 then
+elseif not keys['h'] and s4 then
 c4=c4-2
 shield4.CFrame=char.Torso.CFrame*CFrame.Angles(0,math.rad(-90),0)*CFrame.new(0,(-10)+c4,-5)*CFrame.Angles(math.rad(c4*9),0,math.rad(90))
 
