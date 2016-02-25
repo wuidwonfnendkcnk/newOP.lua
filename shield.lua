@@ -31,14 +31,14 @@ while wait(0) do
   
 if not s1 then s1=true c1=0 shield1=Shield1:clone() shield1.Parent=workspace.Base end
 
-shield1.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c1,-5)*CFrame.Angles(math.rad(c1*9),0,0)
+shield1.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c1,-5)*CFrame.Angles(math.rad(c1*9),math.rad(90),0)
 c1=c1+1
 
 if c1>=M then c1=M end
 
 elseif not keys['t'] and s1 then
 c1=c1-2
-shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)*CFrame.Angles(math.rad(c1*9),0,0)
+shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)*CFrame.Angles(math.rad(c1*9),math.rad(90),0)
 
 if c1<=0 then shield1:Destroy() s1=false end
 
