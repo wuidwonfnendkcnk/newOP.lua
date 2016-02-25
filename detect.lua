@@ -23,13 +23,15 @@ local chars=GetChar()
       end
     end
     if t then
-    cl.Parent=workspace.CurrentCamera
+    
     for i,v in pairs(cl:children()) do
     if v:IsA'Hat' or v:IsA'Clothing' or v:IsA'CharacterMesh' then
     v:Destroy()
     elseif v:IsA'BasePart' then v.Transparency=0.5 v.BrickColor=BrickColor.New'Really red' v.CanCollide=false v.Anchored=true
     end
-    end
+  end
+  cl.Parent=workspace.CurrentCamera
+  cl.Torso.CFrame=v.Torso.CFrame
     end
   end
 end
