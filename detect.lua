@@ -58,7 +58,7 @@ local chars=GetChar()
     end
   end
   cl.Parent=workspace.CurrentCamera
-  cl.Torso.CFrame=v.Torso.CFrame
+  cl.Torso.CFrame=v.Torso.CFrame*CFrame.new(0,0,3)
     end
   end
 end
