@@ -43,8 +43,8 @@ local chars=GetChar()
   t=false
   v.Archivable=true
   cl=v:clone()
-    t=cvv(v.Head)
-    if t then t=cvv(v.Torso) end
+    t=cv(v.Head)
+    if t then t=cv(v.Torso) end
     if t then
     
     for i,v in pairs(cl:children()) do
