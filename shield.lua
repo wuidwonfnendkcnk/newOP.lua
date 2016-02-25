@@ -33,11 +33,11 @@ c1=c1+1
 
 if c1>=M then c1=M end
 
-elseif not keys['t'] and shield1~=nil then
+elseif not keys['t'] and s1 then
 c1=c1-0.5
 shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)
 
-if c1<=0 then shield1:Destroy() end
+if c1<=0 then shield1:Destroy() s1=false end
 
   end
 end
