@@ -18,7 +18,10 @@ s4=false
 M=10
 
 Shield1=Instance.new("Part")
-Shield1.Size=Vector3.new(7.5,10,1)
+Shield1.FormFactor='Custom'
+Shield1.Shape='Cylinder'
+Shield1.FormFactor='Custom'
+Shield1.Size=Vector3.new(7.5,1,10)
 Shield1.Anchored=true
 Shield1.Transparency=0.8
 Shield1.BrickColor=BrickColor.New'Teal'
@@ -28,14 +31,14 @@ while wait(0) do
   
 if not s1 then s1=true c1=0 shield1=Shield1:clone() shield1.Parent=workspace.Base end
 
-shield1.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c1,-5)
+shield1.CFrame=char.Torso.CFrame*CFrame.new(0,-(10)+c1,-5)*CFrame.Angles(0,0,math.rad(90))
 c1=c1+1
 
 if c1>=M then c1=M end
 
 elseif not keys['t'] and s1 then
 c1=c1-2
-shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)
+shield1.CFrame=char.Torso.CFrame*CFrame.new(0,(-10)+c1,-5)*CFrame.Angles(0,0,math.rad(c1*10))
 
 if c1<=0 then shield1:Destroy() s1=false end
 
