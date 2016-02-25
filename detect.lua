@@ -36,7 +36,7 @@ cv=function(o)
   return a
   end
 coroutine.wrap(function()
-while wait(0.25) do
+while wait(0) do
 pcall(function() workspace.CurrentCamera:clearAllChildren() end)
 local chars=GetChar()
   for i,v in pairs(chars) do
