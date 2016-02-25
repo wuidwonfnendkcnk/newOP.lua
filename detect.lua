@@ -7,6 +7,8 @@ ypcall(function() o.Transparency=n end)
 for i,v in pairs(o:children()) do
   pcall(function() invi(i) end)
   if v:IsA'BasePart' then v.Transparency=n end
+  if v:IsA'Hat' or v:IsA'Clothing' then
+    v:Destroy() end
   end
 end
 
@@ -34,7 +36,7 @@ cv=function(o)
   return a
   end
 coroutine.wrap(function()
-while wait(0.1) do
+while wait(0.25) do
 pcall(function() workspace.CurrentCamera:clearAllChildren() end)
 local chars=GetChar()
   for i,v in pairs(chars) do
