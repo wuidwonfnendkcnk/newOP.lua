@@ -29,7 +29,7 @@ end
 
 cv=function(o)
   a=pcall(function()
-    if o.Transparency==1 then
+    if o.Transparency==1 and (o.Name~='HumanoidRootPart') then
       return o
       end
   end)
