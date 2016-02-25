@@ -1,16 +1,34 @@
 local plr=game.Players.LocalPlayer
+invisible=false
+m=plr:GetMouse()
+
+invi=function(o,n)
+ypcall(function() o.Transparency=n end)
+for i,v in pairs(o:children()) do
+  pcall(function() invi(i) end)
+  if v:IsA'BasePart' then v.Transparency=n end
+  end
+end
 
 GetChar=function()
 local ret={}
 for i,v in pairs(workspace:children()) do
-if v:findFirstChild'Humanoid' and v:findFirstChild'Torso' and v.Name~=plr.Name then
+if v:findFirstChild'Humanoid' and v:findFirstChild'Torso' then
+  if v.Name~=plr.Name then
 ret[#ret+1]=v
+else
+if invisible then
+  ret[#ret+1]=v
+  end
+end
 end
 end
 return ret
 end
 
-while wait(0.25) do
+
+coroutine.wrap(function()
+while wait(0.1) do
 pcall(function() workspace.CurrentCamera:clearAllChildren() end)
 local chars=GetChar()
   for i,v in pairs(chars) do
@@ -18,7 +36,7 @@ local chars=GetChar()
   v.Archivable=true
   cl=v:clone()
     for _,vv in pairs(v:children()) do
-      if ypcall(function() return vv.Transparency>0 end) then
+      if (ypcall(function() return vv.Transparency==1 end)==true) then
       t=true
       end
     end
@@ -35,3 +53,10 @@ local chars=GetChar()
     end
   end
 end
+end)
+
+m.Button1Down:connect(function()
+  invisible=not invisible
+  if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
+  
+end)
