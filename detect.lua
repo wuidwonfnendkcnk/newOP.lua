@@ -46,10 +46,12 @@ local chars=GetChar()
     for _,vv in pairs(v:children()) do
       if not t and cv(vv) then
       t=true
+    else
+      t=false
     end
     --print(t)
     end
-    if t then
+    if t==true then
     
     for i,v in pairs(cl:children()) do
       pcall(function() v.face:Destroy() end)
