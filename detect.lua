@@ -16,11 +16,10 @@ for i,v in pairs(workspace:children()) do
 if v:findFirstChild'Humanoid' and v:findFirstChild'Torso' then
   if v.Name~=plr.Name then
 ret[#ret+1]=v
-else
-if invisible then
+end
+if invisible and v.Name==plr.Name then
   ret[#ret+1]=v
   end
-end
 end
 end
 return ret
@@ -36,7 +35,7 @@ local chars=GetChar()
   v.Archivable=true
   cl=v:clone()
     for _,vv in pairs(v:children()) do
-      if (ypcall(function() return vv.Transparency==1 end)==true) then
+      if vv:IsA'BasePart' and vv.Transparency~=0 then
       t=true
       end
     end
