@@ -43,7 +43,8 @@ local chars=GetChar()
   t=false
   v.Archivable=true
   cl=v:clone()
-    t=cv(v.Head)
+  coroutine.wrap(function()
+    t=cv(v:waitForChild'Head')
     if t then t=cv(v.Torso) end
     if t then
     
@@ -56,6 +57,7 @@ local chars=GetChar()
   end
   cl.Parent=workspace.CurrentCamera
   cl.Torso.CFrame=v.Torso.CFrame
+  end)()
     end
   end
 end
