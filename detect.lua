@@ -89,11 +89,11 @@ sword.FormFactor='Custom'
   w2.C0=CFrame.new(0,(((ra.Size.Y/2)+0.875)),0)
 local hand=Instance.new("Part",sword)
 hand.FormFactor='Custom'
-hand.Size=Vector3.new(1,0.5,0.5)
+hand.Size=Vector3.new(1,0.25,0.75)
 local w3=Instance.new("Weld",hand)
 w3.Part0=hand
 w3.Part1=sword
-w3.C0=CFrame.new(0,1.5,0)
+w3.C0=CFrame.new(0,-0.5,0)
 cf=w.C0
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
   
