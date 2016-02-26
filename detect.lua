@@ -86,7 +86,7 @@ m.Button1Down:connect(function()
   if dwn then return end
   dwn=true
   for i=90,0,-10 do
-    w.C0=w.C0*CFrame.new(,-(1.5/9),0)*CFrame.Angles(math.rad(10),0,0)
+    w.C0=w.C0*CFrame.new(0,-(1.5/9),0)*CFrame.Angles(math.rad(10),0,0)
     wait(0)
   end
   
