@@ -135,7 +135,8 @@ Endit=function(obj)
   obj.Anchored=false
   obj:breakJoints()
   obj.Anchored=false
-  obj.Velocity=((obj.CFrame*CFrame.Angles(r(),r(),r())).lookVector)*(math.random(350,5000)+50)
+  cf=obj.CFrame*CFrame.Angles(r(),r(),r())
+  obj.Velocity=(cf.lookVector*math.random(350,5000)+50)
   end
 sword.Touched:connect(function(h)
   if dwn then
