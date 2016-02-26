@@ -87,12 +87,12 @@ m.Button1Down:connect(function()
   if dwn then return end
   dwn=true
   for i=180,180+90,10 do
-    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad((25/90)*i))*CFrame.new(0,-(((i-180)/90)/2),0)
+    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad((25/90)*(i-180)))*CFrame.new(0,-(((i-180)/90)/2),0)
     wait(0)
   end
   
  for i=180+90,180,-10 do
-    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad((25/90)*i))*CFrame.new(0,-(((i-180)/90)/2),0)
+    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad((25/90)*(i-180)))*CFrame.new(0,-(((i-180)/90)/2),0)
     wait(0)
   end
   
