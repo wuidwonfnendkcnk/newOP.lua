@@ -80,8 +80,15 @@ local w=Instance.new("Weld",ra)
 w.Part0=ra
 w.Part1=t
 w.C0=CFrame.new(-1.25,1.5,0)
+local sword=Instance.new("Part",c)
+  sword.Size=Vector3.new(2,4,1)
+  local w2=Instance.new("Weld",sword)
+  w2.Part0=sword
+  w2.Part1=ra
+  w2.C0=CFrame.new(0,(-((ra.Size.Y/2)+4)),0)
 cf=w.C0
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
+  
   dwn=false
 m.Button1Down:connect(function()
   if dwn then return end
