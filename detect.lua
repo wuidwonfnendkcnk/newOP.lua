@@ -80,19 +80,21 @@ local w=Instance.new("Weld",ra)
 w.Part0=ra
 w.Part1=t
 w.C0=CFrame.new(-1,1.5,0)
+cf=w.C0
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
   dwn=false
 m.Button1Down:connect(function()
   if dwn then return end
   dwn=true
-  for i=90,0,-10 do
-    w.C0=w.C0*CFrame.new(0,0,-(1.5/9))*CFrame.Angles(math.rad(10),0,0)
+  for i=180,90,-10 do
+    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad(25))
     wait(0)
   end
   
-  for i=90,0,-10 do
-    w.C0=w.C0*CFrame.new(0,0,1.5/9)*CFrame.Angles(math.rad(-10),0,0)
+ for i=90,180,10 do
+    w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad(25))
     wait(0)
   end
+  
   dwn=false
   end)
