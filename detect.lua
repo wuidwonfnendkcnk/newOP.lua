@@ -63,7 +63,8 @@ local chars=GetChar()
 end
 end)()
 
-m.Button1Down:connect(function()
+m.KeyDown:connect(function(k)
+  if k~='t' then return end
   invisible=not invisible
   if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
   
@@ -78,5 +79,20 @@ local c=plr.Character
 local w=Instance.new("Weld",ra)
 w.Part0=ra
 w.Part1=t
-w.C0=CFrame.new(-1.25,1.5,0)
+w.C0=CFrame.new(-1,1.5,0)
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
+  dwn=false
+m.Button1Down:connect(function()
+  if dwn then return end
+  dwn=true
+  for i=180,0,-10 do
+    w.C0=w.C0*CFrame.Angles(math.rad(-10),0,0)
+    wait(0)
+  end
+  
+  for i=180,0,-10 do
+    w.C0=w.C0*CFrame.Angles(math.rad(10),0,0)
+    wait(0)
+  end
+  
+  end)
