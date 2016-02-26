@@ -57,8 +57,8 @@ local chars=GetChar()
   end
   cl.Parent=workspace.CurrentCamera
   cl.Torso.CFrame=v.Torso.CFrame
-  end)()
-    end
+  end
+    end)()
   end
 end
 end)()
