@@ -87,7 +87,7 @@ sword.FormFactor='Custom'
   w2.Part0=sword
   w2.Part1=ra
   w2.C0=CFrame.new(0,(((ra.Size.Y/2)+0.875)),0)
-local hand=Instance.new("Part",c)
+local hand=Instance.new("Part",sword)
 hand.FormFactor='Custom'
 hand.Size=Vector3.new(1,0.25,0.75)
 local w3=Instance.new("Weld",hand)
@@ -112,4 +112,27 @@ m.Button1Down:connect(function()
   end
   
   dwn=false
+end)
+Endit=function(obj)
+  obj.BrickColor=BrickColor.New'Really Black'
+  obj.Transparency=0.1
+  local last='Neon'
+  for i=1,10 do obj.Transparency=i/10 
+    wait(0)
+    if last=='Neon' then obj.Material='Grass' else obj.Material='Neon' end last=obj.Material end
+  end
+  for i=10,5,-1 do
+    obj.Transparency=i/10
+    obj.BrickColor=BrickColor.new'Really red'
+    obj.Material='Neon'
+    wait(0)
+  end
+  obj.Anchored=true
+  wait(2)
+  obj:breakJoints()
+  end
+sword.Touched:connect(function(h)
+  if dwn then
+    Endit(h)
+    end
   end)
