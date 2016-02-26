@@ -79,3 +79,4 @@ local w=Instance.new("Weld",ra)
 w.Part0=ra
 w.Part1=t
 w.C0=CFrame.new(-1.5,0,0)
+w.C0=w.C0*CFrame.Angles(math.rad(90),0,0)
