@@ -85,13 +85,13 @@ w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
 m.Button1Down:connect(function()
   if dwn then return end
   dwn=true
-  for i=180,0,-10 do
-    w.C0=w.C0*CFrame.Angles(math.rad(10),0,0)
+  for i=90,0,-10 do
+    w.C0=w.C0*CFrame.new(1/9,0,0)*CFrame.Angles(math.rad(10),0,0)
     wait(0)
   end
   
-  for i=180,0,-10 do
-    w.C0=w.C0*CFrame.Angles(math.rad(-10),0,0)
+  for i=90,0,-10 do
+    w.C0=w.C0*CFrame.new(1/9,0,0)*CFrame.Angles(math.rad(-10),0,0)
     wait(0)
   end
   dwn=false
