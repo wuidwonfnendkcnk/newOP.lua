@@ -119,8 +119,10 @@ Endit=function(obj)
   local last='Neon'
   for i=1,10 do obj.Transparency=i/10 
     wait(0)
-    if last=='Neon' then obj.Material='Grass' else obj.Material='Neon' end last=obj.Material end
+    if last=='Neon' then 
+      obj.Material='Grass' else obj.Material='Neon' end last=obj.Material
   end
+  
   for i=10,5,-1 do
     obj.Transparency=i/10
     obj.BrickColor=BrickColor.new'Really red'
