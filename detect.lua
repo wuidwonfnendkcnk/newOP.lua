@@ -66,3 +66,14 @@ m.Button1Down:connect(function()
   if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
   
 end)
+
+local ra=plr.Character['Right Arm']
+
+local t=plr.Character.Torso
+
+local c=plr.Character
+
+local w=Instance.new("Weld",ra)
+w.Part0=ra
+w.Part1=t
+w.C0=CFrame.new(1.5,0,0)
