@@ -132,6 +132,7 @@ Endit=function(obj)
   obj.Anchored=true
   wait(2)
   obj:breakJoints()
+  obj.Anchored=false
   end
 sword.Touched:connect(function(h)
   if dwn then
