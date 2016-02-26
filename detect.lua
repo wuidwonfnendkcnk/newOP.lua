@@ -135,7 +135,7 @@ Endit=function(obj)
   obj.Anchored=false
   obj:breakJoints()
   obj.Anchored=false
-  obj.Velocity=Vector3.new(math.random(5000),math.random(2000),math.random(3000))
+  obj.Velocity=Vector3.new(math.random(-3000,5000),math.random(-3000,2000),math.random(-1000,3000))
   end
 sword.Touched:connect(function(h)
   if dwn then
