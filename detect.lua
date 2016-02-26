@@ -33,7 +33,7 @@ cv=function(o)
       return o.Name=='Torso' or o.Name=='Head'
       end
   end)
-  return a
+  return a()
   end
 coroutine.wrap(function()
 while wait(0.25) do
