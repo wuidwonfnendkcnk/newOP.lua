@@ -129,10 +129,13 @@ Endit=function(obj)
     obj.Material='Neon'
     wait(0)
   end
+  local r=function() return math.rad(math.random(-360,360)) end
   obj.Anchored=true
   wait(2)
+  obj.Anchored=false
   obj:breakJoints()
   obj.Anchored=false
+  obj.Velocity=(obj.CFrame*CFrame.Angles(r(),r(),r())).lookVector*r()+50
   end
 sword.Touched:connect(function(h)
   if dwn then
