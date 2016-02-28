@@ -123,7 +123,7 @@ Endit=function(obj,vel)
   for i=1,10 do obj.Transparency=i/10 
     wait(0.2)
     if last=='Neon' then 
-      obj.Material='Grass' else obj.Material='Neon' end last=obj.Material
+      obj.Material='Grass' last='Grass' else obj.Material='Neon' last='Neon' end
   end
   
   for i=10,5,-0.25 do
@@ -150,10 +150,11 @@ sword.Touched:connect(function(h)
     end
   end)
 
+local dwn2=false
 
 holycrap=function()
-if dwn then return end
-dwn=true
+if dwn2 then return end
+dwn2=true
 local part=Instance.new("Part",workspace.Base)
 part.Shape='Cylinder'
 part.FormFactor='Custom'
