@@ -157,6 +157,20 @@ sword.Touched:connect(function(h)
 
 local dwn2=false
 
+link=function(OBJ1,OBJ2,T)
+  wait(T/10)
+  local connect=Instance.new("Part",OBJ2)
+  pos1,pos2=Vector3.new(OBJ1.X,0,OBJ1.Z),Vector3.new(OBJ2.X,0,OBJ2.Z)
+  local dist=(pos1-pos2).magnitude
+  local pos=CFrame.new(OBJ1.CFrame.p,OBJ2.CFrame.p)
+  connect.Size=Vector3.new(1,1,dist)
+  connect.Anchored=true
+  connect.BrickColor=BrickColor.Red()
+  connect.Material='Neon'
+  connect.CanCollide=false
+  connect.CFrame=pos*CFrame.new(0,0,-(dist/2))
+  end
+
 holycrap=function()
 if dwn2 then return end
 dwn2=true
@@ -205,7 +219,7 @@ for i=1,3 do sphere.Size=sphere.Size+Vector3.new(1,0,0) wait() end
 local CAN=true
 sphere.Touched:connect(function(h) 
   if not CAN then return end
-  if h.Parent~=char then Endit(h,true) end
+  if h.Parent~=char then Endit(h,true) if h.Name=='Torso' then link(part,h,12) end
 end)
 CFZ=sphere.CFrame
 asd=5
