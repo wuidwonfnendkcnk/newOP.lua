@@ -1,7 +1,7 @@
 local plr=game.Players.LocalPlayer
 invisible=false
 m=plr:GetMouse()
-
+char=plr.Character
 invi=function(o,n)
 ypcall(function() o.Transparency= o.Name=='HumanoidRootPart' and 1 or n end)
 for i,v in pairs(o:children()) do
@@ -11,6 +11,8 @@ for i,v in pairs(o:children()) do
     v:Destroy() end
   end
 end
+
+
 
 GetChar=function()
 local ret={}
@@ -113,7 +115,8 @@ m.Button1Down:connect(function()
   
   dwn=false
 end)
-Endit=function(obj)
+
+Endit=function(obj,vel)
   obj.BrickColor=BrickColor.New'Really Black'
   obj.Transparency=0.1
   local last='Neon'
@@ -132,13 +135,30 @@ Endit=function(obj)
   local r=function() return math.rad(math.random(-360,360)) end
   obj.Anchored=true
   wait(2)
+  if vel then
   obj.Anchored=false
+  
   obj:breakJoints()
   obj.Anchored=false
   obj.Velocity=Vector3.new(math.random(-3000,5000),math.random(-3000,2000),math.random(-1000,3000))
+    end
   end
+
 sword.Touched:connect(function(h)
   if dwn then
     Endit(h)
     end
   end)
+
+
+holycrap=function()
+if dwn then return end
+dwn=true
+local part=Instance.new("Part",workspace.Base)
+part.Shape='Cylinder'
+part.FormFactor='Custom'
+part.Size=Vector3.new(1,5,5)
+part.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)*CFrame.Angles(math.rad(90),0,0)
+part.Anchored=true
+part.CanCollide=false
+  end
