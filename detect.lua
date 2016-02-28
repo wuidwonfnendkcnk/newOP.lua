@@ -99,7 +99,7 @@ w3.Part1=sword
 w3.C0=CFrame.new(0,-0.5,0)
 cf=w.C0
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
-  
+  CO=w.C0
   dwn=false
 m.Button1Down:connect(function()
   char:makeJoints()
@@ -114,7 +114,7 @@ m.Button1Down:connect(function()
     w.C0=cf*CFrame.Angles(math.rad(i),0,math.rad((25/90)*(i-90)))*CFrame.new(0,-(((i-180)/90)/2),0)
     wait(0)
   end
-  
+  w.C0=CO
   dwn=false
 end)
 
