@@ -146,7 +146,7 @@ Endit=function(obj,vel)
 
 sword.Touched:connect(function(h)
   if dwn then
-    Endit(h)
+    Endit(h,true)
     end
   end)
 
@@ -163,6 +163,13 @@ repeat part.CFrame=part.CFrame*CFrame.new(0,-1,0) until part.CFrame.Y<=workspace
 part.CFrame=part.CFrame*CFrame.Angles(0,math.rad(90),math.rad(90))
 part.Anchored=true
 part.CanCollide=false
+cf=part.CFrame
+for i=1,10 do
+  part.Size=part.Size+Vector3.new(0,1,0)
+  part.CFrame=cf*CFrame.new(0,(i/2),0)
+  wait(0)
+end
+Endit(part,false)
 end
 wait(3)
 holycrap()
