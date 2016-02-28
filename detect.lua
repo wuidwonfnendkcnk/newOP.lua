@@ -202,18 +202,21 @@ local CAN=true
 sphere.Touched:connect(function(h) 
   if not CAN then return end
   if h.Parent~=char then Endit(h,true) end
-  end)
+end)
+cf=sphere.CFrame
 for i=1,50,2 do
   sphere.Size=sphere.Size+Vector3.new(0,2,2)
+sphere.CFrame=cf
   wait(0)
 end
-
+wait(1)
 CAN=false
 
 for i=1,50,2 do
   sphere.Size=sphere.Size+Vector3.new(0,-2,-2)
   wait(0)
 end
+wait(1)
 for i=1,3 do sphere.Size=sphere.Size+Vector3.new(-1,0,0) wait() end
 for i=20,0,-2 do wait(0) diff=i/2 end
 for i=1,10,2 do
