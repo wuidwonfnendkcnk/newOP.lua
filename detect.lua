@@ -159,6 +159,8 @@ local dwn2=false
 
 link=function(OBJ1,OBJ2,T)
   local connect=Instance.new("Part",OBJ2)
+  coroutine.wrap(function()
+    while wait(0) and connect and OBJ2 and OBJ1 do
   pos1,pos2=Vector3.new(OBJ1.CFrame.X,0,OBJ1.CFrame.Z),Vector3.new(OBJ2.CFrame.X,0,OBJ2.CFrame.Z)
   local dist=(pos1-pos2).magnitude
   local pos=CFrame.new(OBJ1.CFrame.p,OBJ2.CFrame.p)
@@ -168,6 +170,8 @@ link=function(OBJ1,OBJ2,T)
   connect.Material='Neon'
   connect.CanCollide=false
   connect.CFrame=pos*CFrame.new(0,0,-(dist/2))
+    end
+    end)()
     game.Debris:AddItem(connect,T)
   end
 
