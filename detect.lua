@@ -203,27 +203,30 @@ sphere.Touched:connect(function(h)
   if not CAN then return end
   if h.Parent~=char then Endit(h,true) end
 end)
-cf=sphere.CFrame
-for i=1,50,2 do
+CFZ=sphere.CFrame
+for i=1,100,2 do
   sphere.Size=sphere.Size+Vector3.new(0,2,2)
-sphere.CFrame=cf
+sphere.CFrame=CFZ
   wait(0)
 end
 wait(1)
 CAN=false
 
-for i=1,50,2 do
+for i=1,100,2 do
   sphere.Size=sphere.Size+Vector3.new(0,-2,-2)
+  sphere.CFrame=CFZ
   wait(0)
 end
 wait(1)
-for i=1,3 do sphere.Size=sphere.Size+Vector3.new(-1,0,0) wait() end
+for i=1,3 do sphere.Size=sphere.Size+Vector3.new(-1,0,0) sphere.CFrame=CFZ wait() end
 for i=20,0,-2 do wait(0) diff=i/2 end
 for i=1,10,2 do
   sphere.Size=sphere.Size-Vector3.new(0.02,2,2)
+  sphere.CFrame=CFZ
   wait(0)
 end
-
+game.Debris:AddItem(part,2)
+game.Debris:AddItem(sphere,2)
 for i=1,10,2 do
   part.Size=part.Size-Vector3.new(2,0,0)
   part.CFrame=cf*CFrame.new(-(i/2),0,0)
