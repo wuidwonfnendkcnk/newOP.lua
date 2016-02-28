@@ -171,8 +171,10 @@ sphere.Shape='Cylinder'
 sphere.Anchored=true
 sphere.CanCollide=false
 coroutine.wrap(function()
+  local diff=0
   while wait(0) and part and part.Parent and part~=nil do
-    sphere.CFrame=part.CFrame*CFrame.new((part.Size.X/2)+sphere.Size.X/2,0,0)
+    num=(part.Size.X/2)+sphere.Size.X/2
+    sphere.CFrame=part.CFrame*CFrame.new(num-diff,0,0)
     end
   end)()
 cf=part.CFrame
@@ -190,6 +192,7 @@ coroutine.wrap(function()
 Endit(part,false)
 end)()
 Endit(sphere,false)
+for i=1,10 do wait(0) diff=i end
 wait(1)
 dwn2=false
 end
