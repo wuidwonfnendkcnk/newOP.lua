@@ -165,8 +165,8 @@ part.Anchored=true
 part.CanCollide=false
 cf=part.CFrame
 for i=1,10 do
-  part.Size=part.Size+Vector3.new(0,1,0)
-  part.CFrame=cf*CFrame.new(0,(i/2),0)
+  part.Size=part.Size+Vector3.new(1,0,0)
+  part.CFrame=cf*CFrame.new((i/2),0,0)
   wait(0)
 end
 Endit(part,false)
