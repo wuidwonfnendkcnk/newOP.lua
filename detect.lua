@@ -266,7 +266,7 @@ Hand=function()
   local middle=Instance.new("Part",mod)
   middle.Size=Vector3.new(15,15,3)
   middle.Anchored=true
-  middle.CFrame=char.Torso.CFrame*CFrame.new(0,-20,-20)
+  middle.CFrame=char.Torso.CFrame*CFrame.new(0,20,-20)
   middle.Anchored=true
   return Hand
   end
