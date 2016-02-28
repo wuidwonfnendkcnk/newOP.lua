@@ -167,7 +167,7 @@ part.CanCollide=false
 
 local sphere=Instance.new("Part",part)
 sphere.Size=Vector3.new(1,1,1)
-sphere.Shape='Ball'
+sphere.Shape='Cylinder'
 sphere.Anchored=true
 sphere.CanCollide=false
 coroutine.wrap(function()
@@ -183,7 +183,7 @@ for i=1,10 do
   wait(0)
 end
 for i=1,10 do
-  sphere.Size=sphere.Size+Vector3.new(1,1,1)
+  sphere.Size=sphere.Size+Vector3.new(0.01,1,1)
   wait(0)
   end
 coroutine.wrap(function()
