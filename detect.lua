@@ -268,7 +268,7 @@ Hand=function()
   middle.Anchored=true
   middle.CFrame=char.Torso.CFrame*CFrame.new(0,20,-20)
   middle.Anchored=true
-  return Hand
+  return mod
   end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
