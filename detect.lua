@@ -270,10 +270,24 @@ Hand=function()
   middle.Anchored=true
   return Hand
   end
-
+b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
   if k=='p' then
     holycrap() end
-  if k=='h' then Hand() end
+  if k=='h' then 
+    if connected then connected=false Control:Destroy() return end
+    if not workspace:findFirstChild'Base' then b:clone().Parent=workspace end
+    if not workspace.Base:findFirstChild'HAND' then
+    Control=Hand()
+    Main=Control.Part.CFrame
+  else
+    local connected=true
+    m.Move:connect(function()
+      if connected then
+        Control.Part.CFrame=CFrame.new(Main.p,m.Hit.p)
+        end
+      end)
+  end
+  end
 end)
 
