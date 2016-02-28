@@ -197,7 +197,10 @@ Endit(sphere,false)
 for i=1,20 do wait(0) diff=i/2 end
 for i=1,3 do sphere.Size=sphere.Size+Vector3.new(1,0,0) wait() end
 local CAN=true
-sphere.Touched:connect(function(h) if not CAN then return end if h.Parent~=char then Endit(h,true) end)
+sphere.Touched:connect(function(h) 
+  if not CAN then return end
+  if h.Parent~=char then Endit(h,true) end
+  end)
 for i=1,50,2 do
   sphere.Size=sphere.Size+Vector3.new(0,2,2)
   wait(0)
