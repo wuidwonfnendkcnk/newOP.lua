@@ -282,7 +282,7 @@ bl.CFrame=start*CFrame.new(0,0,-3)
 for i=1, 5, 0.5 do
   bl.Material='Grass'
   bl.Size=bl.Size+Vector3.new(1,1,1)
-  bl.CFrame=start*CFrame.new(0,0,-1)
+  bl.CFrame=start*CFrame.new(0,0,-i)
   wait(0)
   end
 end
