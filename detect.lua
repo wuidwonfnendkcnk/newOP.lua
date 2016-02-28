@@ -172,7 +172,7 @@ sphere.Anchored=true
 sphere.CanCollide=false
 coroutine.wrap(function()
   while wait(0) and part and part.Parent and part~=nil do
-    sphere.CFrame=part.CFrame*CFrame.new((part.Size.X/2)+sphere.Size.Y/2,0,0)
+    sphere.CFrame=part.CFrame*CFrame.new((part.Size.X/2)+sphere.Size.X/2,0,0)
     end
   end)()
 cf=part.CFrame
