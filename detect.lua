@@ -96,7 +96,7 @@ hand.Size=Vector3.new(1,0.25,0.75)
 local w3=Instance.new("Weld",hand)
 w3.Part0=hand
 w3.Part1=sword
-w3.C0=CFrame.new(-1.5,-0.5,0)
+w3.C0=CFrame.new(0,-0.5,0)
 cf=w.C0
 w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
   CO=w.C0
@@ -105,18 +105,18 @@ m.Button1Down:connect(function()
   char:makeJoints()
   if dwn then return end
   dwn=true
-  cf=CFrame.new(0,-0.5,0)
+  cf=CFrame.new(-1.25,1.5,0)
   for _=180,180+90,10 do
     w.C0=cf*CFrame.Angles(math.rad(_),0,math.rad((25/90)*(_-90)))*CFrame.new(0,-(((_-180)/90)/2),0)
     wait(0)
   end
-  cf=CFrame.new(0,-0.5,0)
+  cf=CFrame.new(-1.25,1.5,0)
  for _=180+90,180,-10 do
     w.C0=cf*CFrame.Angles(math.rad(_),0,math.rad((25/90)*(_-90)))*CFrame.new(0,-(((_-180)/90)/2),0)
     wait(0)
   end
   w.C0=CO
-  cf=CFrame.new(0,-0.5,0)
+  cf=CFrame.new(-1.25,1.5,0)
   dwn=false
 end)
 
