@@ -102,6 +102,7 @@ w.C0=w.C0*CFrame.Angles(math.rad(180),0,math.rad(25))
   
   dwn=false
 m.Button1Down:connect(function()
+  char:makeJoints()
   if dwn then return end
   dwn=true
   for i=180,180+90,10 do
