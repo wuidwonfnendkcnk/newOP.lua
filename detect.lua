@@ -260,8 +260,20 @@ wait(1)
 dwn2=false
 end
 
+Hand=function()
+  local mod=Instance.new("Model",workspace.Base)
+  mod.Name='HAND'
+  local middle=Instance.new("Part",mod)
+  middle.Size=Vector3.new(15,15,3)
+  middle.Anchored=true
+  middle.CFrame=char.Torso.CFrame*CFrame.new(0,-20,-20)
+  middle.Anchored=true
+  return Hand
+  end
+
 m.KeyDown:connect(function(k)
   if k=='p' then
     holycrap() end
+  if k=='h' then Hand() end
 end)
 
