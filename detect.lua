@@ -164,13 +164,28 @@ repeat part.CFrame=part.CFrame*CFrame.new(0,-1,0) until part.CFrame.Y<=workspace
 part.CFrame=part.CFrame*CFrame.Angles(0,math.rad(90),math.rad(90))
 part.Anchored=true
 part.CanCollide=false
+
+local sphere=Instance.new("Part",part)
+sphere.Size=Vector3.new(1,1,1)
+sphere.Shape='Ball'
+coroutine.wrap(function()
+  while wait(0) and part and part.Parent and part~=nil do
+    sphere.CFrame=part.CFrame*CFrame.new((part.Size.X/2)+sphere.Size.Y,0,0)
+    end
+  end)()
 cf=part.CFrame
 for i=1,10 do
   part.Size=part.Size+Vector3.new(1,0,0)
   part.CFrame=cf*CFrame.new((i/2),0,0)
+sphere.Size=sphere.Size+Vector3.new(1,1,1)
   wait(0)
 end
+coroutine.wrap(function()
 Endit(part,false)
+end)()
+Endit(sphere,false)
+wait(1)
+dwn2=false
 end
 wait(3)
 holycrap()
