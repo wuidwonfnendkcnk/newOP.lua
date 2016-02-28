@@ -117,6 +117,7 @@ m.Button1Down:connect(function()
 end)
 
 Endit=function(obj,vel)
+  if obj.Name=='Base' then return end
   obj.BrickColor=BrickColor.New'Really Black'
   obj.Transparency=0.1
   local last='Neon'
@@ -194,6 +195,33 @@ Endit(part,false)
 end)()
 Endit(sphere,false)
 for i=1,20 do wait(0) diff=i/2 end
+for i=1,3 do sphere.Size=sphere.Size+Vector3.new(1,0,0) wait() end
+local CAN=true
+sphere.Touched:connect(function(h) if not CAN then return end if h.Parent~=char then Endit(h,true) end) end)
+for i=1,50,2 do
+  sphere.Size=sphere.Size+Vector3.new(0,2,2)
+  wait(0)
+end
+
+CAN=false
+
+for i=1,50,2 do
+  sphere.Size=sphere.Size+Vector3.new(0,-2,-2)
+  wait(0)
+end
+for i=1,3 do sphere.Size=sphere.Size+Vector3.new(-1,0,0) wait() end
+for i=20,0,-2 do wait(0) diff=i/2 end
+for i=1,10,2 do
+  sphere.Size=sphere.Size-Vector3.new(0.02,2,2)
+  wait(0)
+end
+
+for i=1,10,2 do
+  part.Size=part.Size-Vector3.new(2,0,0)
+  part.CFrame=cf*CFrame.new((i/2),0,0)
+
+  wait(0)
+end
 wait(1)
 dwn2=false
 end
