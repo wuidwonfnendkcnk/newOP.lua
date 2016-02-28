@@ -161,4 +161,6 @@ part.Size=Vector3.new(1,5,5)
 part.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)*CFrame.Angles(math.rad(90),0,0)
 part.Anchored=true
 part.CanCollide=false
-  end
+end
+wait(3)
+holycrap()
