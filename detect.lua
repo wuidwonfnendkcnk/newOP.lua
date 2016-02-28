@@ -204,16 +204,17 @@ sphere.Touched:connect(function(h)
   if h.Parent~=char then Endit(h,true) end
 end)
 CFZ=sphere.CFrame
-for i=1,100,2 do
-  sphere.Size=sphere.Size+Vector3.new(0,2,2)
+asd=5
+for i=1,100,asd do
+  sphere.Size=sphere.Size+Vector3.new(0,asd,asd)
 sphere.CFrame=CFZ
   wait(0)
 end
 wait(1)
 CAN=false
 
-for i=1,100,2 do
-  sphere.Size=sphere.Size+Vector3.new(0,-2,-2)
+for i=1,100,asd do
+  sphere.Size=sphere.Size+Vector3.new(0,-asd,-asd)
   sphere.CFrame=CFZ
   wait(0)
 end
