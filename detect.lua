@@ -66,8 +66,7 @@ end
 end)()
 
 m.KeyDown:connect(function(k)
-  if k=='p' then
-    holycrap() end
+ 
   if k~='t' then return end
   invisible=not invisible
   if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
@@ -243,9 +242,5 @@ end
 m.KeyDown:connect(function(k)
   if k=='p' then
     holycrap() end
-  if k~='t' then return end
-  invisible=not invisible
-  if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
-  
 end)
 
