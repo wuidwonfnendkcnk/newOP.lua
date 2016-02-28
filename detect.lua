@@ -168,6 +168,7 @@ link=function(OBJ1,OBJ2,T)
   connect.Material='Neon'
   connect.CanCollide=false
   connect.CFrame=pos*CFrame.new(0,0,-(dist/2))
+    game.Debris:AddItem(connect,T)
   end
 
 holycrap=function()
@@ -218,7 +219,7 @@ for i=1,3 do sphere.Size=sphere.Size+Vector3.new(1,0,0) wait() end
 local CAN=true
 sphere.Touched:connect(function(h) 
   if not CAN then return end
-  if h.Parent~=char then if h.Name=='Torso' then link(part,h,12) end Endit(h,true)  end
+  if h.Parent~=char then if h.Parent:findFirstChild'Torso' then link(part,h.Parent.Torso,10) end Endit(h,true)  end
 end)
 CFZ=sphere.CFrame
 asd=5
