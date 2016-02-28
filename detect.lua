@@ -158,7 +158,6 @@ sword.Touched:connect(function(h)
 local dwn2=false
 
 link=function(OBJ1,OBJ2,T)
-  wait(T/10)
   local connect=Instance.new("Part",OBJ2)
   pos1,pos2=Vector3.new(OBJ1.CFrame.X,0,OBJ1.CFrame.Z),Vector3.new(OBJ2.CFrame.X,0,OBJ2.CFrame.Z)
   local dist=(pos1-pos2).magnitude
