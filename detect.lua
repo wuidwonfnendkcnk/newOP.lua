@@ -158,7 +158,9 @@ local part=Instance.new("Part",workspace.Base)
 part.Shape='Cylinder'
 part.FormFactor='Custom'
 part.Size=Vector3.new(1,5,5)
-part.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)*CFrame.Angles(0,math.rad(90),math.rad(90))
+part.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)
+repeat part.CFrame=part.CFrame*CFrame.new(0,-1,0) until part.CFrame.Y<2
+part.CFrame=part.CFrame*CFrame.Angles(0,math.rad(90),math.rad(90))
 part.Anchored=true
 part.CanCollide=false
 end
