@@ -168,6 +168,8 @@ part.CanCollide=false
 local sphere=Instance.new("Part",part)
 sphere.Size=Vector3.new(1,1,1)
 sphere.Shape='Ball'
+sphere.Anchored=true
+sphere.CanCollide=false
 coroutine.wrap(function()
   while wait(0) and part and part.Parent and part~=nil do
     sphere.CFrame=part.CFrame*CFrame.new((part.Size.X/2)+sphere.Size.Y,0,0)
@@ -177,9 +179,13 @@ cf=part.CFrame
 for i=1,10 do
   part.Size=part.Size+Vector3.new(1,0,0)
   part.CFrame=cf*CFrame.new((i/2),0,0)
-sphere.Size=sphere.Size+Vector3.new(1,1,1)
+
   wait(0)
 end
+for i=1,10 do
+  sphere.Size=sphere.Size+Vector3.new(1,1,1)
+  wait(0)
+  end
 coroutine.wrap(function()
 Endit(part,false)
 end)()
