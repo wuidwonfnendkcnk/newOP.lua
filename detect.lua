@@ -186,8 +186,10 @@ for i=1,10 do
 
   wait(0)
 end
+cf=sphere.CFrame
 for i=1,10 do
   sphere.Size=sphere.Size+Vector3.new(0.01,1,1)
+  sphere.CFrame=cf
   wait(0)
   end
 coroutine.wrap(function()
