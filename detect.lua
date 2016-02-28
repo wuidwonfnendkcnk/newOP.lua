@@ -170,8 +170,9 @@ sphere.Size=Vector3.new(1,1,1)
 sphere.Shape='Cylinder'
 sphere.Anchored=true
 sphere.CanCollide=false
+diff=0
 coroutine.wrap(function()
-  local diff=0
+  
   while wait(0) and part and part.Parent and part~=nil do
     num=(part.Size.X/2)+sphere.Size.X/2
     sphere.CFrame=part.CFrame*CFrame.new(num-diff,0,0)
@@ -192,7 +193,7 @@ coroutine.wrap(function()
 Endit(part,false)
 end)()
 Endit(sphere,false)
-for i=1,10 do wait(0) diff=i end
+for i=1,20 do wait(0) diff=i/2 end
 wait(1)
 dwn2=false
 end
