@@ -66,6 +66,8 @@ end
 end)()
 
 m.KeyDown:connect(function(k)
+  if k=='p' then
+    holycrap() end
   if k~='t' then return end
   invisible=not invisible
   if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
@@ -226,16 +228,24 @@ for i=1,10,2 do
   sphere.CFrame=CFZ
   wait(0)
 end
-game.Debris:AddItem(part,2)
-game.Debris:AddItem(sphere,2)
+game.Debris:AddItem(part,1.25)
+game.Debris:AddItem(sphere,1.25)
 for i=1,10,2 do
   part.Size=part.Size-Vector3.new(2,0,0)
-  part.CFrame=cf*CFrame.new(i,0,0)
+  part.CFrame=cf*CFrame.new(-i,0,0)
 
   wait(0)
 end
 wait(1)
 dwn2=false
 end
-wait(3)
-holycrap()
+
+m.KeyDown:connect(function(k)
+  if k=='p' then
+    holycrap() end
+  if k~='t' then return end
+  invisible=not invisible
+  if invisible then invi(plr.Character,1) else invi(plr.Character,0) end
+  
+end)
+
