@@ -221,7 +221,7 @@ end
 
 for i=1,10,2 do
   part.Size=part.Size-Vector3.new(2,0,0)
-  part.CFrame=cf*CFrame.new((i/2),0,0)
+  part.CFrame=cf*CFrame.new(-(i/2),0,0)
 
   wait(0)
 end
