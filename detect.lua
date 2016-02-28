@@ -276,6 +276,7 @@ m.KeyDown:connect(function(k)
     holycrap() end
   if k=='h' then 
     if connected then 
+      connected=false
       Control:Destroy() return end
     if not workspace:findFirstChild'Base' then b:clone().Parent=workspace end
     if not workspace.Base:findFirstChild'HAND' then
@@ -284,6 +285,7 @@ m.KeyDown:connect(function(k)
   else
      connected=true
     m.Move:connect(function()
+      if not connected then return end
       if connected then
         Control.Part.CFrame=CFrame.new(Main.p,m.Hit.p)
         end
