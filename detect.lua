@@ -269,11 +269,32 @@ Hand=function()
   middle.CFrame=char.Torso.CFrame*CFrame.new(0,20,-20)
   middle.Anchored=true
   return mod
+end
+
+Fire=function() 
+local start=Control.Part.CFrame
+local bl=Instance.new("Part",Control)
+bl.Size=Vector3.new(1,1,1)
+bl.Shape='Ball'
+bl.BrickColor=BrickColor.New'Toothpaste'
+bl.Anchored=true
+bl.CFrame=start*CFrame.new(0,0,-3)
+for i=1, 10, 0.5 do
+  bl.Material='Grass'
+  bl.Size=bl.Size+Vector3.new(1,1,1)
+  bl.CFrame=start*CFrame.new(0,0,-0.5)
+  wait(0)
   end
+end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
   if k=='p' then
     holycrap() end
+  if k=='f' then
+    if connected and Control then
+      Fire()
+      end
+    end
   if k=='h' then 
     if connected then 
       connected=false
