@@ -319,7 +319,7 @@ if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   end
 end)
 PP=bl.CFrame*CFrame.new(0,0,-100)
-PP.CFrame=CFrame.new(PP.X,0,PP.Z)
+PP=CFrame.new(PP.X,0,PP.Z)
 for i=1,36,0.1 do
   wait(0)
   P.CFrame=CFrame.new(bl.CFrame.p,PP)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
