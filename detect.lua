@@ -305,7 +305,7 @@ CLerp(bl,start*CFrame.new(0,50,-20),0.1)
 end
 Endit(bl,false)
 local P=Instance.new("Part",bl)
-P.CFrame=CFrame.new(bl.CFrame.p,m.Hit.p)*CFrame.new(0,0,-bl.CFrame.Y)
+P.CFrame=CFrame.new(bl.CFrame.p,workspace:WaitForChild('ASD part01').CFrame.p)*CFrame.new(0,0,-bl.CFrame.Y)
 P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
 P.Anchored=true
 wait(0)
@@ -359,7 +359,8 @@ m.KeyDown:connect(function(k)
        p.Anchored=true
        p.CanCollide=false
        p.CFrame=Control.Part.CFrame*CFrame.new(0,50,0)
-       p.CFrame=CFrame.new(m.Hit.p)
+       p.CFrame=CFrame.new(m.Hit.X,0,m.Hit.Z)
+       p.Name'ASD part01'
         end
       until not connected
   end
