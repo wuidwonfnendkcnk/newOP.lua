@@ -300,7 +300,7 @@ for i=1, 5, 0.5 do
   wait(0)
 end
 
-for i=1,100,0.1 do wait(0)
+for i=1,30,0.5 do wait(0)
 CLerp(bl,start*CFrame.new(0,100,-20),0.1)
 end
 Endit(bl,false)
