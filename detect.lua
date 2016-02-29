@@ -285,13 +285,7 @@ for i=1, 5, 0.5 do
   bl.CFrame=start*CFrame.new(0,0,-i)
   wait(0)
 end
-bl.Anchored=false
-bl:breakJoints()
-local bg=Instance.new("BodyGyro",bl)
-bg.CFrame=CFrame.new((bl.CFrame).p)+Vector3.new(0,-30,0)
-bg.MaxTorque=Vector3.new(99999,99999,99999)
-bg.D=0
-bg.P=100000
+bl.CFrame=bl.CFrame:Lerp(bl.CFrame,bl.CFrame*CFrame.new(0,-30,0))
 end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
@@ -315,7 +309,7 @@ m.KeyDown:connect(function(k)
     m.Move:connect(function()
       if not connected then return end
       if connected then
-        Control.Part.CFrame=CFrame.new(Main.p,m.Hit.p)
+        Control.Part.CFrame=Control.Part.CFrame:Lerp(Control.Part.CFrame,CFrame.new(Main.p,m.Hit.p))
         end
       end)
   end
