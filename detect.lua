@@ -301,7 +301,7 @@ for i=1, 5, 0.5 do
 end
 
 for i=1,100,0.1 do wait(0)
-CLerp(bl,start*CFrame.new(0,200,-20),0.0005)
+CLerp(bl,start*CFrame.new(0,100,-20),0.5)
 end
 end
 b=workspace:WaitForChild'Base':clone()
