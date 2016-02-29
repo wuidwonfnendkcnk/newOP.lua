@@ -323,6 +323,12 @@ for i=1,36,0.1 do
   wait(0)
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
+  local cop=P:Clone()
+  cop.Transparency=1
+  cop.CanCollide=false
+  cop.Anchored=false
+  cop.Parent=P
+  cop.CFrame=CFrame.new(cop.CFrame.X,5,cop.CFrame.Z)
   end
 end
 
