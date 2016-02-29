@@ -329,7 +329,7 @@ end)
 local PP=CFrame.new(workspace:WaitForChild'ASD part01'.CFrame.p)
 for i=1,36,0.1 do
   wait(0)
-  P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
+  CLerp(P,workspace:WaitForChild'ASD part01'.CFrame,0.2)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
   local cop=P:Clone()
   cop.Touched:connect(function(h)
