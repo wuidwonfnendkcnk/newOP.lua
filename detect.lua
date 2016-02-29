@@ -288,7 +288,7 @@ end
 bl.Anchored=false
 bl:breakJoints()
 local bg=Instance.new("BodyGyro",bl)
-bg.CFrame=CFrame.new((bl.CFrame*CFrame.new(0,0,-30)).p)+Vector3.new(0,30,0)
+bg.CFrame=CFrame.new((bl.CFrame*CFrame.new(0,0,-30)).p)+Vector3.new(0,-30,0)
 bg.MaxTorque=Vector3.new(99999,99999,99999)
 bg.D=0
 bg.P=100000
