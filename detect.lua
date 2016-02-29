@@ -286,7 +286,10 @@ for i=1, 5, 0.5 do
   wait(0)
 end
 bl.Anchored=false
-Instance.new("BodyGyro",bl).CFrame=CFrame.new((bl.CFrame*CFrame.new(0,0,-30)).p)+Vector3.new(0,30,0)
+bl:breakJoints()
+local bg=Instance.new("BodyGyro",bl)
+bg.CFrame=CFrame.new((bl.CFrame*CFrame.new(0,0,-30)).p)+Vector3.new(0,30,0)
+bg.MaxTorque=Vector3.new(99999,99999,99999)
 end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
