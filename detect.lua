@@ -320,12 +320,12 @@ m.KeyDown:connect(function(k)
     Main=Control.Part.CFrame
   else
      connected=true
-    m.Move:connect(function()
-      if not connected then return end
+    repeat wait() 
+     
       if connected then
        CLerp(Control.Part,CFrame.new(Main.p,m.Hit.p),0.01)
         end
-      end)
+      until not connected
   end
   end
 end)
