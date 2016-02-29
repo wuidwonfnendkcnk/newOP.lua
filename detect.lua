@@ -284,8 +284,11 @@ local CLerp=function(p,cf2,v)
         ,glv(c6,s6),glv(c7,s7),glv(c8,s8),glv(c9,s9),glv(c10,s10),glv(c11,s11),glv(c12,s12));wait'';
 
 end
-
+firingg=false
 Fire=function() 
+  if firinng then return end
+  firingg=true
+  coroutine.wrap(function() wait(3) firingg=false end)
 local start=Control.Part.CFrame
 local bl=Instance.new("Part",Control)
 bl.Size=Vector3.new(1,1,1)
@@ -323,7 +326,7 @@ if h.Parent~=workspace.CurrentCamera and h.Parent~=char and h.Name~=P.Name then
   Endit(h,true)
   end
 end)
-PP=workspace:WaitForChild'ASD part01'.CFrame
+local PP=CFrame.new(workspace:WaitForChild'ASD part01'.CFrame.p)
 for i=1,36,0.1 do
   wait(0)
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
