@@ -303,7 +303,9 @@ end
 for i=1,10 do wait(0)
 CLerp(bl,start*CFrame.new(0,50,-20),0.1)
 end
+coroutine.wrap(function()
 Endit(bl,false)
+end)()
 local P=Instance.new("Part",bl)
 P.CFrame=CFrame.new(bl.CFrame.p,workspace:WaitForChild('ASD part01').CFrame.p)*CFrame.new(0,0,-bl.CFrame.Y)
 P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
@@ -324,7 +326,6 @@ for i=1,36,0.1 do
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
   local cop=P:Clone()
-  cop.Transparency=1
   cop.CanCollide=false
   cop.Anchored=false
   cop.Parent=P
