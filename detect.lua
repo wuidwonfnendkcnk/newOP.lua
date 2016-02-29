@@ -323,7 +323,7 @@ m.KeyDown:connect(function(k)
     m.Move:connect(function()
       if not connected then return end
       if connected then
-       CLerp(Control.Part,CFrame.new(Main.p,mouse.Hit.p),0.2)
+       CLerp(Control.Part,CFrame.new(Main.p,m.Hit.p),0.2)
         end
       end)
   end
