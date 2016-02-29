@@ -157,11 +157,11 @@ sword.Touched:connect(function(h)
 
 local dwn2=false
 
-link=function(OBJ1,OBJ2,T)
+link=function(OBJ1,OBJ2,T,Y)
   local connect=Instance.new("Part",OBJ2)
   coroutine.wrap(function()
     while wait(0) and connect and OBJ2 and OBJ1 do
-  pos1,pos2=Vector3.new(OBJ1.CFrame.X,0,OBJ1.CFrame.Z),Vector3.new(OBJ2.CFrame.X,0,OBJ2.CFrame.Z)
+  pos1,pos2=Vector3.new(OBJ1.CFrame.X,Y and OBJ1.CFrame.Y,OBJ1.CFrame.Z),Vector3.new(OBJ2.CFrame.X,Y and OBJ2.CFrame.Y,OBJ2.CFrame.Z)
   local dist=(pos1-pos2).magnitude
   local pos=CFrame.new(OBJ1.CFrame.p,OBJ2.CFrame.p)
   connect.Size=Vector3.new(1,1,dist)
@@ -306,6 +306,7 @@ end
 Endit(bl,false)
 local P=Instance.new("Part",bl)
 P.CFrame=CFrame.new(bl.CFrame.p,m.Hit.p)*CFrame.new(0,0,-bl.CFrame.Y)
+wait(0.5)
 link(bl,P,5)
 end
 
