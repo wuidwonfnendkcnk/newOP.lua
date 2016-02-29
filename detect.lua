@@ -316,9 +316,10 @@ game.Debris:AddItem(P,10)
 game.Debris:AddItem(bl,10)
 P.Size=Vector3.new(10,3,10)
 P.Transparency=0.5
+P.Name='BLOCK'
 P.BrickColor=BrickColor.Red()
 P.Touched:connect(function(h)
-if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
+if h.Parent~=workspace.CurrentCamera and h.Parent~=char and h.Name~=P.Name then
   Endit(h,true)
   end
 end)
@@ -328,6 +329,11 @@ for i=1,36,0.1 do
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
   local cop=P:Clone()
+  cop.Touched:connect(function(h)
+if h.Parent~=workspace.CurrentCamera and h.Parent~=char and h.Name~=P.Name then
+  Endit(h,true)
+  end
+end)
   cop.Transparency=1
   cop:clearAllChildren()
   cop.CanCollide=false
