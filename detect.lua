@@ -359,8 +359,7 @@ m.KeyDown:connect(function(k)
        p.Anchored=true
        p.CanCollide=false
        p.CFrame=Control.Part.CFrame*CFrame.new(0,50,0)
-       p.CFrame=CFrame.new(p.CFrame.p,m.Hit.p)
-       p.CFrame=CFrame.new(p.CFrame.X,1,p.CFrame.Z)
+       p.CFrame=m.Hit
         end
       until not connected
   end
