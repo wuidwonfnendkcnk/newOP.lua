@@ -307,7 +307,7 @@ Endit(bl,false)
 local P=Instance.new("Part",bl)
 P.CFrame=CFrame.new(bl.CFrame.p,m.Hit.p)*CFrame.new(0,0,-bl.CFrame.Y)
 wait(0.5)
-link(bl,P,5)
+link(bl,P,5,true)
 end
 
 
