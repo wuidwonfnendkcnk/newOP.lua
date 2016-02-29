@@ -323,7 +323,7 @@ m.KeyDown:connect(function(k)
     repeat wait() 
      
       if connected then
-       CLerp(Control.Part,CFrame.new(Main.p,m.Hit.p),0.1)
+       CLerp(Control.Part,CFrame.new(Main.p,m.Hit.p),0.2)
         end
       until not connected
   end
