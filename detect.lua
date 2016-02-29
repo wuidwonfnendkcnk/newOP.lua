@@ -326,10 +326,12 @@ for i=1,36,0.1 do
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
   local cop=P:Clone()
+  cop:clearAllChildren()
   cop.CanCollide=false
   cop.Anchored=false
   cop.Parent=P
   cop.CFrame=CFrame.new(cop.CFrame.X,5,cop.CFrame.Z)
+  game.Debris:AddItem(cop,1)
   end
 end
 
