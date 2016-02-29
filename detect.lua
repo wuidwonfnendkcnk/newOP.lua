@@ -301,9 +301,12 @@ for i=1, 5, 0.5 do
 end
 
 for i=1,17 do wait(0)
-CLerp(bl,start*CFrame.new(0,75,-20),0.075)
+CLerp(bl,start*CFrame.new(0,75,-20),0.1)
 end
 Endit(bl,false)
+local P=Instance.new("Part",bl)
+P.CFrame=CFrame.new(bl.CFrame.p,m.Hit.p)*CFrame.new(0,0,-bl.CFrame.Y)
+link(bl,P,5)
 end
 
 
