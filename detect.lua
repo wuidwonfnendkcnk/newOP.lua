@@ -318,8 +318,7 @@ if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   Endit(h,true)
   end
 end)
-PP=CFrame.new(bl.CFrame.p,workspace:WaitForChild'ASd part01'.CFrame.p)
-PP=CFrame.new(PP.X,0,PP.Z)
+PP=workspace:WaitForChild'ASD part01'.CFrame
 for i=1,36,0.1 do
   wait(0)
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
