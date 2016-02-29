@@ -300,8 +300,8 @@ for i=1, 5, 0.5 do
   wait(0)
 end
 
-for i=1,17 do wait(0)
-CLerp(bl,start*CFrame.new(0,75,-20),0.1)
+for i=1,10 do wait(0)
+CLerp(bl,start*CFrame.new(0,50,-20),0.1)
 end
 Endit(bl,false)
 local P=Instance.new("Part",bl)
@@ -309,7 +309,19 @@ P.CFrame=CFrame.new(bl.CFrame.p,m.Hit.p)*CFrame.new(0,0,-bl.CFrame.Y)
 P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
 P.Anchored=true
 wait(0)
-link(bl,P,5,true)
+link(bl,P,10,true)
+game.Debris:AddItem(P,10)
+game.Debris:AddItem(bl,10)
+P.Touched:connect(function(h)
+if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
+  Endit(h,true)
+  end
+end)
+for i=1,36,2 do
+  wait(0)
+  P.CFrame=CFrame.new(bl.CFame.p,m.Hit.p)*CFrame.Angles(0,math.rad(i*10),0)*CFRame.new(0,0,-bl.CFrame.Y)
+  P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
+  end
 end
 
 
