@@ -284,11 +284,11 @@ local CLerp=function(p,cf2,v)
         ,glv(c6,s6),glv(c7,s7),glv(c8,s8),glv(c9,s9),glv(c10,s10),glv(c11,s11),glv(c12,s12));wait'';
 
 end
-firingg=false
+firinggz=false
 Fire=function() 
-  if firinng then return end
-  firingg=true
-  coroutine.wrap(function() wait(3) firingg=false end)
+  if firinngz then return end
+  firinggz=true
+  coroutine.wrap(function() wait(5) firinggz=false end)()
 local start=Control.Part.CFrame
 local bl=Instance.new("Part",Control)
 bl.Size=Vector3.new(1,1,1)
