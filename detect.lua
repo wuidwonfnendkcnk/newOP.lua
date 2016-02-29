@@ -318,7 +318,7 @@ if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   Endit(h,true)
   end
 end)
-PP=bl.CFrame*CFrame.new(0,0,-100)
+PP=CFrame.new(bl.CFrame.p,m.Hit.p)
 PP=CFrame.new(PP.X,0,PP.Z)
 for i=1,36,0.1 do
   wait(0)
@@ -359,7 +359,7 @@ m.KeyDown:connect(function(k)
        p.Anchored=true
        p.CanCollide=false
        p.CFrame=Control.Part.CFrame*CFrame.new(0,50,0)
-       p.CFrame=CFrame.new(p.CFrame.p,(p.CFrame*CFrame.Angles(0,0,math.rad(45))).p)*CFrame.new(0,0,-120)
+       p.CFrame=CFrame.new(p.CFrame.p,m.Hit.p)
        p.CFrame=CFrame.new(p.CFrame.X,1,p.CFrame.Z)
         end
       until not connected
