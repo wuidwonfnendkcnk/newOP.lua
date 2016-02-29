@@ -288,7 +288,7 @@ firinggz=false
 Fire=function() 
   if firinngz then return end
   firinggz=true
-  coroutine.wrap(function() wait(5) firinggz=false end)()
+  coroutine.wrap(function() firinggz=true wait(5) firinggz=false end)()
 local start=Control.Part.CFrame
 local bl=Instance.new("Part",Control)
 bl.Size=Vector3.new(1,1,1)
