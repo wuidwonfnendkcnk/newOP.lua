@@ -314,7 +314,9 @@ wait(0)
 link(bl,P,10,true)
 game.Debris:AddItem(P,10)
 game.Debris:AddItem(bl,10)
-P.Size=Vector3.new(10,1,10)
+P.Size=Vector3.new(10,3,10)
+p.Transparency=0.5
+p.BrickColor=BrickColor.Red()
 P.Touched:connect(function(h)
 if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   Endit(h,true)
@@ -326,6 +328,7 @@ for i=1,36,0.1 do
   P.CFrame=CFrame.new(bl.CFrame.p,PP.p)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
   P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
   local cop=P:Clone()
+  cop.Transparency=1
   cop:clearAllChildren()
   cop.CanCollide=false
   cop.Anchored=false
