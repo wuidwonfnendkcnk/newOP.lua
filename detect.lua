@@ -312,12 +312,14 @@ wait(0)
 link(bl,P,10,true)
 game.Debris:AddItem(P,10)
 game.Debris:AddItem(bl,10)
+P.Size=Vector3.new(10,1,10)
 P.Touched:connect(function(h)
 if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   Endit(h,true)
   end
 end)
-PP=m.Hit.p
+PP=bl.CFrame*CFrame.new(0,0,-100)
+PP.CFrame=CFrame.new(PP.CFrame.X,0,PP.CFrame.Z)
 for i=1,36,0.1 do
   wait(0)
   P.CFrame=CFrame.new(bl.CFrame.p,PP)*CFrame.Angles(0,math.rad(i*10),0)*CFrame.new(0,0,-bl.CFrame.Y)
