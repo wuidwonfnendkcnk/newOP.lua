@@ -360,7 +360,7 @@ m.KeyDown:connect(function(k)
        p.CanCollide=false
        p.CFrame=Control.Part.CFrame*CFrame.new(0,50,0)
        p.CFrame=CFrame.new(m.Hit.X,0,m.Hit.Z)
-       p.Name'ASD part01'
+       p.Name='ASD part01'
         end
       until not connected
   end
