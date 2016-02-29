@@ -271,6 +271,20 @@ Hand=function()
   return mod
 end
 
+local CLerp=function(p,cf2,v)
+
+        local st,cf1=tick'',p.CFrame;local c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12=cf1:components'';
+
+        local s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12=cf2:components'';
+
+        local glv=function(v1,v2)return v1+(v2-v1)*v*(1+tick''-st);end;
+
+        p.CFrame=CFrame.new(glv(c1,s1),glv(c2,s2),glv(c3,s3),glv(c4,s4),glv(c5,s5)
+
+        ,glv(c6,s6),glv(c7,s7),glv(c8,s8),glv(c9,s9),glv(c10,s10),glv(c11,s11),glv(c12,s12));wait'';
+
+end
+
 Fire=function() 
 local start=Control.Part.CFrame
 local bl=Instance.new("Part",Control)
@@ -285,7 +299,7 @@ for i=1, 5, 0.5 do
   bl.CFrame=start*CFrame.new(0,0,-i)
   wait(0)
 end
-bl.CFrame=bl.CFrame:Lerp(bl.CFrame,bl.CFrame*CFrame.new(0,-30,0))
+CLerp(bl,bl.CFrame*CFrame.new(0,-30,0),0.2)
 end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
@@ -309,7 +323,7 @@ m.KeyDown:connect(function(k)
     m.Move:connect(function()
       if not connected then return end
       if connected then
-        Control.Part.CFrame=Control.Part.CFrame:Lerp(Control.Part.CFrame,CFrame.new(Main.p,m.Hit.p))
+       CLerp(Control.Part,CFrame.new(Main.p,mouse.Hit.p),0.2)
         end
       end)
   end
