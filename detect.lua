@@ -315,8 +315,8 @@ link(bl,P,10,true)
 game.Debris:AddItem(P,10)
 game.Debris:AddItem(bl,10)
 P.Size=Vector3.new(10,3,10)
-p.Transparency=0.5
-p.BrickColor=BrickColor.Red()
+P.Transparency=0.5
+P.BrickColor=BrickColor.Red()
 P.Touched:connect(function(h)
 if h.Parent~=workspace.CurrentCamera and h.Parent~=char then
   Endit(h,true)
