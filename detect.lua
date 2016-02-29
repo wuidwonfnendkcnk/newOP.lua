@@ -353,12 +353,12 @@ m.KeyDown:connect(function(k)
        CLerp(Control.Part,CFrame.new(Main.p,m.Hit.p),0.2)
        local p=Instance.new("Part",workspace)
        game.Debris:AddItem(p,0)
-       p.Size=Vector3.new(3,3,3)
+       p.Size=Vector3.new(10,3,10)
        p.Transparency=0.5
        p.BrickColor=BrickColor.New'Lime green'
        p.Anchored=true
        p.CanCollide=false
-       p.CFrame=Control.Part.CFrame*CFrame.new(0,0,-120)
+       p.CFrame=Control.Part.CFrame*CFrame.new(0,0,-60)
        p.CFrame=CFrame.new(p.CFrame.X,1,p.CFrame.Z)
         end
       until not connected
