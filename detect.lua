@@ -299,7 +299,10 @@ for i=1, 5, 0.5 do
   bl.CFrame=start*CFrame.new(0,0,-i)
   wait(0)
 end
-CLerp(bl,start*CFrame.new(0,200,-20),0.01)
+
+for i=1,100,0.1 do wait(0)
+CLerp(bl,start*CFrame.new(0,200,-20),0.0005)
+end
 end
 b=workspace:WaitForChild'Base':clone()
 m.KeyDown:connect(function(k)
