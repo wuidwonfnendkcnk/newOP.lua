@@ -353,7 +353,7 @@ m.KeyDown:connect(function(k)
   if k=='p' then
     holycrap() end
   if k=='f' then
-    if connected and Control then
+    if connected and Control and not firingzz then
       Fire()
       end
     end
