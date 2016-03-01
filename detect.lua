@@ -210,6 +210,7 @@ link=function(OBJ1,OBJ2,T,Y)
     end
     end)()
     game.Debris:AddItem(connect,T)
+    return connect
   end
 
 holycrap=function()
@@ -351,13 +352,18 @@ P.CFrame=CFrame.new(bl.CFrame.p,workspace:WaitForChild('ASD part01').CFrame.p)*C
 P.CFrame=CFrame.new(P.CFrame.X,1,P.CFrame.Z)
 P.Anchored=true
 wait(0)
-link(bl,P,10,true)
+local laz=link(bl,P,10,true)
 game.Debris:AddItem(P,10)
 game.Debris:AddItem(bl,10)
 P.Size=Vector3.new(10,3,10)
 P.Transparency=0.5
 P.Name='BLOCK'
 P.BrickColor=BrickColor.Red()
+laz.Touched:connect(function(h)
+if h.Parent~=workspace.CurrentCamera and h.Parent~=char and h.Name~=P.Name and not h.Name:lower():match'hand' then
+  Endit(h,true)
+  end
+end)
 P.Touched:connect(function(h)
 if h.Parent~=workspace.CurrentCamera and h.Parent~=char and h.Name~=P.Name then
   Endit(h,true)
