@@ -68,8 +68,8 @@ while wait() do
       jump=true
       
         wait(0)
-      block.Velocity=block.Velocity+Vector3.new(0,block.JumpPower.Value*4,0)
-    wait(0)
+      block.Velocity=Vector3.new(block.Velocity.X,block.JumpPower.Value*4,block.Velocity.Y)
+    wait(1)
   
       block.Velocity=Vector3.new(0,-block.JumpPower.Value*4,0)
       wait(0)
