@@ -81,15 +81,15 @@ while wait() do
     block.Velocity=block.CFrame.lookVector*30
   end
   if down[18] then
-    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(180),0)
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame.p)*CFrame.Angles(0,math.rad(180),0)
     block.Velocity=block.CFrame.lookVector*30
   end
   if down[20] then
-    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(-90),0)
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame.p)*CFrame.Angles(0,math.rad(-90),0)
     block.Velocity=block.CFrame.lookVector*30
   end
   if down[19] then
-    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(90),0)
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame.p)*CFrame.Angles(0,math.rad(90),0)
     block.Velocity=block.CFrame.lookVector*30
     end
   
