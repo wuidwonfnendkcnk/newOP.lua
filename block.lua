@@ -66,7 +66,7 @@ while wait() do
       for i=1,block.JumpPower.Value do
         print''
         wait(0)
-      block.Velocity=block.Velocity+Vector3.new(0,1,0)
+      block.Velocity=block.Velocity+Vector3.new(0,10,0)
     end
     for i=1,block.JumpPower.Value do
       print'asd'
