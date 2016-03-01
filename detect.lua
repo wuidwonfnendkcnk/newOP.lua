@@ -267,6 +267,10 @@ CFZ=sphere.CFrame
 asd=5
 for i=1,100,asd do
   sphere.Size=sphere.Size+Vector3.new(0,asd,asd)
+  local copp=sphere:clone()
+  copp.Parent=workspace.CurrentCamera
+  copp.Anchored=false
+  copp.CanCollide=false
 sphere.CFrame=CFZ
   wait(0)
 end
