@@ -22,6 +22,7 @@ if ln then
     block.CFrame=ln
     cl=block:clone()
     cam.CameraSubject=block
+    block:BreakJoints()
     block.Parent.ChildRemoved:connect(function() 
   if c==block then
   resp() end end)
@@ -60,6 +61,7 @@ end)
 jump=false
 
 while wait() do
+  block:breakJoints()
   if down[32] then
     if not jump then
       jump=true
