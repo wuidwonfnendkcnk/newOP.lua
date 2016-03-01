@@ -22,18 +22,21 @@ if ln then
     block.CFrame=ln
     cl=block:clone()
     cam.CameraSubject=block
+    block.Parent.ChildRemoved:connect(function() 
+  if c==block then
+  resp() end end)
   end
 end
 
-
+block.Parent.ChildRemoved:connect(function() 
+  if c==block then
+  resp() end end)
 coroutine.wrap(function()
   
     while wait(0) do
   
-  if not block or not block.Parent or block.Parent==nil or not workspace:findFirstChild'Base' then
-resp()
-  end
-block.Parent.ChildRemoved:connect(function() resp() end)
+
+
 if block then
 cl=block:clone() or cl
   if block.Parent~=nil then
@@ -61,10 +64,12 @@ while wait() do
     if not jump then
       jump=true
       for i=1,block.JumpPower.Value do
+        print''
         wait(0)
       block.Velocity=block.Velocity+Vector3.new(0,1,0)
     end
     for i=1,block.JumpPower.Value do
+      print'asd'
       block.Velocity=Vector3.new(0,-block.JumpPower.Value,0)
       wait(0)
     end
