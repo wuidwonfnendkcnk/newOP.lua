@@ -68,14 +68,30 @@ while wait() do
       jump=true
       
         wait(0)
-      block.Velocity=Vector3.new(block.Velocity.X,block.JumpPower.Value*4,block.Velocity.Y)
+      block.Velocity=Vector3.new(block.Velocity.X,block.JumpPower.Value*4,block.Velocity.Z)
     wait(1)
   
-      block.Velocity=Vector3.new(0,-block.JumpPower.Value*4,0)
+      block.Velocity=Vector3.new(block.Velocity.X,-block.JumpPower.Value*4,block.Velocity.Z)
       wait(0)
     
     jump=false
       end
+  end
+  if down[17] then
+    block.Velocity=block.CFrame.lookVector*30
+  end
+  if down[18] then
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(180),0)
+    block.Velocity=block.CFrame.lookVector*30
+  end
+  if down[20] then
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(-90),0)
+    block.Velocity=block.CFrame.lookVector*30
+  end
+  if down[19] then
+    block.CFrame=CFrame.new(block.CFrame.p,workspace.CurrentCamera.CoordinateFrame)*CFrame.Angles(0,math.rad(90),0)
+    block.Velocity=block.CFrame.lookVector*30
     end
+  
   end
 
