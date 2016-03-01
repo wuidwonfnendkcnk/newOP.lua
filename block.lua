@@ -2,6 +2,7 @@ local plr=game.Players.LocalPlayer
 local char=plr.Character
 local cam=workspace.CurrentCamera
 local area=char.Torso.CFrame
+script.Parent=plr.PlayerGui
 char:Destroy()
 
 local block=Instance.new("Part",workspace.Base)
