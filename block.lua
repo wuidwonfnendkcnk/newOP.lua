@@ -66,13 +66,12 @@ while wait() do
   if down[32] then
     if not jump then
       jump=true
-      for i=1,block.JumpPower.Value,4 do
-        
+      
         wait(0)
       block.Velocity=block.Velocity+Vector3.new(0,block.JumpPower.Value*4,0)
-    end
+    wait(0)
   
-      block.Velocity=block.Velocity+Vector3.new(0,-block.JumpPower.Value*4,0)
+      block.Velocity=Vector3.new(0,-block.JumpPower.Value*4,0)
       wait(0)
     
     jump=false
