@@ -2,7 +2,6 @@ local plr=game.Players.LocalPlayer
 local char=plr.Character
 local cam=workspace.CurrentCamera
 local area=char.Torso.CFrame
-script.Parent=plr.PlayerGui
 char:Destroy()
 
 local block=Instance.new("Part",workspace.Base)
@@ -11,6 +10,7 @@ block.Size=Vector3.new(2,2,2)
 block.CFrame=ln
 local jp=Instance.new("NumberValue",block)
 jp.Name='JumpPower'
+jp.Value=30
 local cl=block:clone()
 local bb=workspace.Base:clone()
 
@@ -33,7 +33,7 @@ coroutine.wrap(function()
   if not block or not block.Parent or block.Parent==nil or not workspace:findFirstChild'Base' then
 resp()
   end
-
+block.Parent.ChildRemoved:connect(function() resp() end)
 if block then
 cl=block:clone() or cl
   if block.Parent~=nil then
