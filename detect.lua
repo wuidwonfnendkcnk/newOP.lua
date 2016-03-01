@@ -14,7 +14,7 @@ local Gui=Instance.new("ScreenGui",plr.PlayerGui)
 local tb=Instance.new("TextButton",Gui)
 tb.Text='Instructions'
 
-tb.Size=UDim2.new(0.5,0,0.2,0)
+tb.Size=UDim2.new(0.5,0,0.1,0)
 tb.Position=UDim2.new(0.25,0,0,0)
 
 insopen=true
@@ -24,12 +24,12 @@ tb.MouseButton1Down:connect(function()
     pcall(function() bleh:Destroy() end)
   else
     bleh=Instance.new("ScreenGui",plr.PlayerGui)
-    a=0
+    a=-1
     for i,v in pairs(Moves) do
       a=a+1
       local La=Instance.new("TextLabel",bleh)
-      La.Size=UDim2.new(0.5,0,0.1,0)
-      La.Position=UDim2.new(0.25,0,(a/10)+(0.2)+0.025,0)
+      La.Size=UDim2.new(0.5,0,0.05,0)
+      La.Position=UDim2.new(0.25,0,(a/20)+(0.1)+0.001,0)
       La.Text=i..':'..v
       end
     end
