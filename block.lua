@@ -10,7 +10,7 @@ block.Size=Vector3.new(2,2,2)
 block.CFrame=ln
 local jp=Instance.new("NumberValue",block)
 jp.Name='JumpPower'
-jp.Value=30
+jp.Value=20
 local cl=block:clone()
 local bb=workspace.Base:clone()
 
@@ -59,20 +59,21 @@ m.KeyUp:connect(function(k)
   down[k:byte()]=false
 end)
 jump=false
+block:breakJoints()
 
 while wait() do
-  block:breakJoints()
+  
   if down[32] then
     if not jump then
       jump=true
       for i=1,block.JumpPower.Value do
-        print''
+        
         wait(0)
       block.Velocity=block.Velocity+Vector3.new(0,block.JumpPower.Value*4,0)
     end
-    for i=1,block.JumpPower.Value do
-      print'asd'
-      block.Velocity=Vector3.new(0,-block.JumpPower.Value,0)
+    for i=1,block.JumpPower.Value,4 do
+      
+      block.Velocity=Vector3.new(0,-block.JumpPower.Value*4,0)
       wait(0)
     end
     jump=false
