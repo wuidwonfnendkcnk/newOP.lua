@@ -14,6 +14,7 @@ local Gui=Instance.new("ScreenGui",plr.PlayerGui)
 local tb=Instance.new("TextButton",Gui)
 tb.Text='Instructions'
 
+
 tb.Size=UDim2.new(0.5,0,0.1,0)
 tb.Position=UDim2.new(0.25,0,0,0)
 
@@ -27,7 +28,10 @@ tb.MouseButton1Down:connect(function()
     a=-1
     for i,v in pairs(Moves) do
       a=a+1
+      wait(0)
       local La=Instance.new("TextLabel",bleh)
+      La.BackgroundColor=BrickColor.New'Dark green'
+      La.TextColor=BrickColor.Random()
       La.Size=UDim2.new(0.5,0,0.05,0)
       La.Position=UDim2.new(0.25,0,(a/20)+(0.1)+0.001,0)
       La.Text=i..':'..v
