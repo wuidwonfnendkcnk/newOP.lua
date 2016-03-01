@@ -18,7 +18,7 @@ tb.Size=UDim2.new(0.5,0,0.2,0)
 tb.Position=UDim2.new(0.25,0,0,0)
 
 insopen=true
-tb.Button1Down:connect(function()
+tb.MouseButton1Down:connect(function()
   insopen=not insopen
   if insopen then
     pcall(function() bleh:Destroy() end)
