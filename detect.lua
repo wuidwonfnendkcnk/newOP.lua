@@ -2,6 +2,39 @@ local plr=game.Players.LocalPlayer
 invisible=false
 m=plr:GetMouse()
 char=plr.Character
+
+Moves={T='turn invisible',
+H='Spawn Hand/ Activate firing / Remove hand',
+F='Fire lazor while Hand is active',
+P='Catastrophy',
+Mouse='LeftButton:Sword swing'
+}
+
+local Gui=Instance.new("ScreenGui",plr.PlayerGui)
+local tb=Instance.new("TextButton",Gui)
+tb.Text='Instructions'
+
+tb.Size=UDim2.new(0.5,0,0.2,0)
+tb.Position=UDim2.new(0.25,0,0,0)
+
+insopen=true
+tb.Button1Down:connect(function()
+  insopen=not insopen
+  if insopen then
+    pcall(function() bleh:Destroy() end)
+  else
+    bleh=Instance.new("ScreenGui",plr.PlayerGui)
+    a=0
+    for i,v in pairs(Moves) do
+      a=a+1
+      local La=Instance.new("TextLabel",bleh)
+      La.Size=UDim2.new(0.5,0,0.1,0)
+      La.Position=UDim2.new(0.25,0,(a/10)+(0.2)+0.025,0)
+      La.Text=i..':'..v
+      end
+    end
+  end)
+
 invi=function(o,n)
 ypcall(function() o.Transparency= o.Name=='HumanoidRootPart' and 1 or n end)
 for i,v in pairs(o:children()) do
