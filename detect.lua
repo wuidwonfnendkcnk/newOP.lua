@@ -3,11 +3,11 @@ invisible=false
 m=plr:GetMouse()
 char=plr.Character
 
-Moves={T='turn invisible',
+Moves={T='Visiblity reversal',
 H='Spawn Hand/ Activate firing / Remove hand',
 F='Fire lazor while Hand is active',
 P='Catastrophy',
-Mouse='LeftButton:Sword swing'
+Mouse='LeftButton:Sword swing, RightButton:wip'
 }
 
 local Gui=Instance.new("ScreenGui",plr.PlayerGui)
