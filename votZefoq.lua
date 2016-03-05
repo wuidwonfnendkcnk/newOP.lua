@@ -26,7 +26,38 @@ while wait(0) do
         CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(10,0,-10)).p,m.Hit.p),0.2)
 end
 end)()
-
-
-
-
+make=false
+keys={}
+m.KeyDown:connect(function(k)
+        if k=='p' and not make then
+        make=true
+        block=Instance.new("Part",arm)
+        block.Size=Vector3.new(1,1,1)
+        block.Anchored=true
+        while block and make do wait(0)
+                block.CFrame=arm.CFrame*CFrame.new(block.Size.X/2,block.Size.Y/2,(block.Size.Z/2)+5)
+                end
+end
+keys[k]=true
+end)
+m.KeyUp:connect(function(k)
+        keys[k]=false
+end)
+Instance.new("Hint",plr.PlayerGui).Text='Q/E for X, Z/X for Y, T/Y for Z'
+while wait() do
+        if make then
+                if keys['q'] then
+                    block.Size=block.Size+Vector3.new(1,0,0)   
+                    elseif keys['e'] then
+                    block.Size=block.Size+Vector3.new(-1,0,0)
+                    elseif keys['z'] then
+                    block.Size=block.Size+Vector3.new(0,1,0) 
+                    elseif keys['x'] then
+                    block.Size=block.Size+Vector3.new(0,-1,0)
+                    elseif keys['t'] then
+                    block.Size=block.Size+Vector3.new(0,0,1)
+                    elseif keys['y'] then
+                    block.Size=block.Size+Vector3.new(0,0,-1)   
+                end
+        end
+end
