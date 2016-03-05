@@ -23,7 +23,7 @@ end
 
 coroutine.wrap(function()
 while wait(0) do
-        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(-4,0,-1)).p,m.Hit.p),0.1)
+        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(-4,0,-1)).p,m.Hit.p),0.2)
 end
 end)()
 
