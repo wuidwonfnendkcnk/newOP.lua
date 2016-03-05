@@ -35,7 +35,7 @@ m.KeyDown:connect(function(k)
         block.Size=Vector3.new(1,1,1)
         block.Anchored=true
         while block and make do wait(0)
-                block.CFrame=arm.CFrame*CFrame.new(0,0,-((block.Size.Z/2)+5))
+                block.CFrame=arm.CFrame*CFrame.new(0,block.Size.Y/2,-((block.Size.Z/2)+5))
                 end
 end
 keys[k]=true
