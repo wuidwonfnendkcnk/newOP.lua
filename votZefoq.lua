@@ -5,11 +5,6 @@ Difference=CFrame.new(0,0,0)
 local torso=script.Parent.Torso
 local plr=game.Players.LocalPlayer
 m=plr:GetMouse()
-coroutine.wrap(function()
-while wait(0) do
-arm.CFrame=torso.CFrame*CFrame.new(-4,0,-1)*Difference
-end
-end)()
 
 local CLerp=function(p,cf2,v)
 
@@ -25,13 +20,13 @@ local CLerp=function(p,cf2,v)
 
 end
 
+
+coroutine.wrap(function()
 while wait(0) do
-local p=Instance.new("Part",workspace)
-p.Transparency=1
-p.Anchored=true
-p.CanCollide=false
-p.CFrame=arm.CFrame
-CLerp(p,CFrame.new(p.CFrame.p,m.Hit.p),0.2)
-Difference=p.CFrame
-game.Debris:AddItem(p,0.1)
+        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(-4,0,-1)).p,m.Hit.p),0.1)
 end
+end)()
+
+
+
+
