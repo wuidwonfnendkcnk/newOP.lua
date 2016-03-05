@@ -23,7 +23,7 @@ end
 
 coroutine.wrap(function()
 while wait(0) do
-        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(10,0,-10)).p,m.Hit.p),0.2)
+        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(10,5,-10)).p,m.Hit.p),0.2)
 end
 end)()
 make=false
@@ -35,7 +35,7 @@ m.KeyDown:connect(function(k)
         block.Size=Vector3.new(1,1,1)
         block.Anchored=true
         while block and make do wait(0)
-                block.CFrame=arm.CFrame*CFrame.new(0,block.Size.Y/2,-((block.Size.Z/2)+5))
+                block.CFrame=arm.CFrame*CFrame.new(0,0,-((block.Size.Z/2)+5))
                 end
 end
 keys[k]=true
