@@ -7,8 +7,7 @@ local plr=game.Players.LocalPlayer
 m=plr:GetMouse()
 coroutine.wrap(function()
 while wait(0) do
-arm.CFrame=torso.CFrame*CFrame.new(-4,0,-1)
-arm.CFrame=arm.CFrame*Difference
+arm.CFrame=torso.CFrame*CFrame.new(-4,0,-1)*Difference
 end
 end)()
 
