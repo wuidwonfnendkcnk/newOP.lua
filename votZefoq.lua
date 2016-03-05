@@ -1,5 +1,5 @@
 local arm=Instance.new("Part",script.Parent)
-arm.Size=Vector3.new(2,2,4)
+arm.Size=Vector3.new(2,2,8)
 arm.Anchored=true
 Difference=CFrame.new(0,0,0)
 local torso=script.Parent.Torso
@@ -23,7 +23,7 @@ end
 
 coroutine.wrap(function()
 while wait(0) do
-        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(7,0,-3.5)).p,m.Hit.p),0.2)
+        CLerp(arm,CFrame.new((torso.CFrame*CFrame.new(10,0,-10)).p,m.Hit.p),0.2)
 end
 end)()
 
