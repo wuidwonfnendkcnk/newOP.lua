@@ -31,7 +31,7 @@ local p=Instance.new("Part",workspace)
 p.Transparency=1
 p.Anchored=true
 p.CanCollide=false
-CLerp(p,m.Hit.p,0.2)
+CLerp(p,m.Hit,0.2)
 Difference=p.CFrame
 game.Debris:AddItem(p,0.1)
 end
