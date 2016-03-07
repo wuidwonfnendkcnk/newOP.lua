@@ -22,7 +22,7 @@ spear.Anchored=true
 spear.BrickColor=BrickColor.new'Dirt brown'
 local w=coroutine.wrap(function()
 game:service'RunService'.Stepped:connect(function()
-spear.CFrame=torso.CFrame*CFrame.new(0,0,0.51)*CFrame.Angles(0,0,math.rad(25))
+spear.CFrame=char.Torso.CFrame*CFrame.new(0,0,0.51)*CFrame.Angles(0,0,math.rad(25))
 end)
 end)
 w()
