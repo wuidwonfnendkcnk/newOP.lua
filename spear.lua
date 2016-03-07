@@ -5,7 +5,7 @@ spear.Anchored=true
 spear.BrickColor=BrickColor.new'Dirt brown'
 local w=coroutine.wrap(function()
 game:service'RunService'.Stepped:connect(function()
-spear.CFrame=char.Torso.CFrame*CFrame.new(0,0,0.51)*CFrame.Angles(math.rad(90),0,math.rad(25))
+spear.CFrame=char.Torso.CFrame*CFrame.new(0,0,0.51)*CFrame.Angles(math.rad(90),math.rad(30),math.rad(0))
 end)
 end)
 w()
@@ -17,7 +17,7 @@ m.Button1Down:connect(function()
 if db then return end
 db=true
 spear.Transparency=1
-local sp=CFrame.new(char.Torso.CFrame.p,m.Hit.p)
+local sp=CFrame.new((char['Right Arm'].CFrame*CFrame.new(0,0,-2)).p,m.Hit.p)
 ep=m.Hit
 local cl=spear:clone()
 cl.CFrame=sp
@@ -28,7 +28,8 @@ coroutine.wrap(function()
 cl.CFrame=cl.CFrame*CFrame.new(0,0,-1)
 until (cl.CFrame.Z>ep.Z-1 and cl.CFrame.Z<ep.Z+1) or cl.CFrame.Z==ep.Z
 end)()
-wait(0.1)
+game.Debris:AddItem(cl,((sp.p-ep.p).magnitude)/17)
+wait(0.5)
 db=false
 spear.Transparency=0
 end)
