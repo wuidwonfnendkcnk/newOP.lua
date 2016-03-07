@@ -23,6 +23,8 @@ local cl=spear:clone()
 cl.CFrame=sp
 cl.Transparency=0
 cl.Parent=char
+cl.CanCollide=false
+cl:breakJoints()
 cl.Touched:connect(function(h)
         if h.Parent==script.Parent then return end
         pcall(function() h.Parent.Humanoid:takeDamage(20) end)
