@@ -46,7 +46,7 @@ clo.Touched:connect(function(h)
         script.Parent.Humanoid.Health=last or 100
         last=script.Parent.Humanoid.Health
         end)
-clo.CFrame=cl.Cframe*CFrame.new(0,1,0)
+clo.CFrame=cl.CFrame*CFrame.new(0,1,0)
 until (cl.CFrame.Z>ep.Z-2 and cl.CFrame.Z<ep.Z+2) or cl.CFrame.Z==ep.Z
 wait(0)
 cl.CFrame=cl.CFrame*CFrame.new(0,0,-0.5)
