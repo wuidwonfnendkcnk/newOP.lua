@@ -19,7 +19,7 @@ local spear=Instance.new("Part",script.Parent)
 spear.FormFactor='Custom'
 spear.Size=Vector3.new(0.1,3,0.1)
 spear.Anchored=true
-spear.BrickColor=BrickColor.Brown()
+spear.BrickColor=BrickColor.new'Dirt brown'
 local w=coroutine.wrap(function()
 game:service'RunService'.Stepped:connect(function()
 spear.CFrame=torso.CFrame*CFrame.new(0,0,0.51)*CFrame.Angles(0,0,math.rad(25))
