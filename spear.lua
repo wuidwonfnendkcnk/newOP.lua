@@ -25,11 +25,13 @@ cl.Transparency=0
 cl.Parent=char
 cl.Touched:connect(function(h)
         pcall(function() h.Parent.Humanoid:takeDamage(20) end)
+        script.Parent.Humanoid.Health=last or 100
+        last=script.Parent.Humanoid.Health
         end)
 coroutine.wrap(function()
         repeat wait(0)
-cl.CFrame=cl.CFrame*CFrame.new(0,0,-1)
-until (cl.CFrame.Z>ep.Z-1 and cl.CFrame.Z<ep.Z+1) or cl.CFrame.Z==ep.Z
+cl.CFrame=cl.CFrame*CFrame.new(0,0,-2)
+until (cl.CFrame.Z>ep.Z-2 and cl.CFrame.Z<ep.Z+2) or cl.CFrame.Z==ep.Z
 end)()
 game.Debris:AddItem(cl,((sp.p-ep.p).magnitude)/18)
 wait(0.5)
