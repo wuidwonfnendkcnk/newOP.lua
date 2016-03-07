@@ -34,7 +34,7 @@ m.Button1Down:connect(function()
 if db then return end
 db=true
 spear.Transparency=1
-local sp,ep=char.Torso.CFrame*CFrame.new(0,0,-2)*CFrame.Angles(math.rad(90),0,0),m.Hit*CFrame.Angles(math.rad(90),0,0)
+local sp,ep=CFrame.new((char.Torso.CFrame*CFrame.new(0,0,-2)).p,(m.Hit*CFrame.Angles(math.rad(90),0,0)).p),m.Hit*CFrame.Angles(math.rad(90),0,0)
 local cl=spear:clone()
 cl.CFrame=sp
 cl.Transparency=0
