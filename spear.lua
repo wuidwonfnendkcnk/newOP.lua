@@ -39,7 +39,11 @@ local cl=spear:clone()
 cl.CFrame=sp
 cl.Transparency=0
 cl.Parent=char
-CLerp(cl,ep,0.2)
+coroutine.wrap(function()
+        repeat wait()
+CLerp(cl,ep,0.1)
+until (cl.CFrame.Z>ep.Z-1 and cl.CFrame.Z<ep.Z+1) or cl.CFrame.Z==ep.Z
+end)()
 wait(0.1)
 db=false
 end)
