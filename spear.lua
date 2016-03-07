@@ -1,4 +1,3 @@
-
 local spear=Instance.new("Part",script.Parent)
 spear.FormFactor='Custom'
 spear.Size=Vector3.new(0.1,0.1,3.35)
@@ -19,7 +18,7 @@ if db then return end
 db=true
 spear.Transparency=1
 local sp=CFrame.new(char.Torso.CFrame.p,m.Hit.p)
-repeat ep=sp*CFrame.new(0,0,-1) until ep.Z>sp.Z-0.1 and ep.Z<sp.Z+0.1
+ep=m.Hit
 local cl=spear:clone()
 cl.CFrame=sp
 cl.Transparency=0
@@ -31,4 +30,5 @@ until (cl.CFrame.Z>ep.Z-1 and cl.CFrame.Z<ep.Z+1) or cl.CFrame.Z==ep.Z
 end)()
 wait(0.1)
 db=false
+spear.Transparency=0
 end)
