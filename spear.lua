@@ -34,14 +34,15 @@ m.Button1Down:connect(function()
 if db then return end
 db=true
 spear.Transparency=1
-local sp,ep=CFrame.new((char.Torso.CFrame*CFrame.new(0,0,-2)).p,(m.Hit*CFrame.Angles(math.rad(90),0,0)).p),m.Hit*CFrame.Angles(math.rad(90),0,0)
+local sp=CFrame.new((char.Torso.CFrame*CFrame.new(0,0,-2)).p,(m.Hit*CFrame.Angles(math.rad(90),0,0)).p)
+repeat ep=sp*CFrame.new(0,0,-1) until ep.Z>sp.Z-1 and ep.Z<sp.Z+1
 local cl=spear:clone()
 cl.CFrame=sp
 cl.Transparency=0
 cl.Parent=char
 coroutine.wrap(function()
         repeat wait()
-CLerp(cl,ep,0.1)
+cl.CFrame=cl.CFrame*CFrame.new(0,1,0)
 until (cl.CFrame.Z>ep.Z-1 and cl.CFrame.Z<ep.Z+1) or cl.CFrame.Z==ep.Z
 end)()
 wait(0.1)
