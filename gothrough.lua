@@ -14,31 +14,23 @@ local repeater=coroutine.wrap(function()
 while wait(0) do
 local block=Instance.new("Part",workspace)
 block.Name='asd 000'
-block.Transparency=0.5
+block.Transparency=1
 block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
 block.Anchored=false
-block.Touched:connect(function(h)
-  if h.Parent==workspace then
-    if h.Name=='Base' or h.Name==block.Name then return end
-  else
-    if h.Parent.Parent==workspace then
-      if h.Parent==script.Parent then return end
-      if h.Parent:IsA'Hat' or h.Parent:IsA'Tool' then return end
-      
-    else
-      return
-      end
-    end
-local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
-size=size+detectRange+3
-script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
-end)
-for i=1,detectRange,2 do
+coroutine.wrap(function()
+  for i=1,detectRange,2 do
 wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
-game.Debris:AddItem(block,0.001)
+end)()
+block.Touched:connect(function(h)
+  if not (h.Parent==workspace or h.Parent.Parent==workspace or not h.Parent:IsA'Tool' or h.Parent.Name~=block.Name) then return end
+local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
+size=size+detectRange+((script.Parent.Torso.Position-h.Position).magnitude)
+script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
+end)
+
 end
 end)
 repeater()
