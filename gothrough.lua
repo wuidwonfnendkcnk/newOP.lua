@@ -16,7 +16,7 @@ while wait(0) do
 local block=Instance.new("Part",workspace)
 block.Name='asd 000'
 block.Transparency=1
-block.Size=Vector3.new(detectRange,detectRange/4,detectRange)
+block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
 block.Anchored=false
 coroutine.wrap(function()
@@ -24,7 +24,7 @@ coroutine.wrap(function()
 wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
-game.Debris:AddItem(block,0.2)
+game.Debris:AddItem(block,0.01)
 end)()
 block.Touched:connect(function(h)
   if go then return end
