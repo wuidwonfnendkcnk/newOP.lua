@@ -11,6 +11,7 @@ for i,v in pairs(o:children()) do
 end
 
 local repeater=coroutine.wrap(function()
+  go=false
 while wait(0) do
 local block=Instance.new("Part",workspace)
 block.Name='asd 000'
@@ -26,6 +27,7 @@ end
 game.Debris:AddItem(block,0.001)
 end)()
 block.Touched:connect(function(h)
+  if go then return end
   if h.Parent==workspace then
     if h.Name=='Base' or h.Name==block.Name then return end
   else
@@ -36,10 +38,13 @@ block.Touched:connect(function(h)
     else
       return
       end
-    end
+  end
+  go=true
 local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
 size=size+((script.Parent.Torso.CFrame.p-h.Position).magnitude)+3
 script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
+wait(0.5)
+go=false
 end)
 
 end
