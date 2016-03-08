@@ -18,13 +18,12 @@ block.Name='asd 000'
 block.Transparency=0.9
 block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
-block.Anchored=false
+block.Anchored=true
 coroutine.wrap(function()
   for i=1,detectRange,2 do
 wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
-block.Anchored=true
 game.Debris:AddItem(block,0.001)
 end)()
 block.Touched:connect(function(h)
@@ -40,9 +39,11 @@ block.Touched:connect(function(h)
       return
       end
   end
+  magn=((script.Parent.Torso.CFrame.p-h.Position).magnitude)
+if magn>detectRange+2 then return end
   go=true
 local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
-size=size+((script.Parent.Torso.CFrame.p-h.Position).magnitude)+3
+size=size+magn+3
 script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
 wait(0.5)
 go=false
