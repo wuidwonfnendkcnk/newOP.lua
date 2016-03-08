@@ -38,7 +38,7 @@ block.Touched:connect(function(h)
       end
     end
 local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
-size=size+detectRange+3
+size=size+((script.Parent.Torso.CFrame.p-h.Position).magnitude)+3
 script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
 end)
 
