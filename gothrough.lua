@@ -27,4 +27,5 @@ wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)
 end
 end
-end)()
+end)
+repeater()
