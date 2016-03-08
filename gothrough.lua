@@ -14,7 +14,7 @@ local repeater=coroutine.wrap(function()
 while wait(0) do
 local block=Instance.new("Part",workspace)
 block.Name='asd 000'
-block.Transparency=1
+block.Transparency=0.5
 block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
 block.Anchored=false
