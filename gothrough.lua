@@ -26,7 +26,7 @@ script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
 end)
 for i=1,detectRange,2 do
 wait(0)
-block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)
+block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
 end
 end)
