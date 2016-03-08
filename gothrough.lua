@@ -41,9 +41,10 @@ block.Touched:connect(function(h)
       end
   end
   magn=((script.Parent.Torso.CFrame.p-h.Position).magnitude)
-if magn>detectRange+2 then return end
-  go=true
 local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
+if magn>detectRange+size/2 then return end
+  go=true
+
 size=size+magn+3
 script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
 wait(0.5)
