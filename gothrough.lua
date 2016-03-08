@@ -24,7 +24,7 @@ coroutine.wrap(function()
 wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
-game.Debris:AddItem(block,0.01)
+game.Debris:AddItem(block,0.001)
 end)()
 block.Touched:connect(function(h)
   if go then return end
