@@ -15,15 +15,16 @@ local repeater=coroutine.wrap(function()
 while wait(0) do
 local block=Instance.new("Part",workspace)
 block.Name='asd 000'
-block.Transparency=0.9
+block.Transparency=0.98
 block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
-block.Anchored=true
+block.Anchored=false
 coroutine.wrap(function()
   for i=1,detectRange,2 do
 wait(0)
 block.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-i)*CFrame.new(0,0,-block.Size.Z/2)*CFrame.new(0,0,-1)
 end
+block.Anchored=true
 game.Debris:AddItem(block,0.001)
 end)()
 block.Touched:connect(function(h)
