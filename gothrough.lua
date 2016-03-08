@@ -13,11 +13,13 @@ end
 local repeater=coroutine.wrap(function()
 while wait(0) do
 local block=Instance.new("Part",workspace)
+block.Name='asd 000'
 block.Transparency=1
 block.Size=Vector3.new(detectRange/2,detectRange/4,detectRange)
 block.CanCollide=false
 block.Anchored=false
 block.Touched:connect(function(h)
+  if h==block or h.Name==block.Name then return end
 local size=(h.Size.X+h.Size.Y+h.Size.Z)/3
 size=size+detectRange+3
 script.Parent.Torso.CFrame=script.Parent.Torso.CFrame*CFrame.new(0,0,-size)
