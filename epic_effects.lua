@@ -53,7 +53,7 @@ sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.An
 end
 end)()
 for i=1,50,5 do wait(0) 
-cff=block.CFrame block.Size=block.Size+Vector3.new(2,0,2) block.CFrame=cff 
+cff=block.CFrame block.Size=block.Size+Vector3.new(5,0,5) block.CFrame=cff 
 block.Transparency=i/50 
 end
 block:Destroy()
