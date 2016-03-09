@@ -114,6 +114,7 @@ m.KeyDown:connect(function(k)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
         end
         for i=1,20 do
+          B.Anchored=true
           wait(0)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
           end
@@ -139,6 +140,7 @@ m.KeyDown:connect(function(k)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
         end
         for i=1,20 do
+          B.Anchored=false
           wait(0)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
           end
