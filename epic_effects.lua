@@ -7,6 +7,15 @@ part.Size=s
 part.Transparency=0.5
 part.CFrame=cf
 part.Anchored=true
+coroutine.wrap(function()
+  while wait(0) do
+    x=math.random(1,2)
+    y=math.random(1,2)
+    z=math.random(1,2)
+    r=function() return math.random(-10,10) end
+    part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
+    end
+  end)()
 game.Debris:AddItem(part,tt)
 end
 
