@@ -146,6 +146,8 @@ m.KeyDown:connect(function(k)
     B.Size=Vector3.new(7.5,7.5,1)
     B.Transparency=0.5
     B.Anchored=true
+    B.BrickColor=BrickColor.Red()
+    B.Material='Neon'
       coroutine.wrap(function() 
         while wait() and o<150 do
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
