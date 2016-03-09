@@ -27,9 +27,9 @@ end
 
 p=game.Players.LocalPlayer
 c=p.Character
-for asd=0,50,5 do
+for asd=0,50,10 do
 wait(0)
-  for i=0,360,36 do
+  for i=0,360,40 do
 sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd))*CFrame.new(0,0,-5),5)
   end
 end
