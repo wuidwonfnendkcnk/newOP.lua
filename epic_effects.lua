@@ -117,7 +117,21 @@ m.KeyDown:connect(function(k)
         for i=1,40 do
           wait(0)
           B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-1)
-          end
+        end
+        local cl=B:clone()
+
+      cl.CanCollide=false
+      cl.Parent=B
+      cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
+      cl.Touched:connect(function(h) pcall(function() h.Parent:breakJoints() end) end)
+      local CF=cl.CFrame
+      for i=1,20 do
+        wait(0)
+        cl.Size=cl.Size+Vector3.new(1,0,1)
+        cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
+        cl.Transparency=i/20
+      end
+      cl:Destroy()
       end)()
    end
  end)()
@@ -143,7 +157,21 @@ m.KeyDown:connect(function(k)
         for i=1,40 do
           wait(0)
           B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-1)
-          end
+        end
+      local cl=B:clone()
+
+      cl.CanCollide=false
+      cl.Parent=B
+      cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
+      cl.Touched:connect(function(h) pcall(function() h.Parent:breakJoints() end) end)
+      local CF=cl.CFrame
+      for i=1,20 do
+        wait(0)
+        cl.Size=cl.Size+Vector3.new(1,0,1)
+        cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
+        cl.Transparency=i/20
+      end
+      cl:Destroy()
       end)()
    end
    end)()
