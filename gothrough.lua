@@ -1,4 +1,4 @@
-local detectRange=10
+local detectRange=20
 mod=Instance.new("Model",script.Parent)
 invi=function(o,n)
 ypcall(function() o.Transparency= o.Name=='HumanoidRootPart' and 1 or n end)
