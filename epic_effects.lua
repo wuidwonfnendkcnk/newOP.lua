@@ -87,12 +87,13 @@ m.KeyDown:connect(function(k)
     asd=Instance.new("Part",char)
     asd.Size=Vector3.new(1,1,1)
     asd.CFrame=t.CFrame
+    asd.Anchored=true
     local w=Instance.new("Weld",t)
     w.Part0=t
     w.Part1=asd
     coroutine.wrap(function()
      repeat o=o+1 
-       wait(0)  CLerp(asd,cf,0.1)  until o>150
+       wait(0)  CLerp(asd,cf,0.15)  until o>150
     end)()
   wait(2)
    for ang=-90,90,25 do
