@@ -125,7 +125,7 @@ m.KeyDown:connect(function(k)
       cl.CanCollide=false
       cl.Parent=B
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent:breakJoints() end) end)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Parent:breakJoints() end) end)
       local CF=cl.CFrame
       cl.Anchored=false
       for i=1,20 do
@@ -169,7 +169,7 @@ m.KeyDown:connect(function(k)
       cl.CanCollide=false
       cl.Parent=B
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent:breakJoints() end) end)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Parent:breakJoints() end) end)
       local CF=cl.CFrame
       cl.Anchored=false
       for i=1,20 do
