@@ -1,5 +1,5 @@
 local sp=function(s,cf,tt)
-if math.random(1,100)==math.random(1,100) then
+if math.random(1,5)==math.random(1,5) then
 game.Lighting.TimeOfDay=tostring(math.random(10,120)/10)..":00:00"
 end
 local part=Instance.new("Part",workspace)
