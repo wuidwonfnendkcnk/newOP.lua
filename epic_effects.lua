@@ -171,7 +171,7 @@ m.KeyDown:connect(function(k)
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
       cl.Touched:connect(function(h) pcall(function() h.Parent:breakJoints() end) end)
       local CF=cl.CFrame
-      cl.Anchored=fa;se
+      cl.Anchored=false
       for i=1,20 do
         wait(0)
         cl.FormFactor='Custom'
