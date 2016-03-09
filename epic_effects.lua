@@ -1,10 +1,17 @@
+local plr=game.Players.LocalPlayer
+local char=plr.Character
+local m=plr:GetMouse()
+
 local sp=function(s,cf,tt)
+  
 if math.random(1,5)==math.random(1,5) then
 game.Lighting.TimeOfDay=tostring(math.random(10,120)/10)..":00:00"
 game.Lighting.Ambient=Color3.new(math.random(1,250)/250,math.random(1,250)/250,math.random(1,250)/250)
 game.Lighting.OutdoorAmbient=Color3.new(math.random(1,250)/250,math.random(1,250)/250,math.random(1,250)/250)
 game.Lighting.Brightness=math.random(0,100)/10
 end
+
+
 local part=Instance.new("Part",workspace)
 part.BrickColor=BrickColor.Red()
 part.Size=s
@@ -16,6 +23,8 @@ part:breakJoints()
 part.CFrame=cf
 part:breakJoints()
 part.Anchored=false
+
+
 coroutine.wrap(function()
   repeat wait()
     x=math.random(0,1)
@@ -25,17 +34,25 @@ coroutine.wrap(function()
     r=function() return math.random(-10,10) end
     --part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
     until part.Parent~=workspace
-  end)()
+end)()
+
 game.Debris:AddItem(part,tt)
 end
 
+
+
+
 p=game.Players.LocalPlayer
 c=p.Character
+
+
 local block=Instance.new("Part",workspace)
 block.BrickColor=BrickColor.new'Toothpaste'
 block.FormFactor='Custom'
 block.Size=Vector3.new(2,1,2)
 block.Anchored=true
+
+
 cf=c.Torso.CFrame
 cf=CFrame.new(cf.X,workspace.Base.CFrame.Y+0.3,cf.Z)
 
@@ -52,12 +69,19 @@ sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.An
   end
 end
 end)()
+
+
 for i=1,50,5 do wait(0) 
 block.CFrame=cf*CFrame.Angles(0,math.rad(i*(7.2)),0)
 cff=block.CFrame block.Size=block.Size+Vector3.new(5,0,5) block.CFrame=cff 
 block.Transparency=i/50 
 end
+
+
 block:Destroy()
+
+
+
 
 local CLerp=function(p,cf2,v)
 
@@ -73,7 +97,13 @@ local CLerp=function(p,cf2,v)
 
 end
 
+
+
+
 wait(1)
+
+
+
 attack1=function()
   local t=char.Torso
     cf=t.CFrame*CFrame.new(0,10,0)
@@ -211,9 +241,7 @@ attack2=function()
       end)()
   end
   end
-local plr=game.Players.LocalPlayer
-local char=plr.Character
-local m=plr:GetMouse()
+
 
 m.KeyDown:connect(function(k)
   if k=='h' then
