@@ -14,9 +14,11 @@ p=game.Players.LocalPlayer
 c=p.Character
 for asd=1,10 do
 wait(0)
-  for i=0,360,10 do
-     if i==50 or i==120 or i==300 then
+  for i=0,360,20 do
+     if i==100 or i==200 or i==300 then
+       if math.random(1,5) == math.random(1,5) then
         wait(0)
+        end
       end
 sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,asd,-10),1.5)
   end
