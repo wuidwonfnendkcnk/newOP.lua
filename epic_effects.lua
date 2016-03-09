@@ -20,6 +20,6 @@ wait(0)
         wait(0)
         end
       end
-sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,asd,-10),1.5)
+sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(math.rad(i/8),math.rad(i),0)*CFrame.new(0,asd,-20),1.5)
   end
 end
