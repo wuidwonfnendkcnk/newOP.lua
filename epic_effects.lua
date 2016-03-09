@@ -38,13 +38,14 @@ block.Size=Vector3.new(2,0.25,2)
 block.Anchored=true
 cf=c.Torso.CFrame
 cf=CFrame.new(cf.X,workspace.Base.CFrame.Y+0.3,cf.Z)
+coroutine.wrap(function() for i=1,50,2 do cff=block.CFrame block.Size=block.Size+Vector3.new(2,0,2) block.CFrame=cff block.Transparency=i/50 end end)()
 for asd=0,50,10 do
 wait(0)
   for i=0,360,64 do
     
-    block.Size=block.Size+Vector3.new(2,0,2)
+    
     block.CFrame=cf*CFrame.Angles(0,math.rad(i),0)
-    block.Transparency=asd/5
+    
 sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd*1.5))*CFrame.new(0,0,-5),5)
   end
 end
