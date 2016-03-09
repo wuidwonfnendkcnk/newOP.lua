@@ -1,6 +1,9 @@
 local sp=function(s,cf,tt)
 if math.random(1,5)==math.random(1,5) then
 game.Lighting.TimeOfDay=tostring(math.random(10,120)/10)..":00:00"
+game.Lighting.Ambient=Color3.new(math.random(1,250)/250,math.random(1,250)/250,math.random(1,250)/250)
+game.Lighting.OutdoorAmbient=Color3.new(math.random(1,250)/250,math.random(1,250)/250,math.random(1,250)/250)
+game.Lighting.Brightness=math.random(0,100)/10
 end
 local part=Instance.new("Part",workspace)
 part.BrickColor=BrickColor.Red()
@@ -31,6 +34,6 @@ c=p.Character
 for asd=0,50,10 do
 wait(0)
   for i=0,360,64 do
-sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd))*CFrame.new(0,0,-5),5)
+sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd*1.5))*CFrame.new(0,0,-5),5)
   end
 end
