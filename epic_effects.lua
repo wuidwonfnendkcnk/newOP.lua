@@ -96,7 +96,7 @@ m.KeyDown:connect(function(k)
     B.Anchored=true
       coroutine.wrap(function() 
         while wait() do
-    B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.New(0,0,-o/15)
+    B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/15)
         end
       end)()
    end
