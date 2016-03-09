@@ -117,7 +117,7 @@ m.KeyDown:connect(function(k)
         for i=1,40 do
        
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-0.5)
+          B.CFrame=B.CFrame*CFrame.Angles(math.rad(2),0,0)*CFrame.new(0,0,-0.5)
           end
       end)()
    end
@@ -142,9 +142,9 @@ m.KeyDown:connect(function(k)
         end
         B:breakJoints()
         for i=1,40 do
-          
+       
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,1,-0.5)
+          B.CFrame=B.CFrame*CFrame.Angles(math.rad(2),0,0)*CFrame.new(0,0,-0.5)
           end
       end)()
    end
