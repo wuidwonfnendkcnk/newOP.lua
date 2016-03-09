@@ -93,7 +93,7 @@ m.KeyDown:connect(function(k)
     w.Part1=asd
     coroutine.wrap(function()
      repeat o=o+1 
-       wait(0)  CLerp(asd,cf,0.15)  until o>150
+       wait(0)  CLerp(asd,cf,0.15) t.CFrame=asd.CFrame until o>150
     end)()
   wait(2)
    for ang=-90,90,25 do
