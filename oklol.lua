@@ -20,6 +20,7 @@ local count=0
 
 m.Button1Down:connect(function()
         count=count+1
+        local curr=count
 coroutine.wrap(function()
 local block=Instance.new("Part",workspace)
 block.Size=Vector3.new(5,5,5)
@@ -36,7 +37,7 @@ coroutine.wrap(function() wait(15) count=count-1 end)()
 block.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)
 while block do
 wait(0)
-CLerp(block,m.Hit*CFrame.new(count,count,-count)*CFrame.Angles(0,math.rad(count*10),0),spd/100)
+CLerp(block,m.Hit*CFrame.new(curr,curr,-curr)*CFrame.Angles(0,math.rad(curr*10),0),spd/100)
 end
 end)()
 end)
