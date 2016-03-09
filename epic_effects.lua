@@ -12,7 +12,7 @@ end
 
 p=game.Players.LocalPlayer
 c=p.Character
-for asd=1,10 do
+for asd=1,32,4 do
 wait(0)
   for i=0,360,20 do
      if i==100 or i==200 or i==300 then
