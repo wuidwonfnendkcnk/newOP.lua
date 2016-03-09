@@ -200,6 +200,7 @@ attack2=function()
     sphere.Material=workspace.Base.Material
     sphere.BrickColor=workspace.Base.BrickColor
     sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+i))
+      sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z)
     coroutine.wrap(function()
       wait(1.2)
       for i=1,10 do
