@@ -30,11 +30,6 @@ c=p.Character
 for asd=0,50,10 do
 wait(0)
   for i=0,360,36 do
-     if i==64 or i==160 or i==360 then
-       if math.random(1,5) == math.random(1,5) then
-        wait(0)
-        end
-      end
-sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(0,0,math.rad(45))*CFrame.new(0,asd,-20),5)
+sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(0,0,math.rad(45))*CFrame.new(0,asd,-40),5)
   end
 end
