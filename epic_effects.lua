@@ -85,19 +85,20 @@ m.KeyDown:connect(function(k)
     cf=t.CFrame*CFrame.new(0,20,0)
     o=0
     coroutine.wrap(function()
-    repeat o=o+1 wait(0) CLerp(t,cf,0.1) until o>150
-  end)()
+     repeat o=o+1 wait(0) CLerp(t,cf,0.1) until o>150
+    end)()
   wait(2)
-  for ang=-65,65,10 do
+   for ang=-65,65,10 do
     wait(0)
     local B=Instance.new("Part",workspace)
     B.Size=Vector3.new(10,10,1)
     B.Transparency=0.5
     B.Anchored=true
-    coroutine.wrap(function() while wait() do
+      coroutine.wrap(function() 
+        while wait() do
     B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.New(0,0,-o/15)
+        end
+      end)()
+   end
   end
-end)()
-
-    end
-  end)
+end)
