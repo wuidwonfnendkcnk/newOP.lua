@@ -74,14 +74,8 @@ local CLerp=function(p,cf2,v)
 end
 
 wait(1)
-
-local plr=game.Players.LocalPlayer
-local char=plr.Character
-local m=plr:GetMouse()
-
-m.KeyDown:connect(function(k)
-  if k=='h' then
-    local t=char.Torso
+attack1=function()
+  local t=char.Torso
     cf=t.CFrame*CFrame.new(0,10,0)
     o=0
     asd=Instance.new("Part",char)
@@ -188,7 +182,42 @@ m.KeyDown:connect(function(k)
       cl:Destroy()
       end)()
    end
-   end)()
-  
+ end)()
+end
+
+attack2=function()
+  for i=1,10 do
+      wait(0)
+    local sphere=Instance.new("Part",char)
+    sphere.Size=Vector3.new(i,i,i)
+    sphere.Shape='Ball'
+    sphere.Anchored=true
+    sphere.Touched:connect(function(h)
+      if h.Parent==char then return end
+      pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(0.5)
+        h.Parent.Humanoid.Parent.Torso.Velocity=Vector3.new(0,50,-10) end)
+      end)
+    sphere.Material=workspace.Base.Material
+    sphere.BrickColor=workspace.Base.BrickColor
+    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+i))
+    coroutine.wrap(function()
+      wait(1.2)
+      for i=1,10 do
+        sphere.Transparency=i/10
+        wait(0)
+      end
+      game.Debris:AddItem(sphere,0.1)
+      end)()
+  end
+  end
+local plr=game.Players.LocalPlayer
+local char=plr.Character
+local m=plr:GetMouse()
+
+m.KeyDown:connect(function(k)
+  if k=='h' then
+    attack1()
+  elseif k=='f' then
+    attack2()
    end
   end)
