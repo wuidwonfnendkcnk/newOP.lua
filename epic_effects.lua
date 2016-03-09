@@ -104,9 +104,20 @@ m.KeyDown:connect(function(k)
     B.Transparency=0.5
     B.Anchored=true
       coroutine.wrap(function() 
-        while wait() do
+         coroutine.wrap(function() 
+        while wait() and o<150 do
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
+        wait(5)
+        for i=1,20 do
+          wait(0)
+          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
+        end
+        for i=1,20 do
+          wait(0)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
+          end
       end)()
    end
  end)()
