@@ -18,6 +18,6 @@ wait(0)
      if i==50 or i==120 or i==300 then
         wait(0)
       end
-sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,asd,0),1.5)
+sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,asd,-10),1.5)
   end
 end
