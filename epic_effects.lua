@@ -6,7 +6,7 @@ local part=Instance.new("Part",workspace)
 part.Size=s
 part.Transparency=0.5
 part.CFrame=cf
-part.Anchored=true
+part.Anchored=false
 coroutine.wrap(function()
   while wait(0) do
     x=math.random(1,2)
