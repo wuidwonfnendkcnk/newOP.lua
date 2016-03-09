@@ -1,7 +1,7 @@
 local plr=game.Players.LocalPlayer
 local char=plr.Character
 local m=plr:GetMouse()
-
+Attacking=false
 local sp=function(s,cf,tt)
   
 if math.random(1,5)==math.random(1,5) then
@@ -244,9 +244,15 @@ attack2=function()
 
  
 m.KeyDown:connect(function(k)
+  if Attacking then return end
+  
   if k=='h' then
+  Attacking=true
     attack1()
+    Attacking=false
   elseif k=='f' then
+    Attacking=true
     attack2()
+    Attacking=false
    end
   end)
