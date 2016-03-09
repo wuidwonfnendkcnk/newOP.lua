@@ -9,6 +9,9 @@ part.CFrame=cf
 part.Anchored=false
 part.CanCollide=false
 part:breakJoints()
+part.CFrame=cf
+part:breakJoints()
+part.Anchored=false
 coroutine.wrap(function()
   while wait(0) do
     x=math.random(0,1)
@@ -25,7 +28,7 @@ p=game.Players.LocalPlayer
 c=p.Character
 for asd=0,50,10 do
 wait(0)
-  for i=0,360,20 do
+  for i=0,360,36 do
      if i==100 or i==200 or i==300 then
        if math.random(1,5) == math.random(1,5) then
         wait(0)
