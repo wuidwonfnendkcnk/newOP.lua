@@ -16,8 +16,10 @@ local CLerp=function(p,cf2,v)
 end
 
 local spd=15
+local count=0
 
 m.Button1Down:connect(function()
+        count=count+1
 coroutine.wrap(function()
 local block=Instance.new("Part",workspace)
 block.Size=Vector3.new(5,5,5)
@@ -30,10 +32,11 @@ pcall(function() h.Parent.Humanoid:TakeDamage(10) game.Debris:AddItem(block,0.1)
         end 
 end)
 game.Debris:AddItem(block,15)
+coroutine.wrap(function() wait(15) count=count-1 end)()
 block.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)
 while block do
 wait(0)
-CLerp(block,m.Hit,spd/100)
+CLerp(block,m.Hit*CFrame.new(count,count,-count)*CFrame.Angles(0,math.rad(count*10),0),spd/100)
 end
 end)()
 end)
