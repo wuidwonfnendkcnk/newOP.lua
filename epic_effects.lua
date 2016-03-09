@@ -31,9 +31,9 @@ end
 
 p=game.Players.LocalPlayer
 c=p.Character
-local bloc=Instance.new("Part",workspace)
-bloc.BrickColor=BrickColor.new'Toothepaste'
-bloc.FormFactor='Custom'
+local block=Instance.new("Part",workspace)
+block.BrickColor=BrickColor.new'Toothepaste'
+block.FormFactor='Custom'
 block.Size=Vector3.new(2,0.25,2)
 block.Anchored=true
 cf=CFrame.new(c.Torso.CFrame)
