@@ -113,10 +113,11 @@ m.KeyDown:connect(function(k)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
         end
-        for i=1,20 do
-          B.Anchored=true
+        B:breakJoints()
+        for i=1,40 do
+          B.Anchored=false
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i/2)
           end
       end)()
    end
@@ -139,10 +140,11 @@ m.KeyDown:connect(function(k)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
         end
-        for i=1,20 do
+        B:breakJoints()
+        for i=1,40 do
           B.Anchored=false
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i/2)
           end
       end)()
    end
