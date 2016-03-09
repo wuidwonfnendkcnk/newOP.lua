@@ -37,7 +37,7 @@ coroutine.wrap(function() wait(15) count=count-1 end)()
 block.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)
 while block do
 wait(0)
-CLerp(block,m.Hit*CFrame.Angles(0,math.rad(curr*10),0)*CFrame.new(curr,curr,-curr),spd/100)
+CLerp(block,m.Hit*CFrame.Angles(0,math.rad(math.random(-(curr*10),curr*10)),0)*CFrame.new(curr/2,curr/4,-curr/2),spd/100)
 end
 end)()
 end)
