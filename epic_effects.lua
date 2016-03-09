@@ -7,11 +7,13 @@ part.Size=s
 part.Transparency=0.5
 part.CFrame=cf
 part.Anchored=false
+part.CanCollide=false
+part:breakJoints()
 coroutine.wrap(function()
   while wait(0) do
-    x=math.random(1,2)
-    y=math.random(1,2)
-    z=math.random(1,2)
+    x=math.random(0,1)
+    y=math.random(0,1)
+    z=math.random(0,1)
     r=function() return math.random(-10,10) end
     part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
     end
@@ -29,6 +31,6 @@ wait(0)
         wait(0)
         end
       end
-sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(0,0,math.rad(45))*CFrame.new(0,asd,-20),1.5)
+sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(0,0,math.rad(45))*CFrame.new(0,asd,-20),0.5)
   end
 end
