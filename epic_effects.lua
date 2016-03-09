@@ -23,7 +23,7 @@ coroutine.wrap(function()
     z=math.random(0,1)
     part.Transparency=part.Transparency+0.05
     r=function() return math.random(-10,10) end
-    part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
+    --part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
     until part.Parent~=workspace
   end)()
 game.Debris:AddItem(part,tt)
