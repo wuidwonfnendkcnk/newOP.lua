@@ -96,33 +96,7 @@ m.KeyDown:connect(function(k)
        wait(0)  CLerp(asd,cf,0.15) t.CFrame=asd.CFrame until o>150
     end)()
   wait(2)
-  
   coroutine.wrap(function()
-   for ang=0,90,25 do
-    wait(0)
-    local B=Instance.new("Part",workspace)
-    B.Size=Vector3.new(7.5,7.5,1)
-    B.Transparency=0.5
-    B.Anchored=true
-      coroutine.wrap(function() 
-         coroutine.wrap(function() 
-        while wait() and o<150 do
-          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
-        end
-        wait(5)
-        for i=1,20 do
-          wait(0)
-          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
-        end
-        for i=1,20 do
-          wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
-          end
-      end)()
-   end
-  end end)()
- coroutine.wrap(function()
    for ang=0,-90,-25 do
     wait(0)
     local B=Instance.new("Part",workspace)
@@ -145,6 +119,32 @@ m.KeyDown:connect(function(k)
           end
       end)()
    end
+ end)()
+ 
+ coroutine.wrap(function()
+   for ang=0,90,25 do
+    wait(0)
+    local B=Instance.new("Part",workspace)
+    B.Size=Vector3.new(7.5,7.5,1)
+    B.Transparency=0.5
+    B.Anchored=true
+      coroutine.wrap(function() 
+        while wait() and o<150 do
+          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
+        end
+        wait(5)
+        for i=1,20 do
+          wait(0)
+          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
+        end
+        for i=1,20 do
+          wait(0)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-i*1.5)
+          end
+      end)()
+   end
    end)()
-  end
-end)
+  
+   end
+  end)
