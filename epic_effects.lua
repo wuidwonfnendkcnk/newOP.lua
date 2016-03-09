@@ -108,7 +108,7 @@ m.KeyDown:connect(function(k)
         while wait() and o<150 do
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
-        wait(5)
+        wait()
         for i=1,10 do
           wait(0)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
@@ -155,7 +155,7 @@ m.KeyDown:connect(function(k)
         while wait() and o<150 do
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
-        wait(5)
+        wait()
         for i=1,10 do
           wait(0)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
