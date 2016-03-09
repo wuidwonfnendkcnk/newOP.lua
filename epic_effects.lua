@@ -85,7 +85,9 @@ m.KeyDown:connect(function(k)
     cf=t.CFrame*CFrame.new(0,20,0)
     o=0
     coroutine.wrap(function()
-     repeat o=o+1 wait(0) CLerp(t,cf,0.1) until o>150
+     repeat o=o+1 t.Anchored=false
+       wait(0)  CLerp(t,cf,0.1) t.Anchored=true until o>150
+     t.Anchored=true
     end)()
   wait(2)
    for ang=-65,65,10 do
@@ -96,7 +98,7 @@ m.KeyDown:connect(function(k)
     B.Anchored=true
       coroutine.wrap(function() 
         while wait() do
-    B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/15)
+          B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
       end)()
    end
