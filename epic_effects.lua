@@ -82,7 +82,7 @@ local m=plr:GetMouse()
 m.KeyDown:connect(function(k)
   if k=='h' then
     local t=char.Torso
-    cf=t.CFrame*CFrame.new(0,20,0)
+    cf=t.CFrame*CFrame.new(0,10,0)
     o=0
     asd=Instance.new("Part",char)
     asd.Size=Vector3.new(1,1,1)
@@ -118,7 +118,7 @@ m.KeyDown:connect(function(k)
         B:breakJoints()
         for i=1,40 do
           wait(0)
-          B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-1)
+          B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-0.5)
         end
         local cl=B:clone()
 
@@ -133,9 +133,10 @@ m.KeyDown:connect(function(k)
         cl.FormFactor='Custom'
         cl.Size=cl.Size+Vector3.new(3,i>10 and -0.25 or 0.25,3)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
-        cl.Transparency=i/20
+        cl.Transparency=i/18
       end
       cl:Destroy()
+      asd:Destroy()
       end)()
    end
  end)()
@@ -162,7 +163,7 @@ m.KeyDown:connect(function(k)
         B:breakJoints()
         for i=1,40 do
           wait(0)
-          B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-1)
+          B.CFrame=B.CFrame*CFrame.Angles(math.rad(-2),0,0)*CFrame.new(0,0,-0.5)
         end
       local cl=B:clone()
 
@@ -177,7 +178,7 @@ m.KeyDown:connect(function(k)
         cl.FormFactor='Custom'
         cl.Size=cl.Size+Vector3.new(3,i>10 and -0.25 or 0.25,3)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
-        cl.Transparency=i/20
+        cl.Transparency=i/18
       end
       cl:Destroy()
       end)()
