@@ -1,5 +1,5 @@
 local sp=function(s,cf,tt)
-if math.random(1,100)==math.random(1,100) do then
+if math.random(1,100)==math.random(1,100) then
 game.Lighting.TimeOfDay=tostring(math.random(10,120)/10)..":00:00"
 end
 local part=Instance.new("Part",workspace)
@@ -13,10 +13,10 @@ end
 p,c=game.Players.LocalPlayer,p.Character
 for asd=1,10 do
 wait(0)
-for i=0,360,10 do
-if i==50 or i==120 or i==300 then
-wait(0)
-end
+  for i=0,360,10 do
+     if i==50 or i==120 or i==300 then
+        wait(0)
+      end
 sp(Vector3.new(2,2,2),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.new(0,asd,0),1.5)
-end
+  end
 end
