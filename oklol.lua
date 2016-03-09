@@ -24,7 +24,12 @@ block.Size=Vector3.new(5,5,5)
 block.Shape='Ball'
 block.BrickColor=BrickColor.Red()
 block.Anchored=true
-game.Debris:AddItem(block,10)
+block.Touched:connect(function(h) 
+        if h.Parent~=char then 
+pcall(function() h.Parent.Humanoid:TakeDamage(10) game.Debris:AddItem(block,0.1) end)
+        end 
+end)
+game.Debris:AddItem(block,15)
 block.CFrame=char.Torso.CFrame*CFrame.new(0,0,-5)
 while block do
 wait(0)
