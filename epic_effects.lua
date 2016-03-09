@@ -103,12 +103,14 @@ m.KeyDown:connect(function(k)
     B.Size=Vector3.new(7.5,7.5,1)
     B.Transparency=0.5
     B.Anchored=true
+    B.BrickColor=BrickColor.Red()
+    B.Material='Neon'
       coroutine.wrap(function() 
         while wait() and o<150 do
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
         wait(5)
-        for i=1,20 do
+        for i=1,10 do
           wait(0)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
@@ -128,7 +130,7 @@ m.KeyDown:connect(function(k)
       for i=1,20 do
         wait(0)
         cl.FormFactor='Custom'
-        cl.Size=cl.Size+Vector3.new(3,i>10 and -0.1 or 0.1,3)
+        cl.Size=cl.Size+Vector3.new(3,i>10 and -0.25 or 0.25,3)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
         cl.Transparency=i/20
       end
@@ -149,7 +151,7 @@ m.KeyDown:connect(function(k)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
         end
         wait(5)
-        for i=1,20 do
+        for i=1,10 do
           wait(0)
           B.CFrame=cf*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-o/10)
           B.CFrame=B.CFrame*CFrame.new(0,0,-i*2)
@@ -169,7 +171,7 @@ m.KeyDown:connect(function(k)
       for i=1,20 do
         wait(0)
         cl.FormFactor='Custom'
-        cl.Size=cl.Size+Vector3.new(3,i>10 and -0.1 or 0.1,3)
+        cl.Size=cl.Size+Vector3.new(3,i>10 and -0.25 or 0.25,3)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
         cl.Transparency=i/20
       end
