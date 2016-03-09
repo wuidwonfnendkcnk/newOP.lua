@@ -29,7 +29,7 @@ c=p.Character
 for asd=0,50,10 do
 wait(0)
   for i=0,360,36 do
-     if i==100 or i==200 or i==300 then
+     if i==64 or i==160 or i==360 then
        if math.random(1,5) == math.random(1,5) then
         wait(0)
         end
