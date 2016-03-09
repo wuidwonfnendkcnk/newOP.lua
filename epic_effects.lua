@@ -216,7 +216,7 @@ attack1=function()
 end
 
 attack2=function()
-  for i=1,40,2 do
+  for i=1,60,5 do
       wait(0)
     local sphere=Instance.new("Part",char)
     sphere.Size=Vector3.new(i,i,i)
@@ -229,7 +229,7 @@ attack2=function()
       end)
     sphere.Material=workspace.Base.Material
     sphere.BrickColor=workspace.Base.BrickColor
-    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+i))
+    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))
       sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z)
     coroutine.wrap(function()
       wait(1.2)
