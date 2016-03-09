@@ -3,6 +3,7 @@ if math.random(1,100)==math.random(1,100) then
 game.Lighting.TimeOfDay=tostring(math.random(10,120)/10)..":00:00"
 end
 local part=Instance.new("Part",workspace)
+part.BrickColor=BrickColor.Red()
 part.Size=s
 part.Transparency=0.5
 part.CFrame=cf
@@ -29,7 +30,7 @@ p=game.Players.LocalPlayer
 c=p.Character
 for asd=0,50,10 do
 wait(0)
-  for i=0,360,40 do
-sp(Vector3.new(4,4,4),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd))*CFrame.new(0,0,-5),5)
+  for i=0,360,64 do
+sp(Vector3.new(10,10,10),c.Torso.CFrame*CFrame.Angles(0,math.rad(i),0)*CFrame.Angles(math.rad(asd),0,math.rad(45))*CFrame.new(0,asd,-(asd))*CFrame.new(0,0,-5),5)
   end
 end
