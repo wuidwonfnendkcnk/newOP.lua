@@ -10,7 +10,8 @@ part.Anchored=true
 game.Debris:AddItem(part,tt)
 end
 
-p,c=game.Players.LocalPlayer,p.Character
+p=game.Players.LocalPlayer
+c=p.Character
 for asd=1,10 do
 wait(0)
   for i=0,360,10 do
