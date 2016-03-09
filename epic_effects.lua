@@ -115,9 +115,9 @@ m.KeyDown:connect(function(k)
         end
         B:breakJoints()
         for i=1,40 do
-          B.Anchored=false
+       
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i/2)
+          B.CFrame=B.CFrame*CFrame.new(0,0,-0.5)
           end
       end)()
    end
@@ -142,9 +142,9 @@ m.KeyDown:connect(function(k)
         end
         B:breakJoints()
         for i=1,40 do
-          B.Anchored=false
+          
           wait(0)
-          B.CFrame=B.CFrame*CFrame.new(0,0,-i/2)
+          B.CFrame=B.CFrame*CFrame.new(0,1,-0.5)
           end
       end)()
    end
