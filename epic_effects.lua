@@ -37,7 +37,7 @@ block.FormFactor='Custom'
 block.Size=Vector3.new(2,0.25,2)
 block.Anchored=true
 cf=c.Torso.CFrame
-cf=CFrame.new(cf.X,0.1,cf.Z)
+cf=CFrame.new(cf.X,workspace.Base.CFrame.Y+0.3,cf.Z)
 for asd=0,50,10 do
 wait(0)
   for i=0,360,64 do
