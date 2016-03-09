@@ -92,7 +92,7 @@ m.KeyDown:connect(function(k)
     w.Part0=t
     w.Part1=asd
     coroutine.wrap(function()
-     repeat o=o+1 
+     repeat o=o+8
        wait(0)  CLerp(asd,cf,0.15) t.CFrame=asd.CFrame until o>150
     end)()
   wait(2)
