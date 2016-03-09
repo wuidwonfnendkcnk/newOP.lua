@@ -84,16 +84,21 @@ m.KeyDown:connect(function(k)
     local t=char.Torso
     cf=t.CFrame*CFrame.new(0,20,0)
     o=0
+    asd=Instance.new("Part",char)
+    asd.Size=Vector3.new(1,1,1)
+    asd.CFrame=t.CFrame
+    local w=Instance.new("Weld",t)
+    w.Part0=t
+    w.Part1=asd
     coroutine.wrap(function()
-     repeat o=o+1 t.Anchored=false
-       wait(0)  CLerp(t,cf,0.1) t.Anchored=true until o>150
-     t.Anchored=true
+     repeat o=o+1 
+       wait(0)  CLerp(asd,cf,0.1)  until o>150
     end)()
   wait(2)
-   for ang=-65,65,10 do
+   for ang=-90,90,25 do
     wait(0)
     local B=Instance.new("Part",workspace)
-    B.Size=Vector3.new(10,10,1)
+    B.Size=Vector3.new(7.5,7.5,1)
     B.Transparency=0.5
     B.Anchored=true
       coroutine.wrap(function() 
