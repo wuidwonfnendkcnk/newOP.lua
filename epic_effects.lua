@@ -122,9 +122,10 @@ m.KeyDown:connect(function(k)
         local cl=B:clone()
 
       cl.CanCollide=false
+      cl.Transparency=0
       cl.Parent=workspace
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(3)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(1)
         h.Parent.Humanoid.Parent.Torso.Velocity=h.Parent.Torso.CFrame.lookVector*50 end) end)
       local CF=cl.CFrame
       cl.Anchored=false
@@ -169,9 +170,10 @@ m.KeyDown:connect(function(k)
       local cl=B:clone()
 
       cl.CanCollide=false
+      cl.Transparency=0
       cl.Parent=workspace
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(3)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(1)
         h.Parent.Humanoid.Parent.Torso.Velocity=h.Parent.Torso.CFrame.lookVector*50 end) end)
       local CF=cl.CFrame
       cl.Anchored=false
