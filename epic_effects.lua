@@ -216,7 +216,7 @@ attack1=function()
 end
 
 attack2=function()
-  for i=1,10 do
+  for i=1,40,2 do
       wait(0)
     local sphere=Instance.new("Part",char)
     sphere.Size=Vector3.new(i,i,i)
