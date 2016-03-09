@@ -127,7 +127,7 @@ m.KeyDown:connect(function(k)
       local CF=cl.CFrame
       for i=1,20 do
         wait(0)
-        cl.Size=cl.Size+Vector3.new(1,0,1)
+        cl.Size=cl.Size+Vector3.new(2,i>10 and -0.1 or 0.1,2)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
         cl.Transparency=i/20
       end
@@ -167,7 +167,7 @@ m.KeyDown:connect(function(k)
       local CF=cl.CFrame
       for i=1,20 do
         wait(0)
-        cl.Size=cl.Size+Vector3.new(1,0,1)
+        cl.Size=cl.Size+Vector3.new(2,i>10 and -0.1 or 0.1,2)
         cl.CFrame=CF*CFrame.Angles(0,math.rad(i*13),0)
         cl.Transparency=i/20
       end
