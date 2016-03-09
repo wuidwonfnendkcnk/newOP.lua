@@ -92,10 +92,9 @@ m.KeyDown:connect(function(k)
     w.Part0=t
     w.Part1=asd
     coroutine.wrap(function()
-     repeat o=o+2
+     repeat o=o+5
        wait(0)  CLerp(asd,cf,0.15) t.CFrame=asd.CFrame until o>150
     end)()
-  wait(2)
   coroutine.wrap(function()
    for ang=0,-90,-25 do
     wait(0)
@@ -125,7 +124,7 @@ m.KeyDown:connect(function(k)
       cl.CanCollide=false
       cl.Parent=workspace
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(10)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(3)
         h.Parent.Humanoid.Parent.Torso.Velocity=h.Parent.Torso.CFrame.lookVector*50 end) end)
       local CF=cl.CFrame
       cl.Anchored=false
@@ -172,7 +171,7 @@ m.KeyDown:connect(function(k)
       cl.CanCollide=false
       cl.Parent=workspace
       cl.CFrame=CFrame.new((B.CFrame*CFrame.new(0,1,0)).p)
-      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(10)
+      cl.Touched:connect(function(h) pcall(function() h.Parent.Humanoid.Sit=true h.Parent.Humanoid:takeDamage(3)
         h.Parent.Humanoid.Parent.Torso.Velocity=h.Parent.Torso.CFrame.lookVector*50 end) end)
       local CF=cl.CFrame
       cl.Anchored=false
