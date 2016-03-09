@@ -13,13 +13,13 @@ part.CFrame=cf
 part:breakJoints()
 part.Anchored=false
 coroutine.wrap(function()
-  while wait(0) do
+  repeat wait()
     x=math.random(0,1)
     y=math.random(0,1)
     z=math.random(0,1)
     r=function() return math.random(-10,10) end
     part.CFrame=part.CFrame*CFrame.Angles(z*r(),y*r(),z*r())
-    end
+    until part.Parent~=workspace
   end)()
 game.Debris:AddItem(part,tt)
 end
