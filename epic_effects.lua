@@ -308,7 +308,7 @@ m.KeyDown:connect(function(k)
   	dmg.CanCollide=false
   	cf=CFrame.new(t.CFrame.X,1,t.CFrame.Y)
   	dmg.Touched:connect(function(h) if h.Parent==char then return end
-  		pcall(function() h.Parent.Humanoid:TakeDamage(3) end) end)
+  		pcall(function() h.Parent.Humanoid:TakeDamage(30) h.Parent.Humanoid.Sit=not h.Parent.Humanoid.Sit end) end)
   	omgangles=0
   	dmg.CFrame=cf
   	for i=1,10 do wait(0) dmg.CFrame=cf end
