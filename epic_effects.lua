@@ -309,17 +309,17 @@ m.KeyDown:connect(function(k)
   	cf=CFrame.new(t.CFrame.X,1,t.CFrame.Y)
   	dmg.Touched:connect(function(h) if h.Parent==char then return end
   		pcall(function() h.Parent.Humanoid:TakeDamage(1) end) end)
-  	
+  	omgangles=0
   	coroutine.wrap(function() 
   		while wait(0) and dmg and dmg.Parent do 
-  		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Y)*CFrame.Angles(0,math.rad(i*10),0),0.5) 
+  		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Y)*CFrame.Angles(0,math.rad(omgangles*10),0),0.5) 
   		end 
   	end)()
   	for i=1,36 do
   		wait(0)
   		dmg.Size=dmg.Size+Vector3.new(2,0,2)
   		dmg.CFrame=cf
-  		
+  		omgangles=i
   		end
   	end)()
  for AA=2,math.random(2,5) do
