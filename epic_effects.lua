@@ -325,7 +325,7 @@ m.KeyDown:connect(function(k)
     	mr=math.random
     	--*CFrame.Angles(r(mr(100)),r(mr(100)),r(mr(100)))
     	local spot=block.CFrame*CFrame.new(0,100,-20)
-    	coroutine.wrap(function() wait(2) while wait(0) do CLerp(block,spot,0.05) end end)()
+    	coroutine.wrap(function() wait(0.5) while wait(0) do CLerp(block,spot,0.05) end end)()
       for i=1,10,0.35 do 
       	wait(0) block.Transparency=i/10 end
       block:Destroy()
