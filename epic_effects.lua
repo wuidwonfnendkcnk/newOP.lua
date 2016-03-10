@@ -233,7 +233,7 @@ attack2=function()
       end)
     sphere.Material=workspace.Base.Material
     sphere.BrickColor=workspace.Base.BrickColor
-    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))*CFrame.new(0,0,-a)
+    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))*CFrame.new(0,0,-(a/1.3))
     	
       sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z)
     coroutine.wrap(function()
@@ -301,8 +301,8 @@ m.KeyDown:connect(function(k)
   t.Anchored=false
   char.Humanoid.Jump=true
   
- for AA=1,math.random(1,5) do
-  
+ for AA=2,math.random(2,5) do
+  if math.random(1,20) == math.random(1,20) then wait(0) end
   for ang=1,360,20 do
     local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)*CFrame.new(0,0,-(AA*2))
     
