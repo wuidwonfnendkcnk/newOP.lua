@@ -265,7 +265,7 @@ m.KeyDown:connect(function(k)
     w.Part0,w.Part1=t,anim
     for i=1,325,20 do
       wait(0)
-      anim.CFrame=anim.CFrame*CFrame.Angles(0,0,math.rad(i/2))*CFrame.new(0,0,-1)
+      anim.CFrame=anim.CFrame*CFrame.Angles(math.rad(i/2),0,0)*CFrame.new(0,0,-1)
         CLerp(t,anim.CFrame,0.5)
       end
    end
