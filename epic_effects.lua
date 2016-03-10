@@ -283,7 +283,8 @@ m.KeyDown:connect(function(k)
     repeat CFF=CFF+Vector3.new(0,-1,0) until CFF.Y<3
     repeat wait(0)
     CLerp(t,CFF,0.2)
-  until t.CFrame.Y<=CFF.Y
+  until t.CFrame.Y<=3
   t.Anchored=false
+  char.Humanoid.Jump=true
    end
   end)
