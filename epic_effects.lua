@@ -217,8 +217,10 @@ Attacking=false
 end
 
 attack2=function()
+	a=0
   for i=1,60,5 do
       wait(0)
+    
     local sphere=Instance.new("Part",char)
     sphere.Size=Vector3.new(i,i,i)
     sphere.Shape='Ball'
@@ -231,7 +233,8 @@ attack2=function()
     sphere.Material=workspace.Base.Material
     sphere.BrickColor=workspace.Base.BrickColor
     sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))
-      sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z)
+    	a=a+sphere.Size.Z
+      sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z-a)
     coroutine.wrap(function()
       wait(1.2)
       for i=1,10 do
