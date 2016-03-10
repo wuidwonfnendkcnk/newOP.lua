@@ -282,9 +282,23 @@ m.KeyDown:connect(function(k)
     local CFF=t.CFrame
     repeat CFF=CFF+Vector3.new(0,-1,0) until CFF.Y<3
     repeat wait(0)
-    CLerp(t,CFF,0.2)
+    CLerp(t,CFF,0.5)
   until t.CFrame.Y<=3
   t.Anchored=false
   char.Humanoid.Jump=true
+  for ang=1,360,20 do
+    local asdomg=t.CFrame*CFrame.new(0,0,-10)*CFrame.Angles(0,math.rad(ang),0)
+    wait(0)
+    local block=Instance.new("Part",workspace.Base)
+    coroutine.wrap(function()
+      for i=1,10 do wait(0) block.Transparency=i/10 end
+      block:Destroy()
+    end)()
+  block.Size=Vector3.new(5,5,5)
+  block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-100,100)),math.rad(math.random(-100,100)))
+  block.CFrame=block.CFrame*CFrame.new(math.random(-20,20)/10,math.random(-15,5)/10,math.random(-20,20)/10)
+  block.BrickColor=workspace.Base.BrickColor
+  block.Material=workspace.Base.Material
+  end
    end
   end)
