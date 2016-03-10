@@ -276,6 +276,14 @@ m.KeyDown:connect(function(k)
       CLerp(t,anim.CFrame,0.5)
   anim.CFrame=okcf*CFrame.new(0,-i/30,i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
     wait()
-      end
+    end
+    
+    anim:Destroy()
+    local CFF=t.CFrame
+    repeat CFF=CFF+Vector3.new(0,-1,0) until CFF.Y<3
+    repeat wait(0)
+    CLerp(t,CFF,0.2)
+  until t.CFrame.Y<=CFF.Y
+  t.Anchored=false
    end
   end)
