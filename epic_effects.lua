@@ -271,9 +271,10 @@ m.KeyDown:connect(function(k)
     local a=360/65
     local b=360/30
     local c=180
-    okcf=okcf*CFrame.new(0,a,b)*CFrame.Angles(math.rad(c),0,0)
+    okcf=okcf*CFrame.new(0,a,-b)*CFrame.Angles(math.rad(c),0,0)
     for i=1,360,5 do
-  anim.CFrame=okcf*CFrame.new(0,-i/30,-i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
+      CLerp(t,anim.CFrame,0.5)
+  anim.CFrame=okcf*CFrame.new(0,-i/30,i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
     wait()
       end
    end
