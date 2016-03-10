@@ -324,7 +324,7 @@ m.KeyDown:connect(function(k)
     
     block.Anchored=true
   block.Size=Vector3.new(5,5,5)
-  block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-100,100)),math.rad(math.random(-100,100)))
+  block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360)))
   block.CFrame=block.CFrame*CFrame.new(math.random(-20,20)/10,math.random(-15,5)/10,math.random(-20,20)/10)
   block.BrickColor=workspace.Base.BrickColor
   block.Material=workspace.Base.Material
