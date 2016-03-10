@@ -286,7 +286,7 @@ m.KeyDown:connect(function(k)
   until t.CFrame.Y<=3
   t.Anchored=false
   char.Humanoid.Jump=true
- for AA=math.random(1,5) do
+ for AA=1,math.random(1,5) do
   
   for ang=1,360,20 do
     local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)*CFrame.new(0,0,-(AA*2))
