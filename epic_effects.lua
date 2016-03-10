@@ -260,6 +260,7 @@ m.KeyDown:connect(function(k)
     anim.Size=Vector3.new(1,1,1)
     anim.Anchored=true
     anim.CFrame=t.CFrame
+    t.Anchored=true
     cf=anim.CFrame
     local w=Instance.new("Weld",t)
     w.Part0,w.Part1=t,anim
