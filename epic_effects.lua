@@ -303,7 +303,7 @@ m.KeyDown:connect(function(k)
   coroutine.wrap(function()
   	local dmg=Instance.new("Part",workspace.Base)
   	dmg.Size,dmg.BrickColor,dmg.Material=Vector3.new(2,1,2),workspace.Base.BrickColor,workspace.Base.Material
-  	dmg.Anchored=false
+  	dmg.Anchored=true
   	dmg.CFrame=t.CFrame
   	dmg.CanCollide=false
   	cf=CFrame.new(t.CFrame.X,1,t.CFrame.Y)
