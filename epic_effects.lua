@@ -246,7 +246,8 @@ attack2=function()
 
  t=char.Torso
 m.KeyDown:connect(function(k)
-  if Attacking then return end
+  if Attacking then 
+	return end
   
   if k=='h' then
   Attacking=true
@@ -319,4 +320,5 @@ m.KeyDown:connect(function(k)
   end
  end
 
+end
 end)
