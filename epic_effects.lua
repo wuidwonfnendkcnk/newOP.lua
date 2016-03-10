@@ -287,11 +287,11 @@ m.KeyDown:connect(function(k)
   t.Anchored=false
   char.Humanoid.Jump=true
   for ang=1,360,20 do
-    local asdomg=t.CFrame*CFrame.new(0,0,-10)*CFrame.Angles(0,math.rad(ang),0)
+    local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)
     if math.random(1,361)==ang then wait(0) end
     local block=Instance.new("Part",workspace.Base)
     coroutine.wrap(function()
-      for i=1,10,0.25 do wait(0) block.Transparency=i/10 end
+      for i=1,10,0.1 do wait(0) block.Transparency=i/10 end
       block:Destroy()
     end)()
     block.Anchored=true
