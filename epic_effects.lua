@@ -312,7 +312,7 @@ m.KeyDown:connect(function(k)
   	omgangles=0
   	coroutine.wrap(function() 
   		while wait(0) and dmg and dmg.Parent do 
-  		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Y)*CFrame.Angles(0,math.rad(omgangles*10),0),0.5) 
+  		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0),0.5) 
   		end 
   	end)()
   	for i=1,36 do
