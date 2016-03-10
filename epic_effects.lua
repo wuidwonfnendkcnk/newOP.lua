@@ -262,11 +262,9 @@ m.KeyDown:connect(function(k)
     anim.CFrame=t.CFrame
     t.Anchored=true
     cf=anim.CFrame
-    local w=Instance.new("Weld",t)
-    w.Part0,w.Part1=t,anim
     for i=1,325,20 do
       wait(0)
-      anim.CFrame=anim.CFrame*CFrame.Angles(math.rad(-(i/2)),0,0)*CFrame.new(0,0,-2)
+      anim.CFrame=cf*CFrame.new(0,-i/65,-2)*CFrame.Angles(math.rad(-(i/2)),0,0)
         CLerp(t,anim.CFrame,0.5)
       end
    end
