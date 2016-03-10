@@ -300,7 +300,19 @@ m.KeyDown:connect(function(k)
   
   t.Anchored=false
   char.Humanoid.Jump=true
-  
+  coroutine.wrap(function()
+  	local dmg=Instance.new("Part",workspace.Base)
+  	dmg.Size,dmg.BrickColor,dmg.Material=Vector3.new(2,1,2),workspace.Base.BrickColor,workspace.Base.Material
+  	dmg.Anchored=false
+  	dmg.CFrame=t.CFrame
+  	dmg.CanCollide=false
+  	dmg.Touched:connect(function(h) if h.Parent==char then return end end)
+  	for i=1,36 do
+  		wait(0)
+  		magn=(t.Position.Y-workspace.Base.CFrame.Y)
+  		CLerp(dmg,t.CFrame*CFrame.new(0,-magn,0)*CFrame.Angles(0,math.rad(i*10),0),0.5)
+  		end
+  	end)()
  for AA=2,math.random(2,5) do
   if math.random(1,20) == math.random(1,20) then wait(0) end
   for ang=1,360,20 do
