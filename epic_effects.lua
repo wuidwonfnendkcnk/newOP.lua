@@ -263,10 +263,18 @@ m.KeyDown:connect(function(k)
     char.Humanoid.Jump=true
     t.Anchored=true
     local okcf=anim.CFrame
-    for i=1,325,20 do
+    for i=1,360,20 do
       wait(0)
       anim.CFrame=okcf*CFrame.new(0,i/65,-i/30)*CFrame.Angles(math.rad(-(i/2)),0,0)
         CLerp(t,anim.CFrame,0.5)
+      end
+    local a=360/65
+    local b=360/30
+    local c=180
+    okcf=okcf*CFrame.new(0,a,b)*CFrame.Angles(math.rad(c),0,0)
+    for i=1,360,5 do
+  anim.CFrame=okcf*CFrame.new(0,-i/30,-i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
+    wait()
       end
    end
   end)
