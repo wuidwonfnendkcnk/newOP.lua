@@ -260,6 +260,7 @@ m.KeyDown:connect(function(k)
     anim.Size=Vector3.new(1,1,1)
     anim.Anchored=true
     anim.CFrame=t.CFrame
+    char.Humanoid.Jump=true
     t.Anchored=true
     local okcf=anim.CFrame
     for i=1,325,20 do
