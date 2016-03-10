@@ -312,7 +312,8 @@ m.KeyDown:connect(function(k)
     
     
     coroutine.wrap(function()
-      for i=1,10,0.1 do wait(0) block.Transparency=i/10 end
+      for i=1,10,0.1 do if i>3 and i<3.3 then block.Anchored=false end
+      	wait(0) block.Transparency=i/10 end
       block:Destroy()
     end)()
     
