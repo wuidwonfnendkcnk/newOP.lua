@@ -312,7 +312,7 @@ m.KeyDown:connect(function(k)
     
     
     coroutine.wrap(function()
-      for i=1,10,0.1 do if i>3 and i<3.3 then CL(block,block.CFrame+Vector3.new(0,1,0),0.1) end
+      for i=1,10,0.1 do if i>3 and i<3.3 then CLerp(block,block.CFrame+Vector3.new(0,1,0),0.1) end
       	wait(0) block.Transparency=i/10 end
       block:Destroy()
     end)()
