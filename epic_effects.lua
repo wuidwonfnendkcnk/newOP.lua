@@ -286,9 +286,13 @@ m.KeyDown:connect(function(k)
   until t.CFrame.Y<=3
   t.Anchored=false
   char.Humanoid.Jump=true
+ for AA=math.random(1,5) do
+  
   for ang=1,360,20 do
-    local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)
+    local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)*CFrame.new(0,0,-(AA*2))
+    
     if math.random(1,361)==ang then wait(0) end
+    
     local block=Instance.new("Part",workspace.Base)
     coroutine.wrap(function()
       for i=1,10,0.1 do wait(0) block.Transparency=i/10 end
@@ -301,5 +305,6 @@ m.KeyDown:connect(function(k)
   block.BrickColor=workspace.Base.BrickColor
   block.Material=workspace.Base.Material
   end
-   end
+ end
+ 
   end)
