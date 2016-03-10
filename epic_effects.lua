@@ -311,6 +311,7 @@ m.KeyDown:connect(function(k)
   		pcall(function() h.Parent.Humanoid:TakeDamage(3) end) end)
   	omgangles=0
   	dmg.CFrame=cf
+  	for i=1,10 do wait(0) dmg.CFrame=cf end
   	coroutine.wrap(function() 
   		while wait(0) and dmg and dmg.Parent do 
   		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0),0.5) 
