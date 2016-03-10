@@ -223,6 +223,7 @@ attack2=function()
     
     local sphere=Instance.new("Part",char)
     sphere.Size=Vector3.new(i,i,i)
+    a=a+sphere.Size.Z
     sphere.Shape='Ball'
     sphere.Anchored=true
     sphere.Touched:connect(function(h)
@@ -232,9 +233,9 @@ attack2=function()
       end)
     sphere.Material=workspace.Base.Material
     sphere.BrickColor=workspace.Base.BrickColor
-    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))
-    	a=a+sphere.Size.Z
-      sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z-a)
+    sphere.CFrame=char.Torso.CFrame*CFrame.new(0,0,-(2+(i*1.5)))*CFrame.new(0,0,-a)
+    	
+      sphere.CFrame=CFrame.new(sphere.CFrame.X,0,sphere.CFrame.Z)
     coroutine.wrap(function()
       wait(1.2)
       for i=1,10 do
