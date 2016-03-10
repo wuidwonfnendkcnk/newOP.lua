@@ -256,6 +256,8 @@ m.KeyDown:connect(function(k)
     Attacking=true
     attack2()
   elseif k=='p' then
+    
+    
     local anim=Instance.new("Part",char)
     anim.Size=Vector3.new(1,1,1)
     anim.Anchored=true
@@ -263,20 +265,24 @@ m.KeyDown:connect(function(k)
     char.Humanoid.Jump=true
     t.Anchored=true
     local okcf=anim.CFrame
+    
+    
     for i=1,360,20 do
       wait(0)
       anim.CFrame=okcf*CFrame.new(0,i/65,-i/30)*CFrame.Angles(math.rad(-(i/2)),0,0)
         CLerp(t,anim.CFrame,0.5)
-      end
+    end
+    
     local a=360/65
     local b=360/30
     local c=180
     okcf=okcf*CFrame.new(0,a,-b)*CFrame.Angles(math.rad(c),0,0)
-    for i=1,360,5 do
-      CLerp(t,anim.CFrame,0.5)
-  anim.CFrame=okcf*CFrame.new(0,-i/30,i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
-    wait()
-    end
+    
+      for i=1,360,5 do
+        CLerp(t,anim.CFrame,0.5)
+        anim.CFrame=okcf*CFrame.new(0,-i/30,i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
+        wait()
+      end
     
     anim:Destroy()
     local CFF=t.CFrame
@@ -284,20 +290,26 @@ m.KeyDown:connect(function(k)
     repeat wait(0)
     CLerp(t,CFF,0.5)
   until t.CFrame.Y<=3
+  
   t.Anchored=false
   char.Humanoid.Jump=true
+  
  for AA=1,math.random(1,5) do
   
   for ang=1,360,20 do
     local asdomg=t.CFrame*CFrame.Angles(0,math.rad(ang),0)*CFrame.new(0,0,-17.5)*CFrame.new(0,0,-(AA*2))
     
-    if math.random(1,361)==ang then wait(0) end
+        if math.random(1,361)==ang then wait(0) end
     
     local block=Instance.new("Part",workspace.Base)
+    
+    
     coroutine.wrap(function()
       for i=1,10,0.1 do wait(0) block.Transparency=i/10 end
       block:Destroy()
     end)()
+    
+    
     block.Anchored=true
   block.Size=Vector3.new(5,5,5)
   block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-100,100)),math.rad(math.random(-100,100)))
@@ -306,5 +318,5 @@ m.KeyDown:connect(function(k)
   block.Material=workspace.Base.Material
   end
  end
- 
-  end)
+
+end)
