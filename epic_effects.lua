@@ -264,7 +264,7 @@ m.KeyDown:connect(function(k)
     local okcf=anim.CFrame
     for i=1,325,20 do
       wait(0)
-      anim.CFrame=okcf*CFrame.new(0,i/65,-i/200)*CFrame.Angles(math.rad(-(i/2)),0,0)
+      anim.CFrame=okcf*CFrame.new(0,i/65,-i/100)*CFrame.Angles(math.rad(-(i/2)),0,0)
         CLerp(t,anim.CFrame,0.5)
       end
    end
