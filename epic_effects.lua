@@ -326,6 +326,8 @@ m.KeyDown:connect(function(k)
     	--*CFrame.Angles(r(mr(100)),r(mr(100)),r(mr(100)))
     	local spot=block.CFrame*CFrame.new(0,100,-20)
     	block.CanCollide=false
+    	block.Touched:connect(function(h) if h.Parent==char then return end
+    	pcall(function() h.Parent.Humanoid:TakeDamage(1) end) end)
     	coroutine.wrap(function() wait(0.5) while wait(0) and block and block.Parent do CLerp(block,spot,0.05) end end)()
       for i=1,10,0.35 do 
       	wait(0) block.Transparency=i/10 end
