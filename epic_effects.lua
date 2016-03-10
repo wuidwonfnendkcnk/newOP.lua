@@ -303,14 +303,15 @@ m.KeyDown:connect(function(k)
   coroutine.wrap(function()
   	local dmg=Instance.new("Part",workspace.Base)
   	dmg.Size,dmg.BrickColor,dmg.Material=Vector3.new(2,1,2),workspace.Base.BrickColor,workspace.Base.Material
-  	dmg.Anchored=false
+  	dmg.Anchored=true
   	dmg.CFrame=t.CFrame
   	dmg.CanCollide=false
-  	dmg.Touched:connect(function(h) if h.Parent==char then return end end)
+  	dmg.Touched:connect(function(h) if h.Parent==char then return end
+  		pcall(function() h.Parent.Humanoid:TakeDamage(1) end) end)
   	for i=1,36 do
   		wait(0)
   		
-  		cf=dmg.CFrame
+  		cf=CFrame.new(t.CFrame.X,1,t.CFrame.Y)
   		dmg.Size=dmg.Size+Vector3.new(2,0,2)
   		dmg.CFrame=cf
   		CLerp(dmg,CFrame.new(t.CFrame.X,1,t.CFrame.Y)*CFrame.Angles(0,math.rad(i*10),0),0.5)
