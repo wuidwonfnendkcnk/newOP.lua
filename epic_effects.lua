@@ -283,8 +283,10 @@ m.KeyDown:connect(function(k)
         CLerp(t,anim.CFrame,0.5)
         anim.CFrame=okcf*CFrame.new(0,-i/30,i/20)*CFrame.Angles(math.rad(-(i/2)),0,0)
         wait()
+        lolokay=i
       end
-    
+    CLerp(t,anim.CFrame,0.5)
+        anim.CFrame=okcf*CFrame.new(0,-lolokay/30,lolokay/20)*CFrame.Angles(math.rad(-((lolokay+25)/2)),0,0)
     anim:Destroy()
     local CFF=t.CFrame
     repeat CFF=CFF+Vector3.new(0,-1,0) until CFF.Y<3
