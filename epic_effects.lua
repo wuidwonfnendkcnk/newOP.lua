@@ -303,7 +303,7 @@ m.KeyDown:connect(function(k)
   coroutine.wrap(function()
   	local dmg=Instance.new("Part",workspace.Base)
   	dmg.Size,dmg.BrickColor,dmg.Material=Vector3.new(2,1,2),workspace.Base.BrickColor,workspace.Base.Material
-  	dmg.Anchored=true
+  	dmg.Anchored=false
   	dmg.CFrame=t.CFrame
   	dmg.CanCollide=false
   	cf=CFrame.new(t.CFrame.X,1,t.CFrame.Y)
@@ -320,7 +320,8 @@ m.KeyDown:connect(function(k)
   		dmg.Size=dmg.Size+Vector3.new(2,0,2)
   		dmg.CFrame=cf
   		omgangles=i
-  		end
+  	end
+  	dmg:Destroy()
   	end)()
  for AA=2,math.random(2,5) do
   if math.random(1,20) == math.random(1,20) then wait(0) end
