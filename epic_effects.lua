@@ -312,7 +312,7 @@ m.KeyDown:connect(function(k)
   
     block.Anchored=true
   block.Size=Vector3.new(5,5,5)
-  block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360)))
+  block.CFrame=asdomg*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-100,100)),math.rad(math.random(-100,100)))
   block.CFrame=block.CFrame*CFrame.new(math.random(-20,20)/10,math.random(-15,5)/10,math.random(-20,20)/10)
   block.BrickColor=workspace.Base.BrickColor
   block.Material=workspace.Base.Material
@@ -325,7 +325,8 @@ m.KeyDown:connect(function(k)
     	mr=math.random
     	--*CFrame.Angles(r(mr(100)),r(mr(100)),r(mr(100)))
     	local spot=block.CFrame*CFrame.new(0,100,-20)
-      for i=1,10,0.35 do CLerp(block,spot,0.05)
+    	
+      for i=1,10,0.35 do if i>3 then CLerp(block,spot,0.05) end
       	wait(0) block.Transparency=i/10 end
       block:Destroy()
     end)() 
