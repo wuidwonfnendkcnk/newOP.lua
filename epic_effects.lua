@@ -212,7 +212,8 @@ attack1=function()
       cl:Destroy()
       end)()
    end
- end)()
+end)()
+Attacking=false
 end
 
 attack2=function()
@@ -240,19 +241,32 @@ attack2=function()
       game.Debris:AddItem(sphere,0.1)
       end)()
   end
+  Attacking=false
   end
 
- 
+ t=char.Torso
 m.KeyDown:connect(function(k)
   if Attacking then return end
   
   if k=='h' then
   Attacking=true
     attack1()
-    Attacking=false
+  
   elseif k=='f' then
     Attacking=true
     attack2()
-    Attacking=false
+  elseif k=='p' then
+    local anim=Instance.new("Part",char)
+    anim.Size=Vector3.new(1,1,1)
+    anim.Anchored=true
+    anim.CFrame=t.CFrame
+    cf=anim.CFrame
+    local w=Instance.new("Weld",t)
+    w.Part0,w.Part1=t,anim
+    for i=1,325,20 do
+      wait(0)
+      anim.CFrame=anim.CFrame*CFrame.Angles(0,0,math.rad(i/2))*CFrame.new(0,0,-1)
+        CLerp(t,anim.CFrame,0.5)
+      end
    end
   end)
