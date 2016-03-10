@@ -218,11 +218,11 @@ end
 
 attack2=function()
 	a=0
-  for i=1,60,5 do
+  for i=1,30,5 do
       wait(0)
     
     local sphere=Instance.new("Part",char)
-    sphere.Size=Vector3.new(i,i,i)
+    sphere.Size=Vector3.new(i*2,i*2,i*2)
     a=a+sphere.Size.Z
     sphere.Shape='Ball'
     sphere.Anchored=true
