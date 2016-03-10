@@ -310,6 +310,9 @@ m.KeyDown:connect(function(k)
   	for i=1,36 do
   		wait(0)
   		magn=(t.Position.Y-workspace.Base.CFrame.Y)
+  		cf=dmg.CFrame
+  		dmg.Size=dmg.Size+Vector3.new(2,0,2)
+  		dmg.CFrame=cf
   		CLerp(dmg,t.CFrame*CFrame.new(0,-magn,0)*CFrame.Angles(0,math.rad(i*10),0),0.5)
   		end
   	end)()
