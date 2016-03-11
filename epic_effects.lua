@@ -312,14 +312,17 @@ m.KeyDown:connect(function(k)
   	omgangles=0
   	dmg.CFrame=cf
   	for i=1,10 do wait(0) dmg.CFrame=cf end
-
+t.CFrame=t.CFrame*CFrame.new(0,10,0)
   	for i=1,36 do
   		wait(0)
+  		t.Anchored=true
+  		
   		CLerp(t,CFrame.new(t.CFrame.X,10,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0),0.2)
   		dmg.Size=dmg.Size+Vector3.new(2,0,2)
   		dmg.CFrame=CFrame.new(t.CFrame.X,0.5,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0)
   		omgangles=i
   	end
+  	t.Anchored=false
   	dmg:Destroy()
   	end)()
  for AA=2,math.random(2,5) do
