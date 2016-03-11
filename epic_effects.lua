@@ -380,14 +380,14 @@ elseif k=='q' then
  wait(1)
  for i=1,5,0.5 do
  	wait(0)
- 	bl.CFrame=cfr1*CFrame.new(-i,0,0)
- 	bl2.CFrame=cfr2*CFrame.new(i,0,0)
+ 	bl.CFrame=cfr1*CFrame.new(i,0,0)
+ 	bl2.CFrame=cfr2*CFrame.new(-i,0,0)
  end
  
   for i=5,0,-0.5 do
  	wait(0)
- 	bl.CFrame=cfr1*CFrame.new(-i,0,0)
- 	bl2.CFrame=cfr2*CFrame.new(i,0,0)
+ 	bl.CFrame=cfr1*CFrame.new(i,0,0)
+ 	bl2.CFrame=cfr2*CFrame.new(-i,0,0)
  end
  
 end
