@@ -109,9 +109,15 @@ eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.Transparency=0.75
 Instance.new("SpecialMesh",eye)
-Instance.new("Fire",eye)
-eye.Fire.Size=0.05
-eye.Fire.Heat=30
+local emit=Instance.new("ParticleEmitter",eye)
+emit.Color=ColorSequence.new(Color3.new(1,0,0),Color3.new(1,0,0))
+emit.Size=0.1
+emit.Acceleration=Vector3.new(0,10,0)
+emit.LifeTime=NumberRange.new(0,1)
+emit.LightEmission=0.5
+emit.Texture='rbxasset://textures/particles/fire_main.dds'
+emit.Rate=50
+emit.Speed=1
 local eye2=eye:clone()
 eye2.Parent=char
 local w,w2=Instance.new("Weld",eye),Instance.new("Weld",eye2)
