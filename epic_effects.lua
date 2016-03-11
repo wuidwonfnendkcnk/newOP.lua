@@ -375,10 +375,20 @@ elseif k=='q' then
  bl2.Parent=workspace
  bl.CFrame=char.Torso.CFrame*CFrame.new(10,0,-10)
  bl2.CFrame=bl.CFrame*CFrame.new(-5,0,0)
- for i=1,5 do
+ local cfr1,cfr2=bl.CFrame,bl2.CFrame
+ for i=1,10 do bl.Size=bl.Size+Vector3.new(0,1,1) bl2.Size=bl.Size bl2.CFrame=cfr2 bl.CFrame=cfr1 wait(0.1) end
+ wait(1)
+ for i=1,2.5,0.5 do
  	wait(0)
- 	bl.CFrame=bl.CFrame*CFrame.new(-0.5,0,0)
- 	bl2.CFrame=bl2.CFrame*CFrame.new(0.5,0,0)
- 	end
+ 	bl.CFrame=cfr1*CFrame.new(-i,0,0)
+ 	bl2.CFrame=cfr2*CFrame.new(i,0,0)
+ end
+ 
+  for i=2.5,0,-0.5 do
+ 	wait(0)
+ 	bl.CFrame=cfr1*CFrame.new(-i,0,0)
+ 	bl2.CFrame=cfr2*CFrame.new(i,0,0)
+ end
+ 
 end
 end)
