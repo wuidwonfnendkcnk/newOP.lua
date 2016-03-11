@@ -102,6 +102,17 @@ end
 
 wait(1)
 
+local eye=Instance.new("Part",char)
+eye.FormFactor='Custom'
+eye.Size=Vector3.new(0.1,0.05,0.1)
+eye.BrickColor=BrickColor.New'Really red'
+eye.Material='Neon'
+local eye2=eye:clone()
+eye2.Parent=char
+local w,w2=Instance.new("Weld",eye),Instance.new("Weld",eye2)
+w.Part0,w.Part1,w2.Part0,w2.Part1=eye,char.Head,eye2,char.Head
+w.C0=CFrame.new(-0.05,0.1,-0.45)
+w2.C0=CFrame.new(0.05,0.1,-0.45)
 
 
 attack1=function()
