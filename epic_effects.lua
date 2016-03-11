@@ -377,17 +377,19 @@ elseif k=='q' then
  bl2.CFrame=bl.CFrame*CFrame.new(10,0,0)
  local touch=function(h) 
    pcall(function() 
- 		for i,v in pairs(h.Parent.Torso:children()) do 
- 	pcall(function() v.C0=(h.Parent.Torso:children()[math.random(1,#h.ParentTorso:children())]).C0 
- 	local p1=v.Part1
- 	local p0=v.Part0
- 	local w=Instance.new("Weld",p0)
- 	w.Part0=p0
- 	w.Part1=p1
- 	w.C0=v.C0
- 	w.C1=v.C1
+ local w=Instance.new("Weld",h)
+ w.Part0=h
+ repeat asd=h.Parent:children()[math.random(1,#h.Parent:children())] until asd:IsA'BasePart' and asd~=h
+ 	local rpCF=h.Parent.HumanoidRootPart.CFrame
+ local diff=CFrame.new((rpCF.X-asd.CFrame.X),rpCF.Y-asd.CFrame.Y,rpCF.Z-asd.CFrame.Z)
+ local diff2=CFrame.new(rpCF.X-h.CFrame.X,rpCF.Y-h.CFrame.Y,rpCF.Z-h.CFrame.Z)
+ local w2=Instance.new("Weld",asd)
+ w.Part1=rpCF
+ w.C0=diff
+ w2.Part1=rpCF
+ w2.C0=diff2
  	end)
- 	end
+ 	
  	h.Parent.Humanoid:TakeDamage(5)
 end)
 
