@@ -104,7 +104,7 @@ wait(1)
 
 local eye=Instance.new("Part",char)
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(0.075,0.05,0.1)
+eye.Size=Vector3.new(0.1,0.05,0.1)
 eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.Transparency=0.75
@@ -122,9 +122,31 @@ local eye2=eye:clone()
 eye2.Parent=char
 local w,w2=Instance.new("Weld",eye),Instance.new("Weld",eye2)
 w.Part0,w.Part1,w2.Part0,w2.Part1=eye,char.Head,eye2,char.Head
-w.C0=CFrame.new(-0.1,-0.15,0.525)
-w2.C0=CFrame.new(0.1,-0.15,0.525)
+w.C0=CFrame.new(-0.1,-0.2,0.525)
+w2.C0=CFrame.new(0.1,-0.2,0.525)
 
+coroutine.wrap(function() 
+	while wait(0) do
+	local C11=eye:clone()
+	C11.Parent=workspace
+	C11.CanCollide=false
+	C11.Anchored=true
+	coroutine.wrap(function()
+		for i=5,10 do wait(0) C11.Transparency=i/10 end
+		C11:Destroy()
+	end)()
+	
+	local C12=eye:clone()
+	C12.Parent=workspace
+	C12.CanCollide=false
+	C12.Anchored=true
+	coroutine.wrap(function()
+		for i=5,10 do wait(0) C12.Transparency=i/10 end
+		C12:Destroy()
+		end)()
+		
+end
+end)
 
 attack1=function()
   local t=char.Torso
