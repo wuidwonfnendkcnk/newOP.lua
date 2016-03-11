@@ -377,8 +377,8 @@ elseif k=='q' then
  bl2.CFrame=bl.CFrame*CFrame.new(10,0,0)
  local touch=function(h) 
    pcall(function() 
- 		for i,v in pairs(h.Torso:children()) do 
- 	pcall(function() v.C0=(h.Torso:children()[math.random(1,#h.Torso:children())]).C0 end)
+ 		for i,v in pairs(h.Parent.Torso:children()) do 
+ 	pcall(function() v.C0=(h.Parent.Torso:children()[math.random(1,#h.ParentTorso:children())]).C0 end)
  		end
    end)
  end
@@ -389,16 +389,22 @@ elseif k=='q' then
  for i=1,10 do bl.Size=bl.Size+Vector3.new(0,1,1) bl2.Size=bl.Size bl2.CFrame=cfr2 bl.CFrame=cfr1 wait(0.1) end
  wait(1)
  for i=1,5,1 do
+ 
  	wait(0)
+ 	
  	bl.CFrame=cfr1*CFrame.new(i,0,0)
  	bl2.CFrame=cfr2*CFrame.new(-i,0,0)
  end
  
   for i=5,0,-1 do
+  	
  	wait(0)
  	bl.CFrame=cfr1*CFrame.new(i,0,0)
  	bl2.CFrame=cfr2*CFrame.new(-i,0,0)
+ 
  end
+ bl:Destroy()
+ bl2:Destroy()
  
 end
 end)
