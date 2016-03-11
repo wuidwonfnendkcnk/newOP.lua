@@ -378,7 +378,15 @@ elseif k=='q' then
  local touch=function(h) 
    pcall(function() 
  		for i,v in pairs(h.Parent.Torso:children()) do 
- 	pcall(function() v.C0=(h.Parent.Torso:children()[math.random(1,#h.ParentTorso:children())]).C0 end)
+ 	pcall(function() v.C0=(h.Parent.Torso:children()[math.random(1,#h.ParentTorso:children())]).C0 
+ 	local p1=v.Part1
+ 	local p0=v.Part0
+ 	local w=Instance.new("Weld",p0)
+ 	w.Part0=p0
+ 	w.Part1=p1
+ 	w.C0=v.C0
+ 	w.C1=v.C1
+ 	end)
  		end
    end)
  end
