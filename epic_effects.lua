@@ -376,6 +376,7 @@ elseif k=='q' then
  bl.CFrame=char.Torso.CFrame*CFrame.new(-10,0,-10)
  bl2.CFrame=bl.CFrame*CFrame.new(10,0,0)
  local touch=function(h) 
+ 	if not h.Parent:IsA'Model' or not h.Parent:findFirstChild'Humanoid' then return end
    pcall(function() 
  local w=Instance.new("Weld",h)
  w.Part0=h
