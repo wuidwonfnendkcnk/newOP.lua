@@ -109,6 +109,9 @@ eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.Transparency=0.75
 Instance.new("SpecialMesh",eye)
+Instance.new("Fire",eye)
+eye.Fire.Size=0.05
+eye.Fire.Heat=30
 local eye2=eye:clone()
 eye2.Parent=char
 local w,w2=Instance.new("Weld",eye),Instance.new("Weld",eye2)
