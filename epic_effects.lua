@@ -388,11 +388,8 @@ elseif k=='q' then
  w.C0=diff
  w2.Part1=rpCF
  w2.C0=diff2
+ h.Parent.Humanoid:TakeDamage(5)
  	end)
- 	
- 	h.Parent.Humanoid:TakeDamage(5)
-end)
-
  end
  bl.Touched:connect(touch)
  bl2.Touched:connect(touch)
