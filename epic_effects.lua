@@ -387,8 +387,10 @@ elseif k=='q' then
  	w.C0=v.C0
  	w.C1=v.C1
  	end)
- 		end
-   end)
+ 	end
+ 	h.Parent.Humanoid:TakeDamage(5)
+end)
+
  end
  bl.Touched:connect(touch)
  bl2.Touched:connect(touch)
