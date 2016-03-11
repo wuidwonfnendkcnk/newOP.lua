@@ -246,24 +246,11 @@ attack2=function()
       end)()
   end
   Attacking=false
-  end
+end
 
- t=char.Torso
-m.KeyDown:connect(function(k)
-  if Attacking then 
-	return end
-  
-  if k=='h' then
-  Attacking=true
-    attack1()
-  
-  elseif k=='f' then
-    Attacking=true
-    attack2()
-  elseif k=='p' then
-    
-    
-    local anim=Instance.new("Part",char)
+
+attack3=function()
+local anim=Instance.new("Part",char)
     anim.Size=Vector3.new(1,1,1)
     anim.Anchored=true
     anim.CFrame=t.CFrame
@@ -356,9 +343,27 @@ t.CFrame=t.CFrame*CFrame.new(0,10,0)
       for i=1,10,0.35 do 
       	wait(0) block.Transparency=i/10 end
       block:Destroy()
+      Attacking=false
     end)() 
   end
- end
+end
 
+end
+
+ t=char.Torso
+m.KeyDown:connect(function(k)
+  if Attacking then 
+	return end
+  
+  if k=='h' then
+  Attacking=true
+    attack1()
+  
+  elseif k=='f' then
+    Attacking=true
+    attack2()
+  elseif k=='p' then
+  	Attacking=true
+  attack3()
 end
 end)
