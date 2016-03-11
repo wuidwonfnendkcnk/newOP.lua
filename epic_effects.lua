@@ -365,5 +365,20 @@ m.KeyDown:connect(function(k)
   elseif k=='p' then
   	Attacking=true
   attack3()
+elseif k=='q' then
+ local bl=Instance.new("Part",workspace)
+ bl.Size=Vector3.new(2,2,4)
+ bl.Anchored=true
+ bl.Material=workspace.Base.Material
+ bl.BrickColor=workspace.Base.BrickColor
+ bl2=bl:clone()
+ bl2.Parent=workspace
+ bl.CFrame=char.Torso.CFrame*CFrame.new(10,0,-10)
+ bl2.CFrame=bl.CFrame*CFrame.new(-5,0,0)
+ for i=1,5 do
+ 	wait(0)
+ 	bl.CFrame=bl.CFrame*CFrame.new(-0.5,0,0)
+ 	bl2.CFrame=bl2.CFrame*CFrame.new(0.5,0,0)
+ 	end
 end
 end)
