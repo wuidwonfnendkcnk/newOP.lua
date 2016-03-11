@@ -111,7 +111,7 @@ eye.Transparency=0.75
 Instance.new("SpecialMesh",eye)
 local emit=Instance.new("ParticleEmitter",eye)
 emit.Color=ColorSequence.new(Color3.new(1,0,0),Color3.new(1,0,0))
-emit.Size=0.1
+emit.Size=NumberRange.new(0.1,0.1)
 emit.Acceleration=Vector3.new(0,10,0)
 emit.LifeTime=NumberRange.new(0,1)
 emit.LightEmission=0.5
