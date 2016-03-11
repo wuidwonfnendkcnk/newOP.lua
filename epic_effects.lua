@@ -385,9 +385,9 @@ local w=Instance.new("Weld",h)
  local diff=CFrame.new((rpCF.X-asd.CFrame.X),rpCF.Y-asd.CFrame.Y,rpCF.Z-asd.CFrame.Z)
  local diff2=CFrame.new(rpCF.X-h.CFrame.X,rpCF.Y-h.CFrame.Y,rpCF.Z-h.CFrame.Z)
  local w2=Instance.new("Weld",asd)
- w.Part1=rpCF
+ w.Part1=h.Parent.Torso
  w.C0=diff
- w2.Part1=rpCF
+ w2.Part1=h.Parent.Torso
  w2.C0=diff2
  h.Parent.Humanoid:TakeDamage(5)
 
