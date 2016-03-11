@@ -146,7 +146,7 @@ coroutine.wrap(function()
 		end)()
 		
 end
-end)
+end)()
 
 attack1=function()
   local t=char.Torso
