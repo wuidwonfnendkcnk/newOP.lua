@@ -377,8 +377,8 @@ elseif k=='q' then
  bl2.CFrame=bl.CFrame*CFrame.new(10,0,0)
  local touch=function(h) 
  	if not h.Parent:IsA'Model' or not h.Parent:findFirstChild'Humanoid' then return end
-   pcall(function() 
- local w=Instance.new("Weld",h)
+ 	h.Parent:WaitForChild'HumanoidRootPart'
+local w=Instance.new("Weld",h)
  w.Part0=h
  repeat asd=h.Parent:children()[math.random(1,#h.Parent:children())] until asd:IsA'BasePart' and asd~=h
  	local rpCF=h.Parent.HumanoidRootPart.CFrame
@@ -390,7 +390,7 @@ elseif k=='q' then
  w2.Part1=rpCF
  w2.C0=diff2
  h.Parent.Humanoid:TakeDamage(5)
- 	end)
+
  end
  bl.Touched:connect(touch)
  bl2.Touched:connect(touch)
@@ -399,11 +399,14 @@ elseif k=='q' then
  for i=1,10 do bl.Size=bl.Size+Vector3.new(0,1,1) bl2.Size=bl.Size bl2.CFrame=cfr2 bl.CFrame=cfr1 wait(0.1) end
  wait(1)
  for i=1,5,1 do
- 
+ bl.Anchored=false
+ bl2.Anchored=true
  	wait(0)
  	
  	bl.CFrame=cfr1*CFrame.new(i,0,0)
  	bl2.CFrame=cfr2*CFrame.new(-i,0,0)
+ 	bl.Anchored=true
+ 	bl2.Anchored=false
  end
  
   for i=5,0,-1 do
