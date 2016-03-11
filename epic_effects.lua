@@ -315,9 +315,9 @@ m.KeyDown:connect(function(k)
 
   	for i=1,36 do
   		wait(0)
-  		t.CFrame=t.CFrame*CFrame.new(0,-1,0)
+  		t.CFrame=dmg.CFrame*CFrame.new(0,5,0)
   		dmg.Size=dmg.Size+Vector3.new(2,0,2)
-  		dmg.CFrame=CFrame.new(t.CFrame.X,1,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0)
+  		dmg.CFrame=CFrame.new(t.CFrame.X,0.5,t.CFrame.Z)*CFrame.Angles(0,math.rad(omgangles*10),0)
   		omgangles=i
   	end
   	dmg:Destroy()
