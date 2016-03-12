@@ -75,7 +75,7 @@ end
   hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
 np=Instance.new("Part",Attachblock)
   np.Anchored=true
-  np.Transparency=1
+  --np.Transparency=1
   np.CFrame=hole.CFrame*CFrame.new(0,-10,-10)
 for i=1,20 do
 Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
@@ -102,7 +102,9 @@ elseif ang<20 then
  np.CFrame=np.CFrame*CFrame.new(0,-1,0)
  else ang=0
 end
-np.CFrame=np.CFrame*CFrame.Angles(0,dir,0)
+if turn2 or turn then
+ np.CFrame=np.CFrame*CFrame.Angles(0,dir,0)
+ end
 np.CFrame=np.CFrame*CFrame.new(0,0,-1)
 Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.Angles(math.rad(90),0,0)*CFrame.new(0,0,-1)
 char.Torso.CFrame=Attachblock.CFrame
