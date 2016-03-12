@@ -516,10 +516,11 @@ fakeOut=function(qwe)
 		game.Debris:AddItem(block,0.3)
 		
 	workspace.CurrentCamera.CameraSubject=faking==true and mod or char.Humanoid
+	print(faking)
 	until faking==false or qwe==false
 	workspace.CurrentCamera.CameraSubject=char.Humanoid
 	char:MoveTo(char.Torso.Position+Vector3.new(-10000,0,0))
-else
+elseif qwe==false then
 	faking=false
 	char.Parent=workspace
 	workspace.CurrentCamera.CameraSubject=char.Humanoid
@@ -527,7 +528,7 @@ else
 end
 
 
-lasto=true
+lasto=false
  t=char.Torso
 m.KeyDown:connect(function(k)
   if Attacking then 
@@ -546,7 +547,7 @@ m.KeyDown:connect(function(k)
 elseif k=='q' then
  slamL()
 elseif k=='t' then
- fakeOut(lasto)
+ fakeOut(not lasto)
  lasto=not lasto
  
 end
