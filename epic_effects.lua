@@ -128,19 +128,23 @@ eye.CFrame=char.Head.CFrame*CFrame.new(-0.1,0.2,-0.525)
 eye2.CFrame=char.Head.CFrame*CFrame.new(0.1,0.2,-0.525)
 end
 end)()
-
+cf=char.Head.CFrame
 coroutine.wrap(function() 
 	while wait(0) do
 	local C11=eye:clone()
+	C11.Size=Vector3.new(0.1,0.05,(cf.p-char.Head.CFrame.p).magnitude)
 	C11.Parent=workspace
 	C11.CanCollide=false
 	C11.Anchored=true
+	
 	coroutine.wrap(function()
 		for i=5,10 do wait(0) C11.Transparency=i/10 end
 		C11:Destroy()
 	end)()
 	
 	local C12=eye2:clone()
+	C12.Size=Vector3.new(0.1,0.05,(cf.p-char.Head.CFrame.p).magnitude)
+	C12.CFrame,C11.CFrame=C12.CFrame*CFrame.new(0,0,-0.1),C11.CFrame*CFrame.new(0,0,-0.1)
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
