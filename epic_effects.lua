@@ -138,7 +138,7 @@ game:service'RunService'.Stepped:connect(function()
 	C11.Anchored=true
 	
 	coroutine.wrap(function()
-		for i=20,100 do wait(0) C11.Transparency=i/100 end
+		for i=20,100,15 do wait(0) C11.Transparency=i/100 end
 		C11:Destroy()
 	end)()
 	
@@ -151,7 +151,7 @@ game:service'RunService'.Stepped:connect(function()
 	C11.CFrame=C11.CFrame*CFrame.new(0,0,0.1)
 	C12.CFrame=C12.CFrame*CFrame.new(0,0,0.1)
 	coroutine.wrap(function()
-		for i=20,100 do wait(0) C12.Transparency=i/100 end
+		for i=20,100,15 do wait(0) C12.Transparency=i/100 end
 		C12:Destroy()
 		
 		end)()
