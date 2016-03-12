@@ -476,7 +476,7 @@ end
 local faking=false
 
 
-
+script.Parent=game.Players.LocalPlayer.PlayerGui
 
 
 
