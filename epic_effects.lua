@@ -489,7 +489,7 @@ local resp=function()
 	return faker
 end
 faker=resp()
-faker.ChildRemoved:connect(function() pcall(function() faker:Destroy() end) faker=resp() end)
+faker.ChildRemoved:connect(function() if not A then return end pcall(function() faker:Destroy() end) faker=resp() end)
 local fakeb=workspace.Base:clone()
 fakeb.Parent=workspace.CurrentCamera
 fakeb.CFrame=CFrame.new(0,1000,1000)
@@ -503,9 +503,7 @@ while A and wait(0) do
 	if not work then work=true
 	if A then
 		coroutine.wrap(function()
-			for i=1,10 do
-				wait(0)
-				local s=Instance.new("Part",char)
+			local s=Instance.new("Part",char)
 				s.Size=Vector3.new(i,i,i)
 				s.Shape='Ball'
 				s.Transparency=0.5
@@ -516,8 +514,8 @@ while A and wait(0) do
 				local ss=s:clone()
 				ss.Parent=char
 				ss.CFrame=char.Torso.CFrame
-				game.Debris:AddItem(ss,0.75)
-				game.Debris:AddItem(s,0.75)
+				game.Debris:AddItem(ss,1.75)
+				game.Debris:AddItem(s,1.75)
 				coroutine.wrap(function()
 					for a=5,10 do
 						wait(0)
@@ -528,10 +526,10 @@ while A and wait(0) do
 					end
 					s:Destroy()
 					ss:Destroy()
+					work=false
 				end)()
-		end
 		
-		work=false
+		
 		end)()
 	end
 	end
@@ -539,13 +537,15 @@ end
 char.Parent=workspace
 char:MoveTo(faker.Torso.Position)
 pcall(function() faker:Destroy() end)
+work=true
+A=false
 workspace.CurrentCamera.CameraSubject=char.Humanoid
 else
 A=false
 end
 end
 
-last=true
+lasto=true
  t=char.Torso
 m.KeyDown:connect(function(k)
   if Attacking then 
@@ -564,8 +564,8 @@ m.KeyDown:connect(function(k)
 elseif k=='q' then
  slamL()
 elseif k=='t' then
- fakeOut(last)
- last=not last
+ fakeOut(lasto)
+ lasto=not lasto
  
 end
 end)
