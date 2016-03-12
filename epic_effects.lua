@@ -487,7 +487,8 @@ local resp=function()
 	workspace.CurrentCamera.CameraSubject=faker.Humanoid
 	return faker
 end
-faker.ChildRemove:connect(function() pcall(function() faker:Destroy() end) faker=resp() end)
+faker=resp()
+faker.ChildRemoved:connect(function() pcall(function() faker:Destroy() end) faker=resp() end)
 local fakeb=workspace.Base:clone()
 fakeb.Parent=workspace.CurrentCamera
 fakeb.CFrame=CFrame.new(0,1000,1000)
@@ -496,8 +497,6 @@ faker.Parent=workspace
 char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
 work=false
 while A and wait(0) do
-	game.Debris:AddItem(faker,0.1)
-	
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
 		coroutine.wrap(function()
