@@ -480,9 +480,14 @@ fakeOut=function(qwe)
 		char.Parent=workspace.CurrentCamera
 		local base=workspace.Base:clone()
 		base.CFrame=workspace.Base.CFrame+Vector3.new(10000,0,0)
-		char:MoveTo(char.Torso.Position+Vector3.new(10000,0,0))
+		local magn=CFrame.new(0,0,0)
+		magn=magn*CFrame.new((workspace.Base.CFrame.X-char.Torso.CFrame.X),0,0)
+		magn=magn*CFrame.new(0,(workspace.Base.CFrame.Y-char.Torso.CFrame.Y),0)
+		magn=magn*CFrame.new(0,0,(workspace.Base.CFrame.Z-char.Torso.CFrame.Z))
+		char.Torso.CFrame=base.CFrame*magn
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
+		wait(3)
 	repeat wait(0)
 		if not mod or not workspace:findFirstChild('asd OKDEN') then 
 			if faking==true then
