@@ -484,7 +484,7 @@ local faking=false
 
 
 fakeOut=function(qwe)
-	if qwe then
+	if qwe==true then
 		faking=true
 		char.Parent=workspace.CurrentCamera
 		local base=workspace.Base:clone()
@@ -512,8 +512,8 @@ fakeOut=function(qwe)
 		block.Material=base.Material
 		block.BrickColor=base.BrickColor
 		game.Debris:AddItem(block,0.3)
-		workspace.CurrentCamera.CameraSubject=mod
-	until faking==false
+	--	workspace.CurrentCamera.CameraSubject=mod
+	until faking==false or qwe==false
 	workspace.CurrentCamera.CameraSubject=char.Humanoid
 else
 	faking=false
