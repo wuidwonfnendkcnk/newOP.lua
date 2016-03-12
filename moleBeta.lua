@@ -22,8 +22,10 @@ m.KeyDown:connect(function(k)
   turn=true
   
  elseif k=='a' then
+  turn2=true
   dir=dir+math.rad(-5)
-  elseif k=='d' then
+ elseif k=='d' then
+  turn2=true
   dir=dir+math.rad(5)
   end
 end)
@@ -32,13 +34,14 @@ m.KeyUp:connect(function(k)
   asd=0 
  elseif k=='s' then
   turn=false
+  elseif k=='a' or k=='d' then turn2=false
  end 
  end)
 
 while wait() do
  coroutine.wrap(function()
   if turn then
-   repeat dir=dir+math.rad(5) wait(0) until turn==false
+   repeat dir=math.rad(10) wait(0) until turn==false
    end
   end)()
  if mole then
@@ -84,7 +87,9 @@ odear=true
 end
 
 if odear then
+ if turn2 or turn then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
+ end
  Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)
   char.Torso.CFrame=Attachblock.CFrame
  end
