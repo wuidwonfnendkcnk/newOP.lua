@@ -480,7 +480,7 @@ fakeOut=function(qwe)
 		char.Parent=workspace.CurrentCamera
 		local base=workspace.Base:clone()
 		base.CFrame=workspace.Base.CFrame+Vector3.new(10000,0,0)
-		char:MoveTo(char.Torso.Position+Vector3.new(10000,0,0)
+		char:MoveTo(char.Torso.Position+Vector3.new(10000,0,0))
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
 		while faking and wait(0) do
