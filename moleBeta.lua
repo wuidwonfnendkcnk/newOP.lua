@@ -27,12 +27,13 @@ while wait() do
       char.Humanoid.Jump=true
       cf=char.Torso.CFrame
   for i=0,-135,-10 do
-    Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/15)
+    Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/30)
     char.Torso.CFrame=Attachblock.CFrame
     wait(0)
   end
 for i=1,10 do
-Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,-2)
+Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,2)
+char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
 
