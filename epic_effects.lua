@@ -109,7 +109,7 @@ eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.CanCollide=false
 eye.Anchored=true
-eye.Transparency=0.75
+eye.Transparency=0.45
 --Instance.new("SpecialMesh",eye)
 local emit=Instance.new("ParticleEmitter",eye)
 emit.Color=ColorSequence.new(Color3.new(1,0,0),Color3.new(1,0,0))
@@ -146,6 +146,8 @@ coroutine.wrap(function()
 	C12.CanCollide=false
 	C12.Anchored=true
 	CFX=char.Head.CFrame
+	C11.CFrame=C11.CFrame*CFrame.new(0,0,0.1)
+	C12.CFrame=C12.CFrame*CFrame.new(0,0,0.1)
 	coroutine.wrap(function()
 		for i=75,100 do wait(0) C12.Transparency=i/100 end
 		C12:Destroy()
