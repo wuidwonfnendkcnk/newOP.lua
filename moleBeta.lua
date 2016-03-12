@@ -24,8 +24,9 @@ hole.Anchored=true
 hole.CFrame=CFrame.new(char.Torso.CFrame.X,0.5,char.Torso.CFrame.Z)
 char.Torso.Anchored=true
 char.Humanoid.Jump=true
+cf=char.Torso.CFrame
 for i=0,180,15 do
-Attachblock.CFrame=char.Torso.CFrame*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-1)
+Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/20)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
