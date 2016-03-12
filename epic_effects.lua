@@ -103,8 +103,9 @@ end
 wait(1)
 
 local eye=Instance.new("Part",char)
+eye.Shape='Block'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(0.1,0.03,0.1)
+eye.Size=Vector3.new(0.11,0.01,0.11)
 eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.CanCollide=false
