@@ -6,7 +6,7 @@ Attachblock.Transparency=0.5
 local char=script.Parent
 local plr=game.Players.LocalPlayer
 local m=plr:GetMouse()
-
+colors={workspace.Base.BrickColor,BrickColor.New'Dirt brown'}
 mole=false
 digging=false
 odear=false
@@ -75,7 +75,7 @@ end
   hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
 np=Instance.new("Part",Attachblock)
   np.Anchored=true
-  --np.Transparency=1
+  np.Transparency=1
   np.CFrame=hole.CFrame*CFrame.new(0,-10,-10)
 for i=1,20 do
 Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
@@ -95,6 +95,12 @@ if odear then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
 end
 if asd~=0 then
+local block=Instance.new("Part",workspace.Base)
+block.Size=Vector3.new(math.random(3,5),math.random(3,5),math.random(3,5))
+block.Anchored=true
+block.CFrame=CFrame.new(np.CFrame.X,1,np.CFrame.Z)*CFrame.Angles(math.rad(math.random(-100,100)),math.rad(math.random(-100,100)),math.rad(math.random(-100,100)))
+block.Material='Grass'
+block.BrickColor=colors[math.random(1,#colors)]
 ang=ang+1
 if ang<=10 then
  np.CFrame=np.CFrame*CFrame.new(0,1,0)
