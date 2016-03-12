@@ -37,7 +37,7 @@ m.KeyUp:connect(function(k)
   elseif k=='a' or k=='d' then turn2=false
  end 
  end)
-
+ang=math.rad(0)
 while wait() do
  coroutine.wrap(function()
   if turn then
@@ -89,8 +89,15 @@ end
 if odear then
  if turn2 or turn then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
+end
+ang=ang+47/9
+if ang<47 then
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(5),0,0)
+elseif ang<94 then
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(-5),0,0)
+ else ang=0
+else
  end
- Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)
   char.Torso.CFrame=Attachblock.CFrame
  end
 end
