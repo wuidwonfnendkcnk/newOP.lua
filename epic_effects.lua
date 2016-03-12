@@ -105,7 +105,7 @@ wait(1)
 local eye=Instance.new("Part",char)
 eye.Shape='Block'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(0.11,0.01,0.11)
+eye.Size=Vector3.new(0.15,0.01,0.15)
 eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.CanCollide=false
@@ -124,8 +124,8 @@ emit.Speed=NumberRange.new(1,1)
 local eye2=eye:clone()
 eye2.Parent=char
 game:service'RunService'.Stepped:connect(function()
-eye.CFrame=char.Head.CFrame*CFrame.new(-0.125,0.2,-0.525)
-eye2.CFrame=char.Head.CFrame*CFrame.new(0.125,0.2,-0.525)
+eye.CFrame=char.Head.CFrame*CFrame.new(-0.15,0.2,-0.525)
+eye2.CFrame=char.Head.CFrame*CFrame.new(0.15,0.2,-0.525)
 end)
 CFX=char.Head.CFrame
 coroutine.wrap(function() 
