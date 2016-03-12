@@ -500,6 +500,7 @@ work=false
 while A and wait(0) and faker do
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
+	if A then
 		coroutine.wrap(function()
 			for i=1,10 do
 				wait(0)
@@ -532,9 +533,11 @@ while A and wait(0) and faker do
 		work=false
 		end)()
 	end
+	end
 end
 char.Parent=workspace
-char:MoveTo((char.Torso.CFrame+Vector3.new(0,-1000,-1000)).p)
+char:MoveTo(faker.Torso.Position)
+pcall(function() faker:Destroy() end)
 workspace.CurrentCamera.CameraSubject=char.Humanoid
 else
 A=false
