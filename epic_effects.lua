@@ -138,19 +138,19 @@ coroutine.wrap(function()
 	C11.Anchored=true
 	
 	coroutine.wrap(function()
-		for i=5,10 do wait(0) C11.Transparency=i/10 end
+		for i=75,100 do wait(0) C11.Transparency=i/100 end
 		C11:Destroy()
 	end)()
 	
 	local C12=eye2:clone()
 	C12.Size=Vector3.new(0.1,0.05,(CFX.p-char.Head.CFrame.p).magnitude)
-	C12.CFrame,C11.CFrame=C12.CFrame*CFrame.new(0,0,-0.1),C11.CFrame*CFrame.new(0,0,-0.1)
+	C12.CFrame,C11.CFrame=C12.CFrame*CFrame.new(0,0,-0.2),C11.CFrame*CFrame.new(0,0,-0.2)
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
 	CFX=char.Head.CFrame
 	coroutine.wrap(function()
-		for i=5,10 do wait(0) C12.Transparency=i/10 end
+		for i=75,100 do wait(0) C12.Transparency=i/100 end
 		C12:Destroy()
 		
 		end)()
