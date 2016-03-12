@@ -26,10 +26,11 @@ char.Torso.Anchored=true
 char.Humanoid.Jump=true
 cf=char.Torso.CFrame
 for i=0,180,15 do
-Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/20)
+Attachblock.CFrame=cf*CFrame.Angles(math.rad(-i),0,0)*CFrame.new(0,0,-i/20)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
+
 end
 end
 end
