@@ -92,9 +92,9 @@ if odear then
 end
 if asd~=0 then
 ang=ang+5
-if ang<90 then
+if ang<45 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(5),0,0)*CFrame.new(0,(asd),0)
-elseif ang<180 then
+elseif ang<90 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(-5),0,0)*CFrame.new(0,(asd),0)
  else ang=0
 end
