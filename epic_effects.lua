@@ -474,11 +474,21 @@ local w=Instance.new("Weld",h)
  bl2:Destroy()
 end
 local faking=false
+
+
+
+
+
+
+
+
+
 fakeOut=function(qwe)
 	if qwe then
 		faking=true
 		char.Parent=workspace.CurrentCamera
 		local base=workspace.Base:clone()
+		base.Parent=workspace.CurrentCamera
 		base.CFrame=workspace.Base.CFrame+Vector3.new(10000,0,0)
 		local magn=CFrame.new(0,0,0)
 		magn=magn*CFrame.new((workspace.Base.CFrame.X-char.Torso.CFrame.X),0,0)
@@ -487,7 +497,7 @@ fakeOut=function(qwe)
 		char.Torso.CFrame=base.CFrame*magn
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
-		wait(3)
+		
 	repeat wait(0)
 		if not mod or not workspace:findFirstChild('asd OKDEN') then 
 			if faking==true then
