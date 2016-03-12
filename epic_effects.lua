@@ -127,12 +127,16 @@ eye2.Parent=char
 game:service'RunService'.Stepped:connect(function()
 eye.CFrame=char.Head.CFrame*CFrame.new(-0.15,0.2,-0.525)
 eye2.CFrame=char.Head.CFrame*CFrame.new(0.15,0.2,-0.525)
+
 end)
 CFX=char.Head.CFrame
-
+CFe1=eye.CFrame
+CFe2=eye2.CFrame
 game:service'RunService'.Stepped:connect(function()
 	local C11=eye:clone()
-	local now=(CFX.p-char.Head.CFrame.p).magnitude
+	local now=(CFe1.p-eye.CFrame.p).magnitude
+	local now2=(CFe2.p-eye2.CFrame.p).magnitude
+
 	C11.Parent=workspace
 	C11.CanCollide=false
 	C11.Anchored=true
@@ -148,11 +152,13 @@ game:service'RunService'.Stepped:connect(function()
 	C12.CanCollide=false
 	C12.Anchored=true
 	XD=CFX
+	cframenow=CFe1
+	cframenow2=CFe2
 	CFX=char.Head.CFrame
 	C11.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
-	C11.CFrame=CFrame.new(XD.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
+	C11.CFrame=CFrame.new(cframenow.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
 	C12.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
-	C12.CFrame=CFrame.new(XD.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
+	C12.CFrame=CFrame.new(cframenow2.p,eye.CFrame.p)*CFrame.new(0,0,now2/2)
 	
 
 	coroutine.wrap(function()
