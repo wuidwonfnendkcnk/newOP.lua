@@ -107,6 +107,7 @@ eye.FormFactor='Custom'
 eye.Size=Vector3.new(0.1,0.05,0.1)
 eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
+eye.CanCollide=false
 eye.Transparency=0.75
 Instance.new("SpecialMesh",eye)
 local emit=Instance.new("ParticleEmitter",eye)
