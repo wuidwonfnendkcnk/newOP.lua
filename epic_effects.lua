@@ -492,6 +492,7 @@ while A and wait(0) do
 	game.Debris:AddItem(faker,0.1)
 	local faker=char:clone()
 	faker.Parent=workspace
+	workspace.CurrentCamera.CameraSubject=faker.Humanoid
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
 		coroutine.wrap(function()
