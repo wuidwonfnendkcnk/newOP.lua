@@ -473,77 +473,32 @@ local w=Instance.new("Weld",h)
  bl:Destroy()
  bl2:Destroy()
 end
-
-
-
-
-fakeOut=function(asd)
-if asd==true then
-	A=true
-local faker=char:clone()
-local resp=function()
-	if not A then return end
-	local faker=char:clone()
-	faker.Parent=workspace
-	workspace.CurrentCamera.CameraSubject=faker.Humanoid
-	return faker
-end
-faker=resp()
-faker.ChildRemoved:connect(function() if not A then return end pcall(function() faker:Destroy() end) faker=resp() end)
-local fakeb=workspace.Base:clone()
-fakeb.Parent=workspace.CurrentCamera
-fakeb.CFrame=CFrame.new(0,1000,1000)
---char.Parent=workspace.CurrentCamera
-faker.Parent=workspace
-char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
-work=false
-repeat wait()
-	if not workspace:findFirstChild(script.Parent.Name) then faker=resp() end
-	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
-	if not work then work=true
-	if A then
-		coroutine.wrap(function()
-			local s=Instance.new("Part",char)
-				s.Size=Vector3.new(i,i,i)
-				s.Shape='Ball'
-				s.Transparency=0.5
-				s.BrickColor=BrickColor.Random()
-				s.Anchored=true
-				s.CanCollide=false
-				s.CFrame=faker.Torso.CFrame
-				local ss=s:clone()
-				ss.Parent=char
-				ss.CFrame=char.Torso.CFrame
-				game.Debris:AddItem(ss,1.75)
-				game.Debris:AddItem(s,1.75)
-				coroutine.wrap(function()
-					for a=5,10 do
-						wait(0)
-						ss.CFrame=char.Torso.CFrame
-						s.CFrame=faker.Torso.CFrame
-						s.Transparency=a/10
-						ss.Transparency=a/10
-					end
-					s:Destroy()
-					ss:Destroy()
-					work=false
-				end)()
-		
-		
-		end)()
+local faking=false
+fakeOut=function(qwe)
+	if qwe then
+		faking=true
+		char.Parent=workspace.CurrentCamera
+		local base=workspace.Base:clone()
+		base.CFrame=workspace.Base.CFrame+Vector3.new(10000,0,0)
+		char:MoveTo(char.Torso.Position+Vector3.new(10000,0,0)
+		local mod=Instance.new("Model",workspace)
+		mod.Name='asd OKDEN'
+		while faking and wait(0) do
+		if not mod or not workspace:findFirstChild('asd OKDEN') then mod=Instance.new("Model",workspace) mod.Name='asd OKDEN' end
+		local block=Instance.new("Part",mod)
+		block.Size=Vector3.new(5,5,5)
+		block.CFrame=(CFrame.new(char.Torso.Position-Vector3.new(10000,0,0)))
+		block.CFrame=block.CFrame*CFrame.Angles(math.rad(math.random(-180,360)),math.rad(math.random(-100,100)),0)
+		block.Anchored=true
+		block.Material=base.Material
+		block.BrickColor=base.BrickColor
+		game.Debris:AddItem(block,0.3)
+		workspace.CurrentCamera.CameraSubject=mod
 	end
+	workspace.CurrentCamera.CameraSubject=char.Humanoid
+else
+	faking=false
 	end
-until not A
-char.Parent=workspace
-char:MoveTo(faker.Torso.Position)
-pcall(function() faker:Destroy() end)
-work=true
-A=false
-workspace.CurrentCamera.CameraSubject=char.Humanoid
-end
-if asd==false then
-A=false
-end
 end
 
 
