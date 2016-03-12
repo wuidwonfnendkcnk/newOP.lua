@@ -96,11 +96,11 @@ if odear then
 end
 if asd~=0 then
 ang=ang+1
-if ang<10 then
+if ang<=10 then
  np.CFrame=np.CFrame*CFrame.new(0,1,0)
-elseif ang<20 then
+elseif ang<=20 then
  np.CFrame=np.CFrame*CFrame.new(0,-1,0)
-else ang=0 np.CFrame=Attachblock.CFrame*CFrame.new(0,0,-5)
+else ang=0
 end
 if turn2 or turn then
  np.CFrame=np.CFrame*CFrame.Angles(0,dir,0)
