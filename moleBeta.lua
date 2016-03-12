@@ -123,5 +123,8 @@ end
 
   --char.Torso.CFrame=Attachblock.CFrame
  end
+else
+ print'asd'
+ end
 end
-end
+
