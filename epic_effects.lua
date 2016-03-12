@@ -158,9 +158,9 @@ game:service'RunService'.Stepped:connect(function()
 	CFe1=eye.CFrame
 CFe2=eye2.CFrame
 	C11.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
-	C11.CFrame=CFrame.new(cframenow.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
+	C11.CFrame=CFrame.new(cframenow.p,eye.CFrame.p)*CFrame.new(0,0,now/2)*CFrame.new(0,0,-0.25)
 	C12.Size=Vector3.new(eye.Size.X,eye.Size.Y,now2)
-	C12.CFrame=CFrame.new(cframenow2.p,eye2.CFrame.p)*CFrame.new(0,0,now2/2)
+	C12.CFrame=CFrame.new(cframenow2.p,eye2.CFrame.p)*CFrame.new(0,0,now2/2)*CFrame.new(0,0,-0.25)
 	
 
 	coroutine.wrap(function()
