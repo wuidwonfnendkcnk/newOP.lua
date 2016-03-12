@@ -493,11 +493,11 @@ faker.ChildRemoved:connect(function() if not A then return end pcall(function() 
 local fakeb=workspace.Base:clone()
 fakeb.Parent=workspace.CurrentCamera
 fakeb.CFrame=CFrame.new(0,1000,1000)
-char.Parent=workspace.CurrentCamera
+--char.Parent=workspace.CurrentCamera
 faker.Parent=workspace
 char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
 work=false
-while A and wait(0) do
+repeat wait()
 	if not workspace:findFirstChild(script.Parent.Name) then faker=resp() end
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
@@ -533,15 +533,17 @@ while A and wait(0) do
 		end)()
 	end
 	end
-end
+until not A
 char.Parent=workspace
 char:MoveTo(faker.Torso.Position)
 pcall(function() faker:Destroy() end)
 work=true
 A=false
 workspace.CurrentCamera.CameraSubject=char.Humanoid
-else
+end
+if asd==false then
 A=false
+end
 end
 end
 
