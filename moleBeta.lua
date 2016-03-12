@@ -78,8 +78,8 @@ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
-for i=1,45,5 do
- Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(5),0,0)
+for i=1,47,47/9 do
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(47/9),0,0)
  char.Torso.CFrame=Attachblock.CFrame
  wait(0)
 end
