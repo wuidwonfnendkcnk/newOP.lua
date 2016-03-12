@@ -73,7 +73,7 @@ end
       hole.BrickColor=BrickColor.Black()
       hole.Anchored=true
   hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
-  local np=Instance.new("Part",Attachblock)
+np=Instance.new("Part",Attachblock)
   np.Anchored=true
   np.Transparency=1
   np.CFrame=hole.CFrame*CFrame.new(0,-10,-10)
