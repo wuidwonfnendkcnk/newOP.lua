@@ -494,7 +494,7 @@ fakeOut=function(qwe)
 		magn=magn*CFrame.new((workspace.Base.CFrame.X-char.Torso.CFrame.X),0,0)
 		magn=magn*CFrame.new(0,0,(workspace.Base.CFrame.Z-char.Torso.CFrame.Z))
 			print(magn)
-		char.Torso.CFrame=base.CFrame*magn
+		char.Torso.CFrame=base.CFrame*magn*CFrame.new(0,5,0)
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
 		
@@ -506,15 +506,16 @@ fakeOut=function(qwe)
 		end
 		local block=Instance.new("Part",mod)
 		block.Size=Vector3.new(5,5,5)
-		block.CFrame=(CFrame.new(char.Torso.Position-Vector3.new(10000,0,0)))
+		block.CFrame=(CFrame.new(char.Torso.Position-Vector3.new(10000,3,0)))
 		block.CFrame=block.CFrame*CFrame.Angles(math.rad(math.random(-180,360)),math.rad(math.random(-100,100)),0)
 		block.Anchored=true
 		block.Material=base.Material
 		block.BrickColor=base.BrickColor
 		game.Debris:AddItem(block,0.3)
-	--	workspace.CurrentCamera.CameraSubject=mod
+	workspace.CurrentCamera.CameraSubject=mod
 	until faking==false or qwe==false
 	workspace.CurrentCamera.CameraSubject=char.Humanoid
+	char:MoveTo(char.Torso.Position+Vector3.new(-10000,0,0))
 else
 	faking=false
 	end
