@@ -110,7 +110,7 @@ eye.Material='Neon'
 eye.CanCollide=false
 eye.Anchored=true
 eye.Transparency=0.75
-Instance.new("SpecialMesh",eye)
+--Instance.new("SpecialMesh",eye)
 local emit=Instance.new("ParticleEmitter",eye)
 emit.Color=ColorSequence.new(Color3.new(1,0,0),Color3.new(1,0,0))
 emit.Size=NumberSequence.new(0.1,0.1)
