@@ -133,6 +133,7 @@ elseif digging and odear then
  char.Torso.Anchored=true
  char.Humanoid.PlatformStand=false
  char.Humanoid.Jump=true
+ digging=true
  end
 end
 
