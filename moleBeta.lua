@@ -104,7 +104,7 @@ elseif ang<20 then
 end
 np.CFrame=np.CFrame*CFrame.Angles(0,dir,0)
 np.CFrame=np.CFrame*CFrame.new(0,0,-1)
-Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame)*CFrame.Angles(math.rad(90),0,0)*CFrame.new(0,0,-1)
+Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.Angles(math.rad(90),0,0)*CFrame.new(0,0,-1)
 char.Torso.CFrame=Attachblock.CFrame
 end
 
