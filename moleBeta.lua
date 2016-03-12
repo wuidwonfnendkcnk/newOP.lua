@@ -23,10 +23,10 @@ m.KeyDown:connect(function(k)
   
  elseif k=='a' then
   turn2=true
-  dir=dir+math.rad(-5)
+  dir=math.rad(-5)
  elseif k=='d' then
   turn2=true
-  dir=dir+math.rad(5)
+  dir=math.rad(-5)
   end
 end)
 m.KeyUp:connect(function(k)
