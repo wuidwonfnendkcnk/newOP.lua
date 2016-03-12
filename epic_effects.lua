@@ -155,6 +155,8 @@ game:service'RunService'.Stepped:connect(function()
 	cframenow=CFe1
 	cframenow2=CFe2
 	CFX=char.Head.CFrame
+	CFe1=eye.CFrame
+CFe2=eye2.CFrame
 	C11.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
 	C11.CFrame=CFrame.new(cframenow.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
 	C12.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
