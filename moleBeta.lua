@@ -20,7 +20,7 @@ m.KeyDown:connect(function(k)
   asd=1
  elseif k=='s' then
   turn=true
-  repeat dir=dir+math.rad(5) wait(0) until not turn
+  
  elseif k=='a' then
   dir=dir+math.rad(-5)
   elseif k=='d' then
@@ -36,6 +36,11 @@ m.KeyUp:connect(function(k)
  end)
 
 while wait() do
+ coroutine.wrap(function()
+  if turn then
+   repeat dir=dir+math.rad(5) wait(0) until turn==false
+   end
+  end)()
  if mole then
     if not digging then
       
