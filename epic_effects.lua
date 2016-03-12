@@ -136,7 +136,7 @@ coroutine.wrap(function()
 		C11:Destroy()
 	end)()
 	
-	local C12=eye:clone()
+	local C12=eye2:clone()
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
