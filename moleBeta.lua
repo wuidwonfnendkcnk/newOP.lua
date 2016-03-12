@@ -110,7 +110,7 @@ Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.new(0,0,-
 char.Torso.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(90),0,0)
 end
 
-  char.Torso.CFrame=Attachblock.CFrame
+  --char.Torso.CFrame=Attachblock.CFrame
  end
 end
 end
