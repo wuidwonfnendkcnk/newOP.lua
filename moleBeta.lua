@@ -33,7 +33,7 @@ m.KeyUp:connect(function(k)
  elseif k=='s' then
   turn=false
  end 
- end
+ end)
 
 while wait() do
  if mole then
