@@ -121,10 +121,12 @@ emit.Rate=100
 emit.Speed=NumberRange.new(1,1)
 local eye2=eye:clone()
 eye2.Parent=char
-local w,w2=Instance.new("Weld",eye),Instance.new("Weld",eye2)
-w.Part0,w.Part1,w2.Part0,w2.Part1=eye,char.Head,eye2,char.Head
-w.C0=CFrame.new(-0.1,-0.2,0.525)
-w2.C0=CFrame.new(0.1,-0.2,0.525)
+coroutine.wrap(function()
+	while wait(0) do
+eye.CFrame=char.Head.CFrame.new(-0.1,-0.2,0.525)
+eye2.CFrame=char.Head.CFrame.new(0.1,-0.2,0.525)
+end
+end)()
 
 coroutine.wrap(function() 
 	while wait(0) do
