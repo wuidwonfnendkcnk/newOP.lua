@@ -32,7 +32,7 @@ while wait() do
     wait(0)
   end
 for i=1,10 do
-Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,2)
+Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,2,0)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
