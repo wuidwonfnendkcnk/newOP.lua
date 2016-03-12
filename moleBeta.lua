@@ -2,7 +2,7 @@ local Attachblock=Instance.new("Part",script.Parent)
 Attachblock.Size=Vector3.new(1,1,1)
 Attachblock.Anchored=true
 Attachblock.CanCollide=false
-Attachblock.Transparency=0.5
+Attachblock.Transparency=1
 local char=script.Parent
 local plr=game.Players.LocalPlayer
 local m=plr:GetMouse()
@@ -130,7 +130,20 @@ elseif digging and odear then
   Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.new(0,0,-1)
   char.Torso.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(-90),0,0)
   wait(0) until Attachblock.CFrame.Y>4
- char.Torso.Anchored=true
+ cf3=char.Torso.CFrame
+ local hole=Instance.new("Part",workspace.Base)
+  Instance.new("CylinderMesh",hole)
+  hole.FormFactor='Custom'
+  hole.Size=Vector3.new(5.25,0.1,5.25)
+      hole.BrickColor=BrickColor.new'Really black'
+      hole.Anchored=true
+  hole.CFrame=CFrame.new(cf3.X,0.05,cf3.Z)
+  local h2=hole:clone()
+  h2.Size=Vector3.new(4,0.1,4)
+  h2.Parent=hole
+  h2.BrickColor=colors[2]
+  h2.CFrame=CFrame.new(hole.CFrame.X,-0.2,hole.CFrame.Z)*CFrame.Angles(math.rad(15),0,math.rad(20))
+ char.Torso.Anchored=false
  char.Humanoid.PlatformStand=false
  char.Humanoid.Jump=true
  digging=true
