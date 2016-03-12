@@ -108,6 +108,7 @@ eye.Size=Vector3.new(0.1,0.05,0.1)
 eye.BrickColor=BrickColor.New'Really red'
 eye.Material='Neon'
 eye.CanCollide=false
+eye.Anchored=true
 eye.Transparency=0.75
 Instance.new("SpecialMesh",eye)
 local emit=Instance.new("ParticleEmitter",eye)
@@ -123,8 +124,8 @@ local eye2=eye:clone()
 eye2.Parent=char
 coroutine.wrap(function()
 	while wait(0) do
-eye.CFrame=char.Head.CFrame*CFrame.new(-0.1,-0.2,0.525)
-eye2.CFrame=char.Head.CFrame*CFrame.new(0.1,-0.2,0.525)
+eye.CFrame=char.Head.CFrame*CFrame.new(-0.1,0.2,-0.525)
+eye2.CFrame=char.Head.CFrame*CFrame.new(0.1,0.2,-0.525)
 end
 end)()
 
