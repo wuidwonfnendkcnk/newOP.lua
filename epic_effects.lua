@@ -496,13 +496,14 @@ while A and wait(0) do
 	if not work then work=true
 		coroutine.wrap(function()
 			for i=1,10 do
+				wait(0.5)
 				local s=Instance.new("Part",char)
 				s.Size=Vector3.new(i,i,i)
 				s.Shape='Ball'
 				s.Transparency=0.5
 				s.Anchored=true
 				s.CanCollide=false
-				s.CFrame=char.Torso.CFrame
+				s.CFrame=faker.Torso.CFrame
 				local ss=s:clone()
 				ss.Parent=char
 				ss.CFrame=char.Torso.CFrame
@@ -525,7 +526,7 @@ while A and wait(0) do
 	end
 end
 char.Parent=workspace
-char:MoveTo((char.Torso.CFrame+Vector3.new(0,-1000,1000)).p)
+char:MoveTo((char.Torso.CFrame+Vector3.new(0,-1000,-1000)).p)
 else
 A=false
 end
