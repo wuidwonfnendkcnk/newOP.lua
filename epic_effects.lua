@@ -417,23 +417,9 @@ end
 
 end
 
- t=char.Torso
-m.KeyDown:connect(function(k)
-  if Attacking then 
-	return end
-  
-  if k=='h' then
-  Attacking=true
-    attack1()
-  
-  elseif k=='f' then
-    Attacking=true
-    attack2()
-  elseif k=='p' then
-  	Attacking=true
-  attack3()
-elseif k=='q' then
- local bl=Instance.new("Part",workspace)
+
+slamL=function()
+	local bl=Instance.new("Part",workspace)
  bl.Size=Vector3.new(2,2,4)
  bl.Anchored=true
  bl.Material=workspace.Base.Material
@@ -485,6 +471,83 @@ local w=Instance.new("Weld",h)
  end
  bl:Destroy()
  bl2:Destroy()
+end
+
+
+fakeOut=function(asd)
+if asd==true then
+	A=true
+local faker=char:clone()
+local fakeb=workspace.Base:clone()
+fakeb.Parent=workspace.CurrentCamera
+fakeb.CFrame=CFrame.new(0,1000,1000)
+char.Parent=workspace.CurrentCamera
+faker.Parent=workspace
+char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
+work=false
+while A and wait(0) do
+	game.Debris:AddItem(faker,0.1)
+	local faker=char:clone()
+	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
+	if not work then work=true
+		coroutine.wrap(function()
+			for i=1,10 do
+				local s=Instance.new("Part",char)
+				s.Size=Vector3.new(i,i,i)
+				s.Shape='Ball'
+				s.Transparency=0.5
+				s.Anchored=true
+				s.CanCollide=false
+				s.CFrame=char.Torso.CFrame
+				local ss=s:clone()
+				ss.Parent=char
+				ss.CFrame=char.Torso.CFrame
+				game.Debris:AddItem(ss,0.75)
+				game.Debris:AddItem(s,0.75)
+				coroutine.wrap(function()
+					for a=5,10 do
+						wait(0)
+						ss.CFrame=char.Torso.CFrame
+						s.CFrame=faker.Torso.CFrame
+						s.Transparency=a/10
+						ss.Transparency=a/10
+					end
+					s:Destroy()
+					ss:Destroy()
+				end)()
+			end
+		work=false
+		end)()
+	end
+end
+char.Parent=workspace
+char:MoveTo((char.Torso.CFrame+Vector3.new(0,-1000,1000)).p)
+else
+A=false
+end
+end
+
+last=true
+ t=char.Torso
+m.KeyDown:connect(function(k)
+  if Attacking then 
+	return end
+  
+  if k=='h' then
+  Attacking=true
+    attack1()
+  
+  elseif k=='f' then
+    Attacking=true
+    attack2()
+  elseif k=='p' then
+  	Attacking=true
+  attack3()
+elseif k=='q' then
+ slamL()
+elseif k=='t' then
+ fakeOut(last)
+ last=not last
  
 end
 end)
