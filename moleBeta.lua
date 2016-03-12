@@ -76,6 +76,7 @@ end
   local h2=hole:clone()
   h2.Size=Vector3.new(4,0.1,4)
   h2.Parent=hole
+  h2.BrickColor=colors[2]
   h2.CFrame=CFrame.new(hole.CFrame.X,-0.2,hole.CFrame.Z)*CFrame.Angles(math.rad(15),0,math.rad(20))
 np=Instance.new("Part",Attachblock)
   np.Anchored=true
@@ -124,7 +125,14 @@ end
   --char.Torso.CFrame=Attachblock.CFrame
  end
 else
- print'asd'
+ odear=false
+ repeat np.CFrame=np.CFrame*CFrame.new(0,1,0)
+  Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame)*CFrame.new(0,0,-1)
+  char.Torso.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(-90),0,0)
+  wait(0) until Attachblock.CFrame.Y>4
+ char.Torso.Anchored=true
+ char.Humanoid.PlatformStand=false
+ char.Humanoid.Jump=true
  end
 end
 
