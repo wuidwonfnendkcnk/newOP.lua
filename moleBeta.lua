@@ -14,24 +14,27 @@ mole=not mole
 end)
 
 while wait() do
-if mole then
-if not digging then
-local hole=Instance.new("Part",workspace.Base)
-digging=true
-hole.Size=Vector3.new(3,1,3)
-hole.BrickColor=BrickColor.Black()
-hole.Anchored=true
-char.Humanoid.PlatformStand=true
-hole.CFrame=CFrame.new(char.Torso.CFrame.X,0.5,char.Torso.CFrame.Z)
-char.Torso.Anchored=true
-char.Humanoid.Jump=true
-cf=char.Torso.CFrame
-for i=0,-135,-10 do
-Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/15)
-char.Torso.CFrame=Attachblock.CFrame
+ if mole then
+    if not digging then
+      local hole=Instance.new("Part",workspace.Base)
+      digging=true
+      hole.Size=Vector3.new(3,1,3)
+      hole.BrickColor=BrickColor.Black()
+      hole.Anchored=true
+      char.Humanoid.PlatformStand=true
+      hole.CFrame=CFrame.new(char.Torso.CFrame.X,0.5,char.Torso.CFrame.Z)
+      char.Torso.Anchored=true
+      char.Humanoid.Jump=true
+      cf=char.Torso.CFrame
+  for i=0,-135,-10 do
+    Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/15)
+    char.Torso.CFrame=Attachblock.CFrame
+    wait(0)
+  end
+for i=1,10 do
+Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,-2)
 wait(0)
 end
 
-end
-end
+ end
 end
