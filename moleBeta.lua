@@ -6,7 +6,7 @@ Attachblock.Transparency=0.5
 local char=script.Parent
 local plr=game.Players.LocalPlayer
 local m=plr:GetMouse()
-colors={workspace.Base.BrickColor,BrickColor.New'Dirt brown'}
+colors={workspace.Base.BrickColor,BrickColor.New'Dirt brown',workspace.Base.BrickColor}
 mole=false
 digging=false
 odear=false
@@ -69,10 +69,14 @@ end
   local hole=Instance.new("Part",workspace.Base)
   Instance.new("CylinderMesh",hole)
   hole.FormFactor='Custom'
-  hole.Size=Vector3.new(4,0.1,4)
-      hole.BrickColor=BrickColor.Black()
+  hole.Size=Vector3.new(5.25,0.1,5.25)
+      hole.BrickColor=BrickColor.new'Really black'
       hole.Anchored=true
   hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
+  local h2=hole:clone()
+  h2.Size=Vector3.new(4,0.1,4)
+  h2.Parent=hole
+  h2.CFrame=CFrame.new(cf2.X,0,cf.Z)*CFrame.Angles(math.rad(15),0,math.rad(20))
 np=Instance.new("Part",Attachblock)
   np.Anchored=true
   np.Transparency=1
