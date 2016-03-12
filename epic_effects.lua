@@ -122,12 +122,10 @@ emit.Rate=100
 emit.Speed=NumberRange.new(1,1)
 local eye2=eye:clone()
 eye2.Parent=char
-coroutine.wrap(function()
-	while wait(0) do
+game:service'RunService'.Stepped:connect(function()
 eye.CFrame=char.Head.CFrame*CFrame.new(-0.1,0.2,-0.525)
 eye2.CFrame=char.Head.CFrame*CFrame.new(0.1,0.2,-0.525)
-end
-end)()
+end)
 CFX=char.Head.CFrame
 coroutine.wrap(function() 
 	while wait(0) do
@@ -144,7 +142,6 @@ coroutine.wrap(function()
 	
 	local C12=eye2:clone()
 	C12.Size=Vector3.new(0.1,0.05,(CFX.p-char.Head.CFrame.p).magnitude)
-	C12.CFrame,C11.CFrame=C12.CFrame*CFrame.new(0,0,-0.2),C11.CFrame*CFrame.new(0,0,-0.2)
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
