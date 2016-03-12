@@ -90,12 +90,14 @@ if odear then
  if turn2 or turn then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
 end
+if asd~=0 then
 ang=ang+47/9
 if ang<47 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(5),0,0)
 elseif ang<94 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(-5),0,0)
  else ang=0
+end
 end
 
   char.Torso.CFrame=Attachblock.CFrame
