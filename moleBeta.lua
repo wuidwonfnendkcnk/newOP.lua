@@ -124,7 +124,7 @@ end
 
   --char.Torso.CFrame=Attachblock.CFrame
  end
-elseif digging then
+elseif digging and odear then
  odear=false
  repeat np.CFrame=np.CFrame*CFrame.new(0,1,0)
   Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.new(0,0,-1)
