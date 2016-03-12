@@ -91,10 +91,10 @@ if odear then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
 end
 if asd~=0 then
-ang=ang+47/9
-if ang<94 then
+ang=ang+5
+if ang<90 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(5),0,0)*CFrame.new(0,(asd),0)
-elseif ang<188 then
+elseif ang<180 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(-5),0,0)*CFrame.new(0,(asd),0)
  else ang=0
 end
