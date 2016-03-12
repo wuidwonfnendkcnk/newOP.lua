@@ -150,9 +150,9 @@ game:service'RunService'.Stepped:connect(function()
 	XD=CFX
 	CFX=char.Head.CFrame
 	C11.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
-	C11.CFrame=CFrame.new(XD.p,CFX.p)*CFrame.new(0,0,now/2)
+	C11.CFrame=CFrame.new(XD.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
 	C12.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
-	C12.CFrame=CFrame.new(XD.p,CFX.p)*CFrame.new(0,0,now/2)
+	C12.CFrame=CFrame.new(XD.p,eye.CFrame.p)*CFrame.new(0,0,now/2)
 	
 
 	coroutine.wrap(function()
