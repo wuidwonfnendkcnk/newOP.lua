@@ -20,7 +20,6 @@ while wait() do
       digging=true
       
       char.Humanoid.PlatformStand=true
-      hole.CFrame=CFrame.new(char.Torso.CFrame.X,0.5,char.Torso.CFrame.Z)
       char.Torso.Anchored=true
       char.Humanoid.Jump=true
       cf=char.Torso.CFrame
