@@ -503,7 +503,8 @@ fakeOut=function(qwe)
 			if faking==true then
 		mod=Instance.new("Model",workspace) mod.Name='asd OKDEN'
 		end
-		end
+	end
+	if not faking then return end
 		local block=Instance.new("Part",mod)
 		block.Size=Vector3.new(5,5,5)
 		block.CFrame=(CFrame.new(char.Torso.Position-Vector3.new(10000,3,0)))
@@ -512,6 +513,7 @@ fakeOut=function(qwe)
 		block.Material=base.Material
 		block.BrickColor=base.BrickColor
 		game.Debris:AddItem(block,0.3)
+		
 	workspace.CurrentCamera.CameraSubject=mod
 	until faking==false or qwe==false
 	workspace.CurrentCamera.CameraSubject=char.Humanoid
