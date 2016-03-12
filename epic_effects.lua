@@ -492,8 +492,8 @@ fakeOut=function(qwe)
 		base.CFrame=workspace.Base.CFrame+Vector3.new(10000,0,0)
 		local magn=CFrame.new(0,0,0)
 		magn=magn*CFrame.new((workspace.Base.CFrame.X-char.Torso.CFrame.X),0,0)
-		magn=magn*CFrame.new(0,(workspace.Base.CFrame.Y-char.Torso.CFrame.Y),0)
 		magn=magn*CFrame.new(0,0,(workspace.Base.CFrame.Z-char.Torso.CFrame.Z))
+			print(magn)
 		char.Torso.CFrame=base.CFrame*magn
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
