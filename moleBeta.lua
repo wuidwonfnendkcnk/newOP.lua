@@ -9,9 +9,31 @@ local m=plr:GetMouse()
 
 mole=false
 digging=false
+odear=false
 m.Button1Down:connect(function()
 mole=not mole
 end)
+turn=false
+asd,dir=0,math.rad(0)
+m.KeyDown:connect(function(k)
+ if k=='w' then
+  asd=1
+ elseif k=='s' then
+  turn=true
+  repeat dir=dir+math.rad(5) wait(0) until not turn
+ elseif k=='a' then
+  dir=dir+math.rad(-5)
+  elseif k=='d' then
+  dir=dir+math.rad(5)
+  end
+end)
+m.KeyUp:connect(function(k)
+ if k=='w' then 
+  asd=0 
+ elseif k=='s' then
+  turn=false
+ end 
+ end
 
 while wait() do
  if mole then
@@ -48,11 +70,18 @@ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
-for i=1,50,5 do
+for i=1,45,5 do
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(5),0,0)
  char.Torso.CFrame=Attachblock.CFrame
  wait(0)
- end
+end
+odear=true
+end
+
+if odear then
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,dir or 0,0)
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,-(asd))
+  char.Torso.CFrame=Attachblock.CFrame
  end
 end
 end
