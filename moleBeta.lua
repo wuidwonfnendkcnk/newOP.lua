@@ -21,6 +21,7 @@ digging=true
 hole.Size=Vector3.new(3,1,3)
 hole.BrickColor=BrickColor.Black()
 hole.Anchored=true
+char.Humanoid.PlatformStand=true
 hole.CFrame=CFrame.new(char.Torso.CFrame.X,0.5,char.Torso.CFrame.Z)
 char.Torso.Anchored=true
 char.Humanoid.Jump=true
