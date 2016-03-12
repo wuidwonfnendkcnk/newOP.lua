@@ -545,7 +545,7 @@ if asd==false then
 A=false
 end
 end
-end
+
 
 lasto=true
  t=char.Torso
