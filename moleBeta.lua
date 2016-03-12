@@ -147,6 +147,11 @@ elseif digging and odear then
  char.Humanoid.PlatformStand=false
  char.Humanoid.Jump=true
  digging=true
+ mole=false
+digging=false
+odear=false
+turn=false
+asd,dir=0,math.rad(0)
  end
 end
 
