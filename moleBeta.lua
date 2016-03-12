@@ -26,13 +26,21 @@ while wait() do
       char.Torso.Anchored=true
       char.Humanoid.Jump=true
       cf=char.Torso.CFrame
+      local cf2=cf
+        for i=0,-135,-10 do
+    cf2=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/30)
+  end
+for i=1,5 do
+cf2=cf2*CFrame.new(0,1,0)
+end
   for i=0,-135,-10 do
     Attachblock.CFrame=cf*CFrame.Angles(math.rad(i),0,0)*CFrame.new(0,0,-i/30)
     char.Torso.CFrame=Attachblock.CFrame
     wait(0)
   end
-for i=1,10 do
-Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,2,0)
+  hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
+for i=1,20 do
+Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
