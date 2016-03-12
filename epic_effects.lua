@@ -482,6 +482,7 @@ if asd==true then
 	A=true
 local faker=char:clone()
 local resp=function()
+	if not A then return end
 	local faker=char:clone()
 	faker.Parent=workspace
 	workspace.CurrentCamera.CameraSubject=faker.Humanoid
@@ -496,16 +497,17 @@ char.Parent=workspace.CurrentCamera
 faker.Parent=workspace
 char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
 work=false
-while A and wait(0) do
+while A and wait(0) and faker do
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
 		coroutine.wrap(function()
 			for i=1,10 do
-				wait(0.5)
+				wait(0)
 				local s=Instance.new("Part",char)
 				s.Size=Vector3.new(i,i,i)
 				s.Shape='Ball'
 				s.Transparency=0.5
+				s.BrickColor=BrickColor.Random()
 				s.Anchored=true
 				s.CanCollide=false
 				s.CFrame=faker.Torso.CFrame
@@ -526,7 +528,7 @@ while A and wait(0) do
 					ss:Destroy()
 				end)()
 		end
-		wait(0.5)
+		wait(0)
 		work=false
 		end)()
 	end
