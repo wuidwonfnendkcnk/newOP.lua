@@ -79,8 +79,8 @@ odear=true
 end
 
 if odear then
- Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,dir or 0,0)
- Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,0,-(asd))
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(0,0,dir or 0)
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)
   char.Torso.CFrame=Attachblock.CFrame
  end
 end
