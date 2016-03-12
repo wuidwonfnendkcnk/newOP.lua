@@ -148,10 +148,11 @@ coroutine.wrap(function()
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
+	CFX=char.Head.CFrame
 	coroutine.wrap(function()
 		for i=5,10 do wait(0) C12.Transparency=i/10 end
 		C12:Destroy()
-		CFX=char.Head.CFrame
+		
 		end)()
 		
 end
