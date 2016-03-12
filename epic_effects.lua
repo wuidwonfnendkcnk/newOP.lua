@@ -123,11 +123,13 @@ emit.Rate=100
 emit.Speed=NumberRange.new(1,1)
 local eye2=eye:clone()
 eye2.Parent=char
+
 game:service'RunService'.Stepped:connect(function()
 eye.CFrame=char.Head.CFrame*CFrame.new(-0.15,0.2,-0.525)
 eye2.CFrame=char.Head.CFrame*CFrame.new(0.15,0.2,-0.525)
 end)
 CFX=char.Head.CFrame
+
 game:service'RunService'.Stepped:connect(function()
 	local C11=eye:clone()
 	
@@ -154,7 +156,6 @@ game:service'RunService'.Stepped:connect(function()
 		
 		end)()
 		
-end
 end)
 
 attack1=function()
