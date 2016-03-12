@@ -1,5 +1,6 @@
 local plr=game.Players.LocalPlayer
 local char=plr.Character
+char.Archivable=true
 local m=plr:GetMouse()
 Attacking=false
 local sp=function(s,cf,tt)
