@@ -78,11 +78,11 @@ Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,1,0)
 char.Torso.CFrame=Attachblock.CFrame
 wait(0)
 end
-for i=1,47,47/9 do
+--[[for i=1,47,47/9 do
  Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(47/9),0,0)
  char.Torso.CFrame=Attachblock.CFrame
  wait(0)
-end
+end]]
 odear=true
 end
 
@@ -93,9 +93,9 @@ end
 if asd~=0 then
 ang=ang+47/9
 if ang<47 then
- Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(5),0,0)
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(5),0,0)*CFrame.new(0,(asd),0)
 elseif ang<94 then
- Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(-5),0,0)
+ Attachblock.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(-5),0,0)*CFrame.new(0,(asd),0)
  else ang=0
 end
 end
