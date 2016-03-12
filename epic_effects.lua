@@ -497,7 +497,8 @@ char.Parent=workspace.CurrentCamera
 faker.Parent=workspace
 char:MoveTo((faker.Torso.CFrame+Vector3.new(0,1000,1000)).p)
 work=false
-while A and wait(0) and faker do
+while A and wait(0) do
+	if not workspace:findFirstChild(script.Parent.Name) then faker=resp() end
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
 	if A then
@@ -529,7 +530,7 @@ while A and wait(0) and faker do
 					ss:Destroy()
 				end)()
 		end
-		wait(0)
+		
 		work=false
 		end)()
 	end
