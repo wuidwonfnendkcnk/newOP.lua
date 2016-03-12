@@ -1,7 +1,12 @@
 local plr=game.Players.LocalPlayer
 local char=plr.Character
+wait(0.5)
+repeat
 char.Humanoid.MaxHealth=10000
-char.Humanoid.Health=7500
+char.Humanoid.Health=5000
+until char.Humanoid.Health==5000
+char.Humanoid.MaxHealth=10000
+char.Humanoid.Health=5000
 char.Archivable=true
 local m=plr:GetMouse()
 Attacking=false
