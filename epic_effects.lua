@@ -474,6 +474,8 @@ local w=Instance.new("Weld",h)
 end
 
 
+
+
 fakeOut=function(asd)
 if asd==true then
 	A=true
@@ -488,6 +490,7 @@ work=false
 while A and wait(0) do
 	game.Debris:AddItem(faker,0.1)
 	local faker=char:clone()
+	faker.Parent=workspace
 	faker.Torso.CFrame=char.Torso.CFrame-Vector3.new(0,1000,1000)
 	if not work then work=true
 		coroutine.wrap(function()
