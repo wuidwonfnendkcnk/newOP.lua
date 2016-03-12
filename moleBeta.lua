@@ -100,8 +100,7 @@ if ang<10 then
  np.CFrame=np.CFrame*CFrame.new(0,1,0)
 elseif ang<20 then
  np.CFrame=np.CFrame*CFrame.new(0,-1,0)
-else ang=0 np.CFrame=hole.CFrame*CFrame.new(0,-10,-10)
- np.CFrame=np.CFrame*CFrame.new(0,0,-(char.Torso.CFrame.Z-hole.CFrame.Z))
+else ang=0 np.CFrame=Attachblock.CFrame*CFrame.new(0,0,-5)
 end
 if turn2 or turn then
  np.CFrame=np.CFrame*CFrame.Angles(0,dir,0)
