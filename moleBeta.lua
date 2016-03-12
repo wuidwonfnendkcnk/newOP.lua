@@ -38,7 +38,8 @@ end
   end
   local hole=Instance.new("Part",workspace.Base)
   Instance.new("CylinderMesh",hole)
-  hole.Size=Vector3.new(3,1,3)
+  hole.FormFactor='Custom'
+  hole.Size=Vector3.new(4,0.1,4)
       hole.BrickColor=BrickColor.Black()
       hole.Anchored=true
   hole.CFrame=CFrame.new(cf2.X,0.5,cf2.Z)
