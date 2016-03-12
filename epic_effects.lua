@@ -505,7 +505,10 @@ fakeOut=function(qwe)
 		end
 	end
 	if faking~=true or qwe~=true then return end
-	if (char.Torso.Position-workspace.Base.Position).magnitude<7500 then return end
+	if (char.Torso.Position-workspace.Base.Position).magnitude<7500 then 
+		workspace.CurrentCamera.CameraSubject=char.Humanoid
+		workspace.CurrentCamera.CameraType='Custom'
+		return end
 		local block=Instance.new("Part")
 		block.Parent= faking==true and mod or nil
 		block.Size=Vector3.new(5,5,5)
