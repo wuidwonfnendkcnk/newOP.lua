@@ -96,8 +96,8 @@ if ang<47 then
 elseif ang<94 then
  Attachblock.CFrame=Attachblock.CFrame*CFrame.new(0,(asd),0)*CFrame.Angles(math.rad(-5),0,0)
  else ang=0
-else
- end
+end
+
   char.Torso.CFrame=Attachblock.CFrame
  end
 end
