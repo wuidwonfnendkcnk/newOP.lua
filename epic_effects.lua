@@ -132,7 +132,7 @@ CFX=char.Head.CFrame
 
 game:service'RunService'.Stepped:connect(function()
 	local C11=eye:clone()
-	
+	local now=(CFX.p-char.Head.CFrame.p).magnitude
 	C11.Parent=workspace
 	C11.CanCollide=false
 	C11.Anchored=true
@@ -147,9 +147,14 @@ game:service'RunService'.Stepped:connect(function()
 	C12.Parent=workspace
 	C12.CanCollide=false
 	C12.Anchored=true
+	XD=CFX
 	CFX=char.Head.CFrame
-	C11.CFrame=C11.CFrame*CFrame.new(0,0,0.1)
-	C12.CFrame=C12.CFrame*CFrame.new(0,0,0.1)
+	C11.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
+	C11.CFrame=CFrame.new(XD.p,CFX.p)*CFrame.new(0,0,now/2)
+	C12.Size=Vector3.new(eye.Size.X,eye.Size.Y,now)
+	C12.CFrame=CFrame.new(XD.p,CFX.p)*CFrame.new(0,0,now/2)
+	
+
 	coroutine.wrap(function()
 		for i=20,100,15 do wait(0) C12.Transparency=i/100 end
 		C12:Destroy()
