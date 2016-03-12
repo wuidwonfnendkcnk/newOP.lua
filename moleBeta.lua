@@ -107,7 +107,7 @@ if turn2 or turn then
  end
 np.CFrame=np.CFrame*CFrame.new(0,0,-1)
 Attachblock.CFrame=CFrame.new(Attachblock.Position,np.CFrame.p)*CFrame.new(0,0,-1)
-char.Torso.CFrame=Attachblock.CFrame
+char.Torso.CFrame=Attachblock.CFrame*CFrame.Angles(math.rad(90),0,0)
 end
 
   char.Torso.CFrame=Attachblock.CFrame
