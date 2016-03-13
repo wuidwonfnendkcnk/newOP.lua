@@ -525,7 +525,7 @@ fakeOut=function(qwe)
 		workspace.CurrentCamera.CameraType='Custom'
 		return end
 	char.Humanoid.Jumping:connect(function(a)
-			if a then
+			if a and delete then
 				delete=false
 				wait(1)
 				delete=true
