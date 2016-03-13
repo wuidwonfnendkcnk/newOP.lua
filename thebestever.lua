@@ -545,8 +545,10 @@ fakeOut=function(qwe)
 	elseif delete==false then
 		block.Touched:connect(function(h)
 			if not h.Parent:findFirstChild'Humanoid' and h.Name~='Base' and h.Name~='uarenoob'then
+				
 				game.Debris:AddItem(block,0.3)
 			else
+				if h.Parent==char then return end
 				h.Anchored=true
 				coroutine.wrap(function()
 					for i=h.Parent.Humanoid.Health,0,-1 do
