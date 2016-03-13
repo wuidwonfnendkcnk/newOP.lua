@@ -512,6 +512,7 @@ fakeOut=function(qwe)
 		local mod=Instance.new("Model",workspace)
 		mod.Name='asd OKDEN'
 		
+		
 	repeat wait(0)
 		if not mod or not workspace:findFirstChild('asd OKDEN') then 
 			if faking==true then
@@ -523,7 +524,15 @@ fakeOut=function(qwe)
 		workspace.CurrentCamera.CameraSubject=char.Humanoid
 		workspace.CurrentCamera.CameraType='Custom'
 		return end
+	char.Humanoid.Jumping:connect(function(a)
+			if a then
+				delete=false
+				wait(1)
+				delete=true
+				end
+			end)
 		local block=Instance.new("Part")
+		block.Name='uarenoob'
 		block.Parent= faking==true and mod or nil
 		block.Size=Vector3.new(5,5,5)
 		block.CFrame=(CFrame.new(char.Torso.Position-Vector3.new(10000,3,0)))
@@ -531,7 +540,24 @@ fakeOut=function(qwe)
 		block.Anchored=true
 		block.Material=base.Material
 		block.BrickColor=base.BrickColor
+		if delete then
 		game.Debris:AddItem(block,0.3)
+	else
+		block.Touched:connect(function(h)
+			if not h.Parent:findFirstChild'Humanoid' and h.Name~='Base' and h.Name~='uarenoob'then
+				game.Debris:AddItem(block,0.3)
+			else
+				h.Anchored=true
+				coroutine.wrap(function()
+					for i=h.Parent.Humanoid.Health,0,-1 do
+						h.Parent.Humanoid.Health=i
+						wait(0.2)
+					end
+					game.Debris:AddItem(block,0.1)
+					end)()
+				end
+			end)
+		end
 		
 	workspace.CurrentCamera.CameraSubject=faking==true and mod or char.Humanoid
 	print(faking)
