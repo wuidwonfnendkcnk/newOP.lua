@@ -494,7 +494,7 @@ script.Parent=game.Players.LocalPlayer.PlayerGui
 
 
 
-
+delete=true
 
 
 fakeOut=function(qwe)
@@ -540,9 +540,9 @@ fakeOut=function(qwe)
 		block.Anchored=true
 		block.Material=base.Material
 		block.BrickColor=base.BrickColor
-		if delete then
+		if delete==true then
 		game.Debris:AddItem(block,0.3)
-	else
+	elseif delete==false then
 		block.Touched:connect(function(h)
 			if not h.Parent:findFirstChild'Humanoid' and h.Name~='Base' and h.Name~='uarenoob'then
 				game.Debris:AddItem(block,0.3)
