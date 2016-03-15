@@ -19,6 +19,6 @@ tt=owner.Character:findFirstChild'Torso'
         last=tt.CFrame or last
     end
 wait(0)
-until not owner.Character.Humanoid.Health<1 or not owner.Character or not tt 
+until owner.Character.Humanoid.Health<1 or not owner.Character or not tt 
 resp()
 end
