@@ -18,7 +18,7 @@ local create=function()
   if not last then
   part.CFrame=nextcf*CFrame.new(0,0,-1.5)
 else
-  part.CFrame=parts[#partz].CFrame*CFrame.new(0,0,-1.5)
+  part.CFrame=CFrame.new(parts[#partz].CFrame.p,m.Hit.p)*CFrame.new(0,0,-1.5)
   end
   return part
 end
