@@ -27,10 +27,10 @@ while wait(0) do
     num=num+1
     partz[#partz+1]=part
     elseif active==false then
-      if num<1 then return end
+      if num<1 then else
 partz[num]:Destroy()
 num=num-1
 print(num..' destroyed')
-
+end
   end
 end
