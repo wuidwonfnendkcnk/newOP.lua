@@ -50,8 +50,8 @@ socket.Material='Grass'
 eye.CFrame=b2.CFrame*CFrame.new(0,0,3)
 socket.Anchored=true
 socket.CFrame=eye.CFrame
-CLerp(part1,eye.CFrame*CFrame.new(0,5,0),0.25)
-CLerp(part2,part1.CFrame*CFrame.new(0,1,0),0.25)
+CLerp(part1,eye.CFrame*CFrame.new(0,5,0),0.45)
+CLerp(part2,part1.CFrame*CFrame.new(0,1,0),1.25)
 end)
 
 wait(4)
