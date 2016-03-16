@@ -12,7 +12,7 @@ eye.Size=Vector3.new(1.15,3.2,3.2)
 eye.BrickColor=BrickColor.White()
 game:service'RunService'.Stepped:connect(function()
 b2.Anchored=true
-b2.Parent,block.Parent=bill
+b2.Parent,block.Parent=bill,bill
 b2.CFrame=block.CFrame*CFrame.Angles(0,math.rad(180),0)*CFrame.new(0,0,-8)
 eye.Anchored=true
 eye.CFrame=b2.CFrame*CFrame.new(0,0,4)
