@@ -5,12 +5,13 @@ local ra=char['Right Arm']
 local dist=0
 
 local spray=function()
-local destroy=Instance.new("Part",workspace.Terrain)
+local destroy=Instance.new("Part",workspace)
 destroy.Size=Vector3.new(1,1,2)
 destroy.Anchored=true
 destroy.Name=dist
 destroy.CFrame=CFrame.new(ra.CFrame.p,m.Hit.p)*CFrame.new(0,0,-(2+dist))
     destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
+    destroy.Parent=workspace.Terrain
 return destroy
 end
 
@@ -18,6 +19,7 @@ m.Button1Down:connect(function() rip=true end)
 
 while wait(0) do
     if rip then
+    if dist>=100 then rip=true end
       dist=dist+1 local dmg=spray() 
 
         dmg.Touched:connect(function(h) 
@@ -28,4 +30,5 @@ while wait(0) do
         pcall(function() workspace.Terrain[dist]:Destroy() end)
         dist=dist-1
     end
+    
 end
