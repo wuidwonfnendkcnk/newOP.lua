@@ -20,14 +20,17 @@ end
 mouse.Button1Down:connect(function() active=true end)
 
 mouse.Button1Up:connect(function() active=false end)
-
+num=0
 while wait(0) do
   if active==true then
     local part=create()
+    num=num+1
     partz[#partz+1]=part
-      elseif active==false then
-pcall(function()
-  partz[#partz]:Destroy()
-end)
+    elseif active==false then
+      if num<1 then return end
+partz[num]:Destroy()
+num=num-1
+print(num..' destroyed')
+
   end
 end
