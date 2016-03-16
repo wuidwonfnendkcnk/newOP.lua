@@ -9,10 +9,12 @@ partz={}
 
 local create=function()
   local part=Instance.new("Part",workspace)
-  nextcf=CFrame.new(Torso.Position,mouse.Hit.p)
+  nextcf=Torso.CFrame*CFrame.new(-1,0,0)
+  nextcf=CFrame.new(nextcf.p,mouse.Hit.p)
   nextcf=nextcf*CFrame.new(0,0,-(#partz or 1))
   pcall(function() last=partz[#partz].CFrame.Z-nextcf end)
   part.Size=Vector3.new(1,1,last or 2)
+  part.Anchored=true
   part.CFrame=nextcf*CFrame.new(0,0,-1.5)
   return part
 end
