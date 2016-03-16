@@ -18,7 +18,7 @@ else
     repeat
     destroy.CFrame=destroy.CFrame*CFrame.new(0,-0.1,0) until destroy.CFrame.Y<=2.5
     end
-    destroy.Parent=workspace.Terrain
+    --destroy.Parent=workspace.Terrain
 return destroy
 end
 
