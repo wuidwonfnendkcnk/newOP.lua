@@ -26,6 +26,6 @@ while wait(0) do
   local part=create()
   partz[#partz+1]=part
 else
-  parts[#partz]:Destroy()
+  partz[#partz]:Destroy()
   end
 end
