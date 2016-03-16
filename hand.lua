@@ -25,7 +25,7 @@ while wait(0) do
   if active==true then
     local part=create()
     partz[#partz+1]=part
-      elseif active==false
+      elseif active==false then
 pcall(function()
   partz[#partz]:Destroy()
 end)
