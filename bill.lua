@@ -1,5 +1,6 @@
 local block=Instance.new("WedgePart",workspace)
-block.Size=Vector3.new(1,10,6)
+block.FormFactor='Custom'
+block.Size=Vector3.new(1,8.5,6)
 local b2=block:clone()
 b2.Parent=workspace
 b2.CanCollide=false
@@ -9,10 +10,11 @@ local eye=Instance.new("Part",block)
 eye.FormFactor='Custom'
 Instance.new("SpecialMesh",eye).MeshType='Sphere'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(1.15,4,3.2)
+eye.Size=Vector3.new(1.15,4.25,3.75)
 local socket=eye:clone()
 socket.Parent=eye
-socket.Size=Vector3.new(1.175,2.5,2.25)
+socket.CanCollide,eye.CanCollide=false,false
+socket.Size=Vector3.new(1.175,2.5,2.35)
 eye.BrickColor=BrickColor.White()
 socket.BrickColor=BrickColor.new'Really black'
 game:service'RunService'.Stepped:connect(function()
