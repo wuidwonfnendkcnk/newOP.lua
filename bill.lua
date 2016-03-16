@@ -24,7 +24,7 @@ part1.Size=Vector3.new(1.25,1.25,2)
 part1.BrickColor=socket.BrickColor
 part2=part1:clone()
 part2.Parent=hat
-part2.Size=part2.Size+Vector3.new(0,2,-0.5)
+part2.Size=part2.Size+Vector3.new(0,2.5,-0.75)
 part1.Anchored,part2.Anchored=true,true
 local CLerp=function(p,cf2,v)
 
