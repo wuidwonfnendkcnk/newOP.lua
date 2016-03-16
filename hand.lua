@@ -22,20 +22,23 @@ else
   end
   return part
 end
-
-mouse.Button1Down:connect(function() active=true end)
+can=true
+mouse.Button1Down:connect(function() if not can then return end active=true end)
 
 mouse.Button1Up:connect(function() active=false end)
 num=0
+maxi=50
 while wait(0) do
   if active==true then
     local part=create()
     num=num+1
+    if num>maxi then active=false end
     partz[#partz+1]=part
     elseif active==false then
-      if num<1 then partz={} else
+      if num<1 then partz={} can=true else
 partz[num]:Destroy()
 num=num-1
+can=false
 print(num..' destroyed')
 end
   end
