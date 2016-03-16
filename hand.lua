@@ -14,12 +14,13 @@ local create=function()
   nextcf=nextcf*CFrame.new(0,0,-(#partz or 1))
   pcall(function() last=partz[#partz].CFrame.Z-nextcf end)
   part.Size=Vector3.new(1,1,last~=nil and last or 2)
-  part.Anchored=true
+ 
   if not last then
   part.CFrame=nextcf*CFrame.new(0,0,-1.5)
 else
   part.CFrame=CFrame.new(parts[#partz].CFrame.p,m.Hit.p)*CFrame.new(0,0,-1.5)
-  end
+end
+ part.Anchored=true
   return part
 end
 can=true
