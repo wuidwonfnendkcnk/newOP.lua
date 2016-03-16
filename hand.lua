@@ -19,15 +19,15 @@ end
 
 mouse.Button1Down:connect(function() active=true end)
 
-mouse.Button2Down:connect(function() active=false end)
+mouse.Button1Up:connect(function() active=false end)
 
 while wait(0) do
-  if active then
+  if active==true then
     local part=create()
     partz[#partz+1]=part
-      else
+      elseif active==false
 pcall(function()
-  partz[#partz-1]:Destroy()
+  partz[#partz]:Destroy()
 end)
   end
 end
