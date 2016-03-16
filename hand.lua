@@ -27,7 +27,7 @@ while wait(0) do
     partz[#partz+1]=part
       else
 pcall(function()
-  partz[#partz]:Destroy()
+  partz[#partz-1]:Destroy()
 end)
   end
 end
