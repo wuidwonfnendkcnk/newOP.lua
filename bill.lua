@@ -4,11 +4,15 @@ local b2=block:clone()
 b2.Parent=workspace
 
 local bill=Instance.new("Model",game.workspace.Terrain)
-local eye=Instance.new("Part",bill)
-eye.Size=Vector3.new(1,3.2,3.2)
+local eye=Instance.new("Part",block)
+eye.FormFactor='Custom'
+eye.Shape='Ball'
+eye.FormFactor='Custom'
+eye.Size=Vector3.new(1.15,3.2,3.2)
 eye.BrickColor=BrickColor.White()
 game:service'RunService'.Stepped:connect(function()
 b2.Anchored=true
+b2.Parent,block.Parent=bill
 b2.CFrame=block.CFrame*CFrame.Angles(0,math.rad(180),0)*CFrame.new(0,0,-8)
 eye.Anchored=true
 eye.CFrame=b2.CFrame*CFrame.new(0,0,4)
