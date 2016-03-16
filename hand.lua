@@ -48,7 +48,7 @@ end
 num=0
 maxi=75
 local asd=Instance.new("Part",workspace.Terrain)
-cf=m.Hit
+cf=mouse.Hit
 asd.CFrame=cf
 asd.Transparency=1
 asd.CanCollide=false
