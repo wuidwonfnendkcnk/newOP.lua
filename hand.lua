@@ -7,21 +7,7 @@ active=false
 
 partz={}
 
-local create=function()
-  local part=Instance.new("Part",workspace)
-  nextcf=Torso.CFrame*CFrame.new(-1,0,0)
-  nextcf=CFrame.new(nextcf.p,asd.CFrame.p)
-  nextcf=nextcf*CFrame.new(0,0,-(#partz or 1))
-  pcall(function() last=partz[#partz].CFrame.Z-nextcf end)
-  part.Size=Vector3.new(1,1,last~=nil and last or 2)
-  part.Anchored=true
-  if not last then
-  part.CFrame=nextcf*CFrame.new(0,0,-1.5)
-else
-  part.CFrame=CFrame.new(parts[#partz].CFrame.p,asd.CFrame.p)*CFrame.new(0,0,-1.5)
-  end
-  return part
-end
+
 can=true
 mouse.Button1Down:connect(function() if not can then return end active=true end)
 
@@ -47,12 +33,30 @@ end
 
 num=0
 maxi=75
-local asd=Instance.new("Part",workspace.Terrain)
+asd=Instance.new("Part",workspace.Terrain)
 cf=mouse.Hit
 asd.CFrame=cf
 asd.Transparency=1
 asd.CanCollide=false
 asd.Anchored=true
+
+local create=function()
+  local part=Instance.new("Part",workspace)
+  nextcf=Torso.CFrame*CFrame.new(-1,0,0)
+  nextcf=CFrame.new(nextcf.p,asd.CFrame.p)
+  nextcf=nextcf*CFrame.new(0,0,-(#partz or 1))
+  pcall(function() last=partz[#partz].CFrame.Z-nextcf end)
+  part.Size=Vector3.new(1,1,last~=nil and last or 2)
+  part.Anchored=true
+  if not last then
+  part.CFrame=nextcf*CFrame.new(0,0,-1.5)
+else
+  part.CFrame=CFrame.new(parts[#partz].CFrame.p,asd.CFrame.p)*CFrame.new(0,0,-1.5)
+  end
+  return part
+end
+
+
 while wait(0) do
   CLerp(asd,mouse.Hit,0.075)
   if active==true then
