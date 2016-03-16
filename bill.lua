@@ -6,9 +6,9 @@ b2.Parent=workspace
 local bill=Instance.new("Model",game.workspace.Terrain)
 local eye=Instance.new("Part",block)
 eye.FormFactor='Custom'
-eye.Shape='Ball'
+Instance.new("SpecialMesh",eye).MeshType='Sphere'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(2,4,4)
+eye.Size=Vector3.new(1.15,3.2,3.2)
 eye.BrickColor=BrickColor.White()
 game:service'RunService'.Stepped:connect(function()
 b2.Anchored=true
