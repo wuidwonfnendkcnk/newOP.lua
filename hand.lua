@@ -23,11 +23,11 @@ mouse.Button2Down:connect(function() active=false end)
 
 while wait(0) do
   if active then
-  local part=create()
-  partz[#partz+1]=part
-else
-  if #partz>0 then
+    local part=create()
+    partz[#partz+1]=part
+      else
+pcall(function()
   partz[#partz]:Destroy()
-  end
+end)
   end
 end
