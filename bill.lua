@@ -20,11 +20,11 @@ socket.BrickColor=BrickColor.new'Really black'
 local hat=Instance.new("Model",bill)
 local part1=Instance.new("Part",hat)
 part1.FormFactor='Custom'
-part1.Size=Vector3.new(2,1.25,1.25)
+part1.Size=Vector3.new(1.25,1.25,2)
 part1.BrickColor=socket.BrickColor
 part2=part1:clone()
 part2.Parent=hat
-part2.Size=part2.Size+Vector3.new(0,2,0)
+part2.Size=part2.Size+Vector3.new(0,2,-0.5)
 part1.Anchored,part2.Anchored=true,true
 local CLerp=function(p,cf2,v)
 
