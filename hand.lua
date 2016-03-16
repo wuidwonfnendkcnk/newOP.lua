@@ -11,7 +11,7 @@ destroy.Anchored=true
 destroy.Name=dist
 wait(0)
 destroy.CFrame=char.Torso.CFrame
-wait(0)
+wait(1)
 destroy.CFrame=CFrame.new(destroy.Position,m.Hit.p)*CFrame.new(0,0,-dist)
     destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
     destroy.Parent=workspace.Terrain
@@ -24,7 +24,7 @@ while wait(0) do
     if rip then
     if dist>=50 then rip=false end
       dist=dist+1 local dmg=spray() 
-
+wait(0)
         dmg.Touched:connect(function(h) 
           if h.Parent:findFirstChild'Humanoid' then h.Parent.Humanoid.Health=h.Parent.Humanoid.Health-5 end
         end)
