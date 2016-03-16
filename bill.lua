@@ -34,8 +34,8 @@ local CLerp=function(p,cf2,v)
 
 end
 
-while wait(0) do block.BrickColor=BrickColor.Yellow()
+while wait(0) do block.BrickColor=BrickColor.new'New Yeller'
         b2.BrickColor=block.BrickColor
         b2.Material,block.Material='Neon','Neon'
         block.Anchored=true
-        CLerp(block,CFrame.new(script.Parent.Torso.CFrame.p)*CFrame.new(0,10,-2),0.075) end
+        CLerp(block,CFrame.new(script.Parent.Torso.CFrame.p)*CFrame.new(0,10,-2),0.125) end
