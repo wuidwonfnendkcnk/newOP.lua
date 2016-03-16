@@ -9,7 +9,8 @@ local destroy=Instance.new("Part",workspace.Terrain)
 destroy.Size=Vector3.new(1,1,2)
 destroy.Anchored=true
 destroy.Name=dist
-destroy.CFrame=CFrame.new(char.Torso.CFrame.p,m.Hit.p)*CFrame.new(-1,0,-(2+dist))
+destroy.CFrame=CFrame.new(ra.CFrame.p,m.Hit.p)*CFrame.new(0,0,-(2+dist))
+    destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
 return destroy
 end
 
