@@ -11,6 +11,7 @@ destroy.Anchored=true
 destroy.Name=dist
 wait(0)
 destroy.CFrame=char.Torso.CFrame
+wait(0)
 destroy.CFrame=CFrame.new(destroy.Position,m.Hit.p)*CFrame.new(0,0,-dist)
     destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
     destroy.Parent=workspace.Terrain
