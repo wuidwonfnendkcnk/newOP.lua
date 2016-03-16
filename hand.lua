@@ -36,7 +36,7 @@ maxi=75
 asd=Instance.new("Part",workspace.Terrain)
 cf=mouse.Hit
 asd.CFrame=cf
-asd.Transparency=1
+asd.Transparency=0.9
 asd.CanCollide=false
 asd.Anchored=true
 
@@ -46,7 +46,7 @@ local create=function()
   nextcf=CFrame.new(nextcf.p,asd.CFrame.p)
   nextcf=nextcf*CFrame.new(0,0,-(#partz or 1))
   pcall(function() last=partz[#partz].CFrame.Z-nextcf end)
-  part.Size=Vector3.new(last~=nil and last or 1,1,last~=nil and last or 2)
+  part.Size=Vector3.new(1,1,last~=nil and last or 2)
   part.Anchored=true
   if not last then
   part.CFrame=nextcf*CFrame.new(0,0,-1.5)
@@ -58,7 +58,7 @@ end
 
 
 while wait(0) do
-  CLerp(asd,mouse.Hit,0.075)
+  CLerp(asd,CFrame.new(mouse.Hit.p),0.2)
   if active==true then
     local part=create()
     num=num+1
