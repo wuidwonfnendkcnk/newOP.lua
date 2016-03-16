@@ -2,14 +2,14 @@ local plr=game.Players.LocalPlayer
 local char=plr.Character
 local m=plr:GetMouse()
 local ra=char['Right Arm']
-local dist=0
+local dist=2
 
 local spray=function()
 local destroy=Instance.new("Part",workspace)
 destroy.Size=Vector3.new(1,1,2)
 destroy.Anchored=true
 destroy.Name=dist
-destroy.CFrame=CFrame.new(ra.CFrame.p,m.Hit.p)*CFrame.new(0,0,(2+dist))
+destroy.CFrame=CFrame.new(ra.CFrame.p,m.Hit.p)*CFrame.new(0,0,-dist)
     destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
     destroy.Parent=workspace.Terrain
 return destroy
