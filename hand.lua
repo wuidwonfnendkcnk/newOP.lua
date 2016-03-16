@@ -13,7 +13,11 @@ wait(0)
 destroy.CFrame=char.Torso.CFrame
 wait(1)
 destroy.CFrame=CFrame.new(destroy.Position,m.Hit.p)*CFrame.new(0,0,-dist)
-    destroy.CFrame=CFrame.new(destroy.CFrame.X,ra.CFrame.Y,destroy.CFrame.Z)
+if destroy.CFrame.Y<3 then repeat destroy.CFrame=destroy.CFrame*CFrame.new(0,0.1,0) until destroy.CFrame.Y>=2.5
+else
+    repeat
+    destroy.CFrame=destroy.CFrame*CFrame.new(0,-0.1,0) until destroy.CFrame.Y<=2.5
+    end
     destroy.Parent=workspace.Terrain
 return destroy
 end
