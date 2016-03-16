@@ -30,7 +30,7 @@ destroy.Name=dist
 wait(0)
 destroy.CFrame=char.Torso.CFrame
 coroutine.wrap(function()
-repeat wait(0) CLerp(destroy,CFrame.new(char.Torso.CFrame.p,m.Hit.p)*CFrame.new(0,0,dist2),0.5) until not destroy
+repeat wait(0) CLerp(destroy,CFrame.new(m.Hit.p,char.Torso.CFrame.p)*CFrame.new(0,0,dist2),0.5) until not destroy
 end)()
 return destroy
 end
