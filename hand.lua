@@ -4,21 +4,34 @@ local m=plr:GetMouse()
 local ra=char['Right Arm']
 local dist=2
 
+
+local CLerp=function(p,cf2,v)
+
+        local st,cf1=tick'',p.CFrame;local c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12=cf1:components'';
+
+        local s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12=cf2:components'';
+
+        local glv=function(v1,v2)return v1+(v2-v1)*v*(1+tick''-st);end;
+
+        p.CFrame=CFrame.new(glv(c1,s1),glv(c2,s2),glv(c3,s3),glv(c4,s4),glv(c5,s5)
+
+        ,glv(c6,s6),glv(c7,s7),glv(c8,s8),glv(c9,s9),glv(c10,s10),glv(c11,s11),glv(c12,s12));wait'';
+
+end
+
+
+
 local spray=function()
 local destroy=Instance.new("Part",workspace)
 destroy.Size=Vector3.new(1,1,2)
 destroy.Anchored=true
+local dist2=dist
 destroy.Name=dist
 wait(0)
 destroy.CFrame=char.Torso.CFrame
-wait(1)
-destroy.CFrame=CFrame.new(destroy.Position,m.Hit.p)*CFrame.new(0,0,-dist)
-if destroy.CFrame.Y<3 then repeat destroy.CFrame=destroy.CFrame*CFrame.new(0,0.1,0) until destroy.CFrame.Y>=2.5
-else
-    repeat
-    destroy.CFrame=destroy.CFrame*CFrame.new(0,-0.1,0) until destroy.CFrame.Y<=2.5
-    end
-    --destroy.Parent=workspace.Terrain
+coroutine.wrap(function()
+repeat wait(0) CLerp(destroy,CFrame.new(char.Torso.CFrame.p,m.Hit.p)*CFrame.new(dist2),0.1) until not destroy
+end)()
 return destroy
 end
 
