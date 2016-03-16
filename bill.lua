@@ -1,21 +1,30 @@
 local block=Instance.new("WedgePart",workspace)
-block.Size=Vector3.new(1,10,8)
+block.Size=Vector3.new(1,10,6)
 local b2=block:clone()
 b2.Parent=workspace
-
+b2.CanCollide=false
+b2.Anchored=true
 local bill=Instance.new("Model",game.workspace.Terrain)
 local eye=Instance.new("Part",block)
 eye.FormFactor='Custom'
 Instance.new("SpecialMesh",eye).MeshType='Sphere'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(1.15,3.2,3.2)
+eye.Size=Vector3.new(1.15,4,3.2)
+local socket=eye:clone()
+socket.Parent=eye
+socket.Size=Vector3.new(1.175,2.5,2.25)
 eye.BrickColor=BrickColor.White()
+socket.BrickColor=BrickColor.new'Really black'
 game:service'RunService'.Stepped:connect(function()
 b2.Anchored=true
 b2.Parent,block.Parent=bill,bill
-b2.CFrame=block.CFrame*CFrame.Angles(0,math.rad(180),0)*CFrame.new(0,0,-8)
+b2.CFrame=block.CFrame*CFrame.Angles(0,math.rad(180),0)*CFrame.new(0,0,-6)
 eye.Anchored=true
-eye.CFrame=b2.CFrame*CFrame.new(0,0,4)
+eye.Material='Neon'
+socket.Material='Grass'
+eye.CFrame=b2.CFrame*CFrame.new(0,0,3)
+socket.Anchored=true
+socket.CFrame=eye.CFrame
 end)
 
 wait(4)
