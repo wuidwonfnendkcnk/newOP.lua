@@ -27,9 +27,13 @@ mouse.Button1Down:connect(function() if not can then return end active=true end)
 
 mouse.Button1Up:connect(function() active=false end)
 num=0
-maxi=50
+maxi=75
 while wait(0) do
   if active==true then
+    local part=create()
+    num=num+1
+    if num>maxi then active=false end
+    partz[#partz+1]=part
     local part=create()
     num=num+1
     if num>maxi then active=false end
@@ -40,6 +44,12 @@ partz[num]:Destroy()
 num=num-1
 can=false
 print(num..' destroyed')
+if num>1 then
+  partz[num]:Destroy()
+num=num-1
+can=false
+print(num..' destroyed')
+  end
 end
   end
 end
