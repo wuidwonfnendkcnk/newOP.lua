@@ -17,6 +17,15 @@ socket.CanCollide,eye.CanCollide=false,false
 socket.Size=Vector3.new(1.175,2.5,2.35)
 eye.BrickColor=BrickColor.White()
 socket.BrickColor=BrickColor.new'Really black'
+local hat=Instance.new("Model",bill)
+local part1=Instance.new("Part",hat)
+part1.FormFactor='Custom'
+part1.Size=Vector3.new(2,1.25,1.25)
+part1.BrickColor=socket.BrickColor
+part2=part1:clone()
+part2.Parent=hat
+part2.Size=part2.Size+Vector3.new(0,2,0)
+part1.Anchored,part2.Anchored=true,true
 game:service'RunService'.Stepped:connect(function()
 b2.Anchored=true
 b2.Parent,block.Parent=bill,bill
@@ -27,6 +36,8 @@ socket.Material='Grass'
 eye.CFrame=b2.CFrame*CFrame.new(0,0,3)
 socket.Anchored=true
 socket.CFrame=eye.CFrame
+CLerp(part1,eye.CFrame*CFrame.new(0,5,0),0.25)
+CLerp(part2,part2.CFrame*CFrame.new(0,1,0),0.25)
 end)
 
 wait(4)
@@ -48,5 +59,8 @@ end
 while wait(0) do block.BrickColor=BrickColor.new'New Yeller'
         b2.BrickColor=block.BrickColor
         b2.Material,block.Material='Neon','Neon'
+        eye.Material='Neon'
         block.Anchored=true
-        CLerp(block,CFrame.new(script.Parent.Torso.CFrame.p)*CFrame.new(0,10,-2),0.125) end
+        CLerp(block,CFrame.new(script.Parent.Torso.CFrame.p)*CFrame.new(0,10,-2),0.125) 
+
+end
