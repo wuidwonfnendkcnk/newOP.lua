@@ -15,7 +15,7 @@ local socket=eye:clone()
 socket.Parent=eye
 socket:clearAllChildren()
 socket.CanCollide,eye.CanCollide=false,false
-socket.Size=Vector3.new(1.175,4,0.75)
+socket.Size=Vector3.new(1.175,2.5,0.75)
 eye.BrickColor=BrickColor.White()
 socket.BrickColor=BrickColor.new'Really black'
 local hat=Instance.new("Model",bill)
@@ -47,7 +47,7 @@ b2.Parent,block.Parent=bill,bill
 b2.CFrame=block.CFrame*CFrame.Angles(0,math.rad(180),0)*CFrame.new(0,0,-6)
 eye.Anchored=true
 eye.Material='Neon'
-socket.Material='Grass'
+socket.Material='Neon'
 eye.CFrame=b2.CFrame*CFrame.new(0,0,3)
 socket.Anchored=true
 socket.CFrame=eye.CFrame
