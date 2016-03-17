@@ -13,8 +13,9 @@ eye.FormFactor='Custom'
 eye.Size=Vector3.new(1.15,4.25,3.75)
 local socket=eye:clone()
 socket.Parent=eye
+socket:clearAllChildren()
 socket.CanCollide,eye.CanCollide=false,false
-socket.Size=Vector3.new(1.175,2.5,2.35)
+socket.Size=Vector3.new(1.175,4,2.35)
 eye.BrickColor=BrickColor.White()
 socket.BrickColor=BrickColor.new'Really black'
 local hat=Instance.new("Model",bill)
