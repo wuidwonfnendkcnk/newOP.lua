@@ -10,12 +10,12 @@ local eye=Instance.new("Part",block)
 eye.FormFactor='Custom'
 Instance.new("SpecialMesh",eye).MeshType='Sphere'
 eye.FormFactor='Custom'
-eye.Size=Vector3.new(1.15,4.25,3.75)
+eye.Size=Vector3.new(1.5,4.25,3.75)
 local socket=eye:clone()
 socket.Parent=eye
 socket:clearAllChildren()
 socket.CanCollide,eye.CanCollide=false,false
-socket.Size=Vector3.new(2,2.5,0.75)
+socket.Size=Vector3.new(1.65,2.5,0.75)
 eye.BrickColor=BrickColor.White()
 socket.BrickColor=BrickColor.new'Really black'
 local hat=Instance.new("Model",bill)
