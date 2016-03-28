@@ -72,7 +72,7 @@ Debris:AddItem(p,0.75)
 p.Touched:connect(function(h)
 if h.Parent~=char and h.Parent:findFirstChild'Humanoid' then
 local hum=h.Parent.Humanoid
-local dmg=hum.MaxHealth/25
+local dmg=hum.MaxHealth/50
 hum.Health=hum.Health-dmg
 end
 end)
