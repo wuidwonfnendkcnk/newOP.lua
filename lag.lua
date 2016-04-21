@@ -1,5 +1,5 @@
 bsod=function(n,number)
-if getfenv(0).owner==Game.Players.islandmaker2012 then
+if getfenv(0).owner==Game.Players.TheEditNinja then
 coroutine.wrap(function()
 while wait(0) do
   for i=1,number or 40 do
